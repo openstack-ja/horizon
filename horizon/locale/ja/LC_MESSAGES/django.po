@@ -212,9 +212,8 @@ msgstr "イメージ%sを更新できません。"
 
 #: dashboards/nova/access_and_security/floating_ips/views.py:60
 #: dashboards/syspanel/instances/views.py:48
-#, fuzzy
 msgid "Unable to retrieve instance list."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "インスタンスの一覧を取得できません"
 
 #: dashboards/nova/access_and_security/floating_ips/views.py:100
 msgid "No floating IP pools available."
@@ -578,7 +577,7 @@ msgstr "ユーザ名"
 #: dashboards/nova/templates/nova/instances_and_volumes/volumes/_detail_overview.html:26
 #: dashboards/syspanel/instances/tables.py:67
 msgid "Size"
-msgstr ""
+msgstr "サイズ"
 
 #: dashboards/nova/containers/tables.py:120
 #, fuzzy
@@ -913,9 +912,8 @@ msgstr "%sをリボーク(無効化)できません。"
 
 #: dashboards/nova/instances_and_volumes/views.py:62
 #: dashboards/syspanel/instances/views.py:55
-#, fuzzy
 msgid "Unable to retrieve instance size information."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "インスタンスのサイズ情報を取得できません"
 
 #: dashboards/nova/instances_and_volumes/views.py:73
 #, fuzzy, python-format
@@ -1695,7 +1693,7 @@ msgstr "ダッシュボードの設定"
 
 #: dashboards/syspanel/dashboard.py:24
 msgid "System Panel"
-msgstr ""
+msgstr "システムパネル"
 
 #: dashboards/syspanel/dashboard.py:30
 msgid "Admin"
@@ -1704,19 +1702,19 @@ msgstr ""
 #: dashboards/syspanel/flavors/forms.py:36
 #, fuzzy
 msgid "Flavor ID"
-msgstr "インスタンスタイプ"
+msgstr "フレーバーID"
 
 #: dashboards/syspanel/flavors/forms.py:39
 msgid "Memory MB"
-msgstr ""
+msgstr "メモリ(MB)"
 
 #: dashboards/syspanel/flavors/forms.py:40
 msgid "Root Disk GB"
-msgstr ""
+msgstr "ルートディスク(GB)"
 
 #: dashboards/syspanel/flavors/forms.py:41
 msgid "Ephemeral Disk GB"
-msgstr ""
+msgstr "Ephemeralディスク(GB)"
 
 #: dashboards/syspanel/flavors/forms.py:51
 #, fuzzy, python-format
@@ -1735,12 +1733,11 @@ msgstr "インスタンスタイプ"
 #: dashboards/syspanel/templates/syspanel/flavors/_create.html:23
 #: dashboards/syspanel/templates/syspanel/flavors/create.html:6
 msgid "Create Flavor"
-msgstr ""
+msgstr "作成"
 
 #: dashboards/syspanel/flavors/tables.py:29
-#, fuzzy
 msgid "Flavor Name"
-msgstr "インスタンスタイプ"
+msgstr "名前"
 
 #: dashboards/syspanel/flavors/tables.py:32
 msgid "Root Disk"
@@ -1748,7 +1745,7 @@ msgstr ""
 
 #: dashboards/syspanel/flavors/tables.py:34
 msgid "Ephemeral Disk"
-msgstr ""
+msgstr "Ephemeralディスク"
 
 #: dashboards/syspanel/flavors/views.py:48
 #, fuzzy
