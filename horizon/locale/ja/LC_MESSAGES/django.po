@@ -1769,7 +1769,7 @@ msgstr "テナント"
 #: dashboards/syspanel/instances/tables.py:60
 #: dashboards/syspanel/services/tables.py:40
 msgid "Host"
-msgstr "ホスト"
+msgstr ""
 
 #: dashboards/syspanel/instances/views.py:62
 #, fuzzy
@@ -1778,7 +1778,7 @@ msgstr "%sをリボーク(無効化)できません。"
 
 #: dashboards/syspanel/projects/forms.py:38
 msgid "Role"
-msgstr "ロール"
+msgstr ""
 
 #: dashboards/syspanel/projects/forms.py:52
 #, fuzzy
@@ -1796,11 +1796,12 @@ msgstr "キー%sを作成できません。"
 #: dashboards/syspanel/services/tables.py:42
 #: dashboards/syspanel/users/tables.py:130
 msgid "Enabled"
-msgstr "有効"
+msgstr ""
 
 #: dashboards/syspanel/projects/forms.py:75
+#, fuzzy, python-format
 msgid "%s was successfully created."
-msgstr "プロジェクト %s が作成されました"
+msgstr "キー%sは正常に削除されました。"
 
 #: dashboards/syspanel/projects/forms.py:78
 #, fuzzy
@@ -1839,7 +1840,7 @@ msgstr ""
 
 #: dashboards/syspanel/projects/forms.py:118
 msgid "RAM (in MB)"
-msgstr "メモリ(MB)"
+msgstr ""
 
 #: dashboards/syspanel/projects/forms.py:136
 #, fuzzy, python-format
@@ -1855,28 +1856,31 @@ msgstr "イメージ%sを更新できません。"
 #: dashboards/syspanel/projects/tables.py:52
 #: dashboards/syspanel/projects/tables.py:81
 #: dashboards/syspanel/templates/syspanel/projects/index.html:8
+#, fuzzy
 msgid "Projects"
-msgstr "プロジェクト"
+msgstr "プロジェクトを削除"
 
 #: dashboards/syspanel/projects/tables.py:17
 msgid "Modify Quotas"
-msgstr "クォータの変更"
+msgstr ""
 
 #: dashboards/syspanel/projects/tables.py:24
 msgid "Modify Users"
-msgstr "ユーザの変更"
+msgstr ""
 
 #: dashboards/syspanel/projects/tables.py:31
 msgid "View Usage"
 msgstr ""
 
 #: dashboards/syspanel/projects/tables.py:38
+#, fuzzy
 msgid "Edit Project"
-msgstr "編集"
+msgstr "プロジェクトを削除"
 
 #: dashboards/syspanel/projects/tables.py:45
+#, fuzzy
 msgid "Create New Project"
-msgstr "作成"
+msgstr "新規ボリュームを作成する。"
 
 #: dashboards/syspanel/projects/tables.py:73
 #: dashboards/syspanel/services/tables.py:37
@@ -1896,7 +1900,7 @@ msgstr "イメージを削除する"
 #: dashboards/syspanel/projects/tables.py:91
 #: dashboards/syspanel/users/tables.py:92
 msgid "User"
-msgstr "ユーザー"
+msgstr ""
 
 #: dashboards/syspanel/projects/tables.py:92
 #: dashboards/syspanel/templates/syspanel/users/index.html:8
@@ -1907,12 +1911,13 @@ msgid "Users"
 msgstr "ユーザー"
 
 #: dashboards/syspanel/projects/tables.py:103
+#, fuzzy
 msgid "Users For Project"
-msgstr "所属ユーザ"
+msgstr "プロジェクトからユーザを削除します。"
 
 #: dashboards/syspanel/projects/tables.py:110
 msgid "Add To Project"
-msgstr "追加"
+msgstr ""
 
 #: dashboards/syspanel/projects/tables.py:122
 #, fuzzy
@@ -1946,15 +1951,16 @@ msgstr "クォータ"
 
 #: dashboards/syspanel/quotas/tables.py:28
 msgid "Quota Name"
-msgstr "クォータ名"
+msgstr ""
 
 #: dashboards/syspanel/quotas/tables.py:29
 msgid "Limit"
-msgstr "制限値"
+msgstr ""
 
 #: dashboards/syspanel/quotas/views.py:44
+#, fuzzy
 msgid "Unable to get quota info."
-msgstr "クォータ情報が取得できません"
+msgstr "イメージ%sを公開できません。"
 
 #: dashboards/syspanel/services/panel.py:28
 #: dashboards/syspanel/services/tables.py:47
@@ -1972,6 +1978,7 @@ msgid "From here you can define the sizing of a new flavor."
 msgstr "ここより、ユーザとその資格を管理できます。"
 
 #: dashboards/syspanel/templates/syspanel/instances/index.html:6
+#, fuzzy
 msgid "All Instances"
 msgstr "インスタンス"
 
