@@ -19,28 +19,28 @@ msgstr ""
 
 #: base.py:447
 msgid "Other"
-msgstr ""
+msgstr "その他"
 
 #: decorators.py:56
 msgid "Please log in to continue."
-msgstr "続けて使うにはログインし直して下さい。"
+msgstr "続けるにはログインしてください。。"
 
 #: decorators.py:89
 #, python-format
 msgid "You are not authorized to access %s"
-msgstr ""
+msgstr "%s へのアクセスは許可されていません。"
 
 #: decorators.py:130
 msgid "The services for this view are not available."
-msgstr ""
+msgstr "この画面用のサービスが利用できません。"
 
 #: exceptions.py:211
 msgid "Unauthorized. Please try logging in again."
-msgstr ""
+msgstr "認証されていません。もう一度ログインしてください。"
 
 #: users.py:63
 msgid "Your session has expired. Please log in again."
-msgstr ""
+msgstr "セッションの期限が切れました。もう一度ログインしてください。"
 
 #: api/keystone.py:53
 #, python-format
