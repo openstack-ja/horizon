@@ -1688,7 +1688,7 @@ msgstr "ルートディスク(GB)"
 
 #: dashboards/syspanel/flavors/forms.py:41
 msgid "Ephemeral Disk GB"
-msgstr "Ephemeralディスク(GB)"
+msgstr "一時ディスク(GB)"
 
 #: dashboards/syspanel/flavors/forms.py:51
 #, fuzzy, python-format
@@ -1719,7 +1719,7 @@ msgstr ""
 
 #: dashboards/syspanel/flavors/tables.py:34
 msgid "Ephemeral Disk"
-msgstr "Ephemeralディスク"
+msgstr "一時ディスク"
 
 #: dashboards/syspanel/flavors/views.py:48
 #, fuzzy
@@ -1727,14 +1727,12 @@ msgid "Unauthorized."
 msgstr "%sを認証できません。"
 
 #: dashboards/syspanel/flavors/views.py:53
-#, fuzzy, python-format
 msgid "Unable to get flavor list: %s"
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "インスタンスタイプの一覧を取得できません: %s"
 
 #: dashboards/syspanel/images/views.py:45
-#, fuzzy
 msgid "Unable to retrieve image list."
-msgstr "キー%sを作成できません。"
+msgstr "イメージの一覧を取得できません"
 
 #: dashboards/syspanel/instances/tables.py:53
 msgid "Tenant"
@@ -1746,23 +1744,20 @@ msgid "Host"
 msgstr "ホスト"
 
 #: dashboards/syspanel/instances/views.py:62
-#, fuzzy
 msgid "Unable to retrieve instance tenant information."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "インスタンスのテナント情報を取得できません"
 
 #: dashboards/syspanel/projects/forms.py:38
 msgid "Role"
 msgstr "ロール"
 
 #: dashboards/syspanel/projects/forms.py:52
-#, fuzzy
 msgid "Successfully added user to tenant."
-msgstr "プロジェクト%(proj)sを正常に修正しました。"
+msgstr "プロジェクトにユーザを追加しました"
 
 #: dashboards/syspanel/projects/forms.py:54
-#, fuzzy
 msgid "Unable to add user to tenant."
-msgstr "キー%sを作成できません。"
+msgstr "ユーザをプロジェクトに追加しました"
 
 #: dashboards/syspanel/projects/forms.py:64
 #: dashboards/syspanel/projects/forms.py:89
@@ -1779,21 +1774,19 @@ msgstr "プロジェクト %s が作成されました"
 
 #: dashboards/syspanel/projects/forms.py:78
 msgid "Unable to create tenant."
-msgstr "スナップショットを作成できません。"
+msgstr "プロジェクトを作成出来ませんでした"
 
 #: dashboards/syspanel/projects/forms.py:100
-#, fuzzy, python-format
 msgid "%s was successfully updated."
-msgstr "キー%sは正常に削除されました。"
+msgstr "%s が更新されました"
 
 #: dashboards/syspanel/projects/forms.py:103
-#, fuzzy
 msgid "Unable to update tenant."
-msgstr "イメージ%sを更新できません。"
+msgstr "プロジェクトが更新出来ませんでした"
 
 #: dashboards/syspanel/projects/forms.py:108
 msgid "ID (name)"
-msgstr ""
+msgstr "ID (名前)"
 
 #: dashboards/syspanel/projects/forms.py:110
 msgid "Metadata Items"
@@ -1816,14 +1809,12 @@ msgid "RAM (in MB)"
 msgstr "メモリ(MB)"
 
 #: dashboards/syspanel/projects/forms.py:136
-#, fuzzy, python-format
 msgid "Quotas for %s were successfully updated."
-msgstr "セキュリティグループ%sが正常に削除されました。"
+msgstr "クォータ % が更新されました"
 
 #: dashboards/syspanel/projects/forms.py:139
-#, fuzzy
 msgid "Unable to update quotas."
-msgstr "イメージ%sを更新できません。"
+msgstr "クォータが更新できませんした"
 
 #: dashboards/syspanel/projects/panel.py:28
 #: dashboards/syspanel/projects/tables.py:52
@@ -1882,36 +1873,31 @@ msgstr "ユーザー"
 
 #: dashboards/syspanel/projects/tables.py:103
 msgid "Users For Project"
-msgstr "所属ユーザ"
+msgstr "所属ユーザー"
 
 #: dashboards/syspanel/projects/tables.py:110
 msgid "Add To Project"
 msgstr "追加"
 
 #: dashboards/syspanel/projects/tables.py:122
-#, fuzzy
 msgid "Add New Users"
-msgstr "新規ボリュームを作成する。"
+msgstr "ユーザーの追加"
 
 #: dashboards/syspanel/projects/views.py:49
-#, fuzzy
 msgid "Unable to retrieve project list."
-msgstr "キー%sを作成できません。"
+msgstr "プロジェクトの一覧を取得できません"
 
 #: dashboards/syspanel/projects/views.py:71
-#, fuzzy
 msgid "Unable to retrieve project."
-msgstr "キー%sを作成できません。"
+msgstr "プロジェクトを取得できません"
 
 #: dashboards/syspanel/projects/views.py:100
-#, fuzzy
 msgid "Unable to retrieve users."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "ユーザを取得できません"
 
 #: dashboards/syspanel/projects/views.py:143
-#, fuzzy
 msgid "Unable to retrieve roles."
-msgstr "ボリューム%sを作成できません。"
+msgstr "ロールが取得できません"
 
 #: dashboards/syspanel/quotas/panel.py:28
 #: dashboards/syspanel/quotas/tables.py:36
@@ -1927,7 +1913,6 @@ msgid "Limit"
 msgstr "制限値"
 
 #: dashboards/syspanel/quotas/views.py:44
-#, fuzzy
 msgid "Unable to get quota info."
 msgstr "クォータ情報が取得できません"
 
@@ -1939,21 +1924,19 @@ msgstr "サービス"
 
 #: dashboards/syspanel/services/tables.py:39
 msgid "Service"
-msgstr ""
+msgstr "サービス"
 
 #: dashboards/syspanel/templates/syspanel/flavors/_create.html:18
-#, fuzzy
 msgid "From here you can define the sizing of a new flavor."
-msgstr "ここより、ユーザとその資格を管理できます。"
+msgstr "新しいインスタンスタイプを作成出来ます"
 
 #: dashboards/syspanel/templates/syspanel/instances/index.html:6
 msgid "All Instances"
 msgstr "インスタンス"
 
 #: dashboards/syspanel/templates/syspanel/overview/usage.html:3
-#, fuzzy
 msgid "Usage Overview"
-msgstr "概要"
+msgstr "使用状況"
 
 #: dashboards/syspanel/templates/syspanel/overview/usage.html:12
 msgid "Monitoring"
@@ -1962,24 +1945,22 @@ msgstr ""
 #: dashboards/syspanel/templates/syspanel/projects/_add_user.html:8
 #: dashboards/syspanel/templates/syspanel/projects/add_user.html:3
 #: dashboards/syspanel/templates/syspanel/projects/add_user.html:6
-#, fuzzy
 msgid "Add User To Project"
-msgstr "プロジェクトからユーザを削除します。"
+msgstr "プロジェクトへ追加"
 
 #: dashboards/syspanel/templates/syspanel/projects/_add_user.html:18
 msgid "Select the user role for the project."
-msgstr ""
+msgstr "ユーザに付与するロールを選択します"
 
 #: dashboards/syspanel/templates/syspanel/projects/_add_user.html:23
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 #: dashboards/syspanel/templates/syspanel/projects/_create.html:8
 #: dashboards/syspanel/templates/syspanel/projects/_create.html:23
 #: dashboards/syspanel/templates/syspanel/projects/create.html:6
-#, fuzzy
 msgid "Create Project"
-msgstr "プロジェクトを削除"
+msgstr "プロジェクトを追加"
 
 #: dashboards/syspanel/templates/syspanel/projects/_create.html:18
 #, fuzzy
@@ -1988,9 +1969,8 @@ msgstr "ここで、複数のユーザ資格を編集できます。"
 
 #: dashboards/syspanel/templates/syspanel/projects/_quotas.html:7
 #: dashboards/syspanel/templates/syspanel/projects/_quotas.html:22
-#, fuzzy
 msgid "Update Quota"
-msgstr "インスタンスを更新"
+msgstr "クォータの更新"
 
 #: dashboards/syspanel/templates/syspanel/projects/_quotas.html:17
 #, fuzzy, python-format
@@ -2002,22 +1982,20 @@ msgstr "ここで、複数のユーザ資格を編集できます。"
 #: dashboards/syspanel/templates/syspanel/projects/_update.html:23
 #: dashboards/syspanel/templates/syspanel/projects/quotas.html:6
 #: dashboards/syspanel/templates/syspanel/projects/update.html:6
-#, fuzzy
 msgid "Update Project"
-msgstr "プロジェクトを削除"
+msgstr "プロジェクトの更新"
 
 #: dashboards/syspanel/templates/syspanel/projects/_update.html:18
-#, fuzzy
 msgid "From here you can edit a project."
-msgstr "ここで、複数のユーザ資格を編集できます。"
+msgstr "プロジェクトを編集できます"
 
 #: dashboards/syspanel/templates/syspanel/projects/usage.html:3
 msgid "Project Usage Overview"
-msgstr ""
+msgstr "プロジェクト使用状況"
 
 #: dashboards/syspanel/templates/syspanel/projects/usage.html:7
 msgid "Project Usage"
-msgstr ""
+msgstr "プロジェクト使用状況"
 
 #: dashboards/syspanel/templates/syspanel/projects/users.html:7
 #, fuzzy
@@ -2026,7 +2004,7 @@ msgstr "プロジェクトからユーザを削除します。"
 
 #: dashboards/syspanel/templates/syspanel/quotas/index.html:8
 msgid "Default Quotas"
-msgstr ""
+msgstr "デフォルト クォータ"
 
 #: dashboards/syspanel/templates/syspanel/users/_create.html:7
 #: dashboards/syspanel/templates/syspanel/users/_create.html:22
@@ -2072,7 +2050,7 @@ msgstr "ユーザ名"
 #: dashboards/syspanel/users/forms.py:105
 #: dashboards/syspanel/users/tables.py:126
 msgid "Email"
-msgstr ""
+msgstr "メール"
 
 #: dashboards/syspanel/users/forms.py:64
 #: dashboards/syspanel/users/forms.py:106 views/auth_forms.py:65
@@ -2081,9 +2059,8 @@ msgstr "パスワード"
 
 #: dashboards/syspanel/users/forms.py:69
 #: dashboards/syspanel/users/forms.py:112
-#, fuzzy
 msgid "Confirm Password"
-msgstr "パスワード"
+msgstr "パスワード(確認)"
 
 #: dashboards/syspanel/users/forms.py:72
 #: dashboards/syspanel/users/forms.py:115
@@ -2112,7 +2089,7 @@ msgstr ""
 
 #: dashboards/syspanel/users/forms.py:127
 msgid "email"
-msgstr ""
+msgstr "メール"
 
 #: dashboards/syspanel/users/forms.py:136
 #, fuzzy
@@ -2120,7 +2097,6 @@ msgid "primary project"
 msgstr "テナント"
 
 #: dashboards/syspanel/users/forms.py:147
-#, fuzzy
 msgid "password"
 msgstr "パスワード"
 
@@ -2136,17 +2112,15 @@ msgstr "キー%sを削除できません。"
 
 #: dashboards/syspanel/users/tables.py:30
 msgid "Enable"
-msgstr ""
+msgstr "有効"
 
 #: dashboards/syspanel/users/tables.py:31
-#, fuzzy
 msgid "Enable Users"
-msgstr "イメージを更新"
+msgstr "ユーザを有効化"
 
 #: dashboards/syspanel/users/tables.py:46
-#, fuzzy, python-format
 msgid "Error enabling user: %s"
-msgstr "ユーザ%sを作成中..."
+msgstr "ユーザの有効化でエラーが起きました: %s"
 
 #: dashboards/syspanel/users/tables.py:49
 #, fuzzy, python-format
@@ -2160,15 +2134,15 @@ msgstr "プロジェクト%(proj)sを正常に修正しました。"
 
 #: dashboards/syspanel/users/tables.py:59
 msgid "Disable"
-msgstr ""
+msgstr "無効"
 
 #: dashboards/syspanel/users/tables.py:60
 msgid "Disable Users"
-msgstr ""
+msgstr "ユーザの無効化"
 
 #: dashboards/syspanel/users/tables.py:71
 msgid "You cannot disable the user you are currently logged in as."
-msgstr ""
+msgstr "ログイン中のユーザは無効化できません"
 
 #: dashboards/syspanel/users/tables.py:79
 #, fuzzy, python-format
@@ -2181,23 +2155,20 @@ msgid "Disabled the following users: %s"
 msgstr "キー%sを削除できません。"
 
 #: dashboards/syspanel/users/tables.py:86
-#, fuzzy, python-format
 msgid "Successfully disabled users: %s"
 msgstr "プロジェクト%(proj)sを正常に修正しました。"
 
 #: dashboards/syspanel/users/views.py:47
-#, fuzzy
 msgid "Unable to retrieve user list."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "ユーザ一覧の取得ができません"
 
 #: dashboards/syspanel/users/views.py:63
-#, fuzzy
 msgid "Unable to update user."
-msgstr "イメージ%sを更新できません。"
+msgstr "ユーザの更新が出来ません"
 
 #: tables/actions.py:299
 msgid "Filter"
-msgstr ""
+msgstr "フィルター"
 
 #: tables/actions.py:461
 #, python-format
