@@ -90,7 +90,7 @@ msgstr "リクエスト処理中に予期しないエラーが発生しました
 
 #: templates/_header.html:3
 msgid "Logged in as"
-msgstr "ログイン"
+msgstr "ログイン中"
 
 #: templates/_header.html:4
 msgid "Settings"
