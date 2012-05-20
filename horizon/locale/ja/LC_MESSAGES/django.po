@@ -446,7 +446,6 @@ msgid "Source"
 msgstr ""
 
 #: dashboards/nova/access_and_security/security_groups/tables.py:106
-#, fuzzy
 msgid "Security Group Rules"
 msgstr "セキュリティグループ"
 
@@ -456,113 +455,104 @@ msgid "Unable to retrieve security group."
 msgstr "キー%sを作成できません。"
 
 #: dashboards/nova/access_and_security/security_groups/views.py:64
-#, fuzzy
 msgid "Unable to retrieve security groups."
 msgstr "キー%sを作成できません。"
 
 #: dashboards/nova/containers/forms.py:38
 msgid "Slash is not an allowed character."
-msgstr ""
+msgstr "スラッシュは使用できません。"
 
 #: dashboards/nova/containers/forms.py:45
 #: dashboards/nova/containers/tables.py:103
-#, fuzzy
 msgid "Container Name"
-msgstr "ユーザ名"
+msgstr "コンテナ名"
 
 #: dashboards/nova/containers/forms.py:51
-#, fuzzy
 msgid "Container created successfully."
-msgstr "ボリューム %(id)s %(name)s は正常に作成されました。"
+msgstr "コンテナは正常に作成されました。"
 
 #: dashboards/nova/containers/forms.py:53
-#, fuzzy
 msgid "Unable to create container."
-msgstr "キー%sを作成できません。"
+msgstr "コンテナを作成できません"
 
 #: dashboards/nova/containers/forms.py:59
 #: dashboards/nova/containers/tables.py:170
-#, fuzzy
 msgid "Object Name"
-msgstr "ユーザ名"
+msgstr "オブジェクト名"
 
 #: dashboards/nova/containers/forms.py:61
 msgid "File"
-msgstr ""
+msgstr "ファイル"
 
 #: dashboards/nova/containers/forms.py:73
-#, fuzzy
 msgid "Object was successfully uploaded."
-msgstr "セキュリティグループ%sが正常に削除されました。"
+msgstr "オブジェクトは正常にアップロードされました"
 
 #: dashboards/nova/containers/forms.py:75
-#, fuzzy
 msgid "Unable to upload object."
-msgstr "イメージ%sを更新できません。"
+msgstr "オブジェクトをアップロードできません。"
 
 #: dashboards/nova/containers/forms.py:81
 msgid "Destination container"
-msgstr ""
+msgstr "宛先コンテナ"
 
 #: dashboards/nova/containers/forms.py:84
 msgid "Destination object name"
-msgstr ""
+msgstr "宛先オブジェクト名"
 
 #: dashboards/nova/containers/forms.py:107
 #, python-format
 msgid "Object \"%(obj)s\" copied to container \"%(container)s\"."
-msgstr ""
+msgstr "オブジェクト \"%(obj)s\" がコンテナ \"%(container)s\" にコピーされました。"
 
 #: dashboards/nova/containers/forms.py:115
 msgid "Unable to copy object."
-msgstr ""
+msgstr "オブジェクトをコピーできません"
 
 #: dashboards/nova/containers/panel.py:28
 #: dashboards/nova/containers/tables.py:36
 #: dashboards/nova/containers/tables.py:114
 #: dashboards/nova/templates/nova/containers/index.html:8
 msgid "Containers"
-msgstr ""
+msgstr "コンテナ"
 
 #: dashboards/nova/containers/tables.py:35
-#, fuzzy
 msgid "Container"
-msgstr "ユーザ名"
+msgstr "コンテナ"
 
 #: dashboards/nova/containers/tables.py:52
-#, fuzzy, python-format
+#, python-format
 msgid "Unable to delete non-empty container: %s"
-msgstr "キー%sを削除できません。"
+msgstr "空でないコンテナは削除できません: %s "
 
 #: dashboards/nova/containers/tables.py:56
-#, fuzzy, python-format
+#, python-format
 msgid "Successfully deleted containers: %s"
-msgstr "プロジェクト%(proj)sを正常に修正しました。"
+msgstr "コンテナは正常に削除されました: %s"
 
 #: dashboards/nova/containers/tables.py:63
 #: dashboards/nova/templates/nova/containers/_create.html:7
 #: dashboards/nova/templates/nova/containers/_create.html:22
 #: dashboards/nova/templates/nova/containers/create.html:6
 msgid "Create Container"
-msgstr ""
+msgstr "コンテナの作成"
 
 #: dashboards/nova/containers/tables.py:70
 msgid "List Objects"
-msgstr ""
+msgstr "オブジェクト一覧"
 
 #: dashboards/nova/containers/tables.py:77
 #: dashboards/nova/templates/nova/objects/_upload.html:23
 #: dashboards/nova/templates/nova/objects/upload.html:3
 msgid "Upload Object"
-msgstr ""
+msgstr "オブジェクトのアップロード"
 
 #: dashboards/nova/containers/tables.py:105
 #: dashboards/nova/containers/tables.py:121
 #: dashboards/nova/containers/tables.py:178
 #: dashboards/nova/templates/nova/objects/index.html:3
-#, fuzzy
 msgid "Objects"
-msgstr "ユーザ名"
+msgstr "オブジェクト"
 
 #: dashboards/nova/containers/tables.py:107
 #: dashboards/nova/containers/tables.py:171
@@ -575,37 +565,32 @@ msgid "Size"
 msgstr "サイズ"
 
 #: dashboards/nova/containers/tables.py:120
-#, fuzzy
 msgid "Object"
 msgstr "ユーザ名"
 
 #: dashboards/nova/containers/tables.py:131
 msgid "Copy"
-msgstr ""
+msgstr "コピー"
 
 #: dashboards/nova/containers/tables.py:142
 msgid "Download"
 msgstr "ダウンロード"
 
 #: dashboards/nova/containers/views.py:57
-#, fuzzy
 msgid "Unable to retrieve container list."
-msgstr "キー%sを作成できません。"
+msgstr "コンテナの一覧を取得できません。"
 
 #: dashboards/nova/containers/views.py:84
-#, fuzzy
 msgid "Unable to retrieve object list."
-msgstr "キー%sを作成できません。"
+msgstr "オブジェクトの一覧を取得できません。"
 
 #: dashboards/nova/containers/views.py:122
-#, fuzzy
 msgid "Unable to retrieve object."
-msgstr "キー%sを作成できません。"
+msgstr "オブジェクトを取得できません。"
 
 #: dashboards/nova/containers/views.py:144
-#, fuzzy
 msgid "Unable to list containers."
-msgstr "キー%sを削除できません。"
+msgstr "コンテナの一覧を表示できません。"
 
 #: dashboards/nova/images_and_snapshots/panel.py:25
 msgid "Images & Snapshots"
