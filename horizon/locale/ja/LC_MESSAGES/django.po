@@ -658,7 +658,7 @@ msgstr "ユーザーデータ"
 #: dashboards/nova/images_and_snapshots/images/forms.py:102
 #: dashboards/syspanel/flavors/tables.py:13
 msgid "Flavor"
-msgstr "フレーバー"
+msgstr "インスタンスタイプ"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:103
 msgid "Size of image to launch."
@@ -1002,7 +1002,7 @@ msgstr "タスク"
 #: dashboards/nova/instances_and_volumes/instances/tables.py:251
 #: dashboards/syspanel/instances/tables.py:81
 msgid "Power State"
-msgstr "状態"
+msgstr "稼働状態"
 
 #: dashboards/nova/instances_and_volumes/instances/tabs.py:35
 msgid "Log"
@@ -1275,7 +1275,7 @@ msgstr "情報"
 #: dashboards/syspanel/users/forms.py:103
 #: dashboards/syspanel/users/tables.py:124
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_detail_overview.html:17
 msgid "Checksum"
@@ -1656,12 +1656,11 @@ msgstr "システムパネル"
 
 #: dashboards/syspanel/dashboard.py:30
 msgid "Admin"
-msgstr ""
+msgstr "管理"
 
 #: dashboards/syspanel/flavors/forms.py:36
-#, fuzzy
 msgid "Flavor ID"
-msgstr "フレーバーID"
+msgstr "インスタンスタイプID"
 
 #: dashboards/syspanel/flavors/forms.py:39
 msgid "Memory MB"
@@ -1676,9 +1675,8 @@ msgid "Ephemeral Disk GB"
 msgstr "一時ディスク(GB)"
 
 #: dashboards/syspanel/flavors/forms.py:51
-#, fuzzy, python-format
 msgid "%s was successfully added to flavors."
-msgstr "キー%sは正常に削除されました。"
+msgstr "インスタンスタイプ %s は登録されました"
 
 #: dashboards/syspanel/flavors/panel.py:28
 #: dashboards/syspanel/flavors/tables.py:14
@@ -1700,16 +1698,15 @@ msgstr "名前"
 
 #: dashboards/syspanel/flavors/tables.py:32
 msgid "Root Disk"
-msgstr ""
+msgstr "ルートディスク"
 
 #: dashboards/syspanel/flavors/tables.py:34
 msgid "Ephemeral Disk"
 msgstr "一時ディスク"
 
 #: dashboards/syspanel/flavors/views.py:48
-#, fuzzy
 msgid "Unauthorized."
-msgstr "%sを認証できません。"
+msgstr "認証に失敗しました"
 
 #: dashboards/syspanel/flavors/views.py:53
 msgid "Unable to get flavor list: %s"
@@ -1753,7 +1750,6 @@ msgid "Enabled"
 msgstr "有効"
 
 #: dashboards/syspanel/projects/forms.py:75
-#, python-format
 msgid "%s was successfully created."
 msgstr "プロジェクト %s が作成されました"
 
@@ -1818,7 +1814,7 @@ msgstr "ユーザの変更"
 
 #: dashboards/syspanel/projects/tables.py:31
 msgid "View Usage"
-msgstr ""
+msgstr "使用状況の表示"
 
 #: dashboards/syspanel/projects/tables.py:38
 msgid "Edit Project"
@@ -1831,17 +1827,15 @@ msgstr "作成"
 #: dashboards/syspanel/projects/tables.py:73
 #: dashboards/syspanel/services/tables.py:37
 msgid "Id"
-msgstr ""
+msgstr "ID"
 
 #: dashboards/syspanel/projects/tables.py:89
-#, fuzzy
 msgid "Remove"
-msgstr "イメージを削除する"
+msgstr "削除"
 
 #: dashboards/syspanel/projects/tables.py:90
-#, fuzzy
 msgid "Removed"
-msgstr "イメージを削除する"
+msgstr "削除されました"
 
 #: dashboards/syspanel/projects/tables.py:91
 #: dashboards/syspanel/users/tables.py:92
