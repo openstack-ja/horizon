@@ -566,7 +566,7 @@ msgstr "サイズ"
 
 #: dashboards/nova/containers/tables.py:120
 msgid "Object"
-msgstr "ユーザ名"
+msgstr "オブジェクト"
 
 #: dashboards/nova/containers/tables.py:131
 msgid "Copy"
