@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstack-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-24 16:40-0700\n"
-"PO-Revision-Date: 2012-05-19 02:15+0900\n"
-"Last-Translator: Takeshi Nakajima <tnakaji@midokura.jp>\n"
+"PO-Revision-Date: 2012-05-22 04:53+0900\n"
+"Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -80,25 +80,24 @@ msgid "Access & Security"
 msgstr "アクセスとセキュリティ"
 
 #: dashboards/nova/access_and_security/views.py:52
-#, fuzzy
 msgid "Unable to retrieve keypair list."
-msgstr "キー%sを作成できません。"
+msgstr "キーペアリストを取得できません。"
 
 #: dashboards/nova/access_and_security/views.py:62
-#, fuzzy, python-format
+#, python-format
 msgid "Error fetching security_groups: %s"
-msgstr "セキュリティグループ%sを作成できません。"
+msgstr "セキュリティグループ取得時のエラー: %s"
 
 #: dashboards/nova/access_and_security/views.py:72
 #, python-format
 msgid "Error fetching floating ips: %s"
-msgstr ""
+msgstr "Floating IP 取得時のエラー: %s"
 
 #: dashboards/nova/access_and_security/floating_ips/forms.py:39
 #: dashboards/nova/access_and_security/floating_ips/tables.py:47
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_allocate.html:22
 msgid "Floating IP"
-msgstr ""
+msgstr "Floating IP"
 
 #: dashboards/nova/access_and_security/floating_ips/forms.py:42
 #: dashboards/nova/images_and_snapshots/snapshots/forms.py:38
@@ -129,41 +128,39 @@ msgstr "インスタンス"
 #: dashboards/nova/access_and_security/floating_ips/forms.py:64
 #, python-format
 msgid "Successfully associated Floating IP %(ip)s with Instance: %(inst)s"
-msgstr ""
+msgstr "Floating IP %(ip)s の Instance %(inst)s への割り当てに成功しました。"
 
 #: dashboards/nova/access_and_security/floating_ips/forms.py:70
-#, fuzzy, python-format
+#, python-format
 msgid "Error associating Floating IP: %s"
-msgstr "イメージ%sを更新できません。"
+msgstr "Floating IP 割り当て時のエラー: %s"
 
 #: dashboards/nova/access_and_security/floating_ips/forms.py:76
 msgid "Pool"
-msgstr ""
+msgstr "プール"
 
 #: dashboards/nova/access_and_security/floating_ips/forms.py:91
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Successfully allocated Floating IP \"%(ip)s\" to project \"%(project)s\""
-msgstr "正常にVPNプロジェクト%(proj)sを開始しました。"
+msgstr ""
+"Floating IP \"%(ip)s\" をプロジェクト \"%(project)s\" 用に確保しました。"
 
 #: dashboards/nova/access_and_security/floating_ips/forms.py:95
-#, fuzzy
 msgid "Unable to allocate Floating IP."
-msgstr "キー%sを作成できません。"
+msgstr "Floating IP を確保できません。"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:35
-#, fuzzy
 msgid "Allocate IP To Project"
-msgstr "プロジェクトを削除"
+msgstr "プロジェクト用の IP の確保"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:45
 msgid "Release"
-msgstr "リリース"
+msgstr "解放"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:46
-#, fuzzy
 msgid "Released"
-msgstr "リリース"
+msgstr "解放しました"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:48
 #: dashboards/nova/access_and_security/floating_ips/tables.py:117
@@ -174,21 +171,20 @@ msgstr "Floating IP"
 #: dashboards/nova/access_and_security/floating_ips/tables.py:57
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_associate.html:22
 msgid "Associate IP"
-msgstr ""
+msgstr "IP の割り当て"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:69
 msgid "Disassociate IP"
-msgstr ""
+msgstr "IP の割り当て解除"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:83
 #, python-format
 msgid "Successfully disassociated Floating IP: %s"
-msgstr ""
+msgstr "Floating IP の割り当て解除に成功しました: %s"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:87
-#, fuzzy
 msgid "Unable to disassociate floating IP."
-msgstr "イメージ%sを更新できません。"
+msgstr "Floating IP の割り当てを解除できません。"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:100
 #: dashboards/nova/instances_and_volumes/instances/tables.py:237
@@ -198,12 +194,11 @@ msgstr "IPアドレス"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:106
 msgid "Floating IP Pool"
-msgstr ""
+msgstr "Floating IP プール"
 
 #: dashboards/nova/access_and_security/floating_ips/views.py:51
-#, fuzzy
 msgid "Unable to associate floating IP."
-msgstr "イメージ%sを更新できません。"
+msgstr "Floating IP を割り当てできません。"
 
 #: dashboards/nova/access_and_security/floating_ips/views.py:60
 #: dashboards/syspanel/instances/views.py:48
@@ -212,7 +207,7 @@ msgstr "インスタンスの一覧を取得できません"
 
 #: dashboards/nova/access_and_security/floating_ips/views.py:100
 msgid "No floating IP pools available."
-msgstr ""
+msgstr "Floating IP プールがありません。"
 
 #: dashboards/nova/access_and_security/keypairs/forms.py:38
 #: dashboards/nova/access_and_security/keypairs/forms.py:57
@@ -224,6 +219,8 @@ msgstr "キーペア名"
 msgid ""
 "Keypair names may only contain letters, numbers, underscores and hyphens."
 msgstr ""
+"キーペア名では、アルファベット、数字、アンダースコア、ハイフンだけが使用でき"
+"ます。"
 
 #: dashboards/nova/access_and_security/keypairs/forms.py:52
 #, python-format
@@ -237,12 +234,12 @@ msgstr "公開鍵"
 #: dashboards/nova/access_and_security/keypairs/forms.py:65
 #, python-format
 msgid "Successfully imported public key: %s"
-msgstr ""
+msgstr "公開鍵を正常に取り込みました: %s"
 
 #: dashboards/nova/access_and_security/keypairs/forms.py:72
 #, python-format
 msgid "Error Importing Keypair: %s"
-msgstr ""
+msgstr "キーペア取り込み時のエラー: %s"
 
 #: dashboards/nova/access_and_security/keypairs/tables.py:29
 #: dashboards/nova/images_and_snapshots/images/forms.py:104
@@ -322,31 +319,32 @@ msgid "Description"
 msgstr "説明"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:51
-#, fuzzy, python-format
+#, python-format
 msgid "Successfully created security_group: %s"
-msgstr "セキュリティグループ%sを作成できません。"
+msgstr "セキュリティグループ %s を作成しました。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:54
-#, fuzzy
 msgid "Unable to create security group."
-msgstr "セキュリティグループ"
+msgstr "セキュリティグループを作成できません。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:59
 #: dashboards/nova/access_and_security/security_groups/tables.py:92
 msgid "IP Protocol"
-msgstr ""
+msgstr "IPプロトコル"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:65
 #: dashboards/nova/access_and_security/security_groups/forms.py:71
 #: dashboards/nova/access_and_security/security_groups/tables.py:94
 msgid "From Port"
-msgstr ""
+msgstr "送信元ポート"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:66
 msgid ""
 "TCP/UDP: Enter integer value between 1 and 65535. ICMP: enter a value for "
 "ICMP type in the range (-1: 255)"
 msgstr ""
+"TCP/UDP: 1〜65535 の整数値。\n"
+"ICMP: (-1〜255) の範囲の ICMP 種別を示す値。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:72
 #: dashboards/nova/images_and_snapshots/images/tables.py:86
@@ -357,58 +355,61 @@ msgstr "種別"
 #: dashboards/nova/access_and_security/security_groups/forms.py:80
 #: dashboards/nova/access_and_security/security_groups/tables.py:95
 msgid "To Port"
-msgstr ""
+msgstr "宛先ポート"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:75
 msgid ""
 "TCP/UDP: Enter integer value between 1 and 65535. ICMP: enter a value for "
 "ICMP code in the range (-1: 255)"
 msgstr ""
+"TCP/UDP: 1〜65535 の整数値。\n"
+"ICMP: (-1〜255) の範囲の ICMP コードを示す値。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:81
 msgid "Code"
-msgstr ""
+msgstr "コード"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:84
-#, fuzzy
 msgid "Source Group"
-msgstr "セキュリティグループ"
+msgstr "元グループ"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:85
 msgid "CIDR"
-msgstr ""
+msgstr "CIDR"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:88
 msgid "Classless Inter-Domain Routing (e.g. 192.168.0.0/24)"
-msgstr ""
+msgstr "Classless Inter-Domain Routing (例: 192.168.0.0/24)"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:114
 msgid "The \"from\" port number is invalid."
-msgstr ""
+msgstr "「送信元」ポート番号が不正です。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:117
 msgid "The \"to\" port number is invalid."
-msgstr ""
+msgstr "「宛先」ポート番号が不正です。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:120
 msgid ""
 "The \"to\" port number must be greater than or equal to the \"from\" port "
 "number."
-msgstr ""
+msgstr "「宛先」ポート番号は「送信元」ポート番号以上でなければいけません。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:126
 msgid "Either CIDR or Source Group may be specified, but not both."
 msgstr ""
+"CIDR か元のセキュリティグループのどちらかを指定する必要がありますが、そのどち"
+"らでもありません。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:147
-#, fuzzy, python-format
+#, python-format
 msgid "Successfully added rule: %s"
-msgstr "プロジェクト%(proj)sを正常に修正しました。"
+msgstr "ルールを正常に追加しました: %s"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:151
-#, fuzzy, python-format
+#, python-format
 msgid "Error adding rule security group: %s"
-msgstr "セキュリティグループ%sを削除できません"
+msgstr "セキュリティグループのルール追加時のエラー: %s"
 
 #: dashboards/nova/access_and_security/security_groups/tables.py:30
 msgid "Security Group"
@@ -437,22 +438,20 @@ msgid "Rule"
 msgstr "ルール"
 
 #: dashboards/nova/access_and_security/security_groups/tables.py:72
-#, fuzzy
 msgid "Rules"
-msgstr "ユーザ資格の編集"
+msgstr "ルール"
 
 #: dashboards/nova/access_and_security/security_groups/tables.py:96
 msgid "Source"
-msgstr ""
+msgstr "接続元"
 
 #: dashboards/nova/access_and_security/security_groups/tables.py:106
 msgid "Security Group Rules"
 msgstr "セキュリティグループ"
 
 #: dashboards/nova/access_and_security/security_groups/views.py:55
-#, fuzzy
 msgid "Unable to retrieve security group."
-msgstr "キー%sを作成できません。"
+msgstr "セキュリティグループ情報を取得できません。"
 
 #: dashboards/nova/access_and_security/security_groups/views.py:64
 msgid "Unable to retrieve security groups."
@@ -503,7 +502,8 @@ msgstr "宛先オブジェクト名"
 #: dashboards/nova/containers/forms.py:107
 #, python-format
 msgid "Object \"%(obj)s\" copied to container \"%(container)s\"."
-msgstr "オブジェクト \"%(obj)s\" がコンテナ \"%(container)s\" にコピーされました。"
+msgstr ""
+"オブジェクト \"%(obj)s\" がコンテナ \"%(container)s\" にコピーされました。"
 
 #: dashboards/nova/containers/forms.py:115
 msgid "Unable to copy object."
@@ -597,29 +597,26 @@ msgid "Images & Snapshots"
 msgstr "イメージとスナップショット"
 
 #: dashboards/nova/images_and_snapshots/views.py:53
-#, fuzzy
 msgid "Unable to retrieve images."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "イメージ情報を取得できません。"
 
 #: dashboards/nova/images_and_snapshots/views.py:61
-#, fuzzy
 msgid "Unable to retrieve snapshots."
-msgstr "キー%sを作成できません。"
+msgstr "スナップショット情報を取得できません。"
 
 #: dashboards/nova/images_and_snapshots/views.py:69
-#, fuzzy
 msgid "Unable to retrieve volume snapshots."
-msgstr "ボリューム%sを作成できません。"
+msgstr "ボリュームスナップショット情報を取得できません。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:47
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_detail_overview.html:48
 msgid "Kernel ID"
-msgstr ""
+msgstr "カーネルID"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:52
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_detail_overview.html:52
 msgid "Ramdisk ID"
-msgstr ""
+msgstr "RAMディスクID"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:57
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_detail_overview.html:44
@@ -630,22 +627,21 @@ msgstr ""
 #: dashboards/nova/images_and_snapshots/images/tables.py:95
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_detail_overview.html:32
 msgid "Container Format"
-msgstr ""
+msgstr "格納形式"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:65
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_detail_overview.html:34
 msgid "Disk Format"
-msgstr ""
+msgstr "ディスク形式"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:73
-#, fuzzy, python-format
+#, python-format
 msgid "Unable to update image \"%s\"."
-msgstr "イメージ%sを更新できません。"
+msgstr "イメージ \"%s\" を更新できません。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:89
-#, fuzzy
 msgid "Image was successfully updated."
-msgstr "イメージ%sが正常に登録削除されました。"
+msgstr "イメージは正常に更新されました。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:96
 msgid "Server Name"
@@ -678,17 +674,16 @@ msgid "Number of instances to launch."
 msgstr "起動するインスタンス数"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:118
-#, fuzzy
 msgid "Launch instance in these security groups."
-msgstr "セキュリティグループ%sを作成できません。"
+msgstr "指定されたセキュリティグループでインスタンスを起動できません。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:120
 msgid "Volume or Volume Snapshot"
-msgstr ""
+msgstr "ボリュームやボリュームスナップショット"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:122
 msgid "Volume to boot from."
-msgstr ""
+msgstr "起動元のボリュームを指定します。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:123
 msgid "Device Name"
@@ -697,20 +692,20 @@ msgstr "デバイス名"
 #: dashboards/nova/images_and_snapshots/images/forms.py:126
 msgid "Volume mount point (e.g. 'vda' mounts at '/dev/vda')."
 msgstr ""
+"ボリュームのマウントポイント (例: 'vda' と指定すると '/dev/vda' にマウントさ"
+"れます)。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:129
-#, fuzzy
 msgid "Delete on Terminate"
-msgstr "削除"
+msgstr "終了時に削除"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:132
 msgid "Delete volume on instance terminate"
-msgstr ""
+msgstr "インスタンスの終了時にボリュームを削除します"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:138
-#, fuzzy
 msgid "Select a keypair"
-msgstr "プロジェクトを削除"
+msgstr "キーペアを選択して下さい"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:140
 msgid "No keypairs available."
@@ -718,7 +713,7 @@ msgstr "キーペアがありません。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:155
 msgid "Cannot launch more than one instance if volume is specified."
-msgstr ""
+msgstr "同じボリュームを指定して複数のインスタンスは起動できません。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:183
 #, python-format
@@ -783,30 +778,26 @@ msgid "Overview"
 msgstr "概要"
 
 #: dashboards/nova/images_and_snapshots/images/tabs.py:37
-#, fuzzy
 msgid "Unable to retrieve image details."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "イメージの詳細を取得できません。"
 
 #: dashboards/nova/images_and_snapshots/images/views.py:60
 #: dashboards/nova/images_and_snapshots/images/views.py:164
-#, fuzzy, python-format
+#, python-format
 msgid "Unable to retrieve image \"%s\"."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "イメージ \"%s\" の情報を取得できません。"
 
 #: dashboards/nova/images_and_snapshots/images/views.py:93
-#, fuzzy
 msgid "Unable to retrieve instance flavors."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "インスタンスタイプを取得できません。"
 
 #: dashboards/nova/images_and_snapshots/images/views.py:103
-#, fuzzy
 msgid "Unable to retrieve keypairs."
-msgstr "キー%sを作成できません。"
+msgstr "キーペアを取得できません。"
 
 #: dashboards/nova/images_and_snapshots/images/views.py:112
-#, fuzzy
 msgid "Unable to retrieve list of security groups"
-msgstr "キー%sを作成できません。"
+msgstr "セキュリティグループのリストを取得できません。"
 
 #: dashboards/nova/images_and_snapshots/images/views.py:117
 msgid "Select Volume"
@@ -839,6 +830,7 @@ msgstr "スナップショット名"
 #, python-format
 msgid "Snapshot \"%(name)s\" created for instance \"%(inst)s\""
 msgstr ""
+"インスタンス \"%(inst)s\" のスナップショット \"%(name)s\" を作成しました。"
 
 #: dashboards/nova/images_and_snapshots/snapshots/forms.py:56
 msgid "Unable to create snapshot."
@@ -853,14 +845,15 @@ msgid "Instance Snapshots"
 msgstr "インスタンスのスナップショット"
 
 #: dashboards/nova/images_and_snapshots/snapshots/views.py:50
-#, fuzzy
 msgid "Unable to retrieve instance."
-msgstr "%sをリボーク(無効化)できません。"
+msgstr "インスタンス情報を取得できません。"
 
 #: dashboards/nova/images_and_snapshots/snapshots/views.py:53
 #, python-format
 msgid "To create a snapshot, the instance must be in the \"%s\" state."
 msgstr ""
+"スナップショットを作成するには、インスタンスが \"%s\" 状態でなければいけませ"
+"ん。"
 
 #: dashboards/nova/images_and_snapshots/volume_snapshots/tables.py:30
 msgid "Volume Snapshot"
@@ -904,11 +897,11 @@ msgstr "インスタンスを更新できません。"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:55
 msgid "Terminate"
-msgstr "削除"
+msgstr "終了"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:56
 msgid "Terminated"
-msgstr "削除"
+msgstr "終了しました"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:58
 #: dashboards/nova/instances_and_volumes/instances/tables.py:70
@@ -928,7 +921,7 @@ msgstr "リストを再読み込みする"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:68
 msgid "Rebooted"
-msgstr "再起動中"
+msgstr "再起動しました"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:82
 msgid "Pause"
@@ -940,11 +933,11 @@ msgstr "一時停止解除"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:83
 msgid "Paused"
-msgstr "一時停止"
+msgstr "一時停止しました"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:83
 msgid "Unpaused"
-msgstr "一時停止解除"
+msgstr "一時停止を解除しました"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:110
 msgid "Suspend"
@@ -956,11 +949,11 @@ msgstr "再開"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:111
 msgid "Suspended"
-msgstr "停止中"
+msgstr "停止しました"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:111
 msgid "Resumed"
-msgstr "再開中"
+msgstr "再開しました"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:138
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_launch.html:63
@@ -1674,6 +1667,7 @@ msgid "Ephemeral Disk GB"
 msgstr "一時ディスク(GB)"
 
 #: dashboards/syspanel/flavors/forms.py:51
+#, python-format
 msgid "%s was successfully added to flavors."
 msgstr "インスタンスタイプ %s は登録されました"
 
@@ -1708,6 +1702,7 @@ msgid "Unauthorized."
 msgstr "認証に失敗しました"
 
 #: dashboards/syspanel/flavors/views.py:53
+#, python-format
 msgid "Unable to get flavor list: %s"
 msgstr "インスタンスタイプの一覧を取得できません: %s"
 
@@ -1749,6 +1744,7 @@ msgid "Enabled"
 msgstr "有効"
 
 #: dashboards/syspanel/projects/forms.py:75
+#, python-format
 msgid "%s was successfully created."
 msgstr "プロジェクト %s が作成されました"
 
@@ -1757,6 +1753,7 @@ msgid "Unable to create tenant."
 msgstr "プロジェクトを作成出来ませんでした"
 
 #: dashboards/syspanel/projects/forms.py:100
+#, python-format
 msgid "%s was successfully updated."
 msgstr "%s が更新されました"
 
@@ -1789,8 +1786,9 @@ msgid "RAM (in MB)"
 msgstr "メモリ(MB)"
 
 #: dashboards/syspanel/projects/forms.py:136
+#, python-format
 msgid "Quotas for %s were successfully updated."
-msgstr "クォータ % が更新されました"
+msgstr "クォータ %s が更新されました"
 
 #: dashboards/syspanel/projects/forms.py:139
 msgid "Unable to update quotas."
@@ -1950,6 +1948,7 @@ msgid "Update Quota"
 msgstr "クォータの更新"
 
 #: dashboards/syspanel/templates/syspanel/projects/_quotas.html:17
+#, python-format
 msgid ""
 "From here you can edit quotas (max limits) for the project %(tenant.name)s."
 msgstr "プロジェクト %(tenant.name)s のクォータ(上限値)を設定できます"
@@ -2040,6 +2039,7 @@ msgid "Primary Project"
 msgstr "プライマリ プロジェクト"
 
 #: dashboards/syspanel/users/forms.py:84
+#, python-format
 msgid "User \"%s\" was successfully created."
 msgstr "ユーザ \"%s\" を作成しました"
 
@@ -2068,10 +2068,12 @@ msgid "password"
 msgstr "パスワード"
 
 #: dashboards/syspanel/users/forms.py:158
+#, python-format
 msgid "Updated %(attributes)s for \"%(user)s\"."
 msgstr "ユーザ \"%(user)s\" の属性 %(attributes)s を更新しました"
 
 #: dashboards/syspanel/users/forms.py:164
+#, python-format
 msgid "Unable to update %(attributes)s for \"%(user)s\"."
 msgstr "ユーザ \"%(user)s\" の属性 %(attributes)s の更新が出来ません"
 
@@ -2084,14 +2086,17 @@ msgid "Enable Users"
 msgstr "ユーザを有効化"
 
 #: dashboards/syspanel/users/tables.py:46
+#, python-format
 msgid "Error enabling user: %s"
 msgstr "ユーザの有効化でエラーが起きました: %s"
 
 #: dashboards/syspanel/users/tables.py:49
+#, python-format
 msgid "Enabled the following users: %s"
 msgstr "次のユーザを有効化しました: %s"
 
 #: dashboards/syspanel/users/tables.py:52
+#, python-format
 msgid "Successfully enabled users: %s"
 msgstr "次のユーザを有効化しました: %s"
 
@@ -2108,14 +2113,17 @@ msgid "You cannot disable the user you are currently logged in as."
 msgstr "ログイン中のユーザは無効化できません"
 
 #: dashboards/syspanel/users/tables.py:79
+#, python-format
 msgid "Error disabling user: %s"
 msgstr "ユーザの無効化でエラーが発生しました: %s"
 
 #: dashboards/syspanel/users/tables.py:82
+#, python-format
 msgid "Disabled the following users: %s"
 msgstr "次のユーザを無効化しました: %s"
 
 #: dashboards/syspanel/users/tables.py:86
+#, fuzzy, python-format
 msgid "Successfully disabled users: %s"
 msgstr "プロジェクト%(proj)sを正常に修正しました。"
 
@@ -2151,7 +2159,6 @@ msgid "Delete"
 msgstr "削除"
 
 #: tables/actions.py:484
-#, fuzzy
 msgid "Deleted"
 msgstr "削除しました"
 
