@@ -2345,48 +2345,48 @@ msgstr ""
 #: usage/base.py:94
 #, fuzzy
 msgid "Unable to retrieve usage information."
-msgstr "イメージ%sの登録削除ができませんでした。"
+msgstr "使用情報が取得できません。"
 
 #: usage/base.py:97
 msgid "You are viewing data for the future, which may or may not exist."
-msgstr ""
+msgstr "結果が反映されるまで時間がかかります。しばらくお待ち下さい。"
 
 #: usage/tables.py:10
 msgid "Download CSV Summary"
-msgstr ""
+msgstr "CSV ダウンロード"
 
 #: usage/tables.py:23
 msgid "VCPU Hours"
-msgstr ""
+msgstr "仮想CPU 時間"
 
 #: usage/tables.py:30
 msgid "Disk GB Hours"
-msgstr ""
+msgstr "ディスク GB×時間"
 
 #: usage/tables.py:38 usage/tables.py:56
 msgid "Usage Summary"
-msgstr ""
+msgstr "使用状況概要"
 
 #: usage/tables.py:48
 msgid "Uptime"
-msgstr ""
+msgstr "起動時間"
 
 #: utils/validators.py:44
 msgid "Password is not accepted"
-msgstr ""
+msgstr "パスワードが正しくありません。"
 
 #: views/auth.py:92
 msgid "You are not authorized for that tenant."
-msgstr ""
+msgstr "プロジェクトへのアクセスが承認されていません。"
 
 #: views/auth_forms.py:63
 msgid "Region"
-msgstr ""
+msgstr "リージョン"
 
 #: views/auth_forms.py:97
 #, fuzzy
 msgid "Unable to authenticate for that project."
-msgstr "キー%sを作成できません。"
+msgstr "プロジェクトへの認証が失敗しました"
 
 #: views/auth_forms.py:114
 msgid "Invalid user name or password."
@@ -2394,15 +2394,15 @@ msgstr "ユーザー名かパスワードが無効です。"
 
 #: views/auth_forms.py:121
 msgid "An error occurred authenticating. Please try again later."
-msgstr ""
+msgstr "認証時にエラーが発生しました。しばらくして再度実施してください。"
 
 #: views/auth_forms.py:140
 msgid "You are not authorized for any projects."
-msgstr ""
+msgstr "全てのプロジェクトへのアクセスが承認されていません。"
 
 #: views/auth_forms.py:164
 msgid "You are not authorized for any available projects."
-msgstr ""
+msgstr "利用可能なプロジェクトへのアクセスが承認されていません。"
 
 #, fuzzy
 #~ msgid "Unable to retrieve tenant."
