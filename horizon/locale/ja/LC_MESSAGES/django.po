@@ -2366,7 +2366,7 @@ msgstr "パスワードが正しくありません。"
 
 #: views/auth.py:92
 msgid "You are not authorized for that tenant."
-msgstr "プロジェクトへのアクセスが承認されていません。"
+msgstr "プロジェクトへのアクセスが許可されていません。"
 
 #: views/auth_forms.py:63
 msgid "Region"
@@ -2387,11 +2387,11 @@ msgstr "認証時にエラーが発生しました。しばらくして再度実
 
 #: views/auth_forms.py:140
 msgid "You are not authorized for any projects."
-msgstr "全てのプロジェクトへのアクセスが承認されていません。"
+msgstr "全てのプロジェクトへのアクセスが許可されていません。"
 
 #: views/auth_forms.py:164
 msgid "You are not authorized for any available projects."
-msgstr "利用可能なプロジェクトへのアクセスが承認されていません。"
+msgstr "利用可能なプロジェクトへのアクセスが許可されていません。"
 
 #, fuzzy
 #~ msgid "Unable to retrieve tenant."
