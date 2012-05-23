@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstack-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-24 16:40-0700\n"
-"PO-Revision-Date: 2012-05-22 06:41+0900\n"
+"PO-Revision-Date: 2012-05-23 22:26+0900\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: Japanese\n"
@@ -336,7 +336,7 @@ msgstr "IPプロトコル"
 #: dashboards/nova/access_and_security/security_groups/forms.py:71
 #: dashboards/nova/access_and_security/security_groups/tables.py:94
 msgid "From Port"
-msgstr "送信元ポート"
+msgstr "ポート番号(下限)"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:66
 msgid ""
@@ -355,7 +355,7 @@ msgstr "種別"
 #: dashboards/nova/access_and_security/security_groups/forms.py:80
 #: dashboards/nova/access_and_security/security_groups/tables.py:95
 msgid "To Port"
-msgstr "宛先ポート"
+msgstr "ポート番号(上限)"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:75
 msgid ""
@@ -379,21 +379,21 @@ msgstr "CIDR"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:88
 msgid "Classless Inter-Domain Routing (e.g. 192.168.0.0/24)"
-msgstr "Classless Inter-Domain Routing (例: 192.168.0.0/24)"
+msgstr "ネットワークアドレス (例: 192.168.0.0/24)"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:114
 msgid "The \"from\" port number is invalid."
-msgstr "「送信元」ポート番号が不正です。"
+msgstr "ポート番号の「下限」が不正です。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:117
 msgid "The \"to\" port number is invalid."
-msgstr "「宛先」ポート番号が不正です。"
+msgstr "ポート番号の「上限」が不正です。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:120
 msgid ""
 "The \"to\" port number must be greater than or equal to the \"from\" port "
 "number."
-msgstr "「宛先」ポート番号は「送信元」ポート番号以上でなければいけません。"
+msgstr "ポート番号の上限には下限と同じか大きい値を指定しなければいけません。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:126
 msgid "Either CIDR or Source Group may be specified, but not both."
@@ -1219,7 +1219,7 @@ msgstr "キーペア &quot;%(keypair_name)s&quot; のダウンロード"
 
 #: dashboards/nova/templates/nova/access_and_security/security_groups/_create.html:18
 msgid "From here you can create a new security group"
-msgstr "ここで、新しいセキュリティグループを作成できます。"
+msgstr "新しいセキュリティグループを作成できます。"
 
 #: dashboards/nova/templates/nova/access_and_security/security_groups/_edit_rules.html:9
 #: dashboards/nova/templates/nova/access_and_security/security_groups/edit_rules.html:6
