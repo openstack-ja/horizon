@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstack-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-24 16:40-0700\n"
-"PO-Revision-Date: 2012-05-23 22:26+0900\n"
+"PO-Revision-Date: 2012-05-23 23:48+0900\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: Japanese\n"
@@ -59,14 +59,13 @@ msgstr ""
 
 #: api/swift.py:114
 msgid "Unicode is not currently supported for object copy."
-msgstr ""
+msgstr "今のところ、オブジェクトのコピーでは Unicode はサポートされていません。"
 
 #: dashboards/nova/dashboard.py:24
 msgid "Manage Compute"
 msgstr "Compute の管理"
 
 #: dashboards/nova/dashboard.py:33
-#, fuzzy
 msgid "Object Store"
 msgstr "オブジェクトストア"
 
@@ -1241,6 +1240,16 @@ msgid ""
 "your account. Data must be stored in a container so you must have at least "
 "one container defined in your account prior to uploading data."
 msgstr ""
+"コンテナはオブジェクトストレージにおけるデータの入れ物で、\n"
+"コンテナを使うことでデータを整理することができます。\n"
+"コンテナは、Windows &reg におけるフォルダや UNIX &reg; における\n"
+"ディレクトリのようなものだと考えて下さい。\n"
+"これらのファイルシステムのコンセプトとの一番大きな違いは、\n"
+"コンテナは入れ子にすることができない点です。\n"
+"一方、一つのアカウントで作成できるコンテナ数には制限はありません。\n"
+"データは必ずコンテナに所属させる必要があります。\n"
+"したがって、データをアップロードする前に少なくとも一つコンテナを\n"
+"作成しておく必要があります。"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/index.html:3
 #: dashboards/nova/templates/nova/images_and_snapshots/index.html:6
@@ -1248,9 +1257,8 @@ msgid "Images &amp; Snapshots"
 msgstr "イメージとスナップショット"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_detail_overview.html:3
-#, fuzzy
 msgid "Image Overview"
-msgstr "概要"
+msgstr "イメージの概要"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_detail_overview.html:6
 #: dashboards/nova/templates/nova/instances_and_volumes/instances/_detail_overview.html:6
@@ -1510,18 +1518,19 @@ msgstr "ボリュームの詳細"
 #: dashboards/nova/templates/nova/objects/copy.html:3
 #: dashboards/nova/templates/nova/objects/copy.html:6
 msgid "Copy Object"
-msgstr ""
+msgstr "オブジェクトのコピー"
 
 #: dashboards/nova/templates/nova/objects/_copy.html:17
 msgid ""
 "You may make a new copy of an existing object to store in this or another "
 "container."
 msgstr ""
+"既存のオブジェクトの新しいコピーを作成できます。\n"
+"格納場所として、同じコンテナも別のコンテナも指定できます。"
 
 #: dashboards/nova/templates/nova/objects/_upload.html:8
-#, fuzzy
 msgid "Upload Object To Container"
-msgstr "新規ボリュームを作成する。"
+msgstr "コンテナへのオブジェクトのアップロード"
 
 #: dashboards/nova/templates/nova/objects/_upload.html:18
 msgid ""
@@ -1531,10 +1540,17 @@ msgid ""
 "compression or encryption) and consists of a location (container), the "
 "object's name, and any metadata consisting of key/value pairs."
 msgstr ""
+"オブジェクトは OpenStack の Object Storage システムにおけるストレージ\n"
+"の基本単位です。オブジェクトには任意のメタデータを付与することができ、\n"
+"Object Storage に格納したファイルに関する情報を保存することができます。\n"
+"OpenStack の Object Storage にデータをアップロードすると、\n"
+"データは (圧縮や暗号化などは行われず) そのまま格納されます。\n"
+"オブジェクト情報は、格納場所 (コンテナ)、オブジェクト名、\n"
+"key/value のペアで構成される任意のメタデータから構成されます。"
 
 #: dashboards/nova/templates/nova/objects/upload.html:6
 msgid "Upload Objects"
-msgstr ""
+msgstr "オブジェクトのアップロード"
 
 #: dashboards/settings/dashboard.py:24
 msgid "Settings"
