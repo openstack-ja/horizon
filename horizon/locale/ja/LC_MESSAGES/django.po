@@ -2396,7 +2396,7 @@ msgstr "認証時にエラーが発生しました。しばらくして再度実
 
 #: views/auth_forms.py:140
 msgid "You are not authorized for any projects."
-msgstr "全てのプロジェクトへのアクセスが許可されていません。"
+msgstr "いずれのプロジェクトへのアクセスが許可されていません。"
 
 #: views/auth_forms.py:164
 msgid "You are not authorized for any available projects."
