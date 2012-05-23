@@ -675,7 +675,7 @@ msgstr "起動するインスタンス数"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:118
 msgid "Launch instance in these security groups."
-msgstr "指定されたセキュリティグループでインスタンスを起動できません。"
+msgstr "以下のセキュリティグループでインスタンスを起動する。"
 
 #: dashboards/nova/images_and_snapshots/images/forms.py:120
 msgid "Volume or Volume Snapshot"
@@ -1366,9 +1366,7 @@ msgstr "イメージ詳細"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/snapshots/_create.html:18
 msgid "Snapshots preserve the disk state of a running instance."
-msgstr ""
-"スナップショットは実行中のインスタンスのディスク状態を保存するためのもので"
-"す。"
+msgstr "スナップショットは実行中のインスタンスのディスク状態を保存します"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/snapshots/create.html:6
 msgid "Create a Snapshot"
