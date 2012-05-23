@@ -1657,6 +1657,7 @@ msgid "Ephemeral Disk GB"
 msgstr "一時ディスク(GB)"
 
 #: dashboards/syspanel/flavors/forms.py:51
+#, python-format
 msgid "%s was successfully added to flavors."
 msgstr "インスタンスタイプ %s は登録されました"
 
@@ -1691,6 +1692,7 @@ msgid "Unauthorized."
 msgstr "認証に失敗しました"
 
 #: dashboards/syspanel/flavors/views.py:53
+#, python-format
 msgid "Unable to get flavor list: %s"
 msgstr "インスタンスタイプの一覧を取得できません: %s"
 
@@ -1732,6 +1734,7 @@ msgid "Enabled"
 msgstr "有効"
 
 #: dashboards/syspanel/projects/forms.py:75
+#, python-format
 msgid "%s was successfully created."
 msgstr "プロジェクト %s が作成されました"
 
@@ -1773,6 +1776,7 @@ msgid "RAM (in MB)"
 msgstr "メモリ(MB)"
 
 #: dashboards/syspanel/projects/forms.py:136
+#, python-format
 msgid "Quotas for %s were successfully updated."
 msgstr "クォータ %s が更新されました"
 
@@ -1934,6 +1938,7 @@ msgid "Update Quota"
 msgstr "クォータの更新"
 
 #: dashboards/syspanel/templates/syspanel/projects/_quotas.html:17
+#, python-format
 msgid ""
 "From here you can edit quotas (max limits) for the project %(tenant.name)s."
 msgstr "プロジェクト %(tenant.name)s のクォータ(上限値)を設定できます"
@@ -2024,6 +2029,7 @@ msgid "Primary Project"
 msgstr "プライマリ プロジェクト"
 
 #: dashboards/syspanel/users/forms.py:84
+#, python-format
 msgid "User \"%s\" was successfully created."
 msgstr "ユーザ \"%s\" を作成しました"
 
@@ -2052,10 +2058,12 @@ msgid "password"
 msgstr "パスワード"
 
 #: dashboards/syspanel/users/forms.py:158
+#, python-format
 msgid "Updated %(attributes)s for \"%(user)s\"."
 msgstr "ユーザ \"%(user)s\" の属性 %(attributes)s を更新しました"
 
 #: dashboards/syspanel/users/forms.py:164
+#, python-format
 msgid "Unable to update %(attributes)s for \"%(user)s\"."
 msgstr "ユーザ \"%(user)s\" の属性 %(attributes)s の更新が出来ません"
 
@@ -2095,6 +2103,7 @@ msgid "You cannot disable the user you are currently logged in as."
 msgstr "ログイン中のユーザは無効化できません"
 
 #: dashboards/syspanel/users/tables.py:79
+#, python-format
 msgid "Error disabling user: %s"
 msgstr "ユーザの無効化でエラーが発生しました: %s"
 
@@ -2365,7 +2374,7 @@ msgstr "パスワードが正しくありません。"
 
 #: views/auth.py:92
 msgid "You are not authorized for that tenant."
-msgstr "プロジェクトへのアクセスが承認されていません。"
+msgstr "プロジェクトへのアクセスが許可されていません。"
 
 #: views/auth_forms.py:63
 msgid "Region"
@@ -2386,11 +2395,11 @@ msgstr "認証時にエラーが発生しました。しばらくして再度実
 
 #: views/auth_forms.py:140
 msgid "You are not authorized for any projects."
-msgstr "全てのプロジェクトへのアクセスが承認されていません。"
+msgstr "全てのプロジェクトへのアクセスが許可されていません。"
 
 #: views/auth_forms.py:164
 msgid "You are not authorized for any available projects."
-msgstr "利用可能なプロジェクトへのアクセスが承認されていません。"
+msgstr "利用可能なプロジェクトへのアクセスが許可されていません。"
 
 #, fuzzy
 #~ msgid "Unable to retrieve tenant."
