@@ -45,28 +45,27 @@ msgstr "セッションの期限が切れました。もう一度ログインし
 #: api/keystone.py:53
 #, python-format
 msgid "%(type)s (%(backend)s backend)"
-msgstr ""
+msgstr "%(type)s (%(backend)s バックエンド)"
 
 #: api/nova.py:185
 #, python-format
 msgid "ALLOW %(from)s:%(to)s from %(group)s"
-msgstr ""
+msgstr "ALLOW %(from)s:%(to)s from %(group)s"
 
 #: api/nova.py:190
 #, python-format
 msgid "ALLOW %(from)s:%(to)s from %(cidr)s"
-msgstr ""
+msgstr "ALLOW %(from)s:%(to)s from %(cidr)s"
 
 #: api/swift.py:114
 msgid "Unicode is not currently supported for object copy."
-msgstr ""
+msgstr "オブジェクトのコピーにおいてユニコードはサポートされていません"
 
 #: dashboards/nova/dashboard.py:24
 msgid "Manage Compute"
 msgstr "Compute の管理"
 
 #: dashboards/nova/dashboard.py:33
-#, fuzzy
 msgid "Object Store"
 msgstr "オブジェクトストア"
 
