@@ -342,8 +342,8 @@ msgid ""
 "TCP/UDP: Enter integer value between 1 and 65535. ICMP: enter a value for "
 "ICMP type in the range (-1: 255)"
 msgstr ""
-"TCP/UDP: 1?65535 の整数値。\n"
-"ICMP: (-1?255) の範囲の ICMP 種別を示す値。"
+"TCP/UDP: 1～65535 の整数値。\n"
+"ICMP: (-1～255) の範囲の ICMP 種別を示す値。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:72
 #: dashboards/nova/images_and_snapshots/images/tables.py:86
@@ -361,8 +361,8 @@ msgid ""
 "TCP/UDP: Enter integer value between 1 and 65535. ICMP: enter a value for "
 "ICMP code in the range (-1: 255)"
 msgstr ""
-"TCP/UDP: 1?65535 の整数値。\n"
-"ICMP: (-1?255) の範囲の ICMP コードを示す値。"
+"TCP/UDP: 1～65535 の整数値。\n"
+"ICMP: (-1～255) の範囲の ICMP コードを示す値。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:81
 msgid "Code"
