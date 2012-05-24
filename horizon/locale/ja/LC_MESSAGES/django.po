@@ -342,8 +342,8 @@ msgid ""
 "TCP/UDP: Enter integer value between 1 and 65535. ICMP: enter a value for "
 "ICMP type in the range (-1: 255)"
 msgstr ""
-"TCP/UDP: 1〜65535 の整数値。\n"
-"ICMP: (-1〜255) の範囲の ICMP 種別を示す値。"
+"TCP/UDP: 1?65535 の整数値。\n"
+"ICMP: (-1?255) の範囲の ICMP 種別を示す値。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:72
 #: dashboards/nova/images_and_snapshots/images/tables.py:86
@@ -361,8 +361,8 @@ msgid ""
 "TCP/UDP: Enter integer value between 1 and 65535. ICMP: enter a value for "
 "ICMP code in the range (-1: 255)"
 msgstr ""
-"TCP/UDP: 1〜65535 の整数値。\n"
-"ICMP: (-1〜255) の範囲の ICMP コードを示す値。"
+"TCP/UDP: 1?65535 の整数値。\n"
+"ICMP: (-1?255) の範囲の ICMP コードを示す値。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:81
 msgid "Code"
@@ -1563,28 +1563,26 @@ msgid "Select a Project"
 msgstr "プロジェクトを選択して下さい"
 
 #: dashboards/settings/ec2/forms.py:51
-#, fuzzy
 msgid "Unable to retrieve tenant list."
-msgstr "キー%sを作成できません。"
+msgstr "プロジェクトリストを取得できません。"
 
 #: dashboards/settings/ec2/forms.py:86
-#, fuzzy
 msgid "Unable to fetch EC2 credentials."
-msgstr "X509資格情報生成する。"
+msgstr "EC2認証情報を取得できません。"
 
 #: dashboards/settings/ec2/forms.py:99
-#, fuzzy, python-format
+#, python-format
 msgid "Error writing zipfile: %(exc)s"
-msgstr "ユーザ%sを作成中..."
+msgstr "zipファイル%(exc)s の書き込みに失敗しました。"
 
 #: dashboards/settings/ec2/panel.py:24
 msgid "EC2 Credentials"
 msgstr "EC2認証情報"
 
 #: dashboards/settings/project/forms.py:76
-#, fuzzy, python-format
+#, python-format
 msgid "Error Downloading RC File: %s"
-msgstr "イメージ%sを更新できません。"
+msgstr "RCファイル%s のダウンロードに失敗しました。"
 
 #: dashboards/settings/project/panel.py:24
 msgid "OpenStack Credentials"
@@ -1602,7 +1600,9 @@ msgid ""
 "Clicking \"Download EC2 Credentials\" will download a zip file which "
 "includes an rc file with your access/secret keys, as well as your x509 "
 "private key and certificate."
-msgstr ""
+msgstr " \"EC2認証情報をダウンロード\" をクリックすると、zipファイルを"
+"ダウンロードできます。zipファイルには、RCファイルとあなたの"
+"アクセスキー/秘密鍵と認証情報が含まれています。"
 
 #: dashboards/settings/templates/settings/project/_openrc.html:8
 #: dashboards/settings/templates/settings/project/settings.html:6
@@ -1634,9 +1634,8 @@ msgid "Language Settings"
 msgstr "利用する言語を選択"
 
 #: dashboards/settings/templates/settings/user/_language.html:31
-#, fuzzy
 msgid "From here you can modify different settings for your dashboard."
-msgstr "ここより、ユーザとその資格を管理できます。"
+msgstr "ダッシュボードの設定を変更できます。"
 
 #: dashboards/settings/templates/settings/user/settings.html:6
 msgid "Dashboard Settings"
