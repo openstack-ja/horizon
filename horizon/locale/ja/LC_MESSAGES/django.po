@@ -2145,12 +2145,12 @@ msgstr "フィルター"
 #: tables/actions.py:461
 #, python-format
 msgid "You do not have permission to %(action)s: %(objs)s"
-msgstr ""
+msgstr "権限がありません (%(action)s: %(objs)s)"
 
 #: tables/actions.py:467
-#, fuzzy, python-format
+#, python-format
 msgid "Unable to %(action)s: %(objs)s"
-msgstr "キー%sを削除できません。"
+msgstr "%(action)s ができません: %(objs)s"
 
 #: tables/actions.py:473
 #, python-format
@@ -2181,7 +2181,7 @@ msgstr "表示項目はありません。"
 #: tables/base.py:814
 #, python-format
 msgid "No match returned for the id \"%s\"."
-msgstr ""
+msgstr "ID \"%s\" が一致しませんでした。"
 
 #: tables/base.py:921
 msgid "Please select a row before taking that action."
@@ -2227,7 +2227,7 @@ msgstr "OpenStack Dashboard"
 
 #: templates/horizon/common/_usage_summary.html:5
 msgid "Select a month to query its usage"
-msgstr "使用状況を表示する日付を選択"
+msgstr "使用状況を表示する月を選択"
 
 #: templates/horizon/common/_usage_summary.html:9
 msgid "Submit"
@@ -2243,11 +2243,11 @@ msgstr "Active Memory"
 
 #: templates/horizon/common/_usage_summary.html:16
 msgid "This Month's VCPU-Hours"
-msgstr ""
+msgstr "This Month's VCPU-Hours"
 
 #: templates/horizon/common/_usage_summary.html:17
 msgid "This Month's GB-Hours"
-msgstr ""
+msgstr "This Month's GB-Hours"
 
 #: templatetags/horizon.py:121
 msgid "No Limit"
@@ -2272,22 +2272,22 @@ msgstr[0] "%(size)d"
 #: templatetags/sizeformat.py:52
 #, python-format
 msgid "%s KB"
-msgstr "KB"
+msgstr "%s KB"
 
 #: templatetags/sizeformat.py:55
 #, python-format
 msgid "%s MB"
-msgstr "MB"
+msgstr "%s MB"
 
 #: templatetags/sizeformat.py:61
 #, python-format
 msgid "%s TB"
-msgstr "TB"
+msgstr "%s TB"
 
 #: templatetags/sizeformat.py:63
 #, python-format
 msgid "%s PB"
-msgstr "PB"
+msgstr "%s PB"
 
 #: tests/table_tests.py:94
 msgid "Batch"
