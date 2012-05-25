@@ -878,7 +878,7 @@ msgstr "インスタンス情報を取得できません。"
 #: dashboards/nova/instances_and_volumes/views.py:62
 #: dashboards/syspanel/instances/views.py:55
 msgid "Unable to retrieve instance size information."
-msgstr "インスタンスのサイズ情報を取得できません"
+msgstr "インスタンスのサイズ情報を取得できません。"
 
 #: dashboards/nova/instances_and_volumes/views.py:73
 #, python-format
@@ -896,11 +896,11 @@ msgstr "インスタンスを更新できません。"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:55
 msgid "Terminate"
-msgstr "終了"
+msgstr "削除"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:56
 msgid "Terminated"
-msgstr "終了しました"
+msgstr "削除しました"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:58
 #: dashboards/nova/instances_and_volumes/instances/tables.py:70
@@ -916,11 +916,11 @@ msgstr "インスタンス"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:67
 msgid "Reboot"
-msgstr "リストを再読み込みする"
+msgstr "リブート"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:68
 msgid "Rebooted"
-msgstr "再起動しました"
+msgstr "リブートしました"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:82
 msgid "Pause"
