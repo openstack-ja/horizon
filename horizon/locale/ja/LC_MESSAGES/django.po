@@ -342,8 +342,8 @@ msgid ""
 "TCP/UDP: Enter integer value between 1 and 65535. ICMP: enter a value for "
 "ICMP type in the range (-1: 255)"
 msgstr ""
-"TCP/UDP: 1〜65535 の整数値。\n"
-"ICMP: (-1〜255) の範囲の ICMP 種別を示す値。"
+"TCP/UDP: 1～65535 の整数値。\n"
+"ICMP: (-1～255) の範囲の ICMP 種別を示す値。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:72
 #: dashboards/nova/images_and_snapshots/images/tables.py:86
@@ -361,8 +361,8 @@ msgid ""
 "TCP/UDP: Enter integer value between 1 and 65535. ICMP: enter a value for "
 "ICMP code in the range (-1: 255)"
 msgstr ""
-"TCP/UDP: 1〜65535 の整数値。\n"
-"ICMP: (-1〜255) の範囲の ICMP コードを示す値。"
+"TCP/UDP: 1～65535 の整数値。\n"
+"ICMP: (-1～255) の範囲の ICMP コードを示す値。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:81
 msgid "Code"
@@ -392,7 +392,7 @@ msgstr "ポート番号の「上限」が不正です。"
 msgid ""
 "The \"to\" port number must be greater than or equal to the \"from\" port "
 "number."
-msgstr "ポート番号の上限には下限と同じか大きい値を指定しなければいけません。"
+msgstr "ポート番号の「上限」には「下限」と同じか大きい値を指定しなければいけません。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:126
 msgid "Either CIDR or Source Group may be specified, but not both."
@@ -1554,70 +1554,71 @@ msgstr "オブジェクトのアップロード"
 msgid "Settings"
 msgstr "設定"
 
+#: dashboard/templates/_header.html
+msgid "Sign Out"
+msgstr "ログアウト"
+
 #: dashboards/settings/ec2/forms.py:35 dashboards/settings/project/forms.py:35
 msgid "Select a Project"
 msgstr "プロジェクトを選択して下さい"
 
 #: dashboards/settings/ec2/forms.py:51
-#, fuzzy
 msgid "Unable to retrieve tenant list."
-msgstr "キー%sを作成できません。"
+msgstr "プロジェクトリストを取得できません。"
 
 #: dashboards/settings/ec2/forms.py:86
-#, fuzzy
 msgid "Unable to fetch EC2 credentials."
-msgstr "X509資格情報生成する。"
+msgstr "EC2認証情報を取得できません。"
 
 #: dashboards/settings/ec2/forms.py:99
-#, fuzzy, python-format
+#, python-format
 msgid "Error writing zipfile: %(exc)s"
-msgstr "ユーザ%sを作成中..."
+msgstr "zipファイル%(exc)s の書き込みに失敗しました。"
 
 #: dashboards/settings/ec2/panel.py:24
-#, fuzzy
 msgid "EC2 Credentials"
-msgstr "認証情報を送信"
+msgstr "EC2認証情報"
 
 #: dashboards/settings/project/forms.py:76
-#, fuzzy, python-format
+#, python-format
 msgid "Error Downloading RC File: %s"
-msgstr "イメージ%sを更新できません。"
+msgstr "RCファイル%s のダウンロードに失敗しました。"
 
 #: dashboards/settings/project/panel.py:24
-#, fuzzy
 msgid "OpenStack Credentials"
-msgstr "認証情報を送信"
+msgstr "OpenStack認証情報"
 
 #: dashboards/settings/templates/settings/ec2/download_form.html:8
 #: dashboards/settings/templates/settings/ec2/download_form.html:23
 #: dashboards/settings/templates/settings/ec2/index.html:3
 #: dashboards/settings/templates/settings/ec2/index.html:6
-#, fuzzy
 msgid "Download EC2 Credentials"
-msgstr "認証情報を送信"
+msgstr "EC2認証情報をダウンロード"
 
 #: dashboards/settings/templates/settings/ec2/download_form.html:18
 msgid ""
 "Clicking \"Download EC2 Credentials\" will download a zip file which "
 "includes an rc file with your access/secret keys, as well as your x509 "
 "private key and certificate."
-msgstr ""
+msgstr " \"EC2認証情報をダウンロード\" をクリックすると、zipファイルを"
+"ダウンロードできます。zipファイルには、RCファイルとあなたの"
+"アクセスキー/秘密鍵と認証情報が含まれています。"
 
 #: dashboards/settings/templates/settings/project/_openrc.html:8
 #: dashboards/settings/templates/settings/project/settings.html:6
-#, fuzzy
 msgid "Download OpenStack RC File"
-msgstr "イメージ%sを更新できません。"
+msgstr "OpenStack RCファイルをダウンロード"
 
 #: dashboards/settings/templates/settings/project/_openrc.html:18
 msgid ""
 "Download the RC file for the selected project, then type \"source openrc\" "
 "in the terminal to configure your environment to communicate with OpenStack."
-msgstr ""
+msgstr "RCファイルをダウンロードするプロジェクトを選択してください。"
+"ターミナルで\"source openrc\"と入力することでOpenStackを利用出来ます。"
 
 #: dashboards/settings/templates/settings/project/_openrc.html:23
 msgid "Download RC File"
-msgstr ""
+msgstr "RCファイルをダウンロード"
 
 #: dashboards/settings/templates/settings/user/_language.html:8
 #: dashboards/settings/templates/settings/user/_language.html:36
@@ -1626,26 +1627,23 @@ msgstr "言語を選択"
 
 #: dashboards/settings/templates/settings/user/_language.html:12
 msgid "Dashboard User Interface Language"
-msgstr ""
+msgstr "ダッシュボードで利用する言語"
 
 #: dashboards/settings/templates/settings/user/_language.html:14
-#, fuzzy
 msgid "Language Settings"
-msgstr "ダッシュボードの設定"
+msgstr "利用する言語を選択"
 
 #: dashboards/settings/templates/settings/user/_language.html:31
-#, fuzzy
 msgid "From here you can modify different settings for your dashboard."
-msgstr "ここより、ユーザとその資格を管理できます。"
+msgstr "ダッシュボードの設定を変更できます。"
 
 #: dashboards/settings/templates/settings/user/settings.html:6
 msgid "Dashboard Settings"
 msgstr "ダッシュボードの設定"
 
 #: dashboards/settings/user/panel.py:24
-#, fuzzy
 msgid "User Settings"
-msgstr "ダッシュボードの設定"
+msgstr "ユーザ設定"
 
 #: dashboards/syspanel/dashboard.py:24
 msgid "System Panel"
@@ -2229,7 +2227,7 @@ msgstr "OpenStack Dashboard"
 
 #: templates/horizon/common/_usage_summary.html:5
 msgid "Select a month to query its usage"
-msgstr "使用状況を表示する月を選択"
+msgstr "使用状況を表示する日付を選択"
 
 #: templates/horizon/common/_usage_summary.html:9
 msgid "Submit"
