@@ -392,7 +392,7 @@ msgstr "ポート番号の「上限」が不正です。"
 msgid ""
 "The \"to\" port number must be greater than or equal to the \"from\" port "
 "number."
-msgstr "ポート番号の上限には下限と同じか大きい値を指定しなければいけません。"
+msgstr "ポート番号の「上限」には「下限」と同じか大きい値を指定しなければいけません。"
 
 #: dashboards/nova/access_and_security/security_groups/forms.py:126
 msgid "Either CIDR or Source Group may be specified, but not both."
