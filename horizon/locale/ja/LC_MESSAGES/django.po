@@ -2157,7 +2157,7 @@ msgstr "キー%sを削除できません。"
 #: tables/actions.py:473
 #, python-format
 msgid "%(action)s: %(objs)s"
-msgstr ""
+msgstr "%(action)s: %(objs)s"
 
 #: tables/actions.py:483
 msgid "Delete"
@@ -2170,7 +2170,7 @@ msgstr "削除しました"
 #: tables/base.py:225
 #, python-format
 msgid "The attribute %(attr)s doesn't exist on %(obj)s."
-msgstr ""
+msgstr "属性 %(attr)s は %(obj)s に存在しません。"
 
 #: tables/base.py:652
 msgid "Actions"
@@ -2187,20 +2187,19 @@ msgstr ""
 
 #: tables/base.py:921
 msgid "Please select a row before taking that action."
-msgstr ""
+msgstr "操作を行う前に列を選択してください。"
 
 #: templates/horizon/_messages.html:7
-#, fuzzy
 msgid "Info: "
-msgstr "情報"
+msgstr "情報: "
 
 #: templates/horizon/_messages.html:13
 msgid "Warning: "
-msgstr ""
+msgstr "警告: "
 
 #: templates/horizon/_messages.html:19
 msgid "Success: "
-msgstr ""
+msgstr "成功: "
 
 #: templates/horizon/_messages.html:25
 msgid "Error: "
@@ -2208,11 +2207,11 @@ msgstr "エラー: "
 
 #: templates/horizon/auth/_login.html:4
 msgid "Log In"
-msgstr ""
+msgstr "ログイン"
 
 #: templates/horizon/auth/_login.html:18
 msgid "Sign In"
-msgstr ""
+msgstr "ログイン"
 
 #: templates/horizon/auth/login.html:4
 msgid "Login"
@@ -2226,24 +2225,23 @@ msgstr[0] "%(counter)s 項目を表示"
 
 #: templates/horizon/common/_sidebar.html:4
 msgid "OpenStack Dashboard"
-msgstr ""
+msgstr "OpenStack Dashboard"
 
 #: templates/horizon/common/_usage_summary.html:5
 msgid "Select a month to query its usage"
-msgstr ""
+msgstr "使用状況を表示する月を選択"
 
 #: templates/horizon/common/_usage_summary.html:9
 msgid "Submit"
-msgstr ""
+msgstr "送信"
 
 #: templates/horizon/common/_usage_summary.html:14
-#, fuzzy
 msgid "Active Instances"
-msgstr "インスタンスを表示する"
+msgstr "Active Instances"
 
 #: templates/horizon/common/_usage_summary.html:15
 msgid "Active Memory"
-msgstr ""
+msgstr "Active Memory"
 
 #: templates/horizon/common/_usage_summary.html:16
 msgid "This Month's VCPU-Hours"
@@ -2254,9 +2252,8 @@ msgid "This Month's GB-Hours"
 msgstr ""
 
 #: templatetags/horizon.py:121
-#, fuzzy
 msgid "No Limit"
-msgstr "制限値"
+msgstr "制限なし"
 
 #: templatetags/horizon.py:123 templatetags/horizon.py:125
 msgid "Available"
@@ -2266,33 +2263,33 @@ msgstr "利用可能"
 #, python-format
 msgid "%(size)d byte"
 msgid_plural "%(size)d bytes"
-msgstr[0] ""
+msgstr[0] "%(size)d bytes"
 
 #: templatetags/sizeformat.py:49
 #, python-format
 msgid "%(size)d"
 msgid_plural "%(size)d"
-msgstr[0] ""
+msgstr[0] "%(size)d"
 
 #: templatetags/sizeformat.py:52
 #, python-format
 msgid "%s KB"
-msgstr ""
+msgstr "KB"
 
 #: templatetags/sizeformat.py:55
 #, python-format
 msgid "%s MB"
-msgstr ""
+msgstr "MB"
 
 #: templatetags/sizeformat.py:61
 #, python-format
 msgid "%s TB"
-msgstr ""
+msgstr "TB"
 
 #: templatetags/sizeformat.py:63
 #, python-format
 msgid "%s PB"
-msgstr ""
+msgstr "PB"
 
 #: tests/table_tests.py:94
 msgid "Batch"
