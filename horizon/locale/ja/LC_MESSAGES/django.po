@@ -59,7 +59,7 @@ msgstr "%(cidr)s からポート番号 %(from)s:%(to)s への通信を許可"
 
 #: api/swift.py:114
 msgid "Unicode is not currently supported for object copy."
-msgstr "オブジェクトのコピーで Unicode はサポートされていません。"
+msgstr "オブジェクトのコピーで Unicode は現在サポートされていません。"
 
 #: dashboards/nova/dashboard.py:24
 msgid "Manage Compute"
