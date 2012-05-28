@@ -202,7 +202,7 @@ msgstr "Floating IP を割り当てできません。"
 #: dashboards/nova/access_and_security/floating_ips/views.py:60
 #: dashboards/syspanel/instances/views.py:48
 msgid "Unable to retrieve instance list."
-msgstr "インスタンスの一覧を取得できません"
+msgstr "インスタンスの一覧を取得できません。"
 
 #: dashboards/nova/access_and_security/floating_ips/views.py:100
 msgid "No floating IP pools available."
@@ -1672,7 +1672,7 @@ msgstr "一時ディスク(GB)"
 #: dashboards/syspanel/flavors/forms.py:51
 #, python-format
 msgid "%s was successfully added to flavors."
-msgstr "インスタンスタイプ %s は登録されました"
+msgstr "インスタンスタイプ %s が登録されました。"
 
 #: dashboards/syspanel/flavors/panel.py:28
 #: dashboards/syspanel/flavors/tables.py:14
@@ -1686,11 +1686,11 @@ msgstr "インスタンスタイプ"
 #: dashboards/syspanel/templates/syspanel/flavors/_create.html:23
 #: dashboards/syspanel/templates/syspanel/flavors/create.html:6
 msgid "Create Flavor"
-msgstr "作成"
+msgstr "インスタンスタイプを作成"
 
 #: dashboards/syspanel/flavors/tables.py:29
 msgid "Flavor Name"
-msgstr "名前"
+msgstr "インスタンスタイプ名"
 
 #: dashboards/syspanel/flavors/tables.py:32
 msgid "Root Disk"
@@ -1702,7 +1702,7 @@ msgstr "一時ディスク"
 
 #: dashboards/syspanel/flavors/views.py:48
 msgid "Unauthorized."
-msgstr "認証に失敗しました"
+msgstr "認証に失敗しました。"
 
 #: dashboards/syspanel/flavors/views.py:53
 #, python-format
@@ -1711,11 +1711,11 @@ msgstr "インスタンスタイプの一覧を取得できません: %s"
 
 #: dashboards/syspanel/images/views.py:45
 msgid "Unable to retrieve image list."
-msgstr "イメージの一覧を取得できません"
+msgstr "イメージの一覧を取得できません。"
 
 #: dashboards/syspanel/instances/tables.py:53
 msgid "Tenant"
-msgstr "テナント"
+msgstr "プロジェクト"
 
 #: dashboards/syspanel/instances/tables.py:60
 #: dashboards/syspanel/services/tables.py:40
@@ -1724,7 +1724,7 @@ msgstr "ホスト"
 
 #: dashboards/syspanel/instances/views.py:62
 msgid "Unable to retrieve instance tenant information."
-msgstr "インスタンスのテナント情報を取得できません"
+msgstr "インスタンスのプロジェクト情報を取得できません。"
 
 #: dashboards/syspanel/projects/forms.py:38
 msgid "Role"
@@ -1732,11 +1732,11 @@ msgstr "ロール"
 
 #: dashboards/syspanel/projects/forms.py:52
 msgid "Successfully added user to tenant."
-msgstr "プロジェクトにユーザを追加しました"
+msgstr "プロジェクトにユーザを追加しました。"
 
 #: dashboards/syspanel/projects/forms.py:54
 msgid "Unable to add user to tenant."
-msgstr "ユーザをプロジェクトに追加しました"
+msgstr "プロジェクトにユーザを追加できません。"
 
 #: dashboards/syspanel/projects/forms.py:64
 #: dashboards/syspanel/projects/forms.py:89
@@ -1749,20 +1749,20 @@ msgstr "有効"
 #: dashboards/syspanel/projects/forms.py:75
 #, python-format
 msgid "%s was successfully created."
-msgstr "プロジェクト %s が作成されました"
+msgstr "プロジェクト %s が作成されました。"
 
 #: dashboards/syspanel/projects/forms.py:78
 msgid "Unable to create tenant."
-msgstr "プロジェクトを作成出来ませんでした"
+msgstr "プロジェクトを作成できませんでした。"
 
 #: dashboards/syspanel/projects/forms.py:100
 #, python-format
 msgid "%s was successfully updated."
-msgstr "%s が更新されました"
+msgstr "%s が更新されました。"
 
 #: dashboards/syspanel/projects/forms.py:103
 msgid "Unable to update tenant."
-msgstr "プロジェクトが更新出来ませんでした"
+msgstr "プロジェクトが更新できませんでした。"
 
 #: dashboards/syspanel/projects/forms.py:108
 msgid "ID (name)"
@@ -1770,7 +1770,7 @@ msgstr "ID (名前)"
 
 #: dashboards/syspanel/projects/forms.py:110
 msgid "Metadata Items"
-msgstr "メタデータ　アイテム数"
+msgstr "Metadata Items"
 
 #: dashboards/syspanel/projects/forms.py:111
 msgid "Injected Files"
@@ -1791,11 +1791,11 @@ msgstr "メモリ(MB)"
 #: dashboards/syspanel/projects/forms.py:136
 #, python-format
 msgid "Quotas for %s were successfully updated."
-msgstr "クォータ %s が更新されました"
+msgstr "クォータ %s が更新されました。"
 
 #: dashboards/syspanel/projects/forms.py:139
 msgid "Unable to update quotas."
-msgstr "クォータが更新できませんした"
+msgstr "クォータが更新できませんした。"
 
 #: dashboards/syspanel/projects/panel.py:28
 #: dashboards/syspanel/projects/tables.py:52
@@ -1818,11 +1818,11 @@ msgstr "使用状況の表示"
 
 #: dashboards/syspanel/projects/tables.py:38
 msgid "Edit Project"
-msgstr "編集"
+msgstr "プロジェクトの編集"
 
 #: dashboards/syspanel/projects/tables.py:45
 msgid "Create New Project"
-msgstr "作成"
+msgstr "プロジェクトの作成"
 
 #: dashboards/syspanel/projects/tables.py:73
 #: dashboards/syspanel/services/tables.py:37
@@ -1837,8 +1837,8 @@ msgstr "削除"
 msgid "Removed"
 msgstr "削除されました"
 
-#: dashboards/syspanel/projects/tables.py:91
-#: dashboards/syspanel/users/tables.py:92
+#: dashboard/syspanel/projects/tables.pu:91
+#: dashboard/syspanel/users/tables.py:92
 msgid "User"
 msgstr "ユーザー"
 
@@ -1856,7 +1856,7 @@ msgstr "所属ユーザー"
 
 #: dashboards/syspanel/projects/tables.py:110
 msgid "Add To Project"
-msgstr "追加"
+msgstr "プロジェクトの追加"
 
 #: dashboards/syspanel/projects/tables.py:122
 msgid "Add New Users"
@@ -1864,19 +1864,19 @@ msgstr "ユーザーの追加"
 
 #: dashboards/syspanel/projects/views.py:49
 msgid "Unable to retrieve project list."
-msgstr "プロジェクトの一覧を取得できません"
+msgstr "プロジェクトの一覧を取得できません。"
 
 #: dashboards/syspanel/projects/views.py:71
 msgid "Unable to retrieve project."
-msgstr "プロジェクトを取得できません"
+msgstr "プロジェクトを取得できません。"
 
 #: dashboards/syspanel/projects/views.py:100
 msgid "Unable to retrieve users."
-msgstr "ユーザを取得できません"
+msgstr "ユーザを取得できません。"
 
 #: dashboards/syspanel/projects/views.py:143
 msgid "Unable to retrieve roles."
-msgstr "ロールが取得できません"
+msgstr "ロールが取得できません。"
 
 #: dashboards/syspanel/quotas/panel.py:28
 #: dashboards/syspanel/quotas/tables.py:36
@@ -1907,7 +1907,7 @@ msgstr "サービス"
 
 #: dashboards/syspanel/templates/syspanel/flavors/_create.html:18
 msgid "From here you can define the sizing of a new flavor."
-msgstr "新しいインスタンスタイプを作成出来ます"
+msgstr "新しいインスタンスタイプを作成できます。"
 
 #: dashboards/syspanel/templates/syspanel/instances/index.html:6
 msgid "All Instances"
@@ -1929,7 +1929,7 @@ msgstr "プロジェクトへ追加"
 
 #: dashboards/syspanel/templates/syspanel/projects/_add_user.html:18
 msgid "Select the user role for the project."
-msgstr "ユーザに付与するロールを選択します"
+msgstr "ユーザに付与するロールを選択します。"
 
 #: dashboards/syspanel/templates/syspanel/projects/_add_user.html:23
 msgid "Add"
@@ -1939,7 +1939,7 @@ msgstr "追加"
 #: dashboards/syspanel/templates/syspanel/projects/_create.html:23
 #: dashboards/syspanel/templates/syspanel/projects/create.html:6
 msgid "Create Project"
-msgstr "プロジェクトを追加"
+msgstr "プロジェクトの作成"
 
 #: dashboards/syspanel/templates/syspanel/projects/_create.html:18
 msgid "From here you can create a new project to organize users."
@@ -1965,11 +1965,11 @@ msgstr "プロジェクトの更新"
 
 #: dashboards/syspanel/templates/syspanel/projects/_update.html:18
 msgid "From here you can edit a project."
-msgstr "プロジェクトを編集できます"
+msgstr "プロジェクトを編集できます。"
 
 #: dashboards/syspanel/templates/syspanel/projects/usage.html:3
 msgid "Project Usage Overview"
-msgstr "プロジェクト使用状況"
+msgstr "プロジェクト使用状況(概要)"
 
 #: dashboards/syspanel/templates/syspanel/projects/usage.html:7
 msgid "Project Usage"
@@ -1992,7 +1992,7 @@ msgstr "ユーザの作成"
 
 #: dashboards/syspanel/templates/syspanel/users/_create.html:17
 msgid "From here you can create a new user and assign them to a project."
-msgstr "ユーザを作成しプロジェクトに登録することができます"
+msgstr "ユーザを作成し、プロジェクトに登録することができます。"
 
 #: dashboards/syspanel/templates/syspanel/users/_update.html:7
 #: dashboards/syspanel/templates/syspanel/users/_update.html:22
@@ -2004,7 +2004,7 @@ msgstr "ユーザの更新"
 msgid ""
 "From here you can edit the user by changing their username, email, password, "
 "and default project."
-msgstr "ユーザ名、メール、パスワード、デフォルトのプロジェクトを更新できます"
+msgstr "ユーザ名、メール、パスワード、デフォルトのプロジェクトを更新できます。"
 
 #: dashboards/syspanel/users/forms.py:41
 msgid "Select a project"
@@ -2044,15 +2044,15 @@ msgstr "プライマリ プロジェクト"
 #: dashboards/syspanel/users/forms.py:84
 #, python-format
 msgid "User \"%s\" was successfully created."
-msgstr "ユーザ \"%s\" を作成しました"
+msgstr "ユーザ \"%s\" を作成しました。"
 
 #: dashboards/syspanel/users/forms.py:95
 msgid "Unable to add user to primary project."
-msgstr "プライマリ プロジェクトへユーザを追加できません"
+msgstr "プライマリ プロジェクトへユーザを追加できません。"
 
 #: dashboards/syspanel/users/forms.py:98
 msgid "Unable to create user."
-msgstr "ユーザを作成できません"
+msgstr "ユーザを作成できません。"
 
 #: dashboards/syspanel/users/forms.py:127
 msgid "name"
@@ -2064,7 +2064,7 @@ msgstr "メール"
 
 #: dashboards/syspanel/users/forms.py:136
 msgid "primary project"
-msgstr "プライマリ　プロジェクト"
+msgstr "プライマリ プロジェクト"
 
 #: dashboards/syspanel/users/forms.py:147
 msgid "password"
@@ -2073,12 +2073,12 @@ msgstr "パスワード"
 #: dashboards/syspanel/users/forms.py:158
 #, python-format
 msgid "Updated %(attributes)s for \"%(user)s\"."
-msgstr "ユーザ \"%(user)s\" の属性 %(attributes)s を更新しました"
+msgstr "ユーザ \"%(user)s\" の属性 %(attributes)s を更新しました。"
 
 #: dashboards/syspanel/users/forms.py:164
 #, python-format
 msgid "Unable to update %(attributes)s for \"%(user)s\"."
-msgstr "ユーザ \"%(user)s\" の属性 %(attributes)s の更新が出来ません"
+msgstr "ユーザ \"%(user)s\" の属性 %(attributes)s の更新が出来ません。"
 
 #: dashboards/syspanel/users/tables.py:30
 msgid "Enable"
@@ -2091,7 +2091,7 @@ msgstr "ユーザを有効化"
 #: dashboards/syspanel/users/tables.py:46
 #, python-format
 msgid "Error enabling user: %s"
-msgstr "ユーザの有効化でエラーが起きました: %s"
+msgstr "ユーザの有効化でエラーが発生しました: %s"
 
 #: dashboards/syspanel/users/tables.py:49
 #, python-format
@@ -2113,7 +2113,7 @@ msgstr "ユーザの無効化"
 
 #: dashboards/syspanel/users/tables.py:71
 msgid "You cannot disable the user you are currently logged in as."
-msgstr "ログイン中のユーザは無効化できません"
+msgstr "ログイン中のユーザは無効化できません。"
 
 #: dashboards/syspanel/users/tables.py:79
 #, python-format
@@ -2132,11 +2132,11 @@ msgstr "次のユーザを無効化しました: %s"
 
 #: dashboards/syspanel/users/views.py:47
 msgid "Unable to retrieve user list."
-msgstr "ユーザ一覧の取得ができません"
+msgstr "ユーザ一覧を取得できません。"
 
 #: dashboards/syspanel/users/views.py:63
 msgid "Unable to update user."
-msgstr "ユーザの更新が出来ません"
+msgstr "ユーザの更新ができません。"
 
 #: tables/actions.py:299
 msgid "Filter"
