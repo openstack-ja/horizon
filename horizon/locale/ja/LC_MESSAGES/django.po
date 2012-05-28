@@ -59,7 +59,7 @@ msgstr "%(cidr)s からポート番号 %(from)s:%(to)s への通信を許可"
 
 #: api/swift.py:114
 msgid "Unicode is not currently supported for object copy."
-msgstr "オブジェクトのコピーで Unicode はサポートされていません。"
+msgstr "オブジェクトのコピーで Unicode は現在サポートされていません。"
 
 #: dashboards/nova/dashboard.py:24
 msgid "Manage Compute"
@@ -151,7 +151,7 @@ msgstr "Floating IP を確保できません。"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:35
 msgid "Allocate IP To Project"
-msgstr "プロジェクト用の IP の確保"
+msgstr "プロジェクトへIPを割り当てる"
 
 #: dashboards/nova/access_and_security/floating_ips/tables.py:45
 msgid "Release"
@@ -266,7 +266,7 @@ msgstr "キーペアを作成"
 
 #: dashboards/nova/access_and_security/keypairs/tables.py:52
 msgid "Fingerprint"
-msgstr "鍵の指紋"
+msgstr "フィンガープリント"
 
 #: dashboards/nova/access_and_security/keypairs/views.py:64
 #, python-format
@@ -527,7 +527,7 @@ msgstr "空でないコンテナは削除できません: %s "
 #: dashboards/nova/containers/tables.py:56
 #, python-format
 msgid "Successfully deleted containers: %s"
-msgstr "コンテナは正常に削除されました: %s"
+msgstr "コンテナの削除に成功しました: %s"
 
 #: dashboards/nova/containers/tables.py:63
 #: dashboards/nova/templates/nova/containers/_create.html:7
@@ -962,7 +962,7 @@ msgstr "イメージを起動します"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:145
 msgid "Edit Instance"
-msgstr "編集"
+msgstr "インスタンスを編集"
 
 #: dashboards/nova/instances_and_volumes/instances/tables.py:162
 msgid "VNC Console"
@@ -1115,7 +1115,7 @@ msgstr "アクセスとセキュリティ"
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_allocate.html:8
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/allocate.html:3
 msgid "Allocate Floating IP"
-msgstr "Floating IP の確保"
+msgstr "Floating IP の割り当て"
 
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_allocate.html:17
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_associate.html:16
@@ -1131,7 +1131,7 @@ msgstr "説明："
 
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_allocate.html:18
 msgid "Allocate a floating IP from a given floating ip pool."
-msgstr "指定した Floating IP プールから Floating IP を確保します。"
+msgstr "指定した Floating IP プールから Floating IP を割り当てます。"
 
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_allocate.html:20
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_launch.html:20
@@ -1140,7 +1140,7 @@ msgstr "プロジェクトのクォータ"
 
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_allocate.html:31
 msgid "Allocate IP"
-msgstr "IP の確保"
+msgstr "IP の割り当て"
 
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_allocate.html:32
 #: dashboards/nova/templates/nova/access_and_security/floating_ips/_associate.html:23
@@ -1189,7 +1189,7 @@ msgid ""
 "private key (a .pem file)."
 msgstr ""
 "キーペアは ssh 形式の資格情報で、起動時にイメージに書き込まれます。新しいキー"
-"ペアを作成すると、公開鍵を登録し、秘密鍵 (pemファイル) をダウンロードします。"
+"ペアを作成は、公開鍵を登録し、秘密鍵 (pemファイル) をダウンロードします。"
 
 #: dashboards/nova/templates/nova/access_and_security/keypairs/_create.html:18
 #: dashboards/nova/templates/nova/access_and_security/keypairs/_import.html:18
@@ -1320,7 +1320,7 @@ msgid ""
 "Specify the details for launching an instance. The chart below shows the "
 "resources used by this project in relation to the project's quotas."
 msgstr ""
-"起動するインスタンスの詳細を指定します。下のグラフには、\n"
+"起動中のインスタンスの詳細を指定します。下のグラフには、\n"
 "このプロジェクトのリソース使用状況と利用上限が表示されています。"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_launch.html:30
@@ -1366,7 +1366,7 @@ msgstr "イメージを更新"
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_update.html:17
 #: dashboards/syspanel/templates/syspanel/images/_update.html:18
 msgid "From here you can modify different properties of an image."
-msgstr "イメージのプロパティを変更できます"
+msgstr "イメージのプロパティを変更できます。"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/images/detail.html:4
 msgid "Image Detail "
@@ -1374,7 +1374,7 @@ msgstr "イメージ詳細"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/snapshots/_create.html:18
 msgid "Snapshots preserve the disk state of a running instance."
-msgstr "スナップショットは実行中のインスタンスのディスク状態を保存します"
+msgstr "スナップショットは実行中のインスタンスのディスク状態を保存します。"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/snapshots/create.html:6
 msgid "Create a Snapshot"
@@ -1538,10 +1538,8 @@ msgid ""
 "compression or encryption) and consists of a location (container), the "
 "object's name, and any metadata consisting of key/value pairs."
 msgstr ""
-"オブジェクトは OpenStack の Object Storage システムにおけるストレージ\n"
-"の基本単位です。オブジェクトには任意のメタデータを付与することができ、\n"
-"Object Storage に格納したファイルに関する情報を保存することができます。\n"
-"OpenStack の Object Storage にデータをアップロードすると、\n"
+"OpenStack Object Storageに保存するオブジェクトは実体とメタデータで、\n"
+"ファイルに相当します。データをアップロードすると、\n"
 "データは (圧縮や暗号化などは行われず) そのまま格納されます。\n"
 "オブジェクト情報は、格納場所 (コンテナ)、オブジェクト名、\n"
 "key/value のペアで構成される任意のメタデータから構成されます。"
@@ -1600,9 +1598,10 @@ msgid ""
 "Clicking \"Download EC2 Credentials\" will download a zip file which "
 "includes an rc file with your access/secret keys, as well as your x509 "
 "private key and certificate."
-msgstr " \"EC2認証情報をダウンロード\" をクリックすると、zipファイルを"
-"ダウンロードできます。zipファイルには、RCファイルとあなたの"
-"アクセスキー/秘密鍵と認証情報が含まれています。"
+msgstr ""
+" \"EC2認証情報をダウンロード\" をクリックすると、zipファイルが"
+"ダウンロードされます。zipファイルには、access/secretキーを持った"
+"RCファイルが含まれています（x509の秘密鍵・証明書と同様）"
 
 #: dashboards/settings/templates/settings/project/_openrc.html:8
 #: dashboards/settings/templates/settings/project/settings.html:6
@@ -1613,7 +1612,8 @@ msgstr "OpenStack RCファイルをダウンロード"
 msgid ""
 "Download the RC file for the selected project, then type \"source openrc\" "
 "in the terminal to configure your environment to communicate with OpenStack."
-msgstr "RCファイルをダウンロードするプロジェクトを選択してください。"
+msgstr ""
+"RCファイルをダウンロードするプロジェクトを選択してください。"
 "ターミナルで\"source openrc\"と入力することでOpenStackを利用出来ます。"
 
 #: dashboards/settings/templates/settings/project/_openrc.html:23
@@ -1686,7 +1686,7 @@ msgstr "インスタンスタイプ"
 #: dashboards/syspanel/templates/syspanel/flavors/_create.html:23
 #: dashboards/syspanel/templates/syspanel/flavors/create.html:6
 msgid "Create Flavor"
-msgstr "インスタンスタイプを作成"
+msgstr "インスタンスタイプの作成"
 
 #: dashboards/syspanel/flavors/tables.py:29
 msgid "Flavor Name"
@@ -2368,7 +2368,7 @@ msgstr "仮想CPU 時間"
 
 #: usage/tables.py:30
 msgid "Disk GB Hours"
-msgstr "ディスク GB×時間"
+msgstr "ディスク GB x 時間"
 
 #: usage/tables.py:38 usage/tables.py:56
 msgid "Usage Summary"
