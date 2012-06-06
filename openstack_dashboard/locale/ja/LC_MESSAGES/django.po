@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Takashi Okamoto <toraneko at gmail.com>, 2012.
 #
 #, fuzzy
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-29 11:47-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2012-05-17 23:38+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: settings.py:119
 msgid "Japanese"
-msgstr ""
+msgstr "日本語"
 
 #: settings.py:120
 msgid "Portuguese"
@@ -48,11 +48,11 @@ msgstr ""
 
 #: settings.py:122
 msgid "Simplified Chinese"
-msgstr ""
+msgstr "中国語(簡体字)"
 
 #: settings.py:123
 msgid "Traditional Chinese"
-msgstr ""
+msgstr "中国語(繁体字)"
 
 #: local/local_settings.py:17
 msgid "Your password must be at least 6 characters long."
@@ -60,49 +60,51 @@ msgstr ""
 
 #: templates/403.html:4 templates/403.html.py:9
 msgid "Forbidden"
-msgstr ""
+msgstr "許可されていません"
 
 #: templates/403.html:20 templates/404.html:19 templates/500.html:19
 msgid "Home"
-msgstr ""
+msgstr "ホーム"
 
 #: templates/403.html:24 templates/404.html:23 templates/500.html:23
 msgid "Projects"
-msgstr ""
+msgstr "プロジェクト"
 
 #: templates/404.html:4
 msgid "Page Not Found"
-msgstr ""
+msgstr "ページが見つかりません"
 
 #: templates/404.html:9
 msgid "The page you were looking for doesn't exist"
-msgstr ""
+msgstr "このページは存在しません"
 
 #: templates/404.html:10
 msgid "You may have mistyped the address or the page may have moved."
-msgstr ""
+msgstr "このアドレスはタイプミスか移動されています"
 
 #: templates/500.html:4 templates/500.html.py:9
 msgid "Internal Server Error"
-msgstr ""
+msgstr "内部サーバーエラー"
 
 #: templates/500.html:10
 msgid ""
 "An unexpected error occurred while processing your request.  Please try your "
 "request again."
 msgstr ""
+"リクエスト処理中に予期しないエラーが発生しました。再度アクセスしてみてくださ"
+"い。"
 
 #: templates/_header.html:3
 msgid "Logged in as"
-msgstr ""
+msgstr "ログイン中"
 
 #: templates/_header.html:4
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: templates/_header.html:5
 msgid "Sign Out"
-msgstr ""
+msgstr "ログアウト"
 
 #: templates/_scripts.html:39
 msgid "Loading&hellip;"
@@ -110,4 +112,4 @@ msgstr ""
 
 #: templates/switch_tenants.html:12
 msgid "Log-in to tenant"
-msgstr ""
+msgstr "テナントへログイン"
