@@ -1193,7 +1193,8 @@ msgstr ""
 #: dashboards/nova/templates/nova/access_and_security/keypairs/_import.html:18
 msgid "Protect and use the key as you would any normal ssh private key."
 msgstr ""
-"ダウンロードした秘密鍵は通常の ssh 秘密鍵と同様に保護した上で使用して下さい。"
+"ダウンロードした秘密鍵は、通常の ssh 秘密鍵と同様に他のユーザーにアクセス"
+"されないように管理してください。"
 
 #: dashboards/nova/templates/nova/access_and_security/keypairs/download.html:3
 #: dashboards/nova/templates/nova/access_and_security/keypairs/download.html:6
@@ -1216,7 +1217,7 @@ msgstr "キーペア &quot;%(keypair_name)s&quot; のダウンロード"
 
 #: dashboards/nova/templates/nova/access_and_security/security_groups/_create.html:18
 msgid "From here you can create a new security group"
-msgstr "新しいセキュリティグループを作成できます。"
+msgstr "新しいセキュリティグループを作成します。"
 
 #: dashboards/nova/templates/nova/access_and_security/security_groups/_edit_rules.html:9
 #: dashboards/nova/templates/nova/access_and_security/security_groups/edit_rules.html:6
@@ -1364,7 +1365,7 @@ msgstr "イメージを更新"
 #: dashboards/nova/templates/nova/images_and_snapshots/images/_update.html:17
 #: dashboards/syspanel/templates/syspanel/images/_update.html:18
 msgid "From here you can modify different properties of an image."
-msgstr "イメージのプロパティを変更できます。"
+msgstr "イメージのプロパティを変更します。"
 
 #: dashboards/nova/templates/nova/images_and_snapshots/images/detail.html:4
 msgid "Image Detail "
@@ -1384,7 +1385,7 @@ msgstr "インスタンスとボリューム"
 
 #: dashboards/nova/templates/nova/instances_and_volumes/instances/_detail_log.html:7
 msgid "View Full Log"
-msgstr "全ログの参照"
+msgstr "全てのログを表示"
 
 #: dashboards/nova/templates/nova/instances_and_volumes/instances/_detail_overview.html:3
 msgid "Instance Overview"
