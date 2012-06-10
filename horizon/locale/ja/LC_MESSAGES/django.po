@@ -1613,8 +1613,9 @@ msgid ""
 "Download the RC file for the selected project, then type \"source openrc\" "
 "in the terminal to configure your environment to communicate with OpenStack."
 msgstr ""
-"RCファイルをダウンロードするプロジェクトを選択してください。"
-"ターミナルで\"source openrc\"と入力することでOpenStackを利用出来ます。"
+"”RCファイルをダウンロード”をクリックすると、"
+"選択したプロジェクトの openrc.sh ファイルがダウンロードされます。"
+"ターミナルで\"source openrc.sh\"と入力することでOpenStackを利用出来ます。"
 
 #: dashboards/settings/templates/settings/project/_openrc.html:23
 msgid "Download RC File"
