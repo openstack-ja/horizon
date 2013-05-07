@@ -7,13 +7,14 @@
 # Translators:
 # Akihiro MOTOKI <amotoki@gmail.com>, 2013
 # masayukig <masayuki.igawa@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
 # Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: https://launchpad.net/horizon\n"
 "POT-Creation-Date: 2013-03-12 04:09+0000\n"
-"PO-Revision-Date: 2013-05-07 17:16+0900\n"
+"PO-Revision-Date: 2013-05-07 10:27+0000\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -634,7 +635,7 @@ msgstr "マイグレーション"
 
 #: dashboards/admin/instances/tables.py:44
 msgid "Scheduled migration (pending confirmation) of"
-msgstr ""
+msgstr "(確認待ちで) マイグレーション予約しました"
 
 #: dashboards/admin/instances/tables.py:45
 #: dashboards/project/access_and_security/floating_ips/tables.py:117
@@ -2806,7 +2807,7 @@ msgstr "ボリュームのスナップショット"
 #: dashboards/project/loadbalancers/tables.py:99
 #: dashboards/project/volumes/tables.py:40
 msgid "Scheduled deletion of"
-msgstr ""
+msgstr "削除予約しました"
 
 #: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:45
 #: dashboards/project/volumes/tables.py:61
@@ -2831,7 +2832,7 @@ msgstr "削除"
 
 #: dashboards/project/instances/tables.py:72
 msgid "Scheduled termination of"
-msgstr ""
+msgstr "削除予約しました"
 
 #: dashboards/project/instances/tables.py:86
 msgid "Hard Reboot"
@@ -2851,12 +2852,12 @@ msgstr "リブートしました"
 
 #: dashboards/project/instances/tables.py:112
 msgid "Pause"
-msgstr "一時停止します"
+msgstr "一時停止"
 
 #: dashboards/project/instances/tables.py:112
 #: dashboards/project/instances/tables.py:141
 msgid "Resume"
-msgstr "再開します"
+msgstr "再開"
 
 #: dashboards/project/instances/tables.py:113
 msgid "Paused"
@@ -2869,7 +2870,7 @@ msgstr "再開しました"
 
 #: dashboards/project/instances/tables.py:141
 msgid "Suspend"
-msgstr "休止します"
+msgstr "休止"
 
 #: dashboards/project/instances/tables.py:142
 msgid "Suspended"
@@ -2882,7 +2883,7 @@ msgstr "休止しました"
 #: dashboards/project/instances/workflows/create_instance.py:465
 #: dashboards/project/network_topology/templates/network_topology/index.html:26
 msgid "Launch Instance"
-msgstr "イメージの起動"
+msgstr "インスタンスの起動"
 
 #: dashboards/project/instances/tables.py:189
 msgid "(Quota exceeded)"
@@ -3341,12 +3342,12 @@ msgstr "ネットワーク一覧を取得できません。"
 #: dashboards/project/instances/workflows/create_instance.py:467
 #, python-format
 msgid "Launched %(count)s named \"%(name)s\"."
-msgstr "%(count)s 個の \"%(name)s\" を起動しました。"
+msgstr "名前が \"%(name)s\" の %(count)s を起動しました。"
 
 #: dashboards/project/instances/workflows/create_instance.py:468
 #, python-format
 msgid "Unable to launch %(count)s named \"%(name)s\"."
-msgstr "%(count)s 個の \"%(name)s\" を起動できません。"
+msgstr "名前が \"%(name)s\" の %(count)s が起動できません。"
 
 #: dashboards/project/instances/workflows/create_instance.py:481
 #, python-format
@@ -3583,10 +3584,7 @@ msgid ""
 "Create Pool for current tenant.\n"
 "\n"
 "Assign a name and description for the pool. Choose one subnet where all members of this pool must be on. Select the protocol and load balancing method for this pool. Admin State is UP (checked) by default."
-msgstr ""
-"現在のプロジェクトに対するプールを作成します。\n"
-"\n"
-"プールの名前および説明を入力します。このプールのすべてのメンバーが所属するサブネットを一つ選択します。このプールのプロトコルおよび負荷分散方式を選択します。管理状態がデフォルトで有効 (チェック済み) になっています。"
+msgstr "現在のプロジェクトに対するプールを作成します。\n\nプールの名前および説明を入力します。このプールのすべてのメンバーが所属するサブネットを一つ選択します。このプールのプロトコルおよび負荷分散方式を選択します。管理状態がデフォルトで有効 (チェック済み) になっています。"
 
 #: dashboards/project/loadbalancers/workflows.py:98
 #, python-format
@@ -3701,10 +3699,7 @@ msgid ""
 "Add member to selected pool.\n"
 "\n"
 "Choose one or more listed instances to be added to the pool as member(s). Assign a numeric weight for this member Specify the port number the member(s) operate on; e.g., 80."
-msgstr ""
-"メンバーを選択済みプールに追加します。\n"
-"\n"
-"メンバーとしてプールに追加するインスタンスを一覧から選択してください (複数可)。このメンバーに対する重みを指定してください。メンバーが使用するポート番号を指定してください（例: 80）。"
+msgstr "メンバーを選択済みプールに追加します。\n\nメンバーとしてプールに追加するインスタンスを一覧から選択してください (複数可)。このメンバーに対する重みを指定してください。メンバーが使用するポート番号を指定してください（例: 80）。"
 
 #: dashboards/project/loadbalancers/workflows.py:327
 #, python-format
@@ -3766,10 +3761,7 @@ msgid ""
 "Create a monitor for a pool.\n"
 "\n"
 "Select target pool and type of monitoring. Specify delay, timeout, and retry limits required by the monitor. Specify method, URL path, and expected HTTP codes upon success."
-msgstr ""
-"プールのモニターを作成します。\n"
-"\n"
-"対象のプールおよび監視方法を選択します。モニターで必要な、遅延、タイムアウト、最大試行回数を指定します。メソッド、URL パス、および正常時の HTTP コードの期待値を指定します。"
+msgstr "プールのモニターを作成します。\n\n対象のプールおよび監視方法を選択します。モニターで必要な、遅延、タイムアウト、最大試行回数を指定します。メソッド、URL パス、および正常時の HTTP コードの期待値を指定します。"
 
 #: dashboards/project/loadbalancers/workflows.py:431
 #, python-format
@@ -3960,9 +3952,7 @@ msgstr "ネットワーク名。この項目はオプションです。"
 msgid ""
 "From here you can create a new network.\n"
 "In addition a subnet associated with the network can be created in the next panel."
-msgstr ""
-"新しいネットワークを作成できます。\n"
-"合わせて、このネットワークに割り当てられたサブネットを次のパネルで作成できます。"
+msgstr "新しいネットワークを作成できます。\n合わせて、このネットワークに割り当てられたサブネットを次のパネルで作成できます。"
 
 #: dashboards/project/networks/workflows.py:61
 msgid "Subnet Name"
