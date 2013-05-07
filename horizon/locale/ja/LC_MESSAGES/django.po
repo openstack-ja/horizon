@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: https://launchpad.net/horizon\n"
 "POT-Creation-Date: 2013-03-12 04:08+0000\n"
-"PO-Revision-Date: 2013-04-30 07:03+0000\n"
+"PO-Revision-Date: 2013-05-07 17:35+0900\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgstr "このアクションを実行する前に、対象を選択してくだ
 
 #: templates/_header.html:3
 msgid "Logged in as"
-msgstr "次の役割でログインしました"
+msgstr "次の役割でログイン中"
 
 #: templates/_header.html:5
 msgid "Help"
@@ -132,7 +132,7 @@ msgstr "ログイン"
 
 #: templates/auth/_login.html:14
 msgid "You don't have permissions to access:"
-msgstr "%(action)s を実行する権限がありません: %(objs)s"
+msgstr "アクセスする権限がありません: "
 
 #: templates/auth/_login.html:16
 msgid "Login as different user or go back to"
@@ -194,7 +194,7 @@ msgstr "使用済み"
 #: templates/horizon/common/_quota_summary.html:15
 #: templates/horizon/common/_quota_summary.html:18
 msgid "of"
-msgstr "の"
+msgstr "/"
 
 #: templates/horizon/common/_quota_summary.html:5
 msgid "Available Instances"
@@ -210,11 +210,11 @@ msgstr "利用可能なメモリー"
 
 #: templates/horizon/common/_quota_summary.html:15
 msgid "Available volumes"
-msgstr "利用可能"
+msgstr "利用可能なボリューム"
 
 #: templates/horizon/common/_quota_summary.html:18
 msgid "Available volume storage"
-msgstr "すべてのインスタンス"
+msgstr "利用可能なボリュームストレージ"
 
 #: templates/horizon/common/_resource_browser.html:10
 #, python-format
@@ -481,7 +481,7 @@ msgstr "処理中..."
 
 #: workflows/base.py:467
 msgid "All available"
-msgstr "利用可能"
+msgstr "利用可能な全項目"
 
 #: workflows/base.py:468
 msgid "Members"
@@ -489,7 +489,7 @@ msgstr "メンバー"
 
 #: workflows/base.py:469
 msgid "None available."
-msgstr "利用可能"
+msgstr "利用可能な項目がありません。"
 
 #: workflows/base.py:470
 msgid "No members."
