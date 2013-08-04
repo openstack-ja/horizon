@@ -1,29 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Translators:
-# benjamin lin <bbpp10@qq.com>, 2013.
-#   <cateester@gmail.com>, 2012.
-#   <daisy.ycguo@gmail.com>, 2012.
-# FIRST AUTHOR Jeffrey Wilcox, 2011.
-#   <laurence.miao@gmail.com>, 2012.
-# Lion <11315889@qq.com>, 2012.
-# QunShi Zhang <zhang.kris@gmail.com>, 2012.
-# yuanke wei <weiyuanke123@gmail.com>, 2012.
+# Translators:
+# Translators:
+# linlg <bbpp10@qq.com>, 2013
+# cateester <cateester@gmail.com>, 2012
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2012
+# FIRST AUTHOR Jeffrey Wilcox, 2011
+# laurence.miao <laurence.miao@gmail.com>, 2012
+# dangdang <11315889@qq.com>, 2012
+# QunShi Zhang <zhang.kris@gmail.com>, 2012
+# dangdang <11315889@qq.com>, 2013
+# yuanke wei <weiyuanke123@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
-"Report-Msgid-Bugs-To: https://launchpad.net/horizon\n"
-"POT-Creation-Date: 2013-03-12 04:08+0000\n"
-"PO-Revision-Date: 2013-03-12 08:28+0000\n"
-"Last-Translator: linlg <bbpp10@qq.com>\n"
-"Language-Team: English (http://www.transifex.com/projects/p/openstack/language/en/)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-01 08:53-0500\n"
+"PO-Revision-Date: 2013-04-29 08:33+0000\n"
+"Last-Translator: Gabriel Hurley <gabriel@strikeawe.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/"
+"openstack/language/zh_CN/)\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: base.py:424
@@ -39,7 +43,12 @@ msgstr "请登录先。"
 msgid "You are not authorized to access %s"
 msgstr "您无权访问 %s"
 
-#: exceptions.py:283
+#: exceptions.py:281
+#, python-format
+msgid "Unauthorized: %s"
+msgstr ""
+
+#: exceptions.py:284
 msgid "Unauthorized. Please try logging in again."
 msgstr "未授权。请尝试重新登录。"
 
@@ -57,6 +66,7 @@ msgid "Password is not accepted"
 msgstr "密码没有接受"
 
 #: tables/actions.py:349
+#: templates/horizon/common/_data_table_table_actions.html:12
 msgid "Filter"
 msgstr "筛选"
 
@@ -144,7 +154,7 @@ msgstr ""
 
 #: templates/auth/_login.html:17
 msgid "home page"
-msgstr ""
+msgstr "主页"
 
 #: templates/auth/_login.html:27
 msgid "Sign In"
@@ -260,13 +270,13 @@ msgstr "本月的 VCPU 小时时间"
 msgid "This Month's GB-Hours"
 msgstr "本月的 GB 小时时间"
 
-#: templates/horizon/common/_workflow.html:33
+#: templates/horizon/common/_workflow.html:36
 msgid "Cancel"
 msgstr "取消"
 
 #: templatetags/branding.py:35
 msgid "Horizon"
-msgstr ""
+msgstr "控制面板"
 
 #: templatetags/horizon.py:109
 msgid "No Limit"
@@ -280,7 +290,7 @@ msgstr "可用配额"
 #, python-format
 msgid "%(size)d byte"
 msgid_plural "%(size)d bytes"
-msgstr[0] ""
+msgstr[0] "%(size)d 字节"
 
 #: templatetags/sizeformat.py:49
 #, python-format
