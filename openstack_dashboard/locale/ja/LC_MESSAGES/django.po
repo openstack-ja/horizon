@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-10 18:21-0500\n"
-"PO-Revision-Date: 2013-09-12 01:50+0000\n"
-"Last-Translator: daisy.ycguo <daisy.ycguo@gmail.com>\n"
+"PO-Revision-Date: 2013-09-12 18:39+0000\n"
+"Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -100,7 +100,7 @@ msgstr ""
 #: api/neutron.py:196
 #, python-format
 msgid "ALLOW %(ethertype)s %(proto_port)s %(direction)s %(remote)s"
-msgstr ""
+msgstr "ALLOW %(ethertype)s %(proto_port)s %(direction)s %(remote)s"
 
 #: api/neutron.py:593
 #, python-format
@@ -335,11 +335,11 @@ msgstr ""
 #: dashboards/admin/defaults/workflows.py:83
 #, python-format
 msgid "Unable to update default quotas \"%s\"."
-msgstr ""
+msgstr "クォータ \"%s\" のデフォルト値を更新できません。"
 
 #: dashboards/admin/defaults/workflows.py:100
 msgid "Unable to update default quotas."
-msgstr ""
+msgstr "クォータのデフォルト値を更新できません。"
 
 #: dashboards/admin/domains/panel.py:26 dashboards/admin/domains/tables.py:75
 #: dashboards/admin/domains/tables.py:174
@@ -1272,35 +1272,35 @@ msgstr "種別"
 
 #: dashboards/admin/hypervisors/tables.py:51
 msgid "VCPUs (total)"
-msgstr ""
+msgstr "仮想 CPU (総量)"
 
 #: dashboards/admin/hypervisors/tables.py:54
 msgid "VCPUs (used)"
-msgstr ""
+msgstr "仮想 CPU (使用中)"
 
 #: dashboards/admin/hypervisors/tables.py:57
 msgid "RAM (total)"
-msgstr ""
+msgstr "メモリー (総量)"
 
 #: dashboards/admin/hypervisors/tables.py:61
 msgid "RAM (used)"
-msgstr ""
+msgstr "メモリー (使用中)"
 
 #: dashboards/admin/hypervisors/tables.py:65
 msgid "Storage (total)"
-msgstr ""
+msgstr "ストレージ (総量)"
 
 #: dashboards/admin/hypervisors/tables.py:69
 msgid "Storage (used)"
-msgstr ""
+msgstr "ストレージ (使用中)"
 
 #: dashboards/admin/hypervisors/views.py:40
 msgid "Unable to retrieve hypervisor information."
-msgstr ""
+msgstr "ハイパーバイザーの情報を取得できません。"
 
 #: dashboards/admin/hypervisors/views.py:50
 msgid "Unable to retrieve hypervisor statistics."
-msgstr ""
+msgstr "ハイパーバイザーの統計を取得できません。"
 
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:7
 msgid "All Hypervisors"
@@ -1308,18 +1308,18 @@ msgstr ""
 
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:12
 msgid "Hypervisor Summary"
-msgstr ""
+msgstr "ハイパーバイザーの概要"
 
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:15
 msgid "VCPU Usage"
-msgstr ""
+msgstr "仮想 CPU 使用量"
 
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:16
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:23
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:30
 #, python-format
 msgid "Used <span> %(used)s </span> of <span> %(available)s </span>"
-msgstr ""
+msgstr "<span> %(available)s </span> 中 <span> %(used)s </span> 使用中"
 
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:22
 msgid "Memory Usage"
@@ -2809,7 +2809,7 @@ msgstr ""
 
 #: dashboards/admin/roles/forms.py:48 dashboards/admin/roles/views.py:60
 msgid "Unable to update role."
-msgstr ""
+msgstr "ロールを更新できません。"
 
 #: dashboards/admin/roles/panel.py:26 dashboards/admin/roles/tables.py:53
 #: dashboards/admin/roles/tables.py:77
@@ -2967,7 +2967,7 @@ msgstr "ユーザーが正常に更新されました。"
 
 #: dashboards/admin/users/forms.py:193
 msgid "Unable to update the user."
-msgstr ""
+msgstr "ユーザーを更新できません。"
 
 #: dashboards/admin/users/tables.py:19
 #: dashboards/admin/users/templates/users/_create.html:8
@@ -3362,7 +3362,7 @@ msgstr ""
 
 #: dashboards/project/access_and_security/security_groups/forms.py:92
 msgid "Unable to update security group."
-msgstr ""
+msgstr "セキュリティグループを更新できません。"
 
 #: dashboards/project/access_and_security/security_groups/forms.py:98
 #: dashboards/project/access_and_security/security_groups/tables.py:96
@@ -3590,7 +3590,7 @@ msgstr "ルール"
 
 #: dashboards/project/access_and_security/security_groups/tables.py:140
 msgid "Any"
-msgstr ""
+msgstr "ANY"
 
 #: dashboards/project/access_and_security/security_groups/views.py:58
 #: dashboards/project/access_and_security/security_groups/views.py:83
@@ -3614,7 +3614,7 @@ msgstr "Floating IP の確保"
 
 #: dashboards/project/access_and_security/templates/access_and_security/floating_ips/_allocate.html:19
 msgid "Allocate a floating IP from a given floating IP pool."
-msgstr ""
+msgstr "Floating IP を指定した Floating IP プールから割り当てます。"
 
 #: dashboards/project/access_and_security/templates/access_and_security/floating_ips/_allocate.html:21
 #: dashboards/project/databases/templates/databases/_launch_details_help.html:19
@@ -3857,7 +3857,7 @@ msgstr "コンテナーの詳細"
 
 #: dashboards/project/containers/templates/containers/_container_detail.html:12
 msgid "Object Count"
-msgstr ""
+msgstr "オブジェクト数"
 
 #: dashboards/project/containers/templates/containers/_copy.html:8
 #: dashboards/project/containers/templates/containers/_copy.html:23
@@ -3888,11 +3888,11 @@ msgstr "コンテナーはデータのストレージの区画です。データ
 #: dashboards/project/containers/templates/containers/object_detail.html:3
 #: dashboards/project/containers/templates/containers/object_detail.html:6
 msgid "Object Details"
-msgstr ""
+msgstr "オブジェクトの詳細"
 
 #: dashboards/project/containers/templates/containers/_object_detail.html:12
 msgid "Hash"
-msgstr ""
+msgstr "ハッシュ"
 
 #: dashboards/project/containers/templates/containers/_object_detail.html:14
 msgid "Content Type"
@@ -3900,7 +3900,7 @@ msgstr ""
 
 #: dashboards/project/containers/templates/containers/_object_detail.html:16
 msgid "Last Modified"
-msgstr ""
+msgstr "最終更新時刻"
 
 #: dashboards/project/containers/templates/containers/_upload.html:9
 msgid "Upload Object To Container"
@@ -4440,54 +4440,54 @@ msgstr "IP プロトコル"
 
 #: dashboards/project/firewalls/forms.py:43
 msgid "Protocol for the firewall rule"
-msgstr ""
+msgstr "ファイアウォール・ルールのプロトコル"
 
 #: dashboards/project/firewalls/forms.py:45
 #: dashboards/project/firewalls/tables.py:144
 #: dashboards/project/firewalls/workflows.py:51
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:19
 msgid "Action"
-msgstr ""
+msgstr "アクション"
 
 #: dashboards/project/firewalls/forms.py:46
 msgid "Action for the firewall rule"
-msgstr ""
+msgstr "ファイアウォール・ルールのアクション"
 
 #: dashboards/project/firewalls/forms.py:48
 #: dashboards/project/firewalls/workflows.py:55
 msgid "Source IP Address/Subnet"
-msgstr ""
+msgstr "送信元 IP アドレス/サブネット"
 
 #: dashboards/project/firewalls/forms.py:51
 msgid "Source IP address or subnet"
-msgstr ""
+msgstr "送信元 IP アドレスまたはサブネット"
 
 #: dashboards/project/firewalls/forms.py:53
 #: dashboards/project/firewalls/workflows.py:59
 msgid "Destination IP Address/Subnet"
-msgstr ""
+msgstr "宛先 IP アドレス/サブネット"
 
 #: dashboards/project/firewalls/forms.py:56
 msgid "Destination IP address or subnet"
-msgstr ""
+msgstr "宛先 IP アドレスまたはサブネット"
 
 #: dashboards/project/firewalls/forms.py:59
 #: dashboards/project/firewalls/workflows.py:64
 msgid "Source Port/Port Range"
-msgstr ""
+msgstr "送信元ポート/ポートの範囲"
 
 #: dashboards/project/firewalls/forms.py:62
 msgid "Source port (integer in [1, 65535] or range in a:b)"
-msgstr ""
+msgstr "送信元ポート ([1, 65535] の整数か a:b 形式の範囲)"
 
 #: dashboards/project/firewalls/forms.py:65
 #: dashboards/project/firewalls/workflows.py:69
 msgid "Destination Port/Port Range"
-msgstr ""
+msgstr "宛先ポート/ポートの範囲"
 
 #: dashboards/project/firewalls/forms.py:68
 msgid "Destination port (integer in [1, 65535] or rangein a:b)"
-msgstr ""
+msgstr "宛先ポート ([1, 65535] の整数か a:b 形式の範囲)"
 
 #: dashboards/project/firewalls/forms.py:82
 #: dashboards/project/firewalls/workflows.py:46
@@ -4498,32 +4498,32 @@ msgstr "TCP"
 #: dashboards/project/firewalls/forms.py:82
 #: dashboards/project/firewalls/workflows.py:47
 msgid "UDP"
-msgstr ""
+msgstr "UDP"
 
 #: dashboards/project/firewalls/forms.py:82
 #: dashboards/project/firewalls/workflows.py:48
 msgid "ICMP"
-msgstr ""
+msgstr "ICMP"
 
 #: dashboards/project/firewalls/forms.py:88
 #: dashboards/project/firewalls/workflows.py:52
 msgid "ALLOW"
-msgstr ""
+msgstr "ALLOW"
 
 #: dashboards/project/firewalls/forms.py:88
 #: dashboards/project/firewalls/workflows.py:53
 msgid "DENY"
-msgstr ""
+msgstr "DENY"
 
 #: dashboards/project/firewalls/forms.py:102
 #, python-format
 msgid "Rule %s was successfully updated."
-msgstr ""
+msgstr "ルール %s が正常に更新されました。"
 
 #: dashboards/project/firewalls/forms.py:107
 #, python-format
 msgid "Failed to update rule %(name)s: %(reason)s"
-msgstr ""
+msgstr "ルール %(name)s の更新に失敗しました: %(reason)s"
 
 #: dashboards/project/firewalls/forms.py:119
 #: dashboards/project/firewalls/tables.py:164
@@ -4535,12 +4535,12 @@ msgstr ""
 #: dashboards/project/firewalls/forms.py:128
 #, python-format
 msgid "Policy %s was successfully updated."
-msgstr ""
+msgstr "ポリシー %s が正常に更新されました。"
 
 #: dashboards/project/firewalls/forms.py:133
 #, python-format
 msgid "Failed to update policy %(name)s: %(reason)s"
-msgstr ""
+msgstr "ポリシー %(name)s の更新に失敗しました: %(reason)s"
 
 #: dashboards/project/firewalls/forms.py:147
 #: dashboards/project/firewalls/tables.py:62
@@ -4552,70 +4552,70 @@ msgstr "Polish"
 #: dashboards/project/firewalls/forms.py:149
 #: dashboards/project/firewalls/templates/firewalls/_firewall_details.html:28
 msgid "Admin State Up"
-msgstr ""
+msgstr "管理状態有効"
 
 #: dashboards/project/firewalls/forms.py:163
 #: dashboards/project/firewalls/workflows.py:262
 msgid "Unable to retrieve policy list."
-msgstr ""
+msgstr "ポリシー一覧を取得できません。"
 
 #: dashboards/project/firewalls/forms.py:183
 #, python-format
 msgid "Firewall %s was successfully updated."
-msgstr ""
+msgstr "ファイアウォール %s が正常に更新されました。"
 
 #: dashboards/project/firewalls/forms.py:188
 #, python-format
 msgid "Failed to update firewall %(name)s: %(reason)s"
-msgstr ""
+msgstr "ファイアウォール %(name)s の更新に失敗しました: %(reason)s"
 
 #: dashboards/project/firewalls/forms.py:196
 #: dashboards/project/firewalls/tables.py:109
 msgid "Insert Rule"
-msgstr ""
+msgstr "ルールの挿入"
 
 #: dashboards/project/firewalls/forms.py:197
 msgid "Before"
-msgstr ""
+msgstr "前に挿入"
 
 #: dashboards/project/firewalls/forms.py:199
 msgid "After"
-msgstr ""
+msgstr "後に挿入"
 
 #: dashboards/project/firewalls/forms.py:226
 #, python-format
 msgid "Failed to retrieve available rules: %s"
-msgstr ""
+msgstr "利用可能なルールの取得に失敗しました: %s"
 
 #: dashboards/project/firewalls/forms.py:242
 #, python-format
 msgid "Rule %(rule)s was successfully inserted to policy %(policy)s."
-msgstr ""
+msgstr "ルール %(rule)s のポリシー %(policy)s への挿入に成功しました。"
 
 #: dashboards/project/firewalls/forms.py:249
 #, python-format
 msgid "Failed to insert rule to policy %(name)s: %(reason)s"
-msgstr ""
+msgstr "ポリシー %(name)s へのルールの挿入に失敗しました: %(reason)s"
 
 #: dashboards/project/firewalls/forms.py:257
 #: dashboards/project/firewalls/tables.py:120
 msgid "Remove Rule"
-msgstr ""
+msgstr "ルールの削除"
 
 #: dashboards/project/firewalls/forms.py:278
 #, python-format
 msgid "Failed to retrieve current rules in policy %(name)s: %(reason)s"
-msgstr ""
+msgstr "ポリシー %(name)s の現在のルールの取得に失敗しました: %(reason)s"
 
 #: dashboards/project/firewalls/forms.py:292
 #, python-format
 msgid "Rule %(rule)s was successfully removed from policy %(policy)s."
-msgstr ""
+msgstr "ルール %(rule)s のポリシー %(policy)s からの削除に成功しました。"
 
 #: dashboards/project/firewalls/forms.py:300
 #, python-format
 msgid "Failed to remove rule from policy %(name)s: %(reason)s"
-msgstr ""
+msgstr "ポリシー %(name)s からのルールの削除に失敗しました: %(reason)s"
 
 #: dashboards/project/firewalls/panel.py:10
 #: dashboards/project/firewalls/tables.py:71
@@ -4624,16 +4624,16 @@ msgstr ""
 #: dashboards/project/firewalls/templates/firewalls/details_tabs.html:3
 #: dashboards/project/firewalls/templates/firewalls/details_tabs.html:6
 msgid "Firewalls"
-msgstr ""
+msgstr "ファイアウォール"
 
 #: dashboards/project/firewalls/tables.py:38
 #: dashboards/project/firewalls/workflows.py:216
 msgid "Add Policy"
-msgstr ""
+msgstr "ポリシーの追加"
 
 #: dashboards/project/firewalls/tables.py:45
 msgid "Create Firewall"
-msgstr ""
+msgstr "ファイアウォールの作成"
 
 #: dashboards/project/firewalls/tables.py:63
 #: dashboards/project/firewalls/tables.py:168
@@ -4642,207 +4642,207 @@ msgstr "Polish"
 
 #: dashboards/project/firewalls/tables.py:70
 msgid "Firewall"
-msgstr ""
+msgstr "ファイアウォール"
 
 #: dashboards/project/firewalls/tables.py:76
 #: dashboards/project/firewalls/templates/firewalls/_updaterule.html:8
 #: dashboards/project/firewalls/templates/firewalls/updaterule.html:3
 msgid "Edit Rule"
-msgstr ""
+msgstr "ルールの編集"
 
 #: dashboards/project/firewalls/tables.py:87
 #: dashboards/project/firewalls/templates/firewalls/_updatepolicy.html:8
 #: dashboards/project/firewalls/templates/firewalls/updatepolicy.html:3
 msgid "Edit Policy"
-msgstr ""
+msgstr "ポリシーの編集"
 
 #: dashboards/project/firewalls/tables.py:98
 #: dashboards/project/firewalls/templates/firewalls/_updatefirewall.html:8
 #: dashboards/project/firewalls/templates/firewalls/updatefirewall.html:3
 msgid "Edit Firewall"
-msgstr ""
+msgstr "ファイアウォールの編集"
 
 #: dashboards/project/firewalls/tables.py:136
 msgid "Source IP"
-msgstr ""
+msgstr "送信元 IP アドレス"
 
 #: dashboards/project/firewalls/tables.py:138
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:28
 msgid "Source Port"
-msgstr ""
+msgstr "送信元ポート番号"
 
 #: dashboards/project/firewalls/tables.py:140
 msgid "Destination IP"
-msgstr ""
+msgstr "宛先 IP アドレス"
 
 #: dashboards/project/firewalls/tables.py:142
 msgid "Destination Port"
-msgstr ""
+msgstr "宛先ポート番号"
 
 #: dashboards/project/firewalls/tables.py:148
 msgid "In Policy"
-msgstr ""
+msgstr "利用中のポリシー"
 
 #: dashboards/project/firewalls/tabs.py:33
 msgid "Firewall Rules"
-msgstr ""
+msgstr "ファイアウォールルール"
 
 #: dashboards/project/firewalls/tabs.py:45
 msgid "Unable to retrieve rules list."
-msgstr ""
+msgstr "ルール一覧を取得できません。"
 
 #: dashboards/project/firewalls/tabs.py:54
 msgid "Firewall Policies"
-msgstr ""
+msgstr "ファイアウォールポリシー"
 
 #: dashboards/project/firewalls/tabs.py:66
 msgid "Unable to retrieve policies list."
-msgstr ""
+msgstr "ポリシー一覧を取得できません。"
 
 #: dashboards/project/firewalls/tabs.py:87
 msgid "Unable to retrieve firewall list."
-msgstr ""
+msgstr "ファイアウォール一覧を取得できません。"
 
 #: dashboards/project/firewalls/tabs.py:96
 msgid "Firewall Rule Details"
-msgstr ""
+msgstr "ファイアウォールルールの詳細"
 
 #: dashboards/project/firewalls/tabs.py:107
 #: dashboards/project/firewalls/views.py:145
 msgid "Unable to retrieve rule details."
-msgstr ""
+msgstr "ルールの詳細を取得できません。"
 
 #: dashboards/project/firewalls/tabs.py:112
 msgid "Firewall Policy Details"
-msgstr ""
+msgstr "ファイアウォールポリシーの詳細"
 
 #: dashboards/project/firewalls/tabs.py:123
 #: dashboards/project/firewalls/views.py:177
 #: dashboards/project/firewalls/views.py:243
 #: dashboards/project/firewalls/views.py:277
 msgid "Unable to retrieve policy details."
-msgstr ""
+msgstr "ポリシーの詳細を取得できません。"
 
 #: dashboards/project/firewalls/tabs.py:128
 msgid "Firewall Details"
-msgstr ""
+msgstr "ファイアウォールの詳細"
 
 #: dashboards/project/firewalls/tabs.py:139
 #: dashboards/project/firewalls/views.py:210
 msgid "Unable to retrieve firewall details."
-msgstr ""
+msgstr "ファイアウォールの詳細を取得できません。"
 
 #: dashboards/project/firewalls/views.py:73
 #, python-format
 msgid "Unable to delete rule. %s"
-msgstr ""
+msgstr "ルールを削除できません: %s"
 
 #: dashboards/project/firewalls/views.py:81
 #, python-format
 msgid "Unable to delete policy. %s"
-msgstr ""
+msgstr "ポリシーを削除できません: %s"
 
 #: dashboards/project/firewalls/views.py:89
 #, python-format
 msgid "Unable to delete firewall. %s"
-msgstr ""
+msgstr "ファイアウォールを削除できません: %s"
 
 #: dashboards/project/firewalls/workflows.py:49
 msgid "ANY"
-msgstr ""
+msgstr "ANY"
 
 #: dashboards/project/firewalls/workflows.py:81
 msgid "AddRule"
-msgstr ""
+msgstr "ルールの追加"
 
 #: dashboards/project/firewalls/workflows.py:83
 msgid ""
 "Create a firewall rule.\n"
 "\n"
 "Protocol and action must be specified. Other fields are optional."
-msgstr ""
+msgstr "ファイアウォールルールを作成します。\n\nプロトコルとアクションは指定しなければいけません。他のフィールドは省略可能です。"
 
 #: dashboards/project/firewalls/workflows.py:111
 #, python-format
 msgid "Added Rule \"%s\"."
-msgstr ""
+msgstr "ルール \"%s\" を追加しました。"
 
 #: dashboards/project/firewalls/workflows.py:112
 #, python-format
 msgid "Unable to add Rule \"%s\"."
-msgstr ""
+msgstr "ルール \"%s\" を追加できません。"
 
 #: dashboards/project/firewalls/workflows.py:140
 msgid "Create a policy with selected rules."
-msgstr ""
+msgstr "ルールを選択してポリシーを作成します。"
 
 #: dashboards/project/firewalls/workflows.py:145
 msgid "Select rules for your policy."
-msgstr ""
+msgstr "ポリシーに追加するルールの選択"
 
 #: dashboards/project/firewalls/workflows.py:160
 msgid "Unable to retrieve rules."
-msgstr ""
+msgstr "ルールの一覧を取得できません。"
 
 #: dashboards/project/firewalls/workflows.py:196
 msgid "AddPolicy"
-msgstr ""
+msgstr "ポリシーの追加"
 
 #: dashboards/project/firewalls/workflows.py:198
 msgid ""
 "Create a firewall policy with an ordered listof firewall rules.\n"
 "\n"
 "A name must be given. Firewall rules are added in the order placed under the Rules tab."
-msgstr ""
+msgstr "ルールを指定してファイアウォール・ポリシーを作成します。ファイアウォール・ルールは順序を持ったリストです。\n\n名前は必須項目です。ファイアウォール・ルールは「ルール」タブで指定した順序で追加されます。"
 
 #: dashboards/project/firewalls/workflows.py:218
 #, python-format
 msgid "Added Policy \"%s\"."
-msgstr ""
+msgstr "ポリシー \"%s\" を追加しました。"
 
 #: dashboards/project/firewalls/workflows.py:219
 #, python-format
 msgid "Unable to add Policy \"%s\"."
-msgstr ""
+msgstr "ポリシー \"%s\" を追加できません。"
 
 #: dashboards/project/firewalls/workflows.py:255
 msgid "Select a Policy"
-msgstr ""
+msgstr "ポリシーの選択"
 
 #: dashboards/project/firewalls/workflows.py:273
 msgid "AddFirewall"
-msgstr ""
+msgstr "ファイアウォールの追加"
 
 #: dashboards/project/firewalls/workflows.py:275
 msgid ""
 "Create a firewall based on a policy.\n"
 "\n"
 "A policy must be selected. Other fields are optional."
-msgstr ""
+msgstr "ポリシーを元にファイアウォールを作成します。\n\nポリシーは選択しなければなりません。他のフィールドは省略可能です。"
 
 #: dashboards/project/firewalls/workflows.py:292
 msgid "Add Firewall"
-msgstr ""
+msgstr "ファイアウォールの追加"
 
 #: dashboards/project/firewalls/workflows.py:294
 #, python-format
 msgid "Added Firewall \"%s\"."
-msgstr ""
+msgstr "ファイアウォール \"%s\" を追加しました。"
 
 #: dashboards/project/firewalls/workflows.py:295
 #, python-format
 msgid "Unable to add Firewall \"%s\"."
-msgstr ""
+msgstr "ファイアウォール \"%s\" を追加できません。"
 
 #: dashboards/project/firewalls/templates/firewalls/_firewall_details.html:19
 msgid "Policy ID"
-msgstr ""
+msgstr "ポリシー ID"
 
 #: dashboards/project/firewalls/templates/firewalls/_insert_rule_to_policy.html:8
 #: dashboards/project/firewalls/templates/firewalls/insert_rule_to_policy.html:3
 #: dashboards/project/firewalls/templates/firewalls/insert_rule_to_policy.html:6
 msgid "Insert Rule to Policy"
-msgstr ""
+msgstr "ポリシーへのルールの挿入"
 
 #: dashboards/project/firewalls/templates/firewalls/_insert_rule_to_policy.html:18
 msgid ""
@@ -4850,92 +4850,92 @@ msgid ""
 "    either the rule you want to insert immediately before, or the rule\n"
 "    to insert immediately after. If both are specified, the prior\n"
 "    takes precedence."
-msgstr ""
+msgstr "挿入したいルールを選択して下さい。ルールをどのルールの直前、または直後に挿入するかを指定して下さい。両方指定した場合は指定したルールの直前に挿入されます。"
 
 #: dashboards/project/firewalls/templates/firewalls/_remove_rule_from_policy.html:8
 #: dashboards/project/firewalls/templates/firewalls/remove_rule_from_policy.html:3
 #: dashboards/project/firewalls/templates/firewalls/remove_rule_from_policy.html:6
 msgid "Remove Rule from Policy"
-msgstr ""
+msgstr "ポリシーからのルールの削除"
 
 #: dashboards/project/firewalls/templates/firewalls/_remove_rule_from_policy.html:18
 msgid "Choose the rule you want to remove."
-msgstr ""
+msgstr "削除したいルールを選択して下さい。"
 
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:25
 msgid "Source IP Address"
-msgstr ""
+msgstr "送信元 IP アドレス"
 
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:31
 msgid "Destination IP Address"
-msgstr ""
+msgstr "宛先 IP アドレス"
 
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:34
 msgid "Destination Port: "
-msgstr ""
+msgstr "宛先ポート番号"
 
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:37
 msgid "Used in Policy"
-msgstr ""
+msgstr "利用中のポリシー"
 
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:43
 msgid "Position in Policy"
-msgstr ""
+msgstr "ポリシー内の位置"
 
 #: dashboards/project/firewalls/templates/firewalls/_update_rule_help.html:3
 msgid ""
 "Choose rule(s) from Available Rules to Selected Rule by push button or drag and drop,\n"
 "you may change their order by drag and drop as well. "
-msgstr ""
+msgstr "利用可能なルールから選択済みルールに、ボタンを押すかドラッグアンドドロップすることでルールを選択します。ドラッグアンドドロップでルールの順番を変更することもできます。"
 
 #: dashboards/project/firewalls/templates/firewalls/_update_rules.html:8
 msgid "Selected Rules"
-msgstr ""
+msgstr "選択済みのルール"
 
 #: dashboards/project/firewalls/templates/firewalls/_update_rules.html:11
 msgid "Available Rules"
-msgstr ""
+msgstr "利用可能なルール"
 
 #: dashboards/project/firewalls/templates/firewalls/_updatefirewall.html:18
 msgid "You may update firewall details here."
-msgstr ""
+msgstr "ファイアウォールの詳細をここから更新できます。"
 
 #: dashboards/project/firewalls/templates/firewalls/_updatepolicy.html:18
 msgid ""
 "You may update policy details here. Use 'Insert Rule' or 'Remove Rule' links"
 " instead to insert or remove a rule"
-msgstr ""
+msgstr "ポリシーの詳細をここから更新できます。ルールの挿入、削除はここではなく「ルールの挿入」「ルールの削除」を使って下さい。"
 
 #: dashboards/project/firewalls/templates/firewalls/_updaterule.html:18
 msgid "You may update rule details here."
-msgstr ""
+msgstr "ルールの詳細をここから更新できます。"
 
 #: dashboards/project/firewalls/templates/firewalls/addfirewall.html:3
 #: dashboards/project/firewalls/templates/firewalls/addfirewall.html:6
 msgid "Add New Firewall"
-msgstr ""
+msgstr "ファイアウォールの追加"
 
 #: dashboards/project/firewalls/templates/firewalls/addpolicy.html:3
 #: dashboards/project/firewalls/templates/firewalls/addpolicy.html:6
 msgid "Add New Policy"
-msgstr ""
+msgstr "ポリシーの追加"
 
 #: dashboards/project/firewalls/templates/firewalls/addrule.html:3
 #: dashboards/project/firewalls/templates/firewalls/addrule.html:6
 msgid "Add New Rule"
-msgstr ""
+msgstr "ルールの追加"
 
 #: dashboards/project/firewalls/templates/firewalls/updatefirewall.html:6
 msgid "Edit Firewall "
-msgstr ""
+msgstr "ファイアウォールの編集"
 
 #: dashboards/project/firewalls/templates/firewalls/updatepolicy.html:6
 msgid "Edit Policy "
-msgstr ""
+msgstr "ポリシーの編集"
 
 #: dashboards/project/firewalls/templates/firewalls/updaterule.html:6
 msgid "Edit Rule "
-msgstr ""
+msgstr "ルールの編集"
 
 #: dashboards/project/images_and_snapshots/panel.py:26
 msgid "Images & Snapshots"
@@ -5519,12 +5519,12 @@ msgstr "プロジェクト"
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:29
 #, python-format
 msgid "<p>%(used)s of %(quota)s Used</p>"
-msgstr ""
+msgstr "<p>%(quota)s 個中 %(used)s 個使用</p>"
 
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:36
 #, python-format
 msgid "<p>%(used)s of %(quota)s MB Used</p>"
-msgstr ""
+msgstr "<p>%(quota)s MB 中 %(used)s MB 使用</p>"
 
 #: dashboards/project/instances/templates/instances/_launch_customize_help.html:2
 msgid ""
@@ -5580,23 +5580,23 @@ msgstr ""
 
 #: dashboards/project/instances/workflows/create_instance.py:78
 msgid "Boot from image."
-msgstr ""
+msgstr "イメージから起動"
 
 #: dashboards/project/instances/workflows/create_instance.py:79
 msgid "Boot from snapshot."
-msgstr ""
+msgstr "スナップショットから起動"
 
 #: dashboards/project/instances/workflows/create_instance.py:80
 msgid "Boot from volume."
-msgstr "ボリュームから起動します。"
+msgstr "ボリュームから起動"
 
 #: dashboards/project/instances/workflows/create_instance.py:81
 msgid "Boot from image (creates a new volume)."
-msgstr ""
+msgstr "イメージから起動 (新しいボリュームを作成)"
 
 #: dashboards/project/instances/workflows/create_instance.py:83
 msgid "Boot from volume snapshot (creates a new volume)."
-msgstr "ボリュームのスナップショットから起動します (新しいボリュームを作成します)。"
+msgstr "ボリュームのスナップショットから起動 (新しいボリュームを作成)。"
 
 #: dashboards/project/instances/workflows/create_instance.py:95
 msgid "Instance Count"
@@ -5620,7 +5620,7 @@ msgstr "インスタンスのスナップショット"
 
 #: dashboards/project/instances/workflows/create_instance.py:122
 msgid "Device size (GB)"
-msgstr ""
+msgstr "デバイスサイズ (GB)"
 
 #: dashboards/project/instances/workflows/create_instance.py:124
 msgid "Volume size in gigabytes (integer value)."
@@ -5887,7 +5887,7 @@ msgstr ""
 #: dashboards/project/instances/workflows/resize_instance.py:95
 #, python-format
 msgid "Unable to resize instance \"%s\"."
-msgstr ""
+msgstr "インスタンス \"%s\" をリサイズできません。"
 
 #: dashboards/project/instances/workflows/update_instance.py:41
 msgid "Unable to retrieve security group list. Please try again later."
@@ -5937,12 +5937,12 @@ msgstr "負荷分散方式"
 #: dashboards/project/loadbalancers/forms.py:62
 #, python-format
 msgid "Pool %s was successfully updated."
-msgstr ""
+msgstr "プール %s が正常に更新されました。"
 
 #: dashboards/project/loadbalancers/forms.py:67
 #, python-format
 msgid "Failed to update pool %s"
-msgstr ""
+msgstr "プール %s を更新できません。"
 
 #: dashboards/project/loadbalancers/forms.py:82
 #: dashboards/project/loadbalancers/workflows.py:135
@@ -5986,7 +5986,7 @@ msgstr ""
 #: dashboards/project/loadbalancers/forms.py:148
 #, python-format
 msgid "Failed to update VIP %s"
-msgstr ""
+msgstr "VIP %s を更新できません。"
 
 #: dashboards/project/loadbalancers/forms.py:159
 #: dashboards/project/loadbalancers/workflows.py:262
@@ -6006,7 +6006,7 @@ msgstr ""
 #: dashboards/project/loadbalancers/forms.py:195
 #, python-format
 msgid "Failed to update member %s"
-msgstr ""
+msgstr "メンバー %s の更新に失敗しました"
 
 #: dashboards/project/loadbalancers/forms.py:207
 #: dashboards/project/loadbalancers/workflows.py:373
@@ -6049,7 +6049,7 @@ msgstr ""
 #: dashboards/project/loadbalancers/forms.py:242
 #, python-format
 msgid "Failed to update health monitor %s"
-msgstr ""
+msgstr "ヘルスモニター %s の更新に失敗しました"
 
 #: dashboards/project/loadbalancers/panel.py:10
 msgid "Load Balancers"
@@ -6550,20 +6550,20 @@ msgstr "ポート番号:"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:21
 msgid "Weight:"
-msgstr ""
+msgstr "重み"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:24
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:35
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:36
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:42
 msgid "Admin State Up:"
-msgstr ""
+msgstr "管理状態有効"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:27
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:39
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:45
 msgid "Status:"
-msgstr ""
+msgstr "ステータス"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:12
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:34
@@ -6576,11 +6576,11 @@ msgstr ""
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:18
 msgid "Timeout:"
-msgstr ""
+msgstr "タイムアウト"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:21
 msgid "Max Retries:"
-msgstr ""
+msgstr "最大試行回数"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:25
 msgid "HTTP Method:"
@@ -6623,7 +6623,7 @@ msgstr "メンバー:"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:33
 msgid "Health Monitors:"
-msgstr ""
+msgstr "ヘルスモニター"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_updatemember.html:18
 msgid ""
@@ -6650,7 +6650,7 @@ msgstr ""
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:33
 msgid "Session Persistence:"
-msgstr ""
+msgstr "セッション永続性"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:36
 msgid "Cookie Name:"
@@ -6673,15 +6673,15 @@ msgstr "ネットワークトポロジー"
 
 #: dashboards/project/network_topology/instances/tables.py:24
 msgid "NT_Instances"
-msgstr ""
+msgstr "インスタンス"
 
 #: dashboards/project/network_topology/ports/tables.py:30
 msgid "NT_Interfaces"
-msgstr ""
+msgstr "インターフェース"
 
 #: dashboards/project/network_topology/routers/tables.py:31
 msgid "NT_Routers"
-msgstr ""
+msgstr "ルーター"
 
 #: dashboards/project/network_topology/templates/network_topology/_create_router.html:9
 #: dashboards/project/network_topology/templates/network_topology/_create_router.html:20
@@ -6821,7 +6821,7 @@ msgid ""
 "Additional routes announced to the hosts. Each entry is "
 "&lt;destination_cidr&gt;,&lt;nexthop&gt; (e.g., "
 "192.168.200.0/24,10.56.1.254) and one entry per line."
-msgstr ""
+msgstr "ホストに通知される追加のルート。各項目は &lt;destination_cidr&gt;,&lt;nexthop&gt; (例: 192.168.200.0/24,10.56.1.254) 形式で 1 行に 1 項目記入します。"
 
 #: dashboards/project/networks/workflows.py:192
 #: dashboards/project/networks/templates/networks/subnets/detail.html:3
@@ -7772,62 +7772,62 @@ msgstr "ボリュームのスナップショットの作成"
 
 #: dashboards/project/vpn/panel.py:28
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 #: dashboards/project/vpn/tables.py:34 dashboards/project/vpn/workflows.py:197
 msgid "Add IKE Policy"
-msgstr ""
+msgstr "IKE ポリシーの追加"
 
 #: dashboards/project/vpn/tables.py:41 dashboards/project/vpn/workflows.py:294
 msgid "Add IPSec Policy"
-msgstr ""
+msgstr "IPSec ポリシーの追加"
 
 #: dashboards/project/vpn/tables.py:48 dashboards/project/vpn/workflows.py:98
 msgid "Add VPN Service"
-msgstr ""
+msgstr "VPN サービスの追加"
 
 #: dashboards/project/vpn/tables.py:55 dashboards/project/vpn/workflows.py:465
 msgid "Add IPSec Site Connection"
-msgstr ""
+msgstr "IPSec サイト間接続の追加"
 
 #: dashboards/project/vpn/tables.py:64 dashboards/project/vpn/tables.py:102
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:19
 msgid "VPN Service"
-msgstr ""
+msgstr "VPN サービス"
 
 #: dashboards/project/vpn/tables.py:65 dashboards/project/vpn/tables.py:141
 #: dashboards/project/vpn/tabs.py:73
 msgid "VPN Services"
-msgstr ""
+msgstr "VPN サービス"
 
 #: dashboards/project/vpn/tables.py:72 dashboards/project/vpn/tables.py:104
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:23
 msgid "IKE Policy"
-msgstr ""
+msgstr "IKE ポリシー"
 
 #: dashboards/project/vpn/tables.py:73 dashboards/project/vpn/tables.py:159
 #: dashboards/project/vpn/tabs.py:92
 msgid "IKE Policies"
-msgstr ""
+msgstr "IKE ポリシー"
 
 #: dashboards/project/vpn/tables.py:80 dashboards/project/vpn/tables.py:106
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:27
 msgid "IPSec Policy"
-msgstr ""
+msgstr "IPSec ポリシー"
 
 #: dashboards/project/vpn/tables.py:81 dashboards/project/vpn/tables.py:177
 #: dashboards/project/vpn/tabs.py:109
 msgid "IPSec Policies"
-msgstr ""
+msgstr "IPSec ポリシー"
 
 #: dashboards/project/vpn/tables.py:88
 msgid "IPSec Site Connection"
-msgstr ""
+msgstr "IPSec サイト間接続"
 
 #: dashboards/project/vpn/tables.py:89 dashboards/project/vpn/tables.py:115
 #: dashboards/project/vpn/tabs.py:54
 msgid "IPSec Site Connections"
-msgstr ""
+msgstr "IPSec サイト間接続"
 
 #: dashboards/project/vpn/tables.py:151 dashboards/project/vpn/tables.py:169
 #: dashboards/project/vpn/workflows.py:121
@@ -7835,7 +7835,7 @@ msgstr ""
 #: dashboards/project/vpn/templates/vpn/_ikepolicy_details.html:18
 #: dashboards/project/vpn/templates/vpn/_ipsecpolicy_details.html:18
 msgid "Authorization algorithm"
-msgstr ""
+msgstr "認可アルゴリズム"
 
 #: dashboards/project/vpn/tables.py:154 dashboards/project/vpn/tables.py:172
 #: dashboards/project/vpn/workflows.py:122
@@ -7843,109 +7843,109 @@ msgstr ""
 #: dashboards/project/vpn/templates/vpn/_ikepolicy_details.html:21
 #: dashboards/project/vpn/templates/vpn/_ipsecpolicy_details.html:24
 msgid "Encryption algorithm"
-msgstr ""
+msgstr "暗号化アルゴリズム"
 
 #: dashboards/project/vpn/tables.py:155 dashboards/project/vpn/tables.py:173
 msgid "PFS"
-msgstr ""
+msgstr "PFS"
 
 #: dashboards/project/vpn/tabs.py:67
 msgid "Unable to retrieve IPSec Site Connections list."
-msgstr ""
+msgstr "IPSec サイト間接続の一覧を取得できません。"
 
 #: dashboards/project/vpn/tabs.py:86 dashboards/project/vpn/workflows.py:375
 msgid "Unable to retrieve VPN Services list."
-msgstr ""
+msgstr "VPN サービスの一覧を取得できません。"
 
 #: dashboards/project/vpn/tabs.py:103 dashboards/project/vpn/workflows.py:349
 msgid "Unable to retrieve IKE Policies list."
-msgstr ""
+msgstr "IKE ポリシーの一覧を取得できません。"
 
 #: dashboards/project/vpn/tabs.py:120 dashboards/project/vpn/workflows.py:362
 msgid "Unable to retrieve IPSec Policies list."
-msgstr ""
+msgstr "IPSec ポリシーの一覧を取得できません。"
 
 #: dashboards/project/vpn/tabs.py:132
 msgid "IKE Policy Details"
-msgstr ""
+msgstr "IKE ポリシーの詳細"
 
 #: dashboards/project/vpn/tabs.py:142
 msgid "Unable to retrieve IKE Policy details."
-msgstr ""
+msgstr "IKE ポリシーの詳細を取得できません。"
 
 #: dashboards/project/vpn/tabs.py:153
 msgid "IPSec Policy Details"
-msgstr ""
+msgstr "IPSec ポリシーの詳細"
 
 #: dashboards/project/vpn/tabs.py:163
 msgid "Unable to retrieve IPSec Policy details."
-msgstr ""
+msgstr "IPSec ポリシーの詳細を取得できません。"
 
 #: dashboards/project/vpn/tabs.py:174
 msgid "VPN Service Details"
-msgstr ""
+msgstr "VPN サービスの詳細"
 
 #: dashboards/project/vpn/tabs.py:184
 msgid "Unable to retrieve VPN Service details."
-msgstr ""
+msgstr "VPN サービスの詳細を取得できません。"
 
 #: dashboards/project/vpn/tabs.py:204
 msgid "IPSec Site Connection Details"
-msgstr ""
+msgstr "IPSec サイト間接続の詳細"
 
 #: dashboards/project/vpn/tabs.py:214
 msgid "Unable to retrieve IPSec Site Connection details."
-msgstr ""
+msgstr "IPSec サイト間接続の詳細を取得できません。"
 
 #: dashboards/project/vpn/views.py:55
 msgid "Unable to delete VPN Service."
-msgstr ""
+msgstr "VPN サービスを削除できません。"
 
 #: dashboards/project/vpn/views.py:62
 msgid "Unable to delete IKE Policy."
-msgstr ""
+msgstr "IKE ポリシーを削除できません。"
 
 #: dashboards/project/vpn/views.py:69
 msgid "Unable to delete IPSec Policy."
-msgstr ""
+msgstr "IPSec ポリシーを削除できません。"
 
 #: dashboards/project/vpn/views.py:76
 msgid "Unable to delete IPSec Site Connection."
-msgstr ""
+msgstr "IPSec サイト間接続を削除できません。"
 
 #: dashboards/project/vpn/workflows.py:63
 msgid "Select a Router"
-msgstr ""
+msgstr "ルーターの選択"
 
 #: dashboards/project/vpn/workflows.py:68
 msgid "Unable to retrieve routers list."
-msgstr ""
+msgstr "ルーターの一覧を取得できません。"
 
 #: dashboards/project/vpn/workflows.py:76
 msgid "Add New VPN Service"
-msgstr ""
+msgstr "VPN サービスの追加"
 
 #: dashboards/project/vpn/workflows.py:78
 msgid ""
 "Create VPN Service for current project.\n"
 "\n"
 "Assign a name and description for the VPN Service. Select a router and a subnet. Admin State is Up (checked) by default."
-msgstr ""
+msgstr "現在のプロジェクトに VPN サービスを作成します。\n\nVPN サービスの名前と説明を入力して下さい。ルーターとサブネットを選択します。管理状態はデフォルトで有効 (チェック済み) になっています。"
 
 #: dashboards/project/vpn/workflows.py:100
 #, python-format
 msgid "Added VPN Service \"%s\"."
-msgstr ""
+msgstr "VPN サービス \"%s\" を追加しました。"
 
 #: dashboards/project/vpn/workflows.py:101
 #, python-format
 msgid "Unable to add VPN Service \"%s\"."
-msgstr ""
+msgstr "VPN サービス \"%s\" を追加できません。"
 
 #: dashboards/project/vpn/workflows.py:123
 #: dashboards/project/vpn/templates/vpn/_ikepolicy_details.html:24
 msgid "IKE version"
-msgstr ""
+msgstr "IKE バージョン"
 
 #: dashboards/project/vpn/workflows.py:124
 msgid "Lifetime units for IKE keys"
@@ -7958,7 +7958,7 @@ msgstr ""
 #: dashboards/project/vpn/workflows.py:128
 #: dashboards/project/vpn/workflows.py:227
 msgid "Equal to or more than 60"
-msgstr ""
+msgstr "60 以上"
 
 #: dashboards/project/vpn/workflows.py:129
 #: dashboards/project/vpn/workflows.py:228
@@ -7974,29 +7974,29 @@ msgstr ""
 
 #: dashboards/project/vpn/workflows.py:171
 msgid "Add New IKE Policy"
-msgstr ""
+msgstr "IKE ポリシーの追加"
 
 #: dashboards/project/vpn/workflows.py:173
 msgid ""
 "Create IKE Policy for current project.\n"
 "\n"
 "Assign a name and description for the IKE Policy. "
-msgstr ""
+msgstr "現在のプロジェクトに IKE ポリシーを作成します。\n\nIKE ポリシーの名前と説明を入力して下さい。"
 
 #: dashboards/project/vpn/workflows.py:199
 #, python-format
 msgid "Added IKE Policy \"%s\"."
-msgstr ""
+msgstr "IKE ポリシー \"%s\" を追加しました。"
 
 #: dashboards/project/vpn/workflows.py:200
 #, python-format
 msgid "Unable to add IKE Policy \"%s\"."
-msgstr ""
+msgstr "IKE ポリシー \"%s\" を追加できません。"
 
 #: dashboards/project/vpn/workflows.py:221
 #: dashboards/project/vpn/templates/vpn/_ipsecpolicy_details.html:21
 msgid "Encapsulation mode"
-msgstr ""
+msgstr "カプセル化モード"
 
 #: dashboards/project/vpn/workflows.py:223
 msgid "Lifetime units"
@@ -8013,44 +8013,44 @@ msgstr ""
 
 #: dashboards/project/vpn/workflows.py:268
 msgid "Add New IPSec Policy"
-msgstr ""
+msgstr "IPSec ポリシーの追加"
 
 #: dashboards/project/vpn/workflows.py:270
 msgid ""
 "Create IPSec Policy for current project.\n"
 "\n"
 "Assign a name and description for the IPSec Policy. "
-msgstr ""
+msgstr "現在のプロジェクトに IPSec ポリシーを作成します。\n\nIPSec ポリシーの名前と説明を入力して下さい。"
 
 #: dashboards/project/vpn/workflows.py:296
 #, python-format
 msgid "Added IPSec Policy \"%s\"."
-msgstr ""
+msgstr "IPSec ポリシー \"%s\" を追加しました。"
 
 #: dashboards/project/vpn/workflows.py:297
 #, python-format
 msgid "Unable to add IPSec Policy \"%s\"."
-msgstr ""
+msgstr "IPSec ポリシー \"%s\" を追加できません。"
 
 #: dashboards/project/vpn/workflows.py:318
 msgid "VPN Service associated with this connection"
-msgstr ""
+msgstr "この接続に関連付ける VPN サービス"
 
 #: dashboards/project/vpn/workflows.py:320
 msgid "IKE Policy associated with this connection"
-msgstr ""
+msgstr "この接続に関連付ける IKE ポリシー"
 
 #: dashboards/project/vpn/workflows.py:322
 msgid "IPSec Policy associated with this connection"
-msgstr ""
+msgstr "この接続に関連付ける IPSec ポリシー"
 
 #: dashboards/project/vpn/workflows.py:323
 msgid "Remote Peer IP Address"
-msgstr ""
+msgstr "接続相手の IP アドレス"
 
 #: dashboards/project/vpn/workflows.py:324
 msgid "Remote peer IP address for the VPN Connection (e.g. 172.0.0.2)"
-msgstr ""
+msgstr "VPN 接続の接続相手の IP アドレス (例：172.0.0.2)"
 
 #: dashboards/project/vpn/workflows.py:330
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:34
@@ -8064,11 +8064,11 @@ msgstr ""
 #: dashboards/project/vpn/workflows.py:334
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:37
 msgid "Remote peer subnet"
-msgstr ""
+msgstr "接続相手のサブネット"
 
 #: dashboards/project/vpn/workflows.py:335
 msgid "Remote peer subnet address with mask in CIDR format (e.g. 20.1.0.0/24)"
-msgstr ""
+msgstr "接続相手のサブネットアドレス。マスク付きの CIDR 形式で指定する (例：20.1.0.0/24)"
 
 #: dashboards/project/vpn/workflows.py:341
 msgid "Pre-Shared Key (PSK) string"
@@ -8076,36 +8076,36 @@ msgstr ""
 
 #: dashboards/project/vpn/workflows.py:344
 msgid "Select IKE Policy"
-msgstr ""
+msgstr "IKE ポリシーの選択"
 
 #: dashboards/project/vpn/workflows.py:357
 msgid "Select IPSec Policy"
-msgstr ""
+msgstr "IPSec ポリシーの選択"
 
 #: dashboards/project/vpn/workflows.py:370
 msgid "Select VPN Service"
-msgstr ""
+msgstr "VPN サービスの選択"
 
 #: dashboards/project/vpn/workflows.py:383
 msgid "Add New IPSec Site Connection"
-msgstr ""
+msgstr "IPSec サイト間接続の追加"
 
 #: dashboards/project/vpn/workflows.py:385
 msgid ""
 "Create IPSec Site Connection for current project.\n"
 "\n"
 "Assign a name and description for the IPSec Site Connection. All fields in this tab are required."
-msgstr ""
+msgstr "現在のプロジェクトに IPSec サイト間接続を作成します。\n\nIPSec サイト間接続の名前と説明を入力して下さい。このタブのフィールドはすべて必須です。"
 
 #: dashboards/project/vpn/workflows.py:402
 msgid "Maximum Transmission Unit size for the connection"
-msgstr ""
+msgstr "この接続の MTU （最大転送単位）の大きさ"
 
 #: dashboards/project/vpn/workflows.py:404
 msgid ""
 "Equal to or more than 68 if the local subnet is IPv4. Equal to or more than "
 "1280 if the local subnet is IPv6."
-msgstr ""
+msgstr "ローカルサブネットが IPv4 の場合は 68 以上、 IPv6 の場合は 1280 以上。"
 
 #: dashboards/project/vpn/workflows.py:406
 msgid "Dead peer detection actions"
@@ -8136,23 +8136,23 @@ msgstr ""
 
 #: dashboards/project/vpn/workflows.py:437
 msgid "Optional Parameters"
-msgstr ""
+msgstr "詳細パラメータ"
 
 #: dashboards/project/vpn/workflows.py:439
 msgid ""
 "Fields in this tab are optional. You can configure the detail of IPSec site "
 "connection created."
-msgstr ""
+msgstr "このタブのフィールドは任意項目です。作成する IPSec サイト間接続の詳細設定ができます。"
 
 #: dashboards/project/vpn/workflows.py:467
 #, python-format
 msgid "Added IPSec Site Connection \"%s\"."
-msgstr ""
+msgstr "IPSec サイト間接続 \"%s\" を追加しました。"
 
 #: dashboards/project/vpn/workflows.py:468
 #, python-format
 msgid "Unable to add IPSec Site Connection \"%s\"."
-msgstr ""
+msgstr "IPSec サイト間接続 \"%s\" を追加できません。"
 
 #: dashboards/project/vpn/templates/vpn/_ikepolicy_details.html:27
 #: dashboards/project/vpn/templates/vpn/_ipsecpolicy_details.html:27
@@ -8166,7 +8166,7 @@ msgstr ""
 
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:31
 msgid "Remote peer IP Address"
-msgstr ""
+msgstr "接続相手の IP アドレス"
 
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:44
 msgid "Pre-Shared Key string"
@@ -8174,7 +8174,7 @@ msgstr ""
 
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:47
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:53
 msgid "Dead peer detection action"
@@ -8182,11 +8182,11 @@ msgstr ""
 
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:62
 msgid "Authorization mode"
-msgstr ""
+msgstr "認可モード"
 
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:65
 msgid "Route mode"
-msgstr ""
+msgstr "ルーティングモード"
 
 #: dashboards/project/vpn/templates/vpn/_vpnservice_details.html:27
 msgid "VPN Connections"
@@ -8197,11 +8197,11 @@ msgstr "プロジェクト"
 #: dashboards/project/vpn/templates/vpn/index.html:3
 #: dashboards/project/vpn/templates/vpn/index.html:6
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "仮想プライベートネットワーク"
 
 #: dashboards/router/nexus1000v/forms.py:34
 msgid "Select a tenant"
-msgstr ""
+msgstr "テナントの選択"
 
 #: dashboards/router/nexus1000v/forms.py:39
 msgid "Projects could not be retrieved."
@@ -8261,7 +8261,7 @@ msgstr ""
 #: dashboards/router/nexus1000v/forms.py:156
 #, python-format
 msgid "Failed to update network profile (%s)."
-msgstr ""
+msgstr "ネットワークプロファイル (%s) の更新に失敗しました。"
 
 #: dashboards/router/nexus1000v/panel.py:26
 msgid "Cisco Nexus 1000v"
