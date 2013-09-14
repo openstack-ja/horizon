@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-10 18:20-0500\n"
-"PO-Revision-Date: 2013-09-11 10:37+0000\n"
+"POT-Creation-Date: 2013-09-13 09:07-0500\n"
+"PO-Revision-Date: 2013-09-14 09:10+0000\n"
 "Last-Translator: Tomoyuki KATO <tomo@dream.daynight.jp>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -48,10 +48,6 @@ msgstr "認証されていません。もう一度ログインしてください
 #: middleware.py:67
 msgid "Session timed out."
 msgstr "セッションがタイムアウトしました。"
-
-#: middleware.py:98
-msgid "Unauthorized."
-msgstr "権限がありません。"
 
 #: browsers/base.py:90
 msgid "Navigation Item"
@@ -190,7 +186,7 @@ msgstr[0] "%(counter)s 項目の表示中"
 
 #: templates/horizon/common/_data_table_row_actions.html:10
 msgid "More"
-msgstr "さらに"
+msgstr "その他"
 
 #: templates/horizon/common/_limit_summary.html:4
 msgid "Limit Summary"
@@ -206,7 +202,7 @@ msgstr "インスタンス"
 #: templates/horizon/common/_limit_summary.html:36
 #, python-format
 msgid "Used <span> %(used)s </span> of <span> %(available)s </span>"
-msgstr "<span> %(available)s </span> 中 <span> %(used)s </span> 使用済み"
+msgstr "<span> %(available)s </span> 個中 <span> %(used)s </span> 個使用中"
 
 #: templates/horizon/common/_limit_summary.html:14
 msgid "VCPUs"
@@ -219,7 +215,7 @@ msgstr "メモリー"
 #: templates/horizon/common/_limit_summary.html:22
 #, python-format
 msgid "Used <span> %(used)s MB </span> of <span> %(available)s MB </span>"
-msgstr "<span> %(available)s MB </span> 中 <span> %(used)s MB </span> 使用済み"
+msgstr "<span> %(available)s MB </span> 個中 <span> %(used)s MB </span> 個使用中"
 
 #: templates/horizon/common/_limit_summary.html:28
 msgid "Floating IPs"
@@ -251,7 +247,7 @@ msgstr "リージョンの管理"
 
 #: templates/horizon/common/_usage_summary.html:5
 msgid "Select a period of time to query its usage"
-msgstr "使用量を確認する月を選択してください。"
+msgstr "使用量を確認する月を選択してください"
 
 #: templates/horizon/common/_usage_summary.html:7
 #, python-format
@@ -346,6 +342,22 @@ msgstr "無効な IP アドレスのバージョン"
 #: utils/fields.py:50
 msgid "Invalid subnet mask"
 msgstr "無効なサブネットマスク"
+
+#: utils/validators.py:25 utils/validators.py:49
+msgid "Not a valid port number"
+msgstr "有効なポート番号ではありません"
+
+#: utils/validators.py:30
+msgid "Not a valid ip protocol number"
+msgstr "有効な IP プロトコル番号ではありません"
+
+#: utils/validators.py:44
+msgid "One colon allowed in port range"
+msgstr "ポート範囲でコロンは一つだけ許可されます"
+
+#: utils/validators.py:51
+msgid "Port number must be integer"
+msgstr "ポート番号は整数でなければなりません"
 
 #: workflows/base.py:72
 msgid "Processing..."
