@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-14 11:10-0500\n"
-"PO-Revision-Date: 2013-09-16 17:23+0000\n"
+"PO-Revision-Date: 2013-09-16 17:43+0000\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -3107,7 +3107,7 @@ msgstr "ボリュームの詳細"
 
 #: dashboards/project/dashboard.py:24
 msgid "Manage Compute"
-msgstr "Compute の管理"
+msgstr "コンピュートの管理"
 
 #: dashboards/project/dashboard.py:34
 msgid "Manage Network"
