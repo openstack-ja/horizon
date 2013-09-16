@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-11 18:58+0000\n"
-"PO-Revision-Date: 2013-09-14 17:16+0000\n"
+"PO-Revision-Date: 2013-09-15 07:56+0000\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr "フィルター"
 
 #: static/horizon/js/horizon.membership.js:185
 msgid "No roles"
-msgstr ""
+msgstr "ロールがありません"
 
 #: static/horizon/js/horizon.modals.js:33
 msgid "Cancel"

@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-13 09:07-0500\n"
-"PO-Revision-Date: 2013-09-14 17:19+0000\n"
+"POT-Creation-Date: 2013-09-14 11:10-0500\n"
+"PO-Revision-Date: 2013-09-16 13:49+0000\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -612,7 +612,7 @@ msgstr "ドメイン ID"
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:49
 #: dashboards/project/stacks/templates/stacks/_detail_overview.html:64
 msgid "Enabled"
-msgstr "有効化"
+msgstr "有効化を完了しました"
 
 #: dashboards/admin/domains/views.py:49
 msgid "Unable to retrieve domain list."
@@ -1169,7 +1169,7 @@ msgstr "削除"
 
 #: dashboards/admin/groups/tables.py:125
 msgid "Removed"
-msgstr "削除しました"
+msgstr "削除を完了しました"
 
 #: dashboards/admin/groups/tables.py:126 dashboards/admin/groups/tables.py:183
 #: dashboards/admin/metering/tables.py:51 dashboards/admin/users/tables.py:50
@@ -1231,7 +1231,7 @@ msgstr "追加"
 
 #: dashboards/admin/groups/tables.py:182
 msgid "Added"
-msgstr ""
+msgstr "追加を完了しました"
 
 #: dashboards/admin/groups/tables.py:213
 msgid "Non-Members"
@@ -1259,7 +1259,7 @@ msgstr "グループの割り当ての追加"
 
 #: dashboards/admin/groups/templates/groups/_create.html:18
 msgid "From here you can create a new group to organize users and roles."
-msgstr ""
+msgstr "ユーザーとロールをグループ化する新しいグループをここから作成できます。"
 
 #: dashboards/admin/groups/templates/groups/_update.html:8
 #: dashboards/admin/groups/templates/groups/_update.html:23
@@ -1593,7 +1593,7 @@ msgstr "ホストアグリゲート"
 #: dashboards/admin/info/tables.py:170 dashboards/admin/users/tables.py:49
 #: dashboards/project/stacks/templates/stacks/_detail_overview.html:64
 msgid "Disabled"
-msgstr "無効化しました"
+msgstr "無効化を完了しました"
 
 #: dashboards/admin/info/tables.py:175
 msgid "Up"
@@ -1886,7 +1886,7 @@ msgstr "統計情報"
 
 #: dashboards/admin/metering/tabs.py:172
 msgid "Unable to retrieve Nova Ceilometer resources."
-msgstr ""
+msgstr "Nova Ceilometer リソースを取得できません。"
 
 #: dashboards/admin/metering/tabs.py:182
 msgid "Duration of instance"
@@ -2992,7 +2992,7 @@ msgstr "ユーザー \"%s\" を作成しました。"
 
 #: dashboards/admin/users/forms.py:131
 msgid "Unable to add user to primary project."
-msgstr ""
+msgstr "ユーザーを主プロジェクトに追加できません。"
 
 #: dashboards/admin/users/forms.py:135
 msgid "Unable to create user."
@@ -4201,7 +4201,7 @@ msgstr "データベース"
 #: dashboards/project/databases/tables.py:69
 #: dashboards/project/databases/tables.py:85
 msgid "Deleted"
-msgstr "削除しました"
+msgstr "削除を完了しました"
 
 #: dashboards/project/databases/tables.py:78
 msgid "Error deleting database user."
@@ -6209,7 +6209,6 @@ msgid "Pool Details"
 msgstr "プールの詳細"
 
 #: dashboards/project/loadbalancers/tabs.py:99
-#: dashboards/project/loadbalancers/views.py:170
 msgid "Unable to retrieve pool details."
 msgstr "プールの詳細を取得できません。"
 
@@ -6226,7 +6225,6 @@ msgid "Member Details"
 msgstr "メンバーの詳細"
 
 #: dashboards/project/loadbalancers/tabs.py:131
-#: dashboards/project/loadbalancers/views.py:241
 msgid "Unable to retrieve member details."
 msgstr "メンバーの詳細を取得できません。"
 
@@ -6238,42 +6236,81 @@ msgstr "モニターの詳細"
 msgid "Unable to retrieve monitor details."
 msgstr "モニターの詳細を取得できません。"
 
-#: dashboards/project/loadbalancers/views.py:56
-msgid "Unable to delete monitor."
-msgstr "モニターを削除できません。"
+#: dashboards/project/loadbalancers/views.py:55
+#, python-format
+msgid "Deleted monitor %s"
+msgstr "モニター %s を削除しました。"
+
+#: dashboards/project/loadbalancers/views.py:58
+#, python-format
+msgid "Unable to delete monitor. %s"
+msgstr "モニターを削除できません。 %s"
 
 #: dashboards/project/loadbalancers/views.py:63
-msgid "Must delete VIP first."
-msgstr "まず仮想 IP を削除する必要があります。"
+#, python-format
+msgid "Deleted pool %s"
+msgstr "プール %s を削除しました。"
 
-#: dashboards/project/loadbalancers/views.py:70
-msgid "Unable to delete member."
-msgstr "メンバーを削除できません。"
+#: dashboards/project/loadbalancers/views.py:66
+#, python-format
+msgid "Unable to delete pool. %s"
+msgstr "プールを削除できません。 %s"
 
-#: dashboards/project/loadbalancers/views.py:77
-msgid "Unable to locate VIP to delete."
-msgstr "削除する仮想 IP が見つかりません。"
+#: dashboards/project/loadbalancers/views.py:71
+#, python-format
+msgid "Deleted member %s"
+msgstr "メンバー %s を削除しました。"
 
-#: dashboards/project/loadbalancers/views.py:83
-msgid "Unable to delete VIP."
-msgstr "仮想 IP を削除できません。"
+#: dashboards/project/loadbalancers/views.py:74
+#, python-format
+msgid "Unable to delete member. %s"
+msgstr "メンバーを削除できません。 %s"
 
-#: dashboards/project/loadbalancers/views.py:111
-msgid "Unable to retrieve pool subnet."
-msgstr "プールのサブネットを取得できません。"
+#: dashboards/project/loadbalancers/views.py:81
+#, python-format
+msgid "Unable to locate VIP to delete. %s"
+msgstr "削除する仮想 IP が見つかりません。 %s"
 
-#: dashboards/project/loadbalancers/views.py:201
-msgid "Unable to retrieve vip details."
-msgstr "仮想 IP の詳細を取得できません。"
+#: dashboards/project/loadbalancers/views.py:86
+#, python-format
+msgid "Deleted VIP %s"
+msgstr "VIP %s を削除しました。"
 
-#: dashboards/project/loadbalancers/views.py:272
-msgid "Unable to retrieve health monitor details."
-msgstr "ヘルスモニターの詳細を取得できません。"
+#: dashboards/project/loadbalancers/views.py:89
+#, python-format
+msgid "Unable to delete VIP. %s"
+msgstr "VIP を削除できません。 %s"
 
-#: dashboards/project/loadbalancers/views.py:296
-#: dashboards/project/loadbalancers/views.py:312
-msgid "Unable to retrieve pool."
-msgstr "プールを取得できません。"
+#: dashboards/project/loadbalancers/views.py:117
+#, python-format
+msgid "Unable to retrieve pool subnet. %s"
+msgstr "プールのサブネットを取得できません。 %s"
+
+#: dashboards/project/loadbalancers/views.py:176
+#, python-format
+msgid "Unable to retrieve pool details. %s"
+msgstr "プールの詳細を取得できません。 %s"
+
+#: dashboards/project/loadbalancers/views.py:207
+#, python-format
+msgid "Unable to retrieve VIP details. %s"
+msgstr "仮想 IP の詳細を取得できません。 %s"
+
+#: dashboards/project/loadbalancers/views.py:247
+#, python-format
+msgid "Unable to retrieve member details. %s"
+msgstr "メンバーの詳細を取得できません。 %s"
+
+#: dashboards/project/loadbalancers/views.py:278
+#, python-format
+msgid "Unable to retrieve health monitor details. %s"
+msgstr "ヘルスモニターの詳細を取得できません。 %s"
+
+#: dashboards/project/loadbalancers/views.py:302
+#: dashboards/project/loadbalancers/views.py:318
+#, python-format
+msgid "Unable to retrieve pool. %s"
+msgstr "プールを取得できません。 %s"
 
 #: dashboards/project/loadbalancers/workflows.py:49
 #: dashboards/project/vpn/workflows.py:48
@@ -7156,7 +7193,7 @@ msgstr "削除"
 
 #: dashboards/project/routers/tables.py:79
 msgid "Cleared"
-msgstr "削除しました"
+msgstr "解除を完了しました"
 
 #: dashboards/project/routers/tables.py:80
 msgid "Gateway"
@@ -7408,7 +7445,7 @@ msgstr ""
 #: dashboards/project/stacks/forms.py:200
 #, python-format
 msgid "Password for user \"%s\""
-msgstr ""
+msgstr "ユーザー「%s」のパスワード"
 
 #: dashboards/project/stacks/forms.py:201
 msgid ""
@@ -7527,7 +7564,7 @@ msgstr "最終更新"
 
 #: dashboards/project/stacks/templates/stacks/_detail_overview.html:32
 msgid "Outputs"
-msgstr ""
+msgstr "出力"
 
 #: dashboards/project/stacks/templates/stacks/_detail_overview.html:47
 msgid "Stack Parameters"
