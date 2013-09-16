@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-14 11:10-0500\n"
-"PO-Revision-Date: 2013-09-16 13:49+0000\n"
+"PO-Revision-Date: 2013-09-16 17:23+0000\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -418,7 +418,7 @@ msgstr "ドメインコンテキストの設定"
 #: dashboards/admin/domains/tables.py:139
 #, python-format
 msgid "Domain Context updated to Domain %s."
-msgstr ""
+msgstr "ドメインコンテキストをドメイン %s に更新しました。"
 
 #: dashboards/admin/domains/tables.py:143
 msgid "Unable to set Domain Context."
@@ -1274,7 +1274,7 @@ msgstr "ここからグループの詳細を編集できます。"
 
 #: dashboards/admin/groups/templates/groups/add_non_member.html:3
 msgid "Add User to Group"
-msgstr ""
+msgstr "ユーザーのグループへの追加"
 
 #: dashboards/admin/groups/templates/groups/manage.html:3
 msgid "Group Management"
@@ -1727,11 +1727,11 @@ msgstr "リソース使用量"
 
 #: dashboards/admin/metering/tables.py:42
 msgid "up"
-msgstr ""
+msgstr "動作中"
 
 #: dashboards/admin/metering/tables.py:44
 msgid "none"
-msgstr ""
+msgstr "なし"
 
 #: dashboards/admin/metering/tables.py:49
 #: dashboards/admin/metering/tables.py:59
@@ -1894,7 +1894,7 @@ msgstr "インスタンスの存在時間"
 
 #: dashboards/admin/metering/tabs.py:183
 msgid "Duration of instance <type> (openstack types)"
-msgstr ""
+msgstr "インスタンスタイプ <type> (OpenStack でのタイプ) の存在期間"
 
 #: dashboards/admin/metering/tabs.py:185
 msgid "Volume of RAM in MB"
@@ -1916,43 +1916,43 @@ msgstr "仮想 CPU 数"
 
 #: dashboards/admin/metering/tabs.py:189
 msgid "Number of read requests"
-msgstr ""
+msgstr "読み出し要求数"
 
 #: dashboards/admin/metering/tabs.py:190
 msgid "Number of write requests"
-msgstr ""
+msgstr "ディスク書き込み要求数"
 
 #: dashboards/admin/metering/tabs.py:191
 msgid "Volume of reads in B"
-msgstr ""
+msgstr "ボリュームの読み出しバイト数"
 
 #: dashboards/admin/metering/tabs.py:192
 msgid "Volume of writes in B"
-msgstr ""
+msgstr "ボリュームの書き込みバイト数"
 
 #: dashboards/admin/metering/tabs.py:193
 msgid "Size of root disk in GB"
-msgstr ""
+msgstr "ルートディスクの GB サイズ"
 
 #: dashboards/admin/metering/tabs.py:194
 msgid "Size of ephemeral disk in GB"
-msgstr ""
+msgstr "一時ディスクの GB サイズ"
 
 #: dashboards/admin/metering/tabs.py:196
 msgid "Number of incoming bytes on the network for a VM interface"
-msgstr ""
+msgstr "VM インタフェースでのネットワーク受信バイト数"
 
 #: dashboards/admin/metering/tabs.py:198
 msgid "Number of outgoing bytes on the network for a VM interface"
-msgstr ""
+msgstr "VM インタフェースでのネットワーク送信バイト数"
 
 #: dashboards/admin/metering/tabs.py:200
 msgid "Number of incoming packets for a VM interface"
-msgstr ""
+msgstr "VM インタフェースでのネットワーク受信パケット数"
 
 #: dashboards/admin/metering/tabs.py:202
 msgid "Number of outgoing packets for a VM interface"
-msgstr ""
+msgstr "VM インタフェースでのネットワーク送信パケット数"
 
 #: dashboards/admin/metering/templates/metering/index.html:3
 msgid "Resources usage Overview"
@@ -1964,7 +1964,7 @@ msgstr "リソース使用状況の概要"
 
 #: dashboards/admin/metering/templates/metering/stats.html:10
 msgid "Metric"
-msgstr ""
+msgstr "計測項目"
 
 #: dashboards/admin/metering/templates/metering/stats.html:14
 msgid "Compute (Nova)"
@@ -2036,7 +2036,7 @@ msgstr "イメージ (Glance)"
 
 #: dashboards/admin/metering/templates/metering/stats.html:40
 msgid "Uploaded image size"
-msgstr ""
+msgstr "アップロードされたイメージサイズ"
 
 #: dashboards/admin/metering/templates/metering/stats.html:41
 msgid "Number of update on the image"
@@ -2052,11 +2052,11 @@ msgstr "イメージの削除数"
 
 #: dashboards/admin/metering/templates/metering/stats.html:44
 msgid "Image is downloaded"
-msgstr ""
+msgstr "イメージダウンロード数"
 
 #: dashboards/admin/metering/templates/metering/stats.html:45
 msgid "Image is served out"
-msgstr ""
+msgstr "イメージ利用回数"
 
 #: dashboards/admin/metering/templates/metering/stats.html:48
 msgid "Volume (Cinder)"
@@ -2104,39 +2104,39 @@ msgstr "エネルギー (Kwapi)"
 
 #: dashboards/admin/metering/templates/metering/stats.html:63
 msgid "Amount of energy"
-msgstr ""
+msgstr "総エネルギー量"
 
 #: dashboards/admin/metering/templates/metering/stats.html:64
 msgid "Power consumption"
-msgstr ""
+msgstr "消費電力"
 
 #: dashboards/admin/metering/templates/metering/stats.html:71
 msgid "Group by"
-msgstr ""
+msgstr "グルーピング"
 
 #: dashboards/admin/metering/templates/metering/stats.html:75
 msgid "--"
-msgstr ""
+msgstr "--"
 
 #: dashboards/admin/metering/templates/metering/stats.html:86
 msgid "Avg."
-msgstr ""
+msgstr "平均"
 
 #: dashboards/admin/metering/templates/metering/stats.html:87
 msgid "Min."
-msgstr ""
+msgstr "最小値"
 
 #: dashboards/admin/metering/templates/metering/stats.html:88
 msgid "Max."
-msgstr ""
+msgstr "最大値"
 
 #: dashboards/admin/metering/templates/metering/stats.html:89
 msgid "Sum."
-msgstr ""
+msgstr "合計値"
 
 #: dashboards/admin/metering/templates/metering/stats.html:94
 msgid "Period"
-msgstr ""
+msgstr "期間"
 
 #: dashboards/admin/metering/templates/metering/stats.html:98
 msgid "Last day"
@@ -2164,11 +2164,11 @@ msgstr "その他"
 
 #: dashboards/admin/metering/templates/metering/stats.html:108
 msgid "From"
-msgstr ""
+msgstr "開始"
 
 #: dashboards/admin/metering/templates/metering/stats.html:115
 msgid "To"
-msgstr ""
+msgstr "終了"
 
 #: dashboards/admin/metering/templates/metering/stats.html:127
 msgid "Statistics of all resources"
@@ -2756,19 +2756,19 @@ msgstr "プロジェクト \"%s\" を作成できません。"
 
 #: dashboards/admin/projects/workflows.py:405
 msgid ", add project groups"
-msgstr ""
+msgstr "、プロジェクトグループの追加"
 
 #: dashboards/admin/projects/workflows.py:408
 #, python-format
 msgid ""
 "Failed to add %(users_to_add)s project members%(group_msg)s and set project "
 "quotas."
-msgstr ""
+msgstr "%(users_to_add)s 個のプロジェクトメンバー追加%(group_msg)s、プロジェクトのクォータ設定の操作に失敗しました。"
 
 #: dashboards/admin/projects/workflows.py:439
 #, python-format
 msgid "Failed to add %s project groups and update project quotas."
-msgstr ""
+msgstr "%s 個のプロジェクトメンバー追加、プロジェクトのクォータ更新の操作に失敗しました。"
 
 #: dashboards/admin/projects/workflows.py:464
 msgid "Unable to set project quotas."
@@ -2793,25 +2793,25 @@ msgid ""
 "You cannot revoke your administrative privileges from the project you are "
 "currently logged into. Please switch to another project with administrative "
 "privileges or remove the administrative role manually via the CLI."
-msgstr ""
+msgstr "現在ログインしているプロジェクトから自分の管理権限を削除することはできません。管理権限を持つ別のプロジェクトに切り替えるか、CLI を使って手動で管理権限を削除して下さい。"
 
 #: dashboards/admin/projects/workflows.py:622
 msgid ", update project groups"
-msgstr ""
+msgstr "、プロジェクトグループの更新"
 
 #: dashboards/admin/projects/workflows.py:625
 #, python-format
 msgid ""
 "Failed to modify %(users_to_modify)s project members%(group_msg)s and update"
 " project quotas."
-msgstr ""
+msgstr "%(users_to_modify)s 個のプロジェクトメンバー変更%(group_msg)s、プロジェクトのクォータ更新の操作に失敗しました。"
 
 #: dashboards/admin/projects/workflows.py:697
 #, python-format
 msgid ""
 "Failed to modify %s project members, update project groups and update "
 "project quotas."
-msgstr ""
+msgstr "%s 個のプロジェクトメンバー変更、プロジェクトグループ更新、プロジェクトのクォータ更新の操作に失敗しました。"
 
 #: dashboards/admin/projects/workflows.py:727
 msgid ""
@@ -3119,7 +3119,7 @@ msgstr "オブジェクトストア"
 
 #: dashboards/project/dashboard.py:50
 msgid "Orchestration"
-msgstr "Orchestration"
+msgstr "オーケストレーション"
 
 #: dashboards/project/dashboard.py:56
 msgid "Manage Databases"
@@ -3395,7 +3395,7 @@ msgstr "セキュリティグループを作成できません。"
 #: dashboards/project/access_and_security/security_groups/forms.py:86
 #, python-format
 msgid "Successfully updated security group: %s"
-msgstr ""
+msgstr "セキュリティグループ %s が正常に更新されました。"
 
 #: dashboards/project/access_and_security/security_groups/forms.py:92
 msgid "Unable to update security group."
@@ -4052,7 +4052,7 @@ msgstr "ページが見つかりませんでした"
 
 #: dashboards/project/database_backups/views.py:64
 msgid "Error getting database backup list."
-msgstr ""
+msgstr "データベースのバックアップ一覧の取得でエラーが発生しました。"
 
 #: dashboards/project/database_backups/views.py:92
 #, python-format
@@ -4061,7 +4061,7 @@ msgstr "バックアップの詳細を取得できません: %s"
 
 #: dashboards/project/database_backups/templates/database_backups/_backup_details_help.html:3
 msgid "Specify the details for the backup."
-msgstr ""
+msgstr "バックアップの詳細を指定します。"
 
 #: dashboards/project/database_backups/templates/database_backups/backup.html:3
 #: dashboards/project/database_backups/templates/database_backups/backup.html:6
@@ -4119,7 +4119,7 @@ msgstr "作成日時"
 
 #: dashboards/project/database_backups/templates/database_backups/details.html:32
 msgid "Backup Duration"
-msgstr ""
+msgstr "バックアップ生存期間"
 
 #: dashboards/project/database_backups/templates/database_backups/details.html:39
 msgid "Database Info"
@@ -4131,7 +4131,7 @@ msgstr "データベースインスタンス"
 
 #: dashboards/project/database_backups/workflows/create_backup.py:36
 msgid "Optional Backup Description"
-msgstr ""
+msgstr "バックアップの説明"
 
 #: dashboards/project/database_backups/workflows/create_backup.py:39
 #: dashboards/project/databases/workflows/create_instance.py:41
@@ -4141,12 +4141,12 @@ msgstr "詳細"
 
 #: dashboards/project/database_backups/workflows/create_backup.py:49
 msgid "Unable to list database instance to backup."
-msgstr ""
+msgstr "バックアップするデータベースインスタンス一覧を取得できません。"
 
 #: dashboards/project/database_backups/workflows/create_backup.py:63
 #, python-format
 msgid "Scheduled backup \"%(name)s\"."
-msgstr ""
+msgstr "バックアップ \"%(name)s\" の作成を予約しました。"
 
 #: dashboards/project/database_backups/workflows/create_backup.py:64
 #: dashboards/project/databases/workflows/create_instance.py:169
@@ -4163,7 +4163,7 @@ msgstr "インスタンス"
 
 #: dashboards/project/database_backups/workflows/create_backup.py:86
 msgid "Error creating database backup."
-msgstr ""
+msgstr "データベースのバックアップ作成でエラーが発生しました。"
 
 #: dashboards/project/databases/panel.py:25
 msgid "Database Instances"
@@ -4181,11 +4181,11 @@ msgstr "終了を予約しました"
 
 #: dashboards/project/databases/tables.py:52
 msgid "Restart"
-msgstr ""
+msgstr "再起動"
 
 #: dashboards/project/databases/tables.py:53
 msgid "Restarted"
-msgstr ""
+msgstr "再起動しました"
 
 #: dashboards/project/databases/tables.py:55
 #: dashboards/project/databases/tables.py:87
@@ -4205,11 +4205,11 @@ msgstr "削除を完了しました"
 
 #: dashboards/project/databases/tables.py:78
 msgid "Error deleting database user."
-msgstr ""
+msgstr "データベースユーザーの削除でエラーが発生しました。"
 
 #: dashboards/project/databases/tables.py:94
 msgid "Error deleting database on instance."
-msgstr ""
+msgstr "インスタンスからのデータベースの削除でエラーが発生しました。"
 
 #: dashboards/project/databases/tables.py:100
 #: dashboards/project/databases/templates/databases/launch.html:3
@@ -4222,12 +4222,12 @@ msgstr "インスタンスの起動"
 
 #: dashboards/project/databases/tables.py:136
 msgid "Not Assigned"
-msgstr ""
+msgstr "割り当てなし"
 
 #: dashboards/project/databases/tables.py:141
 #, python-format
 msgid "%(name)s | %(RAM)s RAM"
-msgstr ""
+msgstr "%(name)s | %(RAM)s RAM"
 
 #: dashboards/project/databases/tables.py:145
 #: dashboards/project/instances/tables.py:492
@@ -4247,11 +4247,11 @@ msgstr "データベース名"
 
 #: dashboards/project/databases/tables.py:189
 msgid "Allowed Hosts"
-msgstr ""
+msgstr "許可されたホスト"
 
 #: dashboards/project/databases/tables.py:194
 msgid "Database Instance Users"
-msgstr ""
+msgstr "データベースインスタンスのユーザー"
 
 #: dashboards/project/databases/views.py:53
 msgid "Unable to retrieve database size information."
@@ -4328,25 +4328,25 @@ msgstr "合計メモリー"
 
 #: dashboards/project/databases/templates/databases/_launch_initialize_help.html:3
 msgid "Create an initial database and/or add initial users."
-msgstr ""
+msgstr "初期データーベースと初期ユーザーの追加を行います。"
 
 #: dashboards/project/databases/templates/databases/_launch_initialize_help.html:5
 msgid "Create Initial Databases"
-msgstr ""
+msgstr "初期データベースの作成"
 
 #: dashboards/project/databases/templates/databases/_launch_initialize_help.html:6
 msgid "Optionally provide a comma separated list of databases to create:"
-msgstr ""
+msgstr "オプションで、作成するデータベースをコンマ区切りのリストで指定できます: "
 
 #: dashboards/project/databases/templates/databases/_launch_initialize_help.html:9
 msgid "Create Initial Admin User"
-msgstr ""
+msgstr "初期管理ユーザーの作成"
 
 #: dashboards/project/databases/templates/databases/_launch_initialize_help.html:10
 msgid ""
 "Create an optional initial user.\n"
 "   This user will have access to all databases you create."
-msgstr ""
+msgstr "追加の初期ユーザーを作成できます。\nこのユーザーは作成する全てのデータベースへアクセスできます。"
 
 #: dashboards/project/databases/templates/databases/_launch_initialize_help.html:13
 msgid "Username (required)"
@@ -4366,11 +4366,11 @@ msgid ""
 "Allow the user to connect from this host\n"
 "    only. If not provided this use will be allowed to connect from anywhere.\n"
 "    "
-msgstr ""
+msgstr "このユーザーの接続をこのホストからの場合のみ許可します。\n指定しなかった場合、どこからの接続も許可されます。"
 
 #: dashboards/project/databases/templates/databases/_launch_restore_help.html:3
 msgid "Create this database from a previous backup."
-msgstr ""
+msgstr "過去のバックアップからデータベースを作成します。"
 
 #: dashboards/project/databases/templates/databases/detail.html:3
 msgid "Database Detail"
@@ -4422,11 +4422,11 @@ msgstr "最初の管理ユーザー"
 
 #: dashboards/project/databases/workflows/create_instance.py:94
 msgid "Initial admin user to add"
-msgstr ""
+msgstr "追加する初期管理ユーザー"
 
 #: dashboards/project/databases/workflows/create_instance.py:100
 msgid "Host or IP that the user is allowed to connect through."
-msgstr ""
+msgstr "このユーザーで許可される接続元のホスト名または IP アドレス"
 
 #: dashboards/project/databases/workflows/create_instance.py:104
 msgid "Initialize Databases"
@@ -4434,11 +4434,11 @@ msgstr "データベースの初期化"
 
 #: dashboards/project/databases/workflows/create_instance.py:112
 msgid "You must specify a password if you create a user."
-msgstr ""
+msgstr "ユーザーを作成する場合、パスワードを指定しなければいけません。"
 
 #: dashboards/project/databases/workflows/create_instance.py:115
 msgid "You must specify at least one database if you create a user."
-msgstr ""
+msgstr "ユーザーを作成する場合、少なくともひとつデータベースをしなければいけません。"
 
 #: dashboards/project/databases/workflows/create_instance.py:129
 msgid "Select a backup to Restore"
@@ -5014,7 +5014,7 @@ msgstr "イメージを読み込む外部 (HTTP) URL。"
 
 #: dashboards/project/images_and_snapshots/images/forms.py:70
 msgid "A local image to upload."
-msgstr ""
+msgstr "手元にあるアップロードするイメージ"
 
 #: dashboards/project/images_and_snapshots/images/forms.py:76
 #: dashboards/project/images_and_snapshots/images/forms.py:172
@@ -5402,7 +5402,7 @@ msgstr "開始"
 
 #: dashboards/project/instances/tables.py:449
 msgid "Started"
-msgstr ""
+msgstr "開始しました"
 
 #: dashboards/project/instances/tables.py:462
 #: dashboards/project/instances/tables.py:463
@@ -5646,7 +5646,7 @@ msgstr "インスタンスのブートソース"
 
 #: dashboards/project/instances/workflows/create_instance.py:103
 msgid "Choose Your Boot Source Type."
-msgstr ""
+msgstr "ブートソース種別を選択してください。"
 
 #: dashboards/project/instances/workflows/create_instance.py:106
 msgid "Instance Snapshot"
@@ -5689,7 +5689,7 @@ msgid ""
 msgid_plural ""
 "The requested %(req)i instances cannot be launched as you only have "
 "%(avail)i of your quota available."
-msgstr[0] ""
+msgstr[0] "要求された %(req)i 個のインスタンスを起動できません。あなたが利用できるクォータは %(avail)i インスタンスだけです。"
 
 #: dashboards/project/instances/workflows/create_instance.py:188
 msgid ""
@@ -5707,7 +5707,7 @@ msgstr "利用可能なスナップショットソースがありません。イ
 msgid ""
 "You can't select an instance source when booting from a Volume. The Volume "
 "is your source and should contain the operating system."
-msgstr ""
+msgstr "ボリュームからの起動ではインスタンスのソースを選択できません。ボリュームがソースとなり、そのボリュームにはオペレーティングシステムが入っていなければいけません。"
 
 #: dashboards/project/instances/workflows/create_instance.py:213
 msgid ""
@@ -5717,7 +5717,7 @@ msgstr "複数インスタンスの起動は、イメージとインスタンス
 
 #: dashboards/project/instances/workflows/create_instance.py:219
 msgid "volume_image_id"
-msgstr ""
+msgstr "volume_image_id"
 
 #: dashboards/project/instances/workflows/create_instance.py:222
 msgid "You must set volume size"
@@ -5756,7 +5756,7 @@ msgstr "スナップショット"
 #: dashboards/project/instances/workflows/create_instance.py:296
 #, python-format
 msgid "%(name)s - %(size)s GB (%(label)s)"
-msgstr ""
+msgstr "%(name)s - %(size)s GB (%(label)s)"
 
 #: dashboards/project/instances/workflows/create_instance.py:310
 msgid "Select Instance Snapshot"
@@ -5840,7 +5840,7 @@ msgstr "少なくとも一つのネットワークを指定する必要があり
 
 #: dashboards/project/instances/workflows/create_instance.py:487
 msgid "Launch instance with these networks"
-msgstr ""
+msgstr "これらのネットワークでインスタンスを起動します。"
 
 #: dashboards/project/instances/workflows/create_instance.py:490
 msgid "Policy Profiles"
@@ -5874,12 +5874,12 @@ msgstr "%s インスタンス"
 #: dashboards/project/instances/workflows/create_instance.py:616
 #, python-format
 msgid "Horizon->Create Port with %(netid)s %(profile_id)s"
-msgstr ""
+msgstr "Horizon->Create Port with %(netid)s %(profile_id)s"
 
 #: dashboards/project/instances/workflows/create_instance.py:623
 #, python-format
 msgid "Port not created for profile-id (%s)."
-msgstr ""
+msgstr "プロファイル ID (%s) でポートを作成できませんでした。"
 
 #: dashboards/project/instances/workflows/resize_instance.py:36
 msgid "Old Flavor"
@@ -6639,7 +6639,7 @@ msgstr "ステータス"
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:12
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:34
 msgid "Type:"
-msgstr "種別"
+msgstr "種別: "
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:15
 msgid "Delay:"
@@ -7240,7 +7240,7 @@ msgstr "IP アドレス (省略可能)"
 msgid ""
 "You can specify an IP address of the interface created if you want (e.g. "
 "192.168.0.254)."
-msgstr ""
+msgstr "必要であれば、作成するインタフェースの IP アドレスを指定できます。 (例: 192.168.0.254)"
 
 #: dashboards/project/routers/ports/forms.py:41
 #: dashboards/project/routers/ports/forms.py:149
@@ -7340,7 +7340,7 @@ msgid ""
 " subnet. You can specify another IP address of the interface here. You must "
 "select a subnet to which the specified IP address belongs to from the above "
 "list."
-msgstr ""
+msgstr "作成するインタフェースのデフォルトの IP アドレスは選択したサブネットのゲートウェイアドレスになります。ここで別の IP アドレスを指定できます。また、指定した IP アドレスが所属するサブネットを上にあるリストから選択しなければいけません。"
 
 #: dashboards/project/routers/templates/routers/ports/_create.html:29
 msgid "Add interface"
@@ -7378,7 +7378,7 @@ msgstr "テンプレートファイル"
 
 #: dashboards/project/stacks/forms.py:74
 msgid "A local template to upload."
-msgstr ""
+msgstr "ローカルにあるアップロードするテンプレート"
 
 #: dashboards/project/stacks/forms.py:80 dashboards/project/stacks/forms.py:84
 msgid "Template URL"
@@ -7399,11 +7399,11 @@ msgstr "テンプレートの内容。"
 #: dashboards/project/stacks/forms.py:116
 #, python-format
 msgid "There was a problem parsing the template: %s"
-msgstr ""
+msgstr "テンプレートの解析中に問題がありました: %s"
 
 #: dashboards/project/stacks/forms.py:122
 msgid "Please specify a template using only one source method."
-msgstr ""
+msgstr "ソースメソッドが一つだけのテンプレートを指定してください。"
 
 #: dashboards/project/stacks/forms.py:127
 msgid "You must specify a template via one of the available sources."
@@ -7428,7 +7428,7 @@ msgstr "作成するスタックの名前。"
 
 #: dashboards/project/stacks/forms.py:184
 msgid "Creation Timeout (minutes)"
-msgstr ""
+msgstr "作成タイムアウト時間 (分単位)"
 
 #: dashboards/project/stacks/forms.py:185
 msgid "Stack creation timeout in minutes."
@@ -7436,22 +7436,22 @@ msgstr "スタック作成のタイムアウト時間（分単位）。"
 
 #: dashboards/project/stacks/forms.py:188
 msgid "Rollback On Failure"
-msgstr ""
+msgstr "失敗時のロールバック"
 
 #: dashboards/project/stacks/forms.py:189
 msgid "Enable rollback on create/update failure."
-msgstr ""
+msgstr "作成/更新失敗時のロールバックを有効にします。"
 
 #: dashboards/project/stacks/forms.py:200
 #, python-format
 msgid "Password for user \"%s\""
-msgstr "ユーザー「%s」のパスワード"
+msgstr "ユーザー \"%s\" のパスワード"
 
 #: dashboards/project/stacks/forms.py:201
 msgid ""
 "This is required for operations to be performed throughout the lifecycle of "
 "the stack"
-msgstr ""
+msgstr "スタックの生存期間全体を通して、各種操作の実行に必要です。"
 
 #: dashboards/project/stacks/forms.py:263
 msgid "Stack creation started."
@@ -7487,25 +7487,25 @@ msgstr "スタックリソース"
 
 #: dashboards/project/stacks/tables.py:110
 msgid "Time Since Event"
-msgstr ""
+msgstr "イベントからの時間"
 
 #: dashboards/project/stacks/tables.py:117
 #: dashboards/project/stacks/tables.py:165
 msgid "Status Reason"
-msgstr ""
+msgstr "状態の理由"
 
 #: dashboards/project/stacks/tables.py:121
 msgid "Stack Events"
-msgstr ""
+msgstr "スタックイベント"
 
 #: dashboards/project/stacks/tables.py:154
 #: dashboards/project/stacks/templates/stacks/_resource_overview.html:17
 msgid "Stack Resource Type"
-msgstr ""
+msgstr "スタックリソース種別"
 
 #: dashboards/project/stacks/tables.py:156
 msgid "Date Updated"
-msgstr ""
+msgstr "更新日"
 
 #: dashboards/project/stacks/tables.py:178
 msgid "Stack Resources"
@@ -7576,11 +7576,11 @@ msgstr "起動パラメーター"
 
 #: dashboards/project/stacks/templates/stacks/_detail_overview.html:62
 msgid "Minutes"
-msgstr ""
+msgstr "分"
 
 #: dashboards/project/stacks/templates/stacks/_detail_overview.html:63
 msgid "Rollback"
-msgstr ""
+msgstr "ロールバック"
 
 #: dashboards/project/stacks/templates/stacks/_resource_overview.html:3
 msgid "Resource Overview"
@@ -8332,7 +8332,7 @@ msgstr "マルチキャスト IP 範囲"
 #: dashboards/router/nexus1000v/forms.py:139
 #, python-format
 msgid "request = %(req)s, params = %(params)s"
-msgstr ""
+msgstr "request = %(req)s, params = %(params)s"
 
 #: dashboards/router/nexus1000v/forms.py:104
 #, python-format
@@ -8402,7 +8402,7 @@ msgstr "ポリシープロファイル"
 #: dashboards/router/nexus1000v/views.py:128
 #, python-format
 msgid "Network Profile object=%s"
-msgstr ""
+msgstr "Network Profile object=%s"
 
 #: dashboards/router/nexus1000v/views.py:131
 msgid "Unable to retrieve network profile details."
