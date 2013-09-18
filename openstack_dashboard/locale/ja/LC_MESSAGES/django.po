@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-17 05:18+0000\n"
-"PO-Revision-Date: 2013-09-18 11:39+0000\n"
+"POT-Creation-Date: 2013-09-18 06:44-0500\n"
+"PO-Revision-Date: 2013-09-18 14:46+0000\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -213,7 +213,20 @@ msgstr "デフォルト値"
 msgid "Update Defaults"
 msgstr "デフォルト値の変更"
 
-#: dashboards/admin/defaults/tables.py:47
+#: dashboards/admin/defaults/tables.py:48
+#: dashboards/admin/defaults/tables.py:49
+#: dashboards/admin/defaults/workflows.py:33
+#: dashboards/admin/projects/workflows.py:46
+msgid "Injected File Content Bytes"
+msgstr "注入ファイルのバイト数"
+
+#: dashboards/admin/defaults/tables.py:50
+#: dashboards/admin/defaults/workflows.py:36
+#: dashboards/admin/projects/workflows.py:48
+msgid "Metadata Items"
+msgstr "メタデータ項目"
+
+#: dashboards/admin/defaults/tables.py:51
 #: dashboards/admin/defaults/workflows.py:37
 #: dashboards/admin/flavors/tables.py:99
 #: dashboards/admin/flavors/workflows.py:48
@@ -226,56 +239,7 @@ msgstr "デフォルト値の変更"
 msgid "VCPUs"
 msgstr "仮想 CPU"
 
-#: dashboards/admin/defaults/tables.py:47
-#: dashboards/admin/defaults/workflows.py:49
-#: dashboards/admin/projects/workflows.py:59
-#: dashboards/admin/projects/workflows.py:67
-#: dashboards/project/access_and_security/tabs.py:76
-#: dashboards/project/access_and_security/floating_ips/tables.py:66
-#: dashboards/project/access_and_security/floating_ips/tables.py:147
-msgid "Floating IPs"
-msgstr "Floating IP"
-
 #: dashboards/admin/defaults/tables.py:52
-msgid "Quota Name"
-msgstr "クォータ名"
-
-#: dashboards/admin/defaults/tables.py:53
-msgid "Limit"
-msgstr "上限値"
-
-#: dashboards/admin/defaults/tables.py:60
-msgid "Quotas"
-msgstr "クォータ"
-
-#: dashboards/admin/defaults/tabs.py:30
-#: dashboards/admin/defaults/workflows.py:67
-msgid "Default Quotas"
-msgstr "標準のクォータ"
-
-#: dashboards/admin/defaults/tabs.py:47
-msgid "Unable to get quota info."
-msgstr "クォータ情報を取得できません。"
-
-#: dashboards/admin/defaults/views.py:51
-#: dashboards/admin/projects/views.py:141
-msgid "Unable to retrieve default quota values."
-msgstr "クォータのデフォルト値を取得できません。"
-
-#: dashboards/admin/defaults/workflows.py:33
-#: dashboards/admin/projects/workflows.py:46
-msgid "Injected File Content Bytes"
-msgstr "注入ファイルのバイト数"
-
-#: dashboards/admin/defaults/workflows.py:34
-msgid "Injected File Path Bytes"
-msgstr "注入ファイルのパスのバイト数"
-
-#: dashboards/admin/defaults/workflows.py:36
-#: dashboards/admin/projects/workflows.py:48
-msgid "Metadata Items"
-msgstr "メタデータ項目"
-
 #: dashboards/admin/defaults/workflows.py:38
 #: dashboards/admin/hypervisors/tables.py:73
 #: dashboards/admin/instances/panel.py:29
@@ -297,11 +261,13 @@ msgstr "メタデータ項目"
 msgid "Instances"
 msgstr "インスタンス"
 
+#: dashboards/admin/defaults/tables.py:53
 #: dashboards/admin/defaults/workflows.py:40
 #: dashboards/admin/projects/workflows.py:52
 msgid "Injected Files"
 msgstr "注入ファイル"
 
+#: dashboards/admin/defaults/tables.py:54
 #: dashboards/admin/defaults/workflows.py:45
 #: dashboards/admin/projects/workflows.py:55
 #: dashboards/admin/volumes/panel.py:9 dashboards/admin/volumes/tables.py:42
@@ -316,21 +282,35 @@ msgstr "注入ファイル"
 msgid "Volumes"
 msgstr "ボリューム"
 
+#: dashboards/admin/defaults/tables.py:55
 #: dashboards/admin/defaults/workflows.py:46
 #: dashboards/admin/projects/workflows.py:56
 msgid "Snapshots"
 msgstr "スナップショット"
 
+#: dashboards/admin/defaults/tables.py:56
 #: dashboards/admin/defaults/workflows.py:47
 #: dashboards/admin/projects/workflows.py:57
 msgid "Gigabytes"
 msgstr "ギガバイト"
 
+#: dashboards/admin/defaults/tables.py:57
 #: dashboards/admin/defaults/workflows.py:48
 #: dashboards/admin/projects/workflows.py:58
 msgid "RAM (MB)"
 msgstr "メモリー (MB)"
 
+#: dashboards/admin/defaults/tables.py:58
+#: dashboards/admin/defaults/workflows.py:49
+#: dashboards/admin/projects/workflows.py:59
+#: dashboards/admin/projects/workflows.py:67
+#: dashboards/project/access_and_security/tabs.py:76
+#: dashboards/project/access_and_security/floating_ips/tables.py:66
+#: dashboards/project/access_and_security/floating_ips/tables.py:147
+msgid "Floating IPs"
+msgstr "Floating IP"
+
+#: dashboards/admin/defaults/tables.py:59
 #: dashboards/admin/defaults/workflows.py:51
 #: dashboards/admin/projects/workflows.py:62
 #: dashboards/project/access_and_security/tabs.py:44
@@ -342,15 +322,56 @@ msgstr "メモリー (MB)"
 msgid "Security Groups"
 msgstr "セキュリティグループ"
 
+#: dashboards/admin/defaults/tables.py:60
 #: dashboards/admin/defaults/workflows.py:53
 #: dashboards/admin/projects/workflows.py:64
 #: dashboards/project/access_and_security/security_groups/tables.py:178
 msgid "Security Group Rules"
 msgstr "セキュリティグループのルール"
 
+#: dashboards/admin/defaults/tables.py:61
 #: dashboards/admin/defaults/workflows.py:54
 msgid "Key Pairs"
 msgstr "キーペア"
+
+#: dashboards/admin/defaults/tables.py:62
+#: dashboards/admin/networks/ports/tables.py:76
+#: dashboards/admin/projects/workflows.py:60
+#: dashboards/admin/routers/ports/tables.py:36
+#: dashboards/project/networks/ports/tables.py:59
+#: dashboards/project/routers/ports/tables.py:85
+msgid "Fixed IPs"
+msgstr "固定 IP"
+
+#: dashboards/admin/defaults/tables.py:68
+msgid "Quota Name"
+msgstr "クォータ名"
+
+#: dashboards/admin/defaults/tables.py:69
+msgid "Limit"
+msgstr "上限値"
+
+#: dashboards/admin/defaults/tables.py:76
+msgid "Quotas"
+msgstr "クォータ"
+
+#: dashboards/admin/defaults/tabs.py:30
+#: dashboards/admin/defaults/workflows.py:67
+msgid "Default Quotas"
+msgstr "標準のクォータ"
+
+#: dashboards/admin/defaults/tabs.py:47
+msgid "Unable to get quota info."
+msgstr "クォータ情報を取得できません。"
+
+#: dashboards/admin/defaults/views.py:51
+#: dashboards/admin/projects/views.py:141
+msgid "Unable to retrieve default quota values."
+msgstr "クォータのデフォルト値を取得できません。"
+
+#: dashboards/admin/defaults/workflows.py:34
+msgid "Injected File Path Bytes"
+msgstr "注入ファイルのパスのバイト数"
 
 #: dashboards/admin/defaults/workflows.py:69
 msgid "From here you can update the default quotas (max limits)."
@@ -2435,14 +2456,6 @@ msgstr "ポートの作成"
 #: dashboards/project/networks/templates/networks/ports/_update.html:8
 msgid "Edit Port"
 msgstr "ポートの編集"
-
-#: dashboards/admin/networks/ports/tables.py:76
-#: dashboards/admin/projects/workflows.py:60
-#: dashboards/admin/routers/ports/tables.py:36
-#: dashboards/project/networks/ports/tables.py:59
-#: dashboards/project/routers/ports/tables.py:85
-msgid "Fixed IPs"
-msgstr "固定 IP"
 
 #: dashboards/admin/networks/ports/tables.py:78
 msgid "Device Attached"
@@ -7769,10 +7782,19 @@ msgstr "切断"
 msgid "Detaching"
 msgstr "切断中"
 
-#: dashboards/project/volumes/tables.py:256
+#: dashboards/project/volumes/tables.py:248
+msgid "Device"
+msgstr "デバイス"
+
+#: dashboards/project/volumes/tables.py:257
 #, python-format
 msgid "%(dev)s on instance %(instance_name)s"
 msgstr "インスタンス %(instance_name)s 上の %(dev)s"
+
+#: dashboards/project/volumes/tables.py:267
+#: dashboards/project/volumes/templates/volumes/_detail_overview.html:35
+msgid "Attachments"
+msgstr "接続状況"
 
 #: dashboards/project/volumes/tabs.py:42
 msgid "Unable to retrieve volume details."
@@ -7814,10 +7836,6 @@ msgstr "ボリュームのスナップショットの作成"
 #: dashboards/project/volumes/templates/volumes/_detail_overview.html:4
 msgid "Volume Overview"
 msgstr "ボリュームの概要"
-
-#: dashboards/project/volumes/templates/volumes/_detail_overview.html:35
-msgid "Attachments"
-msgstr "接続状況"
 
 #: dashboards/project/volumes/templates/volumes/_detail_overview.html:47
 msgid "Not attached"
