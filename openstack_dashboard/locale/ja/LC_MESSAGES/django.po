@@ -3,9 +3,6 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Translators:
-# Translators:
-# Translators:
 # Akihiro MOTOKI <amotoki@gmail.com>, 2013
 # masayukig <masayuki.igawa@gmail.com>, 2013
 # Tomoyuki KATO <tomo@dream.daynight.jp>, 2013
@@ -13,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-14 11:10-0500\n"
-"PO-Revision-Date: 2013-09-17 12:10+0000\n"
-"Last-Translator: Tomoyuki KATO <tomo@dream.daynight.jp>\n"
+"POT-Creation-Date: 2013-09-17 05:18+0000\n"
+"PO-Revision-Date: 2013-09-18 11:39+0000\n"
+"Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -631,7 +628,7 @@ msgstr "ドメイン情報"
 msgid ""
 "From here you can create a new domain to organize projects, groups and "
 "users."
-msgstr "プロジェクト、グループ、ユーザーをまとめるドメインをここから新たに作成できます。"
+msgstr "プロジェクト、グループ、ユーザーをグルーピングするドメインをここから新たに作成できます。"
 
 #: dashboards/admin/domains/workflows.py:64
 #: dashboards/admin/projects/workflows.py:246
@@ -878,7 +875,7 @@ msgstr "フレーバー情報"
 
 #: dashboards/admin/flavors/workflows.py:56
 msgid "From here you can create a new flavor to organize projects."
-msgstr "インスタンスのリソースをまとめたフレーバーをここから作成できます。"
+msgstr "インスタンスのリソースをグルーピングするフレーバーをここから作成できます。"
 
 #: dashboards/admin/flavors/workflows.py:68
 #: dashboards/admin/flavors/workflows.py:233
@@ -914,7 +911,7 @@ msgstr "このフレーバーへのアクセス権を制御することができ
 
 #: dashboards/admin/flavors/workflows.py:157
 msgid "All Projects"
-msgstr "プロジェクト"
+msgstr "すべてのプロジェクト"
 
 #: dashboards/admin/flavors/workflows.py:158
 msgid "Selected projects"
@@ -1174,7 +1171,7 @@ msgstr "削除"
 
 #: dashboards/admin/groups/tables.py:125
 msgid "Removed"
-msgstr "削除を完了しました"
+msgstr "削除しました"
 
 #: dashboards/admin/groups/tables.py:126 dashboards/admin/groups/tables.py:183
 #: dashboards/admin/metering/tables.py:51 dashboards/admin/users/tables.py:50
@@ -1236,7 +1233,7 @@ msgstr "追加"
 
 #: dashboards/admin/groups/tables.py:182
 msgid "Added"
-msgstr "追加を完了しました"
+msgstr "追加しました"
 
 #: dashboards/admin/groups/tables.py:213
 msgid "Non-Members"
@@ -1260,11 +1257,11 @@ msgstr "ユーザー一覧を取得できません。"
 
 #: dashboards/admin/groups/templates/groups/_add_non_member.html:5
 msgid "Add Group Assignment"
-msgstr "グループの割り当ての追加"
+msgstr "グループ割り当ての追加"
 
 #: dashboards/admin/groups/templates/groups/_create.html:18
 msgid "From here you can create a new group to organize users and roles."
-msgstr "ユーザーとロールをグループ化する新しいグループをここから作成できます。"
+msgstr "ユーザーとロールをグルーピングする新しいグループをここから作成できます。"
 
 #: dashboards/admin/groups/templates/groups/_update.html:8
 #: dashboards/admin/groups/templates/groups/_update.html:23
@@ -1425,7 +1422,7 @@ msgstr "イメージの作成"
 #: dashboards/settings/password/templates/password/_change.html:18
 #: dashboards/settings/user/templates/user/_settings.html:18
 msgid "Description:"
-msgstr "説明:"
+msgstr "説明"
 
 #: dashboards/admin/images/templates/images/_create.html:20
 #: dashboards/project/images_and_snapshots/templates/images_and_snapshots/images/_create.html:20
@@ -1598,7 +1595,7 @@ msgstr "ホストアグリゲート"
 #: dashboards/admin/info/tables.py:170 dashboards/admin/users/tables.py:49
 #: dashboards/project/stacks/templates/stacks/_detail_overview.html:64
 msgid "Disabled"
-msgstr "無効化を完了しました"
+msgstr "無効化しました"
 
 #: dashboards/admin/info/tables.py:175
 msgid "Up"
@@ -1606,7 +1603,7 @@ msgstr "動作中"
 
 #: dashboards/admin/info/tables.py:177
 msgid "Down"
-msgstr "下へ"
+msgstr "停止中"
 
 #: dashboards/admin/info/tables.py:196 dashboards/admin/info/tabs.py:99
 msgid "Network Agents"
@@ -2751,7 +2748,7 @@ msgstr "ユーザーの一覧を取得できません。"
 #: dashboards/admin/projects/workflows.py:312
 #: dashboards/admin/projects/workflows.py:319
 msgid "Project Groups"
-msgstr "プロジェクト"
+msgstr "プロジェクトグループ"
 
 #: dashboards/admin/projects/workflows.py:342
 #, python-format
@@ -3194,12 +3191,12 @@ msgstr "EC2 認証情報を取得できません。"
 #: dashboards/project/access_and_security/api_access/views.py:93
 #, python-format
 msgid "Error writing zipfile: %(exc)s"
-msgstr "zip ファイル %(exc)s の書き込みに失敗しました。"
+msgstr "zip ファイルの書き込みに失敗しました: %(exc)s"
 
 #: dashboards/project/access_and_security/api_access/views.py:134
 #, python-format
 msgid "Error Downloading RC File: %s"
-msgstr "RC ファイル %s のダウンロードに失敗しました。"
+msgstr "RC ファイルのダウンロードに失敗しました:  %s"
 
 #: dashboards/project/access_and_security/floating_ips/forms.py:33
 #: dashboards/project/loadbalancers/forms.py:80
@@ -3345,7 +3342,7 @@ msgstr "公開鍵"
 #: dashboards/project/access_and_security/keypairs/forms.py:60
 #, python-format
 msgid "Successfully imported public key: %s"
-msgstr "公開鍵を正常に取り込みました: %s"
+msgstr "公開鍵 %s を正常に取り込みました"
 
 #: dashboards/project/access_and_security/keypairs/forms.py:65
 msgid "Unable to import keypair."
@@ -3723,7 +3720,7 @@ msgid ""
 " of ports. Selecting the \"Port Range\" option will provide you with space "
 "to provide both the starting and ending ports for the range. For ICMP rules "
 "you instead specify an ICMP type and code in the spaces provided."
-msgstr "TCP および UDP の場合、ポート番号またはポート範囲を選択できます。 \"ポート範囲\" オプションを選択すると、範囲の開始ポートおよび終了ポートを空白区切りで指定できます。ICMP の場合、ICMP タイプおよびコードを空白区切りで指定します。"
+msgstr "TCP および UDP の場合、ポート番号またはポート範囲を選択できます。「ポート範囲」オプションを選択すると、範囲の開始ポートおよび終了ポートを空白区切りで指定できます。ICMP の場合、ICMP タイプおよびコードを空白区切りで指定します。"
 
 #: dashboards/project/access_and_security/templates/access_and_security/security_groups/_add_rule.html:22
 msgid ""
@@ -4057,7 +4054,7 @@ msgstr "データベース"
 
 #: dashboards/project/database_backups/views.py:52
 msgid "Not Found"
-msgstr "ページが見つかりませんでした"
+msgstr "見つかりません"
 
 #: dashboards/project/database_backups/views.py:64
 msgid "Error getting database backup list."
@@ -4210,7 +4207,7 @@ msgstr "データベース"
 #: dashboards/project/databases/tables.py:69
 #: dashboards/project/databases/tables.py:85
 msgid "Deleted"
-msgstr "削除を完了しました"
+msgstr "削除しました"
 
 #: dashboards/project/databases/tables.py:78
 msgid "Error deleting database user."
@@ -4242,7 +4239,7 @@ msgstr "%(name)s | %(RAM)s RAM"
 #: dashboards/project/instances/tables.py:492
 #: dashboards/project/instances/tables.py:499
 msgid "Not available"
-msgstr "取得できません"
+msgstr "N/A"
 
 #: dashboards/project/databases/tables.py:153
 msgid "-"
@@ -4373,9 +4370,9 @@ msgstr "ホスト (省略可能)"
 #: dashboards/project/databases/templates/databases/_launch_initialize_help.html:16
 msgid ""
 "Allow the user to connect from this host\n"
-"    only. If not provided this use will be allowed to connect from anywhere.\n"
+"    only. If not provided this user will be allowed to connect from anywhere.\n"
 "    "
-msgstr "このユーザーの接続をこのホストからの場合のみ許可します。\n指定しなかった場合、どこからの接続も許可されます。"
+msgstr "このユーザーの接続をこのホストからのみ許可します。\n指定しなかった場合、どこからの接続も許可されます。"
 
 #: dashboards/project/databases/templates/databases/_launch_restore_help.html:3
 msgid "Create this database from a previous backup."
@@ -4423,7 +4420,7 @@ msgstr "初期データベース"
 
 #: dashboards/project/databases/workflows/create_instance.py:90
 msgid "Comma separated list of databases to create"
-msgstr "作成するデータベースのコンマ区切りのリスト"
+msgstr "作成するデータベースのリスト（コンマ区切り）"
 
 #: dashboards/project/databases/workflows/create_instance.py:92
 msgid "Initial Admin User"
@@ -4593,7 +4590,7 @@ msgstr "ポリシー %(name)s の更新に失敗しました: %(reason)s"
 #: dashboards/project/firewalls/tables.py:179
 #: dashboards/project/firewalls/workflows.py:243
 msgid "Policy"
-msgstr "Polish"
+msgstr "ポリシー"
 
 #: dashboards/project/firewalls/forms.py:149
 #: dashboards/project/firewalls/templates/firewalls/_firewall_details.html:28
@@ -4684,7 +4681,7 @@ msgstr "ファイアウォールの作成"
 #: dashboards/project/firewalls/tables.py:63
 #: dashboards/project/firewalls/tables.py:168
 msgid "Policies"
-msgstr "Polish"
+msgstr "ポリシー"
 
 #: dashboards/project/firewalls/tables.py:70
 msgid "Firewall"
@@ -5040,7 +5037,7 @@ msgstr "最小ディスク (GB)"
 msgid ""
 "The minimum disk size required to boot the image. If unspecified, this value"
 " defaults to 0 (no minimum)."
-msgstr "イメージを起動するために必要となる最小ディスク容量。指定されなければ、この値の初期値は 0 (最小値なし) です。"
+msgstr "イメージを起動するために必要となる最小ディスク容量。指定しなければ、この値の初期値は 0 (最小値なし) です。"
 
 #: dashboards/project/images_and_snapshots/images/forms.py:88
 msgid "Minimum Ram (MB)"
@@ -5055,7 +5052,7 @@ msgstr "保護"
 
 #: dashboards/project/images_and_snapshots/images/forms.py:108
 msgid "A image or external image location must be specified."
-msgstr "イメージまたは外部のイメージ位置を指定する必要があります。"
+msgstr "イメージまたは外部のイメージの位置を指定する必要があります。"
 
 #: dashboards/project/images_and_snapshots/images/forms.py:111
 msgid "Can not specify both image and external image location."
@@ -5307,7 +5304,7 @@ msgstr "ハードリブート"
 
 #: dashboards/project/instances/tables.py:91
 msgid "Hard Rebooted"
-msgstr "ハードリブートを完了しました"
+msgstr "ハードリブートを行いました"
 
 #: dashboards/project/instances/tables.py:110
 msgid "Soft Reboot"
@@ -5315,7 +5312,7 @@ msgstr "ソフトリブート"
 
 #: dashboards/project/instances/tables.py:111
 msgid "Soft Rebooted"
-msgstr "ソフトリブートを完了しました"
+msgstr "ソフトリブートを行いました"
 
 #: dashboards/project/instances/tables.py:119
 msgid "Pause"
@@ -5328,12 +5325,12 @@ msgstr "再開"
 
 #: dashboards/project/instances/tables.py:120
 msgid "Paused"
-msgstr "一時停止を完了しました"
+msgstr "一時停止しました"
 
 #: dashboards/project/instances/tables.py:120
 #: dashboards/project/instances/tables.py:152
 msgid "Resumed"
-msgstr "再開を完了しました"
+msgstr "再開しました"
 
 #: dashboards/project/instances/tables.py:151
 msgid "Suspend"
@@ -5341,7 +5338,7 @@ msgstr "休止"
 
 #: dashboards/project/instances/tables.py:152
 msgid "Suspended"
-msgstr "休止を完了しました"
+msgstr "休止しました"
 
 #: dashboards/project/instances/tables.py:235
 msgid "Edit Security Groups"
@@ -5456,7 +5453,7 @@ msgstr "インスタンス \"%s\" の SPICE コンソールを取得できませ
 #: dashboards/project/instances/views.py:167
 #: dashboards/project/instances/views.py:251
 msgid "Unable to retrieve instance details."
-msgstr "インスタンスの詳細を取り出せません。"
+msgstr "インスタンスの詳細を取得できません。"
 
 #: dashboards/project/instances/views.py:217
 #, python-format
@@ -5556,7 +5553,7 @@ msgstr "ボリュームが接続されていません。"
 
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:19
 msgid "Project Limits"
-msgstr "プロジェクト"
+msgstr "プロジェクトのリソース上限"
 
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:22
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:29
@@ -5573,7 +5570,7 @@ msgstr "<p>%(quota)s MB 中 %(used)s MB 使用中</p>"
 msgid ""
 "You can customize your instance after it's launched using the options "
 "available here."
-msgstr "ここで利用可能なオプションを使用して、起動した後でインスタンスをカスタマイズできます。"
+msgstr "このオプションを使用して、起動後にインスタンスをカスタマイズできます。"
 
 #: dashboards/project/instances/templates/instances/_launch_customize_help.html:3
 msgid ""
@@ -5585,7 +5582,7 @@ msgstr "「カスタマイズ・スクリプト」 フィールドは他のシ�
 msgid ""
 "Choose network from Available networks to Selected Networks by push button "
 "or drag and drop, you may change nic order by drag and drop as well. "
-msgstr "利用可能なネットワークから選択済みネットワークに、ボタンを押すかドラッグアンドドロップすることによりネットワークを選択します。同様にドラッグアンドドロップにより NIC の順番を変更できます。"
+msgstr "ボタンを押すかドラッグアンドドロップで、利用可能なネットワークから選択済みネットワークに移動して、ネットワークを選択します。ドラッグアンドドロップにより NIC の順番を変更できます。"
 
 #: dashboards/project/instances/templates/instances/_launch_volumes_help.html:3
 msgid ""
@@ -5680,7 +5677,7 @@ msgstr "ボリュームのマウントポイント (例 'vda' と指定すると
 
 #: dashboards/project/instances/workflows/create_instance.py:133
 msgid "Delete on Terminate"
-msgstr "終了時に削除します"
+msgstr "終了時に削除"
 
 #: dashboards/project/instances/workflows/create_instance.py:136
 msgid "Delete volume on instance terminate"
@@ -6283,12 +6280,12 @@ msgstr "削除する仮想 IP が見つかりません。 %s"
 #: dashboards/project/loadbalancers/views.py:86
 #, python-format
 msgid "Deleted VIP %s"
-msgstr "VIP %s を削除しました。"
+msgstr "仮想 IP %s を削除しました。"
 
 #: dashboards/project/loadbalancers/views.py:89
 #, python-format
 msgid "Unable to delete VIP. %s"
-msgstr "VIP を削除できません。 %s"
+msgstr "仮想 IP を削除できません。 %s"
 
 #: dashboards/project/loadbalancers/views.py:117
 #, python-format
@@ -6604,29 +6601,29 @@ msgstr "ヘルスモニターの関連付けを解除できません。"
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:6
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:6
 msgid "ID:"
-msgstr "ID:"
+msgstr "ID"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:9
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:9
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:9
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:9
 msgid "Tenant ID:"
-msgstr "プロジェクト ID:"
+msgstr "プロジェクト ID"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:12
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:30
 msgid "Pool ID:"
-msgstr "プール ID:"
+msgstr "プール ID"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:15
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:21
 msgid "Address:"
-msgstr "IP アドレス:"
+msgstr "アドレス"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:18
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:24
 msgid "Protocol Port:"
-msgstr "ポート番号:"
+msgstr "ポート番号"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:21
 msgid "Weight:"
@@ -6648,7 +6645,7 @@ msgstr "ステータス"
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:12
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:34
 msgid "Type:"
-msgstr "種別: "
+msgstr "種別"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:15
 msgid "Delay:"
@@ -6664,42 +6661,42 @@ msgstr "最大試行回数"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:25
 msgid "HTTP Method:"
-msgstr "HTTP メソッド:"
+msgstr "HTTP メソッド"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:28
 msgid "URL Path:"
-msgstr "URL パス:"
+msgstr "URL パス"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_monitor_details.html:31
 msgid "Expected Codes:"
-msgstr "期待されるコード:"
+msgstr "期待されるコード"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:12
 msgid "VIP ID:"
-msgstr "仮想 IP ID:"
+msgstr "仮想 IP ID"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:15
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:12
 msgid "Name:"
-msgstr "名前:"
+msgstr "名前"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:21
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:18
 msgid "Subnet ID:"
-msgstr "サブネット ID:"
+msgstr "サブネット ID"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:24
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:27
 msgid "Protocol:"
-msgstr "プロトコル:"
+msgstr "プロトコル"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:27
 msgid "Load Balancing Method:"
-msgstr "負荷分散方式:"
+msgstr "負荷分散方式"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:30
 msgid "Members:"
-msgstr "メンバー:"
+msgstr "メンバー"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:33
 msgid "Health Monitors:"
@@ -6734,11 +6731,11 @@ msgstr "セッション永続性"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:36
 msgid "Cookie Name:"
-msgstr "クッキー名:"
+msgstr "クッキー名"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:39
 msgid "Connection Limit:"
-msgstr "プロジェクト"
+msgstr "最大接続数"
 
 #: dashboards/project/loadbalancers/templates/loadbalancers/details_tabs.html:3
 #: dashboards/project/loadbalancers/templates/loadbalancers/details_tabs.html:6
@@ -7202,7 +7199,7 @@ msgstr "削除"
 
 #: dashboards/project/routers/tables.py:79
 msgid "Cleared"
-msgstr "解除を完了しました"
+msgstr "解除しました"
 
 #: dashboards/project/routers/tables.py:80
 msgid "Gateway"
@@ -8290,7 +8287,7 @@ msgstr "ルーティングモード"
 
 #: dashboards/project/vpn/templates/vpn/_vpnservice_details.html:27
 msgid "VPN Connections"
-msgstr "プロジェクト"
+msgstr "VPN 接続"
 
 #: dashboards/project/vpn/templates/vpn/details_tabs.html:3
 #: dashboards/project/vpn/templates/vpn/details_tabs.html:6
@@ -8486,23 +8483,23 @@ msgstr "ここからパスワードを変更できます。強固なパスワー
 msgid "Change"
 msgstr "変更"
 
-#: dashboards/settings/user/forms.py:31
+#: dashboards/settings/user/forms.py:37
 msgid "Language"
 msgstr "言語"
 
-#: dashboards/settings/user/forms.py:32
+#: dashboards/settings/user/forms.py:38
 msgid "Timezone"
 msgstr "タイムゾーン"
 
-#: dashboards/settings/user/forms.py:33
+#: dashboards/settings/user/forms.py:39
 msgid "Items Per Page"
 msgstr "ページあたりの項目数"
 
-#: dashboards/settings/user/forms.py:38
+#: dashboards/settings/user/forms.py:44
 msgid "Number of items to show per page"
 msgstr "1 ページに表示する項目数"
 
-#: dashboards/settings/user/forms.py:86
+#: dashboards/settings/user/forms.py:96
 msgid "Settings saved."
 msgstr "設定を保存しました。"
 
