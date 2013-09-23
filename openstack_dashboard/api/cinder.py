@@ -4,7 +4,7 @@
 # Administrator of the National Aeronautics and Space Administration.
 # All Rights Reserved.
 #
-# Copyright 2012 Openstack, LLC
+# Copyright 2012 OpenStack Foundation
 # Copyright 2012 Nebula, Inc.
 # Copyright (c) 2012 X.commerce, a business unit of eBay Inc.
 #
@@ -115,7 +115,7 @@ def volume_snapshot_list(request):
 
 def volume_snapshot_create(request, volume_id, name, description):
     return cinderclient(request).volume_snapshots.create(
-            volume_id, display_name=name, display_description=description)
+        volume_id, display_name=name, display_description=description)
 
 
 def volume_snapshot_delete(request, snapshot_id):
