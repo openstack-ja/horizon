@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-17 05:18+0000\n"
-"PO-Revision-Date: 2013-09-18 14:46+0000\n"
+"PO-Revision-Date: 2013-09-23 02:04+0000\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -103,7 +103,7 @@ msgstr "%(obj)s に 属性 %(attr)s が存在しません。"
 
 #: tables/base.py:766
 msgid "No items to display."
-msgstr "表示する項目がありません。"
+msgstr "表示する項目がありません"
 
 #: tables/base.py:870
 msgid "Actions"
@@ -121,7 +121,7 @@ msgstr "このアクションを実行する前に、対象を選択してくだ
 #: templates/_header.html:4
 #, python-format
 msgid "Logged in as: %(username)s"
-msgstr "次のユーザーとしてログイン中: %(username)s"
+msgstr "%(username)s としてログイン中"
 
 #: templates/_header.html:6
 msgid "Help"
@@ -145,7 +145,7 @@ msgstr "アクセスする権限がありません: "
 
 #: templates/auth/_login.html:17
 msgid "Login as different user or go back to"
-msgstr "他のユーザーとしてログインしてください。または、戻ってください。"
+msgstr "他のユーザーとしてログインするか、戻ってください。"
 
 #: templates/auth/_login.html:18
 msgid "home page"
@@ -183,7 +183,7 @@ msgstr[0] "%(counter)s 項目の表示中"
 
 #: templates/horizon/common/_data_table_row_actions.html:10
 msgid "More"
-msgstr "その他"
+msgstr " "
 
 #: templates/horizon/common/_limit_summary.html:4
 msgid "Limit Summary"
