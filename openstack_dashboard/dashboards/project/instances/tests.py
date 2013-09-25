@@ -659,7 +659,8 @@ class InstanceTests(test.TestCase):
                                    'server_list',
                                    'flavor_list',
                                    'server_delete'),
-                        cinder: ('volume_snapshot_list',),
+                        cinder: ('volume_snapshot_list',
+                                 'volume_list',),
                         api.glance: ('image_list_detailed',)})
     def test_create_instance_snapshot(self):
         server = self.servers.first()
@@ -672,6 +673,7 @@ class InstanceTests(test.TestCase):
         api.glance.image_list_detailed(IsA(http.HttpRequest),
                                        marker=None).AndReturn([[], False])
         cinder.volume_snapshot_list(IsA(http.HttpRequest)).AndReturn([])
+        cinder.volume_list(IsA(http.HttpRequest)).AndReturn([])
 
         self.mox.ReplayAll()
 
@@ -857,14 +859,6 @@ class InstanceTests(test.TestCase):
                                 .AndReturn(self.security_groups.list())
         api.nova.availability_zone_list(IsA(http.HttpRequest)) \
                                 .AndReturn(self.availability_zones.list())
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-            .AndReturn([self.images.list(), False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                .AndReturn([[], False])
 
         self.mox.ReplayAll()
 
@@ -948,14 +942,6 @@ class InstanceTests(test.TestCase):
         cinder.volume_list(IsA(http.HttpRequest)) \
                 .AndReturn([])
         cinder.volume_snapshot_list(IsA(http.HttpRequest)).AndReturn([])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-                  .AndReturn([self.images.list(), False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                  .AndReturn([[], False])
         api.nova.server_create(IsA(http.HttpRequest),
                                server.name,
                                image.id,
@@ -1059,14 +1045,6 @@ class InstanceTests(test.TestCase):
         cinder.volume_list(IsA(http.HttpRequest)) \
                 .AndReturn(self.volumes.list())
         cinder.volume_snapshot_list(IsA(http.HttpRequest)).AndReturn([])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-                  .AndReturn([self.images.list(), False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                  .AndReturn([[], False])
         api.nova.server_create(IsA(http.HttpRequest),
                                server.name,
                                '',
@@ -1178,15 +1156,6 @@ class InstanceTests(test.TestCase):
         quotas.tenant_quota_usages(IsA(http.HttpRequest)) \
                 .AndReturn(quota_usages)
 
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-            .AndReturn([self.images.list(), False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                  .AndReturn([[], False])
-
         api.nova.server_create(IsA(http.HttpRequest),
                                server.name,
                                '',
@@ -1281,14 +1250,6 @@ class InstanceTests(test.TestCase):
         cinder.volume_list(IsA(http.HttpRequest)) \
                 .AndReturn([])
         cinder.volume_snapshot_list(IsA(http.HttpRequest)).AndReturn([])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-                .AndReturn([[], False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                .AndReturn([[], False])
         quotas.tenant_quota_usages(IsA(http.HttpRequest)) \
                 .AndReturn(quota_usages)
 
@@ -1361,14 +1322,6 @@ class InstanceTests(test.TestCase):
                 .AndReturn(self.security_groups.list())
         api.nova.availability_zone_list(IsA(http.HttpRequest)) \
                 .AndReturn(self.availability_zones.list())
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-                  .AndReturn([self.images.list(), False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                  .AndReturn([[], False])
 
         self.mox.ReplayAll()
 
@@ -1439,14 +1392,6 @@ class InstanceTests(test.TestCase):
                 policy_profile_id=policy_profile_id).AndReturn(port)
             nics = [{"port-id": port.id}]
         cinder.volume_list(IgnoreArg()).AndReturn(self.volumes.list())
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-                  .AndReturn([self.images.list(), False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                  .AndReturn([[], False])
         api.nova.server_create(IsA(http.HttpRequest),
                                server.name,
                                image.id,
@@ -1550,14 +1495,6 @@ class InstanceTests(test.TestCase):
                 .AndReturn(self.flavors.list())
         api.nova.tenant_absolute_limits(IsA(http.HttpRequest)) \
            .AndReturn(self.limits['absolute'])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-                  .AndReturn([self.images.list(), False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                  .AndReturn([[], False])
         quotas.tenant_quota_usages(IsA(http.HttpRequest)) \
                 .AndReturn(quota_usages)
 
@@ -1689,14 +1626,6 @@ class InstanceTests(test.TestCase):
                                 .AndReturn(self.security_groups.list())
         api.nova.availability_zone_list(IsA(http.HttpRequest)) \
                                 .AndReturn(self.availability_zones.list())
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                                       filters={'is_public': True,
-                                                'status': 'active'}) \
-            .AndReturn([self.images.list(), False])
-        api.glance.image_list_detailed(IsA(http.HttpRequest),
-                            filters={'property-owner_id': self.tenant.id,
-                                     'status': 'active'}) \
-                .AndReturn([[], False])
 
         self.mox.ReplayAll()
 
