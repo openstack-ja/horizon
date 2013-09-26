@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-24 14:00+0000\n"
-"PO-Revision-Date: 2013-09-25 06:47+0000\n"
+"PO-Revision-Date: 2013-09-26 05:59+0000\n"
 "Last-Translator: Akihiro MOTOKI <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -870,7 +870,7 @@ msgstr "フレーバーのデータを取得できません。"
 msgid ""
 "Flavor ID should be UUID4 or integer. Leave this field blank or use 'auto' "
 "to set a random UUID4."
-msgstr "フレーバー ID は UUID4 か整数でなければなりません。ランダムな UUID4 を使うにはこのフィールドを空欄にするか 'auto' を指定して下さい。"
+msgstr "フレーバー ID は UUID4 か整数でなければなりません。ランダムな UUID4 を使うにはこのフィールドを空欄にするか 'auto' を指定してください。"
 
 #: dashboards/admin/flavors/workflows.py:40
 msgid ""
@@ -920,7 +920,7 @@ msgstr "ID \"%s\" はすでに別のフレーバーで使用されています�
 
 #: dashboards/admin/flavors/workflows.py:102
 msgid "Unable to retrieve flavor access list. Please try again later."
-msgstr "フレーバーアクセス権の一覧を取得できません。後からもう一度お試し下さい。"
+msgstr "フレーバーアクセス権の一覧を取得できません。後からもう一度お試しください。"
 
 #: dashboards/admin/flavors/workflows.py:146
 msgid "Flavor Access"
@@ -932,7 +932,7 @@ msgid ""
 "column to the right column. Only projects in the right column can use the "
 "flavor. If there are no projects in the right column, all projects can use "
 "the flavor."
-msgstr "このフレーバーへのアクセス権を制御することができます。必要なプロジェクトを左側から右側に移動して下さい。右側にあるプロジェクトだけがこのフレーバーを使用できます。右側にプロジェクトがひとつもない場合は、すべてのプロジェクトがこのフレーバーを使用できます。"
+msgstr "このフレーバーへのアクセス権を制御することができます。必要なプロジェクトを左側から右側に移動してください。右側にあるプロジェクトだけがこのフレーバーを使用できます。右側にプロジェクトがひとつもない場合は、すべてのプロジェクトがこのフレーバーを使用できます。"
 
 #: dashboards/admin/flavors/workflows.py:157
 msgid "All Projects"
@@ -2271,7 +2271,7 @@ msgstr "プロジェクトの選択"
 #: dashboards/admin/networks/forms.py:65
 #: dashboards/project/networks/workflows.py:53
 msgid "Select a profile"
-msgstr "プロファイルを選択して下さい"
+msgstr "プロファイルを選択してください"
 
 #: dashboards/admin/networks/forms.py:75
 #: dashboards/project/networks/workflows.py:63
@@ -2816,7 +2816,7 @@ msgid ""
 "You cannot revoke your administrative privileges from the project you are "
 "currently logged into. Please switch to another project with administrative "
 "privileges or remove the administrative role manually via the CLI."
-msgstr "現在ログインしているプロジェクトから自分の管理権限を削除することはできません。管理権限を持つ別のプロジェクトに切り替えるか、CLI を使って手動で管理権限を削除して下さい。"
+msgstr "現在ログインしているプロジェクトから自分の管理権限を削除することはできません。管理権限を持つ別のプロジェクトに切り替えるか、CLI を使って手動で管理権限を削除してください。"
 
 #: dashboards/admin/projects/workflows.py:622
 msgid ", update project groups"
@@ -3451,7 +3451,7 @@ msgstr "IP プロトコル"
 
 #: dashboards/project/access_and_security/security_groups/forms.py:123
 msgid "Enter an integer value between 0 and 255 (or -1 which means wildcard)."
-msgstr "0 以上 255 以下の整数値 (または全てを意味する -1) を入力して下さい。"
+msgstr "0 以上 255 以下の整数値 (または全てを意味する -1) を入力してください。"
 
 #: dashboards/project/access_and_security/security_groups/forms.py:132
 #: dashboards/project/access_and_security/security_groups/forms.py:139
@@ -4465,7 +4465,7 @@ msgstr "ユーザーを作成する場合、少なくともひとつデータベ
 
 #: dashboards/project/databases/workflows/create_instance.py:129
 msgid "Select a backup to Restore"
-msgstr "復元するバックアップを選択して下さい"
+msgstr "復元するバックアップを選択してください"
 
 #: dashboards/project/databases/workflows/create_instance.py:132
 msgid "Restore From Backup"
@@ -4911,7 +4911,7 @@ msgid ""
 "    either the rule you want to insert immediately before, or the rule\n"
 "    to insert immediately after. If both are specified, the prior\n"
 "    takes precedence."
-msgstr "挿入したいルールを選択して下さい。ルールをどのルールの直前、または直後に挿入するかを指定して下さい。両方指定した場合は指定したルールの直前に挿入されます。"
+msgstr "挿入したいルールを選択してください。ルールをどのルールの直前、または直後に挿入するかを指定してください。両方指定した場合は指定したルールの直前に挿入されます。"
 
 #: dashboards/project/firewalls/templates/firewalls/_remove_rule_from_policy.html:8
 #: dashboards/project/firewalls/templates/firewalls/remove_rule_from_policy.html:3
@@ -4921,7 +4921,7 @@ msgstr "ポリシーからのルールの削除"
 
 #: dashboards/project/firewalls/templates/firewalls/_remove_rule_from_policy.html:18
 msgid "Choose the rule you want to remove."
-msgstr "削除したいルールを選択して下さい。"
+msgstr "削除したいルールを選択してください。"
 
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:25
 msgid "Source IP Address"
@@ -4961,7 +4961,7 @@ msgstr "ファイアウォールの詳細をここから更新できます。"
 msgid ""
 "You may update policy details here. Use 'Insert Rule' or 'Remove Rule' links"
 " instead to insert or remove a rule"
-msgstr "ポリシーの詳細をここから更新できます。ルールの挿入、削除はここではなく「ルールの挿入」「ルールの削除」を使って下さい。"
+msgstr "ポリシーの詳細をここから更新できます。ルールの挿入、削除はここではなく「ルールの挿入」「ルールの削除」を使ってください。"
 
 #: dashboards/project/firewalls/templates/firewalls/_updaterule.html:18
 msgid "You may update rule details here."
@@ -5609,7 +5609,7 @@ msgstr "インスタンスはさまざまな形式のストレージを接続し
 
 #: dashboards/project/instances/templates/instances/_rebuild.html:19
 msgid "Select the image to rebuild your instance."
-msgstr "インスタンスの再作成に使うフレーバーを選択して下さい。"
+msgstr "インスタンスの再作成に使うフレーバーを選択してください。"
 
 #: dashboards/project/instances/templates/instances/_rebuild.html:20
 msgid "You may optionally set a password on the rebuilt instance."
@@ -5910,7 +5910,7 @@ msgstr "新しいフレーバー"
 
 #: dashboards/project/instances/workflows/resize_instance.py:43
 msgid "Choose the flavor to launch."
-msgstr "起動するフレーバーを選択して下さい。"
+msgstr "起動するフレーバーを選択してください。"
 
 #: dashboards/project/instances/workflows/resize_instance.py:46
 msgid "Flavor Choice"
@@ -5918,7 +5918,7 @@ msgstr "フレーバーの選択"
 
 #: dashboards/project/instances/workflows/resize_instance.py:56
 msgid "Please  choose a new flavor that can not be same as the old one."
-msgstr "新しいフレーバーを選択して下さい。現在のフレーバーとは同じにはできません。"
+msgstr "新しいフレーバーを選択してください。現在のフレーバーとは同じにはできません。"
 
 #: dashboards/project/instances/workflows/resize_instance.py:65
 msgid "Select an New Flavor"
@@ -6348,7 +6348,7 @@ msgstr "プロトコルの選択"
 
 #: dashboards/project/loadbalancers/workflows.py:66
 msgid "Select a Method"
-msgstr "方式を選択して下さい"
+msgstr "方式を選択してください"
 
 #: dashboards/project/loadbalancers/workflows.py:73
 msgid "Add New Pool"
@@ -6359,7 +6359,7 @@ msgid ""
 "Create Pool for current project.\n"
 "\n"
 "Assign a name and description for the pool. Choose one subnet where all members of this pool must be on. Select the protocol and load balancing method for this pool. Admin State is UP (checked) by default."
-msgstr "このプロジェクトにプールを作成します。\n\nプールの名前と説明を入力して下さい。このプールのメンバー全てが所属するサブネットを選択して下さい。このプールで使用するプロトコルと負荷分散方式を選択して下さい。管理状態はデフォルトで有効 (チェック済み) になっています。"
+msgstr "このプロジェクトにプールを作成します。\n\nプールの名前と説明を入力してください。このプールのメンバー全てが所属するサブネットを選択してください。このプールで使用するプロトコルと負荷分散方式を選択してください。管理状態はデフォルトで有効 (チェック済み) になっています。"
 
 #: dashboards/project/loadbalancers/workflows.py:99
 #, python-format
@@ -6378,7 +6378,7 @@ msgstr "Floating IP からの仮想 IP 割り当て"
 #: dashboards/project/loadbalancers/workflows.py:151
 #, python-format
 msgid "Specify a free IP address from %s"
-msgstr "%s の未使用の IP アドレスを選択して下さい"
+msgstr "%s の未使用の IP アドレスを選択してください"
 
 #: dashboards/project/loadbalancers/workflows.py:160
 msgid "Set Session Persistence"
@@ -6402,7 +6402,7 @@ msgid ""
 "Specify an IP address and port for the VIP. Choose the protocol and session "
 "persistence method for the VIP.Specify the max connections allowed. Admin "
 "State is UP (checked) by default."
-msgstr "このプールに仮想 IP を作成します。仮想 IP の名前と説明を入力して下さい。仮想 IP の IP アドレスとポート番号を指定します。この仮想 IP で使用するプロトコルとセッション永続化方法を選んで下さい。許可する最大接続数を指定します。管理状態はデフォルトで有効 (チェック済み) になっています。"
+msgstr "このプールに仮想 IP を作成します。仮想 IP の名前と説明を入力してください。仮想 IP の IP アドレスとポート番号を指定します。この仮想 IP で使用するプロトコルとセッション永続化方法を選んでください。許可する最大接続数を指定します。管理状態はデフォルトで有効 (チェック済み) になっています。"
 
 #: dashboards/project/loadbalancers/workflows.py:206
 #, python-format
@@ -8045,7 +8045,7 @@ msgid ""
 "Create VPN Service for current project.\n"
 "\n"
 "Assign a name and description for the VPN Service. Select a router and a subnet. Admin State is Up (checked) by default."
-msgstr "現在のプロジェクトに VPN サービスを作成します。\n\nVPN サービスの名前と説明を入力して下さい。ルーターとサブネットを選択します。管理状態はデフォルトで有効 (チェック済み) になっています。"
+msgstr "現在のプロジェクトに VPN サービスを作成します。\n\nVPN サービスの名前と説明を入力してください。ルーターとサブネットを選択します。管理状態はデフォルトで有効 (チェック済み) になっています。"
 
 #: dashboards/project/vpn/workflows.py:100
 #, python-format
@@ -8096,7 +8096,7 @@ msgid ""
 "Create IKE Policy for current project.\n"
 "\n"
 "Assign a name and description for the IKE Policy. "
-msgstr "現在のプロジェクトに IKE ポリシーを作成します。\n\nIKE ポリシーの名前と説明を入力して下さい。"
+msgstr "現在のプロジェクトに IKE ポリシーを作成します。\n\nIKE ポリシーの名前と説明を入力してください。"
 
 #: dashboards/project/vpn/workflows.py:199
 #, python-format
@@ -8135,7 +8135,7 @@ msgid ""
 "Create IPSec Policy for current project.\n"
 "\n"
 "Assign a name and description for the IPSec Policy. "
-msgstr "現在のプロジェクトに IPSec ポリシーを作成します。\n\nIPSec ポリシーの名前と説明を入力して下さい。"
+msgstr "現在のプロジェクトに IPSec ポリシーを作成します。\n\nIPSec ポリシーの名前と説明を入力してください。"
 
 #: dashboards/project/vpn/workflows.py:296
 #, python-format
@@ -8161,21 +8161,21 @@ msgstr "この接続に関連付ける IPSec ポリシー"
 
 #: dashboards/project/vpn/workflows.py:324
 msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
-msgstr ""
+msgstr "接続相手のゲートウェイのパブリック IPv4/IPv6 アドレスまたは FQDN"
 
 #: dashboards/project/vpn/workflows.py:325
 msgid "Peer gateway public IPv4/IPv6 address or FQDN for the VPN Connection"
-msgstr ""
+msgstr "VPN 接続の接続相手のゲートウェイのパブリック IPv4/IPv6 アドレスまたは FQDN"
 
 #: dashboards/project/vpn/workflows.py:330
 msgid "Peer router identity for authentication (Peer ID)"
-msgstr ""
+msgstr "接続相手のルータの認証用識別子 (Peer ID)"
 
 #: dashboards/project/vpn/workflows.py:331
 msgid ""
 "Peer router identity for authentication. Can be IPv4/IPv6 address, e-mail, "
 "key ID, or FQDN"
-msgstr ""
+msgstr "接続相手のルータの認証用識別子。 IPv4/IPv6 アドレス、メールアドレス、キー ID、FQDN が使用できます。"
 
 #: dashboards/project/vpn/workflows.py:335
 #: dashboards/project/vpn/templates/vpn/_ipsecsiteconnection_details.html:37
@@ -8211,7 +8211,7 @@ msgid ""
 "Create IPSec Site Connection for current project.\n"
 "\n"
 "Assign a name and description for the IPSec Site Connection. All fields in this tab are required."
-msgstr "現在のプロジェクトに IPSec サイト間接続を作成します。\n\nIPSec サイト間接続の名前と説明を入力して下さい。このタブのフィールドはすべて必須です。"
+msgstr "現在のプロジェクトに IPSec サイト間接続を作成します。\n\nIPSec サイト間接続の名前と説明を入力してください。このタブのフィールドはすべて必須です。"
 
 #: dashboards/project/vpn/workflows.py:403
 msgid "Maximum Transmission Unit size for the connection"
