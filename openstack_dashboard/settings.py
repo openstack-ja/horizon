@@ -39,14 +39,6 @@ if ROOT_PATH not in sys.path:
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-# Ensure that we always have a SECRET_KEY set, even when no local_settings.py
-# file is present. See local_settings.py.example for full documentation on the
-# horizon.utils.secret_key module and its use.
-from horizon.utils import secret_key
-LOCAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'local')
-SECRET_KEY = secret_key.generate_or_read_from_file(os.path.join(LOCAL_PATH,
-                                                   '.secret_key_store'))
-
 SITE_BRANDING = 'OpenStack Dashboard'
 
 LOGIN_URL = '/auth/login/'
@@ -182,18 +174,17 @@ SESSION_TIMEOUT = 1800
 
 gettext_noop = lambda s: s
 LANGUAGES = (
-    ('bg', gettext_noop('Bulgarian (Bulgaria)')),
-    ('cs', gettext_noop('Czech')),
     ('en', gettext_noop('English')),
+    ('en-au', gettext_noop('Australian English')),
+    ('en-gb', gettext_noop('British English')),
     ('es', gettext_noop('Spanish')),
     ('fr', gettext_noop('French')),
-    ('it', gettext_noop('Italiano')),
     ('ja', gettext_noop('Japanese')),
     ('ko', gettext_noop('Korean (Korea)')),
     ('nl', gettext_noop('Dutch (Netherlands)')),
     ('pl', gettext_noop('Polish')),
-    ('pt', gettext_noop('Portuguese')),
     ('pt-br', gettext_noop('Portuguese (Brazil)')),
+    ('ru', gettext_noop('Russian')),
     ('zh-cn', gettext_noop('Simplified Chinese')),
     ('zh-tw', gettext_noop('Traditional Chinese')),
 )
@@ -214,10 +205,22 @@ POLICY_FILES = {
     'compute': 'nova_policy.json'
 }
 
+SECRET_KEY = None
+
 try:
     from local.local_settings import *  # noqa
 except ImportError:
     logging.warning("No local_settings file found.")
+
+# Ensure that we always have a SECRET_KEY set, even when no local_settings.py
+# file is present. See local_settings.py.example for full documentation on the
+# horizon.utils.secret_key module and its use.
+if not SECRET_KEY:
+    from horizon.utils import secret_key
+    LOCAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              'local')
+    SECRET_KEY = secret_key.generate_or_read_from_file(os.path.join(LOCAL_PATH,
+                                                       '.secret_key_store'))
 
 from openstack_dashboard import policy
 POLICY_CHECK_FUNCTION = policy.check

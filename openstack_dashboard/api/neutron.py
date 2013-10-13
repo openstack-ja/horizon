@@ -283,7 +283,7 @@ class SecurityGroupManager(network_base.SecurityGroupManager):
         sg_ids = []
         for p in ports:
             sg_ids += p.security_groups
-        return self._list(id=set(sg_ids))
+        return self._list(id=set(sg_ids)) if sg_ids else []
 
     def update_instance_security_group(self, instance_id,
                                        new_security_group_ids):
@@ -599,8 +599,8 @@ def port_modify(request, port_id, **kwargs):
 
 
 def profile_list(request, type_p, **params):
-    LOG.debug(_("profile_list(): "
-                "profile_type=%(profile_type)s, params=%(params)s"),
+    LOG.debug("profile_list(): "
+              "profile_type=%(profile_type)s, params=%(params)s",
               {'profile_type': type_p, 'params': params})
     if type_p == 'network':
         profiles = neutronclient(request).list_network_profiles(
@@ -612,8 +612,8 @@ def profile_list(request, type_p, **params):
 
 
 def profile_get(request, profile_id, **params):
-    LOG.debug(_("profile_get(): "
-                "profileid=%(profileid)s, params=%(params)s"),
+    LOG.debug("profile_get(): "
+              "profileid=%(profileid)s, params=%(params)s",
               {'profileid': profile_id, 'params': params})
     profile = neutronclient(request).show_network_profile(
         profile_id, **params).get('network_profile')
@@ -621,7 +621,7 @@ def profile_get(request, profile_id, **params):
 
 
 def profile_create(request, **kwargs):
-    LOG.debug(_("profile_create(): kwargs=%s") % kwargs)
+    LOG.debug("profile_create(): kwargs=%s", kwargs)
     body = {'network_profile': {}}
     body['network_profile'].update(kwargs)
     profile = neutronclient(request).create_network_profile(
@@ -630,13 +630,13 @@ def profile_create(request, **kwargs):
 
 
 def profile_delete(request, profile_id):
-    LOG.debug(_("profile_delete(): profile_id=%s") % profile_id)
+    LOG.debug("profile_delete(): profile_id=%s", profile_id)
     neutronclient(request).delete_network_profile(profile_id)
 
 
 def profile_modify(request, profile_id, **kwargs):
-    LOG.debug(_("profile_modify(): "
-                "profileid=%(profileid)s, kwargs=%(kwargs)s"),
+    LOG.debug("profile_modify(): "
+              "profileid=%(profileid)s, kwargs=%(kwargs)s",
               {'profileid': profile_id, 'kwargs': kwargs})
     body = {'network_profile': kwargs}
     profile = neutronclient(request).update_network_profile(
@@ -645,8 +645,8 @@ def profile_modify(request, profile_id, **kwargs):
 
 
 def profile_bindings_list(request, type_p, **params):
-    LOG.debug(_("profile_bindings_list(): "
-                "profile_type=%(profile_type)s params=%(params)s"),
+    LOG.debug("profile_bindings_list(): "
+              "profile_type=%(profile_type)s params=%(params)s",
               {'profile_type': type_p, 'params': params})
     if type_p == 'network':
         bindings = neutronclient(request).list_network_profile_bindings(
@@ -720,6 +720,11 @@ def tenant_quota_update(request, tenant_id, **kwargs):
 def agent_list(request):
     agents = neutronclient(request).list_agents()
     return [Agent(a) for a in agents['agents']]
+
+
+def provider_list(request):
+    providers = neutronclient(request).list_service_providers()
+    return providers['service_providers']
 
 
 @memoized

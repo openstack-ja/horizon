@@ -264,6 +264,21 @@ class FirewallTests(test.TestCase):
                      'shared': policy.shared,
                      'audited': policy.audited
                      }
+        post_data = {'name': policy.name,
+                     'description': policy.description,
+                     'rule': policy.firewall_rules,
+                     'shared': policy.shared,
+                     'audited': policy.audited
+                     }
+
+        # NOTE: SelectRulesAction.populate_rule_choices() lists rule not
+        # associated with any policy. We need to ensure that rules specified
+        # in policy.firewall_rules in post_data (above) are not associated
+        # with any policy. Test data in neutron_data is data in a stable state,
+        # so we need to modify here.
+        for rule in rules:
+            if rule.id in policy.firewall_rules:
+                rule.firewall_policy_id = rule.policy = None
         api.fwaas.rules_list(
             IsA(http.HttpRequest), tenant_id=tenant_id).AndReturn(rules)
         api.fwaas.policy_create(
@@ -271,7 +286,7 @@ class FirewallTests(test.TestCase):
 
         self.mox.ReplayAll()
 
-        res = self.client.post(reverse(self.ADDPOLICY_PATH), form_data)
+        res = self.client.post(reverse(self.ADDPOLICY_PATH), post_data)
 
         self.assertNoFormErrors(res)
         self.assertRedirectsNoFollow(res, str(self.INDEX_URL))
@@ -449,9 +464,8 @@ class FirewallTests(test.TestCase):
         self.assertNoFormErrors(res)
         self.assertRedirectsNoFollow(res, str(self.INDEX_URL))
 
-    @test.create_stubs({api.fwaas: ('policy_get',
-                                    'policy_insert_rule',
-                                    'rules_list')})
+    @test.create_stubs({api.fwaas: ('policy_get', 'policy_insert_rule',
+                                    'rules_list', 'rule_get')})
     def test_policy_insert_rule(self):
         policy = self.fw_policies.first()
         tenant_id = policy.tenant_id
@@ -472,6 +486,8 @@ class FirewallTests(test.TestCase):
 
         api.fwaas.rules_list(
             IsA(http.HttpRequest), tenant_id=tenant_id).AndReturn(rules)
+        api.fwaas.rule_get(
+            IsA(http.HttpRequest), new_rule_id).AndReturn(rules[2])
         api.fwaas.policy_insert_rule(IsA(http.HttpRequest), policy.id, **data)\
             .AndReturn(policy)
 
@@ -484,7 +500,7 @@ class FirewallTests(test.TestCase):
         self.assertRedirectsNoFollow(res, str(self.INDEX_URL))
 
     @test.create_stubs({api.fwaas: ('policy_get', 'policy_remove_rule',
-                                    'rules_list',)})
+                                    'rules_list', 'rule_get')})
     def test_policy_remove_rule(self):
         policy = self.fw_policies.first()
         tenant_id = policy.tenant_id
@@ -508,6 +524,8 @@ class FirewallTests(test.TestCase):
                              policy.id).AndReturn(policy)
         api.fwaas.rules_list(
             IsA(http.HttpRequest), tenant_id=tenant_id).AndReturn(rules)
+        api.fwaas.rule_get(
+            IsA(http.HttpRequest), remove_rule_id).AndReturn(rules[0])
         api.fwaas.policy_remove_rule(IsA(http.HttpRequest), policy.id, **data)\
             .AndReturn(after_remove_policy)
 

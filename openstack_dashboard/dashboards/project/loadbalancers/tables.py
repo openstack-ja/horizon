@@ -16,6 +16,7 @@
 
 
 from django.core.urlresolvers import reverse  # noqa
+from django.template import defaultfilters as filters
 from django.utils import http
 from django.utils.translation import ugettext_lazy as _  # noqa
 
@@ -23,11 +24,6 @@ from horizon import exceptions
 from horizon import tables
 
 from openstack_dashboard import api
-
-import logging
-
-
-LOG = logging.getLogger(__name__)
 
 
 class AddPoolLink(tables.LinkAction):
@@ -151,8 +147,11 @@ class UpdateMonitorLink(tables.LinkAction):
 
 
 def get_vip_link(pool):
-    return reverse("horizon:project:loadbalancers:vipdetails",
-                   args=(http.urlquote(pool.vip_id),))
+    if pool.vip_id:
+        return reverse("horizon:project:loadbalancers:vipdetails",
+                       args=(http.urlquote(pool.vip_id),))
+    else:
+        return None
 
 
 class AddPMAssociationLink(tables.LinkAction):
@@ -190,6 +189,8 @@ class PoolsTable(tables.DataTable):
                        verbose_name=_("Name"),
                        link="horizon:project:loadbalancers:pooldetails")
     description = tables.Column('description', verbose_name=_("Description"))
+    provider = tables.Column('provider', verbose_name=_("Provider"),
+                             filters=(lambda v: filters.default(v, _('N/A')),))
     subnet_name = tables.Column('subnet_name', verbose_name=_("Subnet"))
     protocol = tables.Column('protocol', verbose_name=_("Protocol"))
     vip_name = tables.Column('vip_name', verbose_name=_("VIP"),

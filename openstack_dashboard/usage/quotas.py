@@ -39,7 +39,10 @@ NEUTRON_QUOTA_FIELDS = ("network",
                         "subnet",
                         "port",
                         "router",
-                        "floatingip",)
+                        "floatingip",
+                        "security_group",
+                        "security_group_rule",
+                        )
 
 QUOTA_FIELDS = NOVA_QUOTA_FIELDS + CINDER_QUOTA_FIELDS + NEUTRON_QUOTA_FIELDS
 
@@ -150,6 +153,13 @@ def get_disabled_quotas(request):
     else:
         # Remove the nova network quotas
         disabled_quotas.extend(['floating_ips', 'fixed_ips'])
+
+        if neutron.is_security_group_extension_supported(request):
+            # If Neutron security group is supported, disable Nova quotas
+            disabled_quotas.extend(['security_groups', 'security_group_rules'])
+        else:
+            # If Nova security group is used, disable Neutron quotas
+            disabled_quotas.extend(['security_group', 'security_group_rule'])
 
         try:
             if not neutron.is_quotas_extension_supported(request):

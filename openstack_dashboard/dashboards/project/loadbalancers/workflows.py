@@ -14,8 +14,6 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import logging
-
 from django.utils.translation import ugettext_lazy as _  # noqa
 
 from horizon import exceptions
@@ -27,14 +25,14 @@ from horizon import workflows
 from openstack_dashboard import api
 
 
-LOG = logging.getLogger(__name__)
-
-
 class AddPoolAction(workflows.Action):
     name = forms.CharField(max_length=80, label=_("Name"))
     description = forms.CharField(
         initial="", required=False,
         max_length=80, label=_("Description"))
+    # provider is optional because some LBaaS implemetation does
+    # not support service-type extension.
+    provider = forms.ChoiceField(label=_("Provider"), required=False)
     subnet_id = forms.ChoiceField(label=_("Subnet"))
     protocol = forms.ChoiceField(label=_("Protocol"))
     lb_method = forms.ChoiceField(label=_("Load Balancing Method"))
@@ -69,6 +67,40 @@ class AddPoolAction(workflows.Action):
         lb_method_choices.append(('SOURCE_IP', 'SOURCE_IP'))
         self.fields['lb_method'].choices = lb_method_choices
 
+        # provider choice
+        try:
+            if api.neutron.is_extension_supported(request, 'service-type'):
+                provider_list = api.neutron.provider_list(request)
+                providers = [p for p in provider_list
+                             if p['service_type'] == 'LOADBALANCER']
+            else:
+                providers = None
+        except Exception:
+            exceptions.handle(request,
+                              _('Unable to retrieve providers list.'))
+            providers = []
+
+        if providers:
+            default_providers = [p for p in providers if p.get('default')]
+            if default_providers:
+                default_provider = default_providers[0]['name']
+            else:
+                default_provider = None
+            provider_choices = [(p['name'], p['name']) for p in providers
+                                if p['name'] != default_provider]
+            if default_provider:
+                provider_choices.insert(
+                    0, (default_provider,
+                        _("%s (default)") % default_provider))
+        else:
+            if providers is None:
+                msg = _("Provider for Load Balancer is not supported.")
+            else:
+                msg = _("No provider is available.")
+            provider_choices = [('', msg)]
+            self.fields['provider'].widget.attrs['readonly'] = True
+        self.fields['provider'].choices = provider_choices
+
     class Meta:
         name = _("Add New Pool")
         permissions = ('openstack.services.network',)
@@ -83,7 +115,7 @@ class AddPoolAction(workflows.Action):
 
 class AddPoolStep(workflows.Step):
     action_class = AddPoolAction
-    contributes = ("name", "description", "subnet_id",
+    contributes = ("name", "description", "subnet_id", "provider",
                    "protocol", "lb_method", "admin_state_up")
 
     def contribute(self, data, context):
@@ -157,7 +189,7 @@ class AddVipAction(workflows.Action):
         protocol_choices.append(('HTTPS', 'HTTPS'))
         self.fields['protocol'].choices = protocol_choices
 
-        session_persistence_choices = [('', _("Set Session Persistence"))]
+        session_persistence_choices = [('', _("No Session Persistence"))]
         for mode in ('SOURCE_IP', 'HTTP_COOKIE', 'APP_COOKIE'):
             session_persistence_choices.append((mode, mode))
         self.fields[

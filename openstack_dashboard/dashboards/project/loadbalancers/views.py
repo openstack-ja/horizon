@@ -23,8 +23,6 @@ from horizon import messages
 from horizon import tabs
 from horizon import workflows
 
-import logging
-
 from openstack_dashboard import api
 from openstack_dashboard.dashboards.project.loadbalancers \
     import forms as project_forms
@@ -34,8 +32,6 @@ from openstack_dashboard.dashboards.project.loadbalancers \
     import workflows as project_workflows
 
 import re
-
-LOG = logging.getLogger(__name__)
 
 
 class IndexView(tabs.TabView):
@@ -210,17 +206,22 @@ class UpdateVipView(forms.ModalFormView):
 
     def get_initial(self):
         vip = self._get_object()
-        stype = vip['session_persistence']
-        if stype['type'] == 'APP_COOKIE':
-            cookie = stype['cookie_name']
+        persistence = getattr(vip, 'session_persistence', None)
+        if persistence:
+            stype = persistence['type']
+            if stype == 'APP_COOKIE':
+                cookie = persistence['cookie_name']
+            else:
+                cookie = ''
         else:
+            stype = ''
             cookie = ''
 
         return {'name': vip['name'],
                 'vip_id': vip['id'],
                 'description': vip['description'],
                 'pool_id': vip['pool_id'],
-                'session_persistence': vip['session_persistence']['type'],
+                'session_persistence': stype,
                 'cookie_name': cookie,
                 'connection_limit': vip['connection_limit'],
                 'admin_state_up': vip['admin_state_up']}
