@@ -5,14 +5,16 @@
 # Translators:
 # Akihiro Motoki <amotoki@gmail.com>, 2013
 # masayukig <masayuki.igawa@gmail.com>, 2013
+# myamamot <myamamot@redhat.com>, 2013
 # Tomoyuki KATO <tomo@dream.daynight.jp>, 2013
+# ykatabam <ykatabam@redhat.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-09 05:08+0000\n"
-"PO-Revision-Date: 2013-11-14 17:59+0000\n"
-"Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
+"PO-Revision-Date: 2013-11-25 07:00+0000\n"
+"Last-Translator: ykatabam <ykatabam@redhat.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -860,7 +862,7 @@ msgstr "フレーバー情報"
 
 #: dashboards/admin/flavors/workflows.py:56
 msgid "From here you can create a new flavor to organize projects."
-msgstr "インスタンスのリソースをグルーピングするフレーバーをここから作成できます。"
+msgstr "ここから新しいフレーバーを作成して、インスタンスのリソースをまとめることができます。"
 
 #: dashboards/admin/flavors/workflows.py:68
 #: dashboards/admin/flavors/workflows.py:233
@@ -1080,7 +1082,7 @@ msgstr "フレーバーの追加スペックの作成"
 
 #: dashboards/admin/flavors/templates/flavors/extras/_create.html:20
 msgid "Create a new \"extra spec\" key-value pair for a flavor."
-msgstr "フレーバーに対する「追加スペック」のキーと値の新しい組を作成します。"
+msgstr "フレーバーに対する「追加スペック」のキーと値のペアを新規作成します。 "
 
 #: dashboards/admin/flavors/templates/flavors/extras/_edit.html:10
 #: dashboards/admin/flavors/templates/flavors/extras/edit.html:4
@@ -1246,7 +1248,7 @@ msgstr "グループ割り当ての追加"
 
 #: dashboards/admin/groups/templates/groups/_create.html:18
 msgid "From here you can create a new group to organize users and roles."
-msgstr "ユーザーとロールをグルーピングする新しいグループをここから作成できます。"
+msgstr "ここから新しいグループを作成して、ユーザーとロールをまとめることができます。"
 
 #: dashboards/admin/groups/templates/groups/_update.html:8
 #: dashboards/admin/groups/templates/groups/_update.html:23
@@ -1345,11 +1347,11 @@ msgstr "仮想 CPU 使用量"
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:30
 #, python-format
 msgid "Used <span> %(used)s </span> of <span> %(available)s </span>"
-msgstr "<span> %(available)s </span> 個中 <span> %(used)s </span> 個使用中"
+msgstr "<span> %(available)s </span> 中 <span> %(used)s </span> 使用中"
 
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:22
 msgid "Memory Usage"
-msgstr "メモリ使用量"
+msgstr "メモリー使用量"
 
 #: dashboards/admin/hypervisors/templates/hypervisors/index.html:29
 msgid "Disk Usage"
@@ -1420,7 +1422,7 @@ msgid ""
 "Currently only images available via an HTTP URL are supported. The image "
 "location must be accessible to the Image Service. Compressed image binaries "
 "are supported (.zip and .tar.gz.)"
-msgstr "今のところ HTTP URL 経由で取得できるイメージのみがサポートされています。イメージの場所は Image Service からアクセスできる必要があります。圧縮イメージがサポートされています (.zip および .tar.gz.)。"
+msgstr "現在、HTTP URLから取得できるイメージのみがサポートされています。イメージの場所から Image Service へアクセスできるようにしてください。また、圧縮イメージがサポートされています(.zip および .tar.gz.)。"
 
 #: dashboards/admin/images/templates/images/_create.html:26
 #: dashboards/project/images_and_snapshots/templates/images_and_snapshots/images/_create.html:26
@@ -1432,7 +1434,7 @@ msgstr "注意: "
 msgid ""
 "The Image Location field MUST be a valid and direct URL to the image binary."
 " URLs that redirect or serve error pages will result in unusable images."
-msgstr "イメージの場所は、イメージバイナリーへの有効かつ直接の URL である必要があります。 URL がリダイレクトや処理エラーページであった場合、結果的に利用できないイメージが登録されます。"
+msgstr "イメージの場所のフィールドは、イメージ（バイナリー）への有効かつ直接の URL を入力する必要があります。 URL がリダイレクトのページの場合や、エラーページが返ってきた場合には、登録されたイメージは使用できない可能性があります。"
 
 #: dashboards/admin/images/templates/images/_create.html:33
 #: dashboards/project/images_and_snapshots/images/tables.py:74
@@ -1713,7 +1715,7 @@ msgstr "すべてのインスタンス"
 
 #: dashboards/admin/metering/panel.py:22
 msgid "Resource Usage"
-msgstr "リソース使用量"
+msgstr "リソース使用状況"
 
 #: dashboards/admin/metering/tables.py:37
 msgid "up"
@@ -1729,7 +1731,7 @@ msgstr "なし"
 #: dashboards/admin/metering/tables.py:107
 #: dashboards/admin/metering/tables.py:175
 msgid "Tenant"
-msgstr "テナント"
+msgstr "プロジェクト"
 
 #: dashboards/admin/metering/tables.py:49
 #: dashboards/admin/metering/tables.py:184
@@ -1822,7 +1824,7 @@ msgstr "Floating IP の作成要求数"
 
 #: dashboards/admin/metering/tables.py:150
 msgid "Global Network Usage (average of last 30 days)"
-msgstr "全体のネットワーク使用量 (直近 30 日の平均)"
+msgstr "全体のネットワーク使用状況 (直近 30 日の平均)"
 
 #: dashboards/admin/metering/tables.py:169
 #: dashboards/admin/metering/tabs.py:74 dashboards/admin/metering/tabs.py:148
@@ -1848,7 +1850,7 @@ msgstr "オブジェクトの合計サイズ"
 
 #: dashboards/admin/metering/tables.py:208
 msgid "Global Object Store Usage (average of last 30 days)"
-msgstr "全体のオブジェクトストレージ使用量 (直近 30 日の平均)"
+msgstr "全体のオブジェクトストア使用量 (直近 30 日の平均)"
 
 #: dashboards/admin/metering/tabs.py:38 dashboards/admin/metering/views.py:138
 msgid "Unable to retrieve tenant list."
@@ -1864,11 +1866,11 @@ msgstr "全体のネットワークトラフィック状況"
 
 #: dashboards/admin/metering/tabs.py:108
 msgid "Global Network Usage"
-msgstr "全体のネットワーク使用量"
+msgstr "全体のネットワーク使用状況"
 
 #: dashboards/admin/metering/tabs.py:125
 msgid "Global Object Store Usage"
-msgstr "全体のオブジェクトストレージ使用量"
+msgstr "全体のオブジェクトストア使用量"
 
 #: dashboards/admin/metering/tabs.py:157
 msgid "Stats"
@@ -2321,7 +2323,7 @@ msgstr "ネットワーク名"
 #: dashboards/admin/networks/tables.py:72
 #: dashboards/project/networks/tables.py:97
 msgid "Subnets Associated"
-msgstr "関連サブネット"
+msgstr "割り当てサブネット"
 
 #: dashboards/admin/networks/views.py:60
 #: dashboards/project/networks/views.py:53
@@ -2590,7 +2592,7 @@ msgstr "ディスク (GB)"
 #: dashboards/admin/overview/views.py:35
 #: dashboards/project/overview/views.py:34
 msgid "Usage (Hours)"
-msgstr "使用量 (時間)"
+msgstr "使用状況 (時間)"
 
 #: dashboards/admin/overview/views.py:66 dashboards/admin/projects/views.py:89
 msgid "Unable to retrieve project list."
@@ -2810,7 +2812,7 @@ msgstr "プロジェクトの情報とメンバーを変更しましたが、プ
 
 #: dashboards/admin/projects/templates/projects/usage.html:3
 msgid "Project Usage Overview"
-msgstr "プロジェクトの使用量の概要"
+msgstr "プロジェクトの使用状況の概要"
 
 #: dashboards/admin/projects/templates/projects/usage.html:6
 msgid "Project Usage"
@@ -3020,7 +3022,7 @@ msgstr "ユーザーのロールを取得できません。"
 
 #: dashboards/admin/users/templates/users/_create.html:18
 msgid "From here you can create a new user and assign them to a project."
-msgstr "ここから、新規ユーザーを作成でき、プロジェクトに割り当てられます。"
+msgstr "ここから、新規ユーザーを作成して、プロジェクトに割り当てることができます。"
 
 #: dashboards/admin/users/templates/users/_update.html:8
 #: dashboards/admin/users/templates/users/_update.html:33
@@ -3073,7 +3075,7 @@ msgid ""
 "    It usually maps to a set of capabilities of the storage back-end driver to be used for this volume.\n"
 "    Examples: \"Performance\", \"SSD\", \"Backup\", etc.\n"
 "    "
-msgstr "\n    ボリューム種別によりボリュームの特性がきまります。\n    通常、このボリュームのために使用されるストレージのバックエンドのドライバーによる機能に対応づけられます。\n    例: \"Performance\", \"SSD\", \"Backup\" など\n    "
+msgstr "\n    ボリューム種別によりボリュームの特性が決まります。\n    通常、このボリュームで使用されるストレージのバックエンドドライバーの機能に対応付られます。\n    例: \"Performance\", \"SSD\", \"Backup\" など\n    "
 
 #: dashboards/admin/volumes/templates/volumes/create_volume_type.html:6
 msgid "Create a Volume Type"
@@ -3636,7 +3638,7 @@ msgstr "Floating IP の確保"
 
 #: dashboards/project/access_and_security/templates/access_and_security/floating_ips/_allocate.html:19
 msgid "Allocate a floating IP from a given floating IP pool."
-msgstr "Floating IP を指定した Floating IP プールから割り当てます。"
+msgstr "指定した Floating IP プールから Floating IP を確保します。"
 
 #: dashboards/project/access_and_security/templates/access_and_security/floating_ips/_allocate.html:21
 msgid "Project Quotas"
@@ -4153,7 +4155,7 @@ msgstr "データベースインスタンス"
 #: dashboards/project/databases/tables.py:36
 #: dashboards/project/instances/tables.py:75
 msgid "Terminate"
-msgstr "削除"
+msgstr "終了"
 
 #: dashboards/project/databases/tables.py:37
 #: dashboards/project/instances/tables.py:76
@@ -5442,7 +5444,7 @@ msgstr "インスタンスのコンソール"
 msgid ""
 "If console is not responding to keyboard input: click the grey status bar "
 "below."
-msgstr "コンソールがキーボード入力に対応していなければ、以下のグレーのステータスバーをクリックしてください。"
+msgstr "コンソールがキーボード入力に応答していない場合には、以下のグレーのステータスバーをクリックしてください。"
 
 #: dashboards/project/instances/templates/instances/_detail_console.html:6
 msgid "Click here to show only console"
@@ -5462,11 +5464,11 @@ msgstr "インスタンスのコンソールログ"
 
 #: dashboards/project/instances/templates/instances/_detail_log.html:8
 msgid "Log Length"
-msgstr "ログの大きさ"
+msgstr "ログの表示行数"
 
 #: dashboards/project/instances/templates/instances/_detail_log.html:10
 msgid "Go"
-msgstr "進む"
+msgstr "表示"
 
 #: dashboards/project/instances/templates/instances/_detail_log.html:12
 msgid "View Full Log"
@@ -5547,7 +5549,7 @@ msgstr "インスタンス数"
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:29
 #, python-format
 msgid "<p>%(used)s of %(quota)s Used</p>"
-msgstr "<p>%(quota)s 個中 %(used)s 個使用中</p>"
+msgstr "<p>%(quota)s 中 %(used)s 使用中</p>"
 
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:35
 msgid "Total RAM"
@@ -5574,7 +5576,7 @@ msgstr "「カスタマイズ・スクリプト」 フィールドは他のシ�
 msgid ""
 "The chart below shows the resources used by this project in relation to the "
 "project's quotas."
-msgstr "以下は、このプロジェクトが使用しているリソースを、プロジェクトのクォータと関連付けて表示しています。"
+msgstr "下のグラフは、このプロジェクトで使用しているリソースを、プロジェクトのクォータと対比して表示しています"
 
 #: dashboards/project/instances/templates/instances/_launch_network_help.html:3
 msgid ""
@@ -6738,11 +6740,11 @@ msgstr "JavaScript が有効になっている必要があります。"
 
 #: dashboards/project/network_topology/templates/network_topology/index.html:22
 msgid "Small"
-msgstr "小さめ"
+msgstr "コンパクト"
 
 #: dashboards/project/network_topology/templates/network_topology/index.html:23
 msgid "Normal"
-msgstr "ふつう"
+msgstr "標準"
 
 #: dashboards/project/network_topology/templates/network_topology/index.html:34
 msgid "There are no networks, routers, or connected instances to display."
@@ -6760,7 +6762,7 @@ msgstr "ネットワークの詳細を取得できません。"
 msgid ""
 "From here you can create a new network.\n"
 "In addition a subnet associated with the network can be created in the next panel."
-msgstr "新しいネットワークを作成できます。\n合わせて、このネットワークに割り当てられたサブネットを次のパネルで作成できます。"
+msgstr "新しいネットワークを作成できます。\n合わせて、このネットワークに割り当てるサブネットを次のパネルで作成できます。"
 
 #: dashboards/project/networks/workflows.py:88
 msgid "Subnet Name"
@@ -6795,7 +6797,7 @@ msgid ""
 "You can create a subnet associated with the new network, in which case "
 "\"Network Address\" must be specified. If you wish to create a network "
 "WITHOUT a subnet, uncheck the \"Create Subnet\" checkbox."
-msgstr "新しいネットワークに関連付けるサブネットを作成できます。この場合、「ネットワークアドレス」を指定する必要があります。サブネットなしでネットワークを作成したければ、「サブネットの作成」のチェックを外してください。"
+msgstr "新しいネットワークに割り当てるサブネットを作成できます。この場合、「ネットワークアドレス」を指定する必要があります。サブネットなしでネットワークを作成したい場合は、「サブネットの作成」のチェックを外してください。"
 
 #: dashboards/project/networks/workflows.py:128
 msgid "Specify \"Network Address\" or clear \"Create Subnet\" checkbox."
@@ -8250,7 +8252,7 @@ msgstr "仮想プライベートネットワーク"
 
 #: dashboards/router/nexus1000v/forms.py:34
 msgid "Select a tenant"
-msgstr "テナントの選択"
+msgstr "プロジェクトの選択"
 
 #: dashboards/router/nexus1000v/forms.py:39
 msgid "Projects could not be retrieved."
@@ -8448,7 +8450,7 @@ msgstr "ユーザー設定"
 
 #: dashboards/settings/user/templates/user/_settings.html:19
 msgid "From here you can modify dashboard settings for your user."
-msgstr "ここからユーザー向けダッシュボードの設定を変更できます。"
+msgstr "ここからダッシュボードの設定を変更できます。"
 
 #: templates/403.html:5 templates/403.html.py:10
 msgid "Forbidden"
@@ -8476,7 +8478,7 @@ msgstr "内部サーバーエラー"
 
 #: templates/500.html:67
 msgid "Something went wrong!"
-msgstr "どこかがおかしくなりました !"
+msgstr "問題が発生しました"
 
 #: templates/500.html:68
 msgid ""
@@ -8534,7 +8536,7 @@ msgstr "ボリュームのリソース上限情報を取得できません。"
 
 #: usage/tables.py:12
 msgid "Download CSV Summary"
-msgstr "概要 CSV のダウンロード"
+msgstr "サマリー (CSV) のダウンロード"
 
 #: usage/tables.py:26
 msgid "VCPU Hours"

@@ -5,13 +5,14 @@
 # Translators:
 # Akihiro Motoki <amotoki@gmail.com>, 2013
 # bi.yamagata <bi.yamagata@gmail.com>, 2012
+# myamamot <myamamot@redhat.com>, 2013
 # Tomoyuki KATO <tomo@dream.daynight.jp>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-09 05:08+0000\n"
-"PO-Revision-Date: 2013-11-14 17:57+0000\n"
+"PO-Revision-Date: 2013-11-25 06:00+0000\n"
 "Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -240,7 +241,7 @@ msgstr "リージョンの管理"
 
 #: templates/horizon/common/_usage_summary.html:5
 msgid "Select a period of time to query its usage"
-msgstr "使用量を確認する期間を選択してください"
+msgstr "使用状況を照会する期間を選択してください"
 
 #: templates/horizon/common/_usage_summary.html:7
 #, python-format
@@ -265,11 +266,11 @@ msgstr "使用中のメモリー"
 
 #: templates/horizon/common/_usage_summary.html:16
 msgid "This Period's VCPU-Hours"
-msgstr "期間中の仮想 CPU 時間"
+msgstr "指定期間中の仮想 CPU 時間"
 
 #: templates/horizon/common/_usage_summary.html:17
 msgid "This Period's GB-Hours"
-msgstr "期間中の GB 時間"
+msgstr "指定期間中の GB 時間"
 
 #: templates/horizon/common/_workflow.html:36
 msgid "Cancel"
@@ -291,7 +292,7 @@ msgstr "利用可能"
 #, python-format
 msgid "%(size)d byte"
 msgid_plural "%(size)d bytes"
-msgstr[0] "%(size)d バイト"
+msgstr[0] "%(size)d"
 
 #: templatetags/sizeformat.py:49
 #, python-format
