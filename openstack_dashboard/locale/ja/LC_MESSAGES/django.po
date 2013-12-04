@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-09 05:08+0000\n"
-"PO-Revision-Date: 2013-11-25 07:00+0000\n"
-"Last-Translator: ykatabam <ykatabam@redhat.com>\n"
+"POT-Creation-Date: 2013-12-03 21:56-0600\n"
+"PO-Revision-Date: 2013-12-04 04:30+0000\n"
+"Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,8 +99,16 @@ msgid "Portuguese (Brazil)"
 msgstr "Portuguese"
 
 #: settings.py:187
+msgid "Russian"
+msgstr "Russian"
+
+#: settings.py:188
 msgid "Simplified Chinese"
 msgstr "Simplified Chinese"
+
+#: settings.py:189
+msgid "Traditional Chinese"
+msgstr "Traditional Chinese"
 
 #: api/cinder.py:90
 msgid "Unknown instance"
@@ -119,6 +127,11 @@ msgstr "Identity service によりユーザーデータの編集が許可され�
 #, python-format
 msgid "User %s has no role defined for that project."
 msgstr "ユーザー %s はこのプロジェクトではロールが定義されていません。"
+
+#: api/keystone.py:360 api/keystone.py:376
+#: dashboards/settings/password/forms.py:63
+msgid "Password changed. Please log in again to continue."
+msgstr "パスワードが変更されました。続けるには、ログインしなおしてください。"
 
 #: api/neutron.py:198
 #, python-format
@@ -265,7 +278,7 @@ msgstr "メモリー (MB)"
 #: dashboards/admin/defaults/tables.py:53
 #: dashboards/admin/defaults/workflows.py:49
 #: dashboards/admin/projects/workflows.py:59
-#: dashboards/admin/projects/workflows.py:67
+#: dashboards/admin/projects/workflows.py:71
 #: dashboards/project/access_and_security/tabs.py:76
 #: dashboards/project/access_and_security/floating_ips/tables.py:66
 #: dashboards/project/access_and_security/floating_ips/tables.py:147
@@ -275,6 +288,7 @@ msgstr "Floating IP"
 #: dashboards/admin/defaults/tables.py:54
 #: dashboards/admin/defaults/workflows.py:51
 #: dashboards/admin/projects/workflows.py:62
+#: dashboards/admin/projects/workflows.py:68
 #: dashboards/project/access_and_security/tabs.py:44
 #: dashboards/project/access_and_security/security_groups/tables.py:29
 #: dashboards/project/access_and_security/security_groups/tables.py:75
@@ -287,6 +301,7 @@ msgstr "セキュリティグループ"
 #: dashboards/admin/defaults/tables.py:55
 #: dashboards/admin/defaults/workflows.py:53
 #: dashboards/admin/projects/workflows.py:64
+#: dashboards/admin/projects/workflows.py:70
 #: dashboards/project/access_and_security/security_groups/tables.py:173
 msgid "Security Group Rules"
 msgstr "セキュリティグループのルール"
@@ -426,7 +441,7 @@ msgstr "ドメインコンテキストをクリアしました。"
 #: dashboards/admin/networks/ports/tables.py:73
 #: dashboards/admin/networks/subnets/tables.py:70
 #: dashboards/admin/projects/tables.py:113
-#: dashboards/admin/projects/workflows.py:104
+#: dashboards/admin/projects/workflows.py:108
 #: dashboards/admin/routers/tables.py:52
 #: dashboards/admin/routers/ports/tables.py:28
 #: dashboards/admin/routers/templates/routers/_detail_overview.html:7
@@ -458,7 +473,7 @@ msgstr "ドメインコンテキストをクリアしました。"
 #: dashboards/project/images_and_snapshots/images/forms.py:154
 #: dashboards/project/images_and_snapshots/templates/images_and_snapshots/images/_detail_overview.html:9
 #: dashboards/project/images_and_snapshots/templates/images_and_snapshots/snapshots/_detail_overview.html:10
-#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:82
+#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:84
 #: dashboards/project/instances/templates/instances/_detail_overview.html:10
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:9
 #: dashboards/project/instances/workflows/update_instance.py:108
@@ -512,7 +527,7 @@ msgstr "名前"
 #: dashboards/admin/networks/templates/networks/_create.html:18
 #: dashboards/admin/networks/templates/networks/ports/_create.html:18
 #: dashboards/admin/projects/tables.py:115
-#: dashboards/admin/projects/workflows.py:106
+#: dashboards/admin/projects/workflows.py:110
 #: dashboards/admin/roles/templates/roles/_create.html:17
 #: dashboards/admin/roles/templates/roles/_update.html:17
 #: dashboards/admin/users/templates/users/_create.html:17
@@ -577,8 +592,8 @@ msgid "Description"
 msgstr "説明"
 
 #: dashboards/admin/domains/tables.py:169
-#: dashboards/admin/projects/workflows.py:98
-#: dashboards/admin/users/forms.py:71 dashboards/admin/users/forms.py:140
+#: dashboards/admin/projects/workflows.py:102
+#: dashboards/admin/users/forms.py:72 dashboards/admin/users/forms.py:141
 msgid "Domain ID"
 msgstr "ドメイン ID"
 
@@ -586,8 +601,8 @@ msgstr "ドメイン ID"
 #: dashboards/admin/domains/workflows.py:40
 #: dashboards/admin/groups/tables.py:166 dashboards/admin/info/tables.py:42
 #: dashboards/admin/info/tables.py:163 dashboards/admin/projects/tables.py:117
-#: dashboards/admin/projects/workflows.py:108
-#: dashboards/admin/projects/workflows.py:469
+#: dashboards/admin/projects/workflows.py:112
+#: dashboards/admin/projects/workflows.py:473
 #: dashboards/admin/users/tables.py:46 dashboards/admin/users/tables.py:125
 #: dashboards/project/firewalls/forms.py:71
 #: dashboards/project/firewalls/tables.py:160
@@ -617,13 +632,13 @@ msgid ""
 msgstr "プロジェクト、グループ、ユーザーをグルーピングするドメインをここから新たに作成できます。"
 
 #: dashboards/admin/domains/workflows.py:64
-#: dashboards/admin/projects/workflows.py:246
+#: dashboards/admin/projects/workflows.py:250
 msgid "Unable to retrieve group list. Please try again later."
 msgstr "グループ一覧を取得できません。後からもう一度お試しください。"
 
 #: dashboards/admin/domains/workflows.py:76
-#: dashboards/admin/projects/workflows.py:157
-#: dashboards/admin/projects/workflows.py:260
+#: dashboards/admin/projects/workflows.py:161
+#: dashboards/admin/projects/workflows.py:264
 #, python-format
 msgid "Could not find default role \"%s\" in Keystone"
 msgstr "Keystone において標準のロール \"%s\" を見つけられませんでした。"
@@ -634,22 +649,22 @@ msgid "Domain Groups"
 msgstr "ドメイングループ"
 
 #: dashboards/admin/domains/workflows.py:135
-#: dashboards/admin/projects/workflows.py:318
+#: dashboards/admin/projects/workflows.py:322
 msgid "All Groups"
 msgstr "すべてのグループ"
 
 #: dashboards/admin/domains/workflows.py:137
-#: dashboards/admin/projects/workflows.py:320
+#: dashboards/admin/projects/workflows.py:324
 msgid "No groups found."
 msgstr "グループがありません。"
 
 #: dashboards/admin/domains/workflows.py:138
-#: dashboards/admin/projects/workflows.py:321
+#: dashboards/admin/projects/workflows.py:325
 msgid "No groups."
 msgstr "グループがありません。"
 
 #: dashboards/admin/domains/workflows.py:146
-#: dashboards/admin/projects/workflows.py:329
+#: dashboards/admin/projects/workflows.py:333
 msgid "Unable to retrieve role list."
 msgstr "ロール一覧を取得できません。"
 
@@ -675,7 +690,7 @@ msgstr "ドメインの編集"
 #: dashboards/admin/flavors/workflows.py:260
 #: dashboards/admin/flavors/templates/flavors/_update.html:25
 #: dashboards/admin/flavors/templates/flavors/extras/_edit.html:25
-#: dashboards/admin/projects/workflows.py:490
+#: dashboards/admin/projects/workflows.py:494
 #: dashboards/project/instances/workflows/update_instance.py:135
 #: dashboards/settings/user/templates/user/_settings.html:24
 msgid "Save"
@@ -775,7 +790,7 @@ msgstr "スワップディスク"
 #: dashboards/admin/networks/templates/networks/ports/_update.html:13
 #: dashboards/admin/roles/forms.py:39
 #: dashboards/admin/routers/templates/routers/_detail_overview.html:9
-#: dashboards/admin/users/forms.py:146
+#: dashboards/admin/users/forms.py:147
 #: dashboards/project/database_backups/templates/database_backups/details.html:22
 #: dashboards/project/database_backups/templates/database_backups/details.html:44
 #: dashboards/project/databases/templates/databases/_detail_overview.html:11
@@ -1182,14 +1197,14 @@ msgstr "ユーザー"
 msgid "Add..."
 msgstr "追加..."
 
-#: dashboards/admin/groups/tables.py:162 dashboards/admin/users/forms.py:77
-#: dashboards/admin/users/forms.py:147 dashboards/admin/users/tables.py:118
+#: dashboards/admin/groups/tables.py:162 dashboards/admin/users/forms.py:78
+#: dashboards/admin/users/forms.py:148 dashboards/admin/users/tables.py:118
 #: dashboards/project/databases/tables.py:184
 msgid "User Name"
 msgstr "ユーザー名"
 
-#: dashboards/admin/groups/tables.py:163 dashboards/admin/users/forms.py:79
-#: dashboards/admin/users/forms.py:149 dashboards/admin/users/tables.py:119
+#: dashboards/admin/groups/tables.py:163 dashboards/admin/users/forms.py:80
+#: dashboards/admin/users/forms.py:150 dashboards/admin/users/tables.py:119
 msgid "Email"
 msgstr "電子メール"
 
@@ -1638,6 +1653,11 @@ msgid "Instance"
 msgstr "インスタンス"
 
 #: dashboards/admin/instances/tables.py:81
+#: dashboards/admin/metering/tables.py:44
+#: dashboards/admin/metering/tables.py:54
+#: dashboards/admin/metering/tables.py:78
+#: dashboards/admin/metering/tables.py:107
+#: dashboards/admin/metering/tables.py:175
 #: dashboards/admin/metering/templates/metering/stats.html:76
 #: dashboards/admin/networks/forms.py:37
 #: dashboards/admin/networks/tables.py:68
@@ -1705,7 +1725,7 @@ msgid "Unable to retrieve instance project information."
 msgstr "インスタンスのプロジェクト情報を取得できません。"
 
 #: dashboards/admin/instances/views.py:106
-#: dashboards/project/instances/views.py:105
+#: dashboards/project/instances/views.py:111
 msgid "Unable to retrieve instance size information."
 msgstr "インスタンスのサイズ情報を取得できません。"
 
@@ -1724,14 +1744,6 @@ msgstr "動作中"
 #: dashboards/admin/metering/tables.py:39
 msgid "none"
 msgstr "なし"
-
-#: dashboards/admin/metering/tables.py:44
-#: dashboards/admin/metering/tables.py:54
-#: dashboards/admin/metering/tables.py:78
-#: dashboards/admin/metering/tables.py:107
-#: dashboards/admin/metering/tables.py:175
-msgid "Tenant"
-msgstr "プロジェクト"
 
 #: dashboards/admin/metering/tables.py:49
 #: dashboards/admin/metering/tables.py:184
@@ -1828,7 +1840,7 @@ msgstr "全体のネットワーク使用状況 (直近 30 日の平均)"
 
 #: dashboards/admin/metering/tables.py:169
 #: dashboards/admin/metering/tabs.py:74 dashboards/admin/metering/tabs.py:148
-#: dashboards/admin/metering/views.py:176
+#: dashboards/admin/metering/views.py:186
 msgid "Unable to retrieve statistics."
 msgstr "統計情報を取得できません。"
 
@@ -1852,7 +1864,7 @@ msgstr "オブジェクトの合計サイズ"
 msgid "Global Object Store Usage (average of last 30 days)"
 msgstr "全体のオブジェクトストア使用量 (直近 30 日の平均)"
 
-#: dashboards/admin/metering/tabs.py:38 dashboards/admin/metering/views.py:138
+#: dashboards/admin/metering/tabs.py:38 dashboards/admin/metering/views.py:157
 msgid "Unable to retrieve tenant list."
 msgstr "プロジェクトリストを取得できません。"
 
@@ -1876,74 +1888,75 @@ msgstr "全体のオブジェクトストア使用量"
 msgid "Stats"
 msgstr "統計情報"
 
-#: dashboards/admin/metering/tabs.py:172
-msgid "Unable to retrieve Nova Ceilometer resources."
-msgstr "Nova Ceilometer リソースを取得できません。"
+#: dashboards/admin/metering/tabs.py:183
+msgid "Unable to retrieve Nova Ceilometer metering information."
+msgstr ""
 
-#: dashboards/admin/metering/tabs.py:182
+#: dashboards/admin/metering/tabs.py:189
 msgid "Duration of instance"
 msgstr "インスタンスの存在時間"
 
-#: dashboards/admin/metering/tabs.py:183
-msgid "Duration of instance <type> (openstack types)"
-msgstr "インスタンスタイプ <type> (OpenStack でのタイプ) の存在期間"
-
-#: dashboards/admin/metering/tabs.py:185
+#: dashboards/admin/metering/tabs.py:190
 msgid "Volume of RAM in MB"
 msgstr "MB 単位のメモリー量"
 
-#: dashboards/admin/metering/tabs.py:186
+#: dashboards/admin/metering/tabs.py:191
 msgid "CPU time used"
 msgstr "使用 CPU 時間"
 
-#: dashboards/admin/metering/tabs.py:187
+#: dashboards/admin/metering/tabs.py:192
 msgid "Average CPU utilisation"
 msgstr "平均 CPU 使用量"
 
-#: dashboards/admin/metering/tabs.py:188
+#: dashboards/admin/metering/tabs.py:193
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:28
 msgid "Number of VCPUs"
 msgstr "仮想 CPU 数"
 
-#: dashboards/admin/metering/tabs.py:189
+#: dashboards/admin/metering/tabs.py:194
 msgid "Number of read requests"
 msgstr "読み出し要求数"
 
-#: dashboards/admin/metering/tabs.py:190
+#: dashboards/admin/metering/tabs.py:195
 msgid "Number of write requests"
 msgstr "ディスク書き込み要求数"
 
-#: dashboards/admin/metering/tabs.py:191
+#: dashboards/admin/metering/tabs.py:196
 msgid "Volume of reads in B"
 msgstr "ボリュームの読み出しバイト数"
 
-#: dashboards/admin/metering/tabs.py:192
+#: dashboards/admin/metering/tabs.py:197
 msgid "Volume of writes in B"
 msgstr "ボリュームの書き込みバイト数"
 
-#: dashboards/admin/metering/tabs.py:193
+#: dashboards/admin/metering/tabs.py:198
 msgid "Size of root disk in GB"
 msgstr "ルートディスクの GB サイズ"
 
-#: dashboards/admin/metering/tabs.py:194
+#: dashboards/admin/metering/tabs.py:199
 msgid "Size of ephemeral disk in GB"
 msgstr "一時ディスクの GB サイズ"
 
-#: dashboards/admin/metering/tabs.py:196
+#: dashboards/admin/metering/tabs.py:201
 msgid "Number of incoming bytes on the network for a VM interface"
 msgstr "VM インタフェースでのネットワーク受信バイト数"
 
-#: dashboards/admin/metering/tabs.py:198
+#: dashboards/admin/metering/tabs.py:203
 msgid "Number of outgoing bytes on the network for a VM interface"
 msgstr "VM インタフェースでのネットワーク送信バイト数"
 
-#: dashboards/admin/metering/tabs.py:200
+#: dashboards/admin/metering/tabs.py:205
 msgid "Number of incoming packets for a VM interface"
 msgstr "VM インタフェースでのネットワーク受信パケット数"
 
-#: dashboards/admin/metering/tabs.py:202
+#: dashboards/admin/metering/tabs.py:207
 msgid "Number of outgoing packets for a VM interface"
 msgstr "VM インタフェースでのネットワーク送信パケット数"
+
+#: dashboards/admin/metering/tabs.py:212
+#, python-format
+msgid "Duration of instance type %s (openstack flavor)"
+msgstr ""
 
 #: dashboards/admin/metering/templates/metering/index.html:3
 msgid "Resources usage Overview"
@@ -2187,7 +2200,7 @@ msgstr "ネットワークプロファイル"
 #: dashboards/project/loadbalancers/forms.py:231
 #: dashboards/project/loadbalancers/workflows.py:39
 #: dashboards/project/loadbalancers/workflows.py:178
-#: dashboards/project/loadbalancers/workflows.py:301
+#: dashboards/project/loadbalancers/workflows.py:302
 #: dashboards/project/loadbalancers/workflows.py:456
 #: dashboards/project/networks/forms.py:42
 #: dashboards/project/networks/tables.py:102
@@ -2228,7 +2241,7 @@ msgstr "共有"
 msgid "External Network"
 msgstr "外部ネットワーク"
 
-#: dashboards/admin/networks/forms.py:53 dashboards/admin/users/forms.py:43
+#: dashboards/admin/networks/forms.py:53 dashboards/admin/users/forms.py:44
 msgid "Select a project"
 msgstr "プロジェクトの選択"
 
@@ -2270,7 +2283,7 @@ msgstr "ネットワーク %s の更新に失敗しました"
 #: dashboards/admin/networks/tables.py:81
 #: dashboards/admin/networks/templates/networks/index.html:3
 #: dashboards/admin/networks/templates/networks/index.html:6
-#: dashboards/admin/projects/workflows.py:68
+#: dashboards/admin/projects/workflows.py:72
 #: dashboards/project/instances/workflows/create_instance.py:480
 #: dashboards/project/networks/panel.py:25
 #: dashboards/project/networks/tables.py:44
@@ -2398,7 +2411,7 @@ msgstr "ポート"
 
 #: dashboards/admin/networks/ports/tables.py:35
 #: dashboards/admin/networks/ports/tables.py:85
-#: dashboards/admin/projects/workflows.py:69
+#: dashboards/admin/projects/workflows.py:73
 #: dashboards/project/networks/ports/tables.py:65
 msgid "Ports"
 msgstr "ポート"
@@ -2463,6 +2476,8 @@ msgstr "ネットワークを取得できません。"
 #: dashboards/project/loadbalancers/workflows.py:36
 #: dashboards/project/networks/workflows.py:116
 #: dashboards/project/networks/subnets/tables.py:45
+#: dashboards/project/networks/subnets/workflows.py:40
+#: dashboards/project/networks/subnets/workflows.py:121
 #: dashboards/project/networks/templates/networks/subnets/_detail_overview.html:7
 #: dashboards/project/routers/ports/forms.py:32
 #: dashboards/project/vpn/tables.py:126 dashboards/project/vpn/workflows.py:35
@@ -2471,7 +2486,7 @@ msgstr "サブネット"
 
 #: dashboards/admin/networks/subnets/tables.py:33
 #: dashboards/admin/networks/subnets/tables.py:81
-#: dashboards/admin/projects/workflows.py:71
+#: dashboards/admin/projects/workflows.py:75
 #: dashboards/project/networks/subnets/tables.py:46
 #: dashboards/project/networks/subnets/tables.py:105
 msgid "Subnets"
@@ -2620,13 +2635,13 @@ msgid "View Usage"
 msgstr "使用状況の表示"
 
 #: dashboards/admin/projects/tables.py:52
-#: dashboards/admin/projects/workflows.py:340
-#: dashboards/admin/projects/workflows.py:341
+#: dashboards/admin/projects/workflows.py:344
+#: dashboards/admin/projects/workflows.py:345
 msgid "Create Project"
 msgstr "プロジェクトの作成"
 
 #: dashboards/admin/projects/tables.py:63
-#: dashboards/admin/projects/workflows.py:489
+#: dashboards/admin/projects/workflows.py:493
 msgid "Edit Project"
 msgstr "プロジェクトの編集"
 
@@ -2670,7 +2685,7 @@ msgstr "プロジェクトドメインを取得できません。"
 msgid "Unable to retrieve project details."
 msgstr "プロジェクトの詳細を取得できません。"
 
-#: dashboards/admin/projects/workflows.py:70
+#: dashboards/admin/projects/workflows.py:74
 #: dashboards/admin/routers/panel.py:25 dashboards/admin/routers/tables.py:66
 #: dashboards/admin/routers/templates/routers/index.html:3
 #: dashboards/admin/routers/templates/routers/index.html:6
@@ -2682,129 +2697,129 @@ msgstr "プロジェクトの詳細を取得できません。"
 msgid "Routers"
 msgstr "ルーター"
 
-#: dashboards/admin/projects/workflows.py:84
+#: dashboards/admin/projects/workflows.py:88
 msgid "Quota"
 msgstr "クォータ"
 
-#: dashboards/admin/projects/workflows.py:86
+#: dashboards/admin/projects/workflows.py:90
 msgid "From here you can set quotas (max limits) for the project."
 msgstr "ここからプロジェクトのクォータ (上限) を設定できます。"
 
-#: dashboards/admin/projects/workflows.py:101
-#: dashboards/admin/users/forms.py:74 dashboards/admin/users/forms.py:143
+#: dashboards/admin/projects/workflows.py:105
+#: dashboards/admin/users/forms.py:75 dashboards/admin/users/forms.py:144
 msgid "Domain Name"
 msgstr "ドメイン名"
 
-#: dashboards/admin/projects/workflows.py:123
-#: dashboards/admin/projects/workflows.py:472
+#: dashboards/admin/projects/workflows.py:127
+#: dashboards/admin/projects/workflows.py:476
 msgid "Project Info"
 msgstr "プロジェクトの情報"
 
-#: dashboards/admin/projects/workflows.py:124
+#: dashboards/admin/projects/workflows.py:128
 msgid "From here you can create a new project to organize users."
 msgstr "ユーザーをグルーピングする新しいプロジェクトをここから作成できます。"
 
-#: dashboards/admin/projects/workflows.py:143
+#: dashboards/admin/projects/workflows.py:147
 msgid "Unable to retrieve user list. Please try again later."
 msgstr "ユーザー一覧を取得できません。後からもう一度お試しください。"
 
-#: dashboards/admin/projects/workflows.py:215
-#: dashboards/admin/projects/workflows.py:222
+#: dashboards/admin/projects/workflows.py:219
+#: dashboards/admin/projects/workflows.py:226
 msgid "Project Members"
 msgstr "プロジェクトのメンバー"
 
-#: dashboards/admin/projects/workflows.py:221
+#: dashboards/admin/projects/workflows.py:225
 msgid "All Users"
 msgstr "すべてのユーザー"
 
-#: dashboards/admin/projects/workflows.py:223
+#: dashboards/admin/projects/workflows.py:227
 msgid "No users found."
 msgstr "ユーザーが見つかりませんでした。"
 
-#: dashboards/admin/projects/workflows.py:224
+#: dashboards/admin/projects/workflows.py:228
 msgid "No users."
 msgstr "ユーザーがいません。"
 
-#: dashboards/admin/projects/workflows.py:232
+#: dashboards/admin/projects/workflows.py:236
 #: dashboards/admin/users/views.py:53
 msgid "Unable to retrieve user list."
 msgstr "ユーザーの一覧を取得できません。"
 
-#: dashboards/admin/projects/workflows.py:312
-#: dashboards/admin/projects/workflows.py:319
+#: dashboards/admin/projects/workflows.py:316
+#: dashboards/admin/projects/workflows.py:323
 msgid "Project Groups"
 msgstr "プロジェクトグループ"
 
-#: dashboards/admin/projects/workflows.py:342
+#: dashboards/admin/projects/workflows.py:346
 #, python-format
 msgid "Created new project \"%s\"."
 msgstr "新規プロジェクト \"%s\" を作成しました。"
 
-#: dashboards/admin/projects/workflows.py:343
+#: dashboards/admin/projects/workflows.py:347
 #, python-format
 msgid "Unable to create project \"%s\"."
 msgstr "プロジェクト \"%s\" を作成できません。"
 
-#: dashboards/admin/projects/workflows.py:405
+#: dashboards/admin/projects/workflows.py:409
 msgid ", add project groups"
 msgstr "、プロジェクトグループの追加"
 
-#: dashboards/admin/projects/workflows.py:408
+#: dashboards/admin/projects/workflows.py:412
 #, python-format
 msgid ""
 "Failed to add %(users_to_add)s project members%(group_msg)s and set project "
 "quotas."
 msgstr "%(users_to_add)s 個のプロジェクトメンバー追加%(group_msg)s、プロジェクトのクォータ設定の操作に失敗しました。"
 
-#: dashboards/admin/projects/workflows.py:439
+#: dashboards/admin/projects/workflows.py:443
 #, python-format
 msgid "Failed to add %s project groups and update project quotas."
 msgstr "%s 個のプロジェクトメンバー追加、プロジェクトのクォータ更新の操作に失敗しました。"
 
-#: dashboards/admin/projects/workflows.py:464
+#: dashboards/admin/projects/workflows.py:468
 msgid "Unable to set project quotas."
 msgstr "プロジェクトのクォータを設定できません。"
 
-#: dashboards/admin/projects/workflows.py:474
+#: dashboards/admin/projects/workflows.py:478
 msgid "From here you can edit the project details."
 msgstr "ここからプロジェクトの詳細を編集できます。"
 
-#: dashboards/admin/projects/workflows.py:491
+#: dashboards/admin/projects/workflows.py:495
 #, python-format
 msgid "Modified project \"%s\"."
 msgstr "プロジェクト \"%s\" を変更しました。"
 
-#: dashboards/admin/projects/workflows.py:492
+#: dashboards/admin/projects/workflows.py:496
 #, python-format
 msgid "Unable to modify project \"%s\"."
 msgstr "プロジェクト \"%s\" を変更できません。"
 
-#: dashboards/admin/projects/workflows.py:587
+#: dashboards/admin/projects/workflows.py:591
 msgid ""
 "You cannot revoke your administrative privileges from the project you are "
 "currently logged into. Please switch to another project with administrative "
 "privileges or remove the administrative role manually via the CLI."
 msgstr "現在ログインしているプロジェクトから自分の管理権限を削除することはできません。管理権限を持つ別のプロジェクトに切り替えるか、CLI を使って手動で管理権限を削除してください。"
 
-#: dashboards/admin/projects/workflows.py:622
+#: dashboards/admin/projects/workflows.py:626
 msgid ", update project groups"
 msgstr "、プロジェクトグループの更新"
 
-#: dashboards/admin/projects/workflows.py:625
+#: dashboards/admin/projects/workflows.py:629
 #, python-format
 msgid ""
 "Failed to modify %(users_to_modify)s project members%(group_msg)s and update"
 " project quotas."
 msgstr "%(users_to_modify)s 個のプロジェクトメンバー変更%(group_msg)s、プロジェクトのクォータ更新の操作に失敗しました。"
 
-#: dashboards/admin/projects/workflows.py:697
+#: dashboards/admin/projects/workflows.py:701
 #, python-format
 msgid ""
 "Failed to modify %s project members, update project groups and update "
 "project quotas."
 msgstr "%s 個のプロジェクトメンバー変更、プロジェクトグループ更新、プロジェクトのクォータ更新の操作に失敗しました。"
 
-#: dashboards/admin/projects/workflows.py:727
+#: dashboards/admin/projects/workflows.py:731
 msgid ""
 "Modified project information and members, but unable to modify project "
 "quotas."
@@ -2854,7 +2869,7 @@ msgstr "ロール"
 msgid "Create Role"
 msgstr "ロールの作成"
 
-#: dashboards/admin/roles/tables.py:47 dashboards/admin/users/forms.py:92
+#: dashboards/admin/roles/tables.py:47 dashboards/admin/users/forms.py:93
 msgid "Role"
 msgstr "ロール"
 
@@ -2952,43 +2967,43 @@ msgstr "ルーターの詳細"
 msgid "Router Detail"
 msgstr "ルーターの詳細"
 
-#: dashboards/admin/users/forms.py:62 dashboards/project/instances/forms.py:73
+#: dashboards/admin/users/forms.py:63 dashboards/project/instances/forms.py:73
 #: dashboards/project/instances/workflows/create_instance.py:438
 #: dashboards/settings/password/forms.py:48
 msgid "Passwords do not match."
 msgstr "パスワードが一致しません。"
 
-#: dashboards/admin/users/forms.py:82 dashboards/admin/users/forms.py:152
+#: dashboards/admin/users/forms.py:83 dashboards/admin/users/forms.py:153
 #: dashboards/project/databases/workflows/create_instance.py:83
 msgid "Password"
 msgstr "パスワード"
 
-#: dashboards/admin/users/forms.py:87 dashboards/admin/users/forms.py:158
+#: dashboards/admin/users/forms.py:88 dashboards/admin/users/forms.py:159
 msgid "Confirm Password"
 msgstr "パスワード（確認）"
 
-#: dashboards/admin/users/forms.py:90 dashboards/admin/users/forms.py:161
+#: dashboards/admin/users/forms.py:91 dashboards/admin/users/forms.py:162
 msgid "Primary Project"
 msgstr "主プロジェクト"
 
-#: dashboards/admin/users/forms.py:121
+#: dashboards/admin/users/forms.py:122
 #, python-format
 msgid "User \"%s\" was successfully created."
 msgstr "ユーザー \"%s\" を作成しました。"
 
-#: dashboards/admin/users/forms.py:131
+#: dashboards/admin/users/forms.py:132
 msgid "Unable to add user to primary project."
 msgstr "ユーザーを主プロジェクトに追加できません。"
 
-#: dashboards/admin/users/forms.py:135
+#: dashboards/admin/users/forms.py:136
 msgid "Unable to create user."
 msgstr "ユーザーを作成できません。"
 
-#: dashboards/admin/users/forms.py:190
+#: dashboards/admin/users/forms.py:191
 msgid "User has been updated successfully."
 msgstr "ユーザーが正常に更新されました。"
 
-#: dashboards/admin/users/forms.py:193
+#: dashboards/admin/users/forms.py:194
 msgid "Unable to update the user."
 msgstr "ユーザーを更新できません。"
 
@@ -3432,7 +3447,7 @@ msgstr "ポート範囲"
 #: dashboards/project/access_and_security/security_groups/forms.py:150
 #: dashboards/project/access_and_security/security_groups/forms.py:161
 #: dashboards/project/loadbalancers/workflows.py:162
-#: dashboards/project/loadbalancers/workflows.py:298
+#: dashboards/project/loadbalancers/workflows.py:299
 msgid "Enter an integer value between 1 and 65535."
 msgstr "1 から 65535 までの整数値を入力してください。"
 
@@ -3990,7 +4005,7 @@ msgstr "削除"
 #: dashboards/project/firewalls/tables.py:49
 #: dashboards/project/firewalls/tables.py:57
 #: dashboards/project/firewalls/tables.py:65
-#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:34
+#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:35
 #: dashboards/project/loadbalancers/tables.py:69
 #: dashboards/project/loadbalancers/tables.py:82
 #: dashboards/project/loadbalancers/tables.py:90
@@ -4228,6 +4243,7 @@ msgstr "N/A"
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:11
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:43
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:48
+#: dashboards/project/instances/views.py:99
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:10
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:13
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:19
@@ -5068,7 +5084,7 @@ msgid "Image"
 msgstr "イメージ"
 
 #: dashboards/project/images_and_snapshots/images/tables.py:96
-#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:42
+#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:43
 #: dashboards/project/volumes/tables.py:61
 #: dashboards/project/volumes/tables.py:74
 #: dashboards/project/volumes/templates/volumes/_create.html:9
@@ -5122,7 +5138,7 @@ msgstr "イメージの概要"
 
 #: dashboards/project/images_and_snapshots/templates/images_and_snapshots/images/_detail_overview.html:18
 #: dashboards/project/images_and_snapshots/templates/images_and_snapshots/images/_detail_overview.html:26
-#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:70
+#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:72
 #: dashboards/project/networks/templates/networks/_detail_overview.html:14
 #: dashboards/project/networks/templates/networks/_detail_overview.html:16
 #: dashboards/project/networks/templates/networks/_detail_overview.html:23
@@ -5224,17 +5240,17 @@ msgstr "ボリュームのスナップショットの詳細"
 msgid "Volume Snapshot Detail"
 msgstr "ボリュームのスナップショットの詳細"
 
-#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:32
+#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:33
 #: dashboards/project/instances/workflows/create_instance.py:111
 msgid "Volume Snapshot"
 msgstr "ボリュームのスナップショット"
 
-#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:33
-#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:90
+#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:34
+#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:92
 msgid "Volume Snapshots"
 msgstr "ボリュームのスナップショット"
 
-#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:85
+#: dashboards/project/images_and_snapshots/volume_snapshots/tables.py:87
 #: dashboards/project/volumes/forms.py:32
 msgid "Volume Name"
 msgstr "ボリューム名"
@@ -5403,7 +5419,7 @@ msgid "Log"
 msgstr "ログ"
 
 #: dashboards/project/instances/tabs.py:49
-#: dashboards/project/instances/views.py:128
+#: dashboards/project/instances/views.py:134
 #, python-format
 msgid "Unable to get log for instance \"%s\"."
 msgstr "インスタンス \"%s\" のログを取得できません。"
@@ -5412,27 +5428,27 @@ msgstr "インスタンス \"%s\" のログを取得できません。"
 msgid "Unable to retrieve instances."
 msgstr "インスタンス一覧を取得できません。"
 
-#: dashboards/project/instances/views.py:144
+#: dashboards/project/instances/views.py:150
 #, python-format
 msgid "Unable to get VNC console for instance \"%s\"."
 msgstr "インスタンス \"%s\" の VNC コンソールを取得できません。"
 
-#: dashboards/project/instances/views.py:156
+#: dashboards/project/instances/views.py:162
 #, python-format
 msgid "Unable to get SPICE console for instance \"%s\"."
 msgstr "インスタンス \"%s\" の SPICE コンソールを取得できません。"
 
-#: dashboards/project/instances/views.py:176
-#: dashboards/project/instances/views.py:260
+#: dashboards/project/instances/views.py:182
+#: dashboards/project/instances/views.py:266
 msgid "Unable to retrieve instance details."
 msgstr "インスタンスの詳細を取得できません。"
 
-#: dashboards/project/instances/views.py:226
+#: dashboards/project/instances/views.py:232
 #, python-format
 msgid "Unable to retrieve details for instance \"%s\"."
 msgstr "インスタンス \"%s\" の詳細を取り出せません。"
 
-#: dashboards/project/instances/views.py:273
+#: dashboards/project/instances/views.py:279
 msgid "Unable to retrieve flavors."
 msgstr "フレーバーの一覧を取得できません。"
 
@@ -6015,7 +6031,7 @@ msgstr "この仮想 IP で許可する最大接続数。 上限を設定しな�
 #: dashboards/project/loadbalancers/forms.py:107
 #: dashboards/project/loadbalancers/forms.py:186
 #: dashboards/project/loadbalancers/tabs.py:42
-#: dashboards/project/loadbalancers/workflows.py:313
+#: dashboards/project/loadbalancers/workflows.py:314
 msgid "Unable to retrieve pools list."
 msgstr "プール一覧を取得できません。"
 
@@ -6045,7 +6061,7 @@ msgid "Weight"
 msgstr "重み"
 
 #: dashboards/project/loadbalancers/forms.py:171
-#: dashboards/project/loadbalancers/workflows.py:295
+#: dashboards/project/loadbalancers/workflows.py:296
 msgid "Relative part of requests this pool member serves compared to others"
 msgstr "このプールメンバーが他のメンバーと比較してどの程度リクエストを担当するかの相対値"
 
@@ -6214,7 +6230,7 @@ msgstr "プロバイダー"
 
 #: dashboards/project/loadbalancers/tables.py:224
 #: dashboards/project/loadbalancers/workflows.py:161
-#: dashboards/project/loadbalancers/workflows.py:297
+#: dashboards/project/loadbalancers/workflows.py:298
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:18
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:24
 msgid "Protocol Port"
@@ -6455,19 +6471,19 @@ msgid "At least one member must be specified"
 msgstr "少なくともメンバーを一つ指定する必要があります。"
 
 #: dashboards/project/loadbalancers/workflows.py:293
-#: dashboards/project/loadbalancers/workflows.py:332
+#: dashboards/project/loadbalancers/workflows.py:333
 msgid "Select members for this pool "
 msgstr "このプールのメンバーを選択します。"
 
-#: dashboards/project/loadbalancers/workflows.py:307
+#: dashboards/project/loadbalancers/workflows.py:308
 msgid "Select a Pool"
 msgstr "プールの選択"
 
-#: dashboards/project/loadbalancers/workflows.py:326
+#: dashboards/project/loadbalancers/workflows.py:327
 msgid "Unable to retrieve instances list."
 msgstr "インスタンスの一覧を取得できません。"
 
-#: dashboards/project/loadbalancers/workflows.py:329
+#: dashboards/project/loadbalancers/workflows.py:330
 msgid "No servers available. Click Add to cancel."
 msgstr "指定できるサーバがありません。止めるには追加ボタンを押します。"
 
@@ -6856,6 +6872,7 @@ msgid ""
 msgstr "ホストに通知される追加のルート。各項目は &lt;destination_cidr&gt;,&lt;nexthop&gt; (例: 192.168.200.0/24,10.56.1.254) 形式で 1 行に 1 項目記入します。"
 
 #: dashboards/project/networks/workflows.py:192
+#: dashboards/project/networks/subnets/workflows.py:142
 #: dashboards/project/networks/templates/networks/subnets/detail.html:3
 #: dashboards/project/networks/templates/networks/subnets/detail.html:6
 msgid "Subnet Detail"
@@ -8392,10 +8409,6 @@ msgstr "新しいパスワード"
 msgid "Confirm new password"
 msgstr "新しいパスワード（確認）"
 
-#: dashboards/settings/password/forms.py:63
-msgid "Password changed. Please log in again to continue."
-msgstr "パスワードが変更されました。続けるには、ログインしなおしてください。"
-
 #: dashboards/settings/password/forms.py:68
 msgid "Unable to change password."
 msgstr "パスワードを変更できません。"
@@ -8404,7 +8417,7 @@ msgstr "パスワードを変更できません。"
 msgid "Changing password is not supported."
 msgstr "パスワードの変更はサポートされません。"
 
-#: dashboards/settings/password/panel.py:25
+#: dashboards/settings/password/panel.py:26
 #: dashboards/settings/password/templates/password/_change.html:9
 #: dashboards/settings/password/templates/password/change.html:3
 #: dashboards/settings/password/templates/password/change.html:6
@@ -8526,11 +8539,11 @@ msgid ""
 "exist."
 msgstr "指定された期間が不正です。存在しない未来のデータを要求しています。"
 
-#: usage/quotas.py:231
+#: usage/quotas.py:228
 msgid "Unable to retrieve compute limit information."
 msgstr "コンピュートのリソース上限情報を取得できません。"
 
-#: usage/quotas.py:243
+#: usage/quotas.py:240
 msgid "Unable to retrieve volume limit information."
 msgstr "ボリュームのリソース上限情報を取得できません。"
 
