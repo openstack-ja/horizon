@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-03 21:56-0600\n"
-"PO-Revision-Date: 2013-12-05 03:20+0000\n"
-"Last-Translator: Tomoyuki KATO <tomo@dream.daynight.jp>\n"
+"POT-Creation-Date: 2013-12-04 22:08-0600\n"
+"PO-Revision-Date: 2013-12-05 05:00+0000\n"
+"Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1890,7 +1890,7 @@ msgstr "統計情報"
 
 #: dashboards/admin/metering/tabs.py:183
 msgid "Unable to retrieve Nova Ceilometer metering information."
-msgstr "Nova Ceilometer の課金情報を取得できません。"
+msgstr "Nova Ceilometer の統計情報を取得できません。"
 
 #: dashboards/admin/metering/tabs.py:189
 msgid "Duration of instance"
