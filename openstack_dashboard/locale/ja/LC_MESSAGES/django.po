@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-12-06 00:44-0600\n"
-"PO-Revision-Date: 2013-12-06 08:20+0000\n"
+"PO-Revision-Date: 2013-12-06 09:30+0000\n"
 "Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -2616,7 +2616,7 @@ msgstr "プロジェクト一覧を取得できません。"
 #: dashboards/admin/overview/templates/overview/usage.csv:1
 #: dashboards/project/overview/templates/overview/usage.csv:1
 msgid "Usage Report For Period"
-msgstr ""
+msgstr "指定期間の使用状況"
 
 #: dashboards/admin/overview/templates/overview/usage.csv:2
 msgid "Active Instances"
@@ -2625,21 +2625,21 @@ msgstr "稼働中のインスタンス"
 #: dashboards/admin/overview/templates/overview/usage.csv:3
 #: dashboards/project/overview/templates/overview/usage.csv:4
 msgid "CPU-HRs Used"
-msgstr ""
+msgstr "使用した仮想 CPU 時間"
 
 #: dashboards/admin/overview/templates/overview/usage.csv:4
 msgid "Total Active RAM (MB)"
-msgstr ""
+msgstr "使用中のメモリー総量 (MB)"
 
 #: dashboards/admin/overview/templates/overview/usage.csv:5
 #: dashboards/project/overview/templates/overview/usage.csv:6
 msgid "Total Disk Size"
-msgstr ""
+msgstr "合計ディスクサイズ"
 
 #: dashboards/admin/overview/templates/overview/usage.csv:6
 #: dashboards/project/overview/templates/overview/usage.csv:7
 msgid "Total Disk Usage"
-msgstr ""
+msgstr "合計ディスク使用状況 (GB 時間)"
 
 #: dashboards/admin/overview/templates/overview/usage.html:3
 msgid "Usage Overview"
@@ -7155,11 +7155,11 @@ msgstr "稼働時間 (秒)"
 
 #: dashboards/project/overview/templates/overview/usage.csv:3
 msgid "Total Active VCPUs"
-msgstr ""
+msgstr "稼働中の仮想 CPU 総数"
 
 #: dashboards/project/overview/templates/overview/usage.csv:5
 msgid "Total Active Ram (MB)"
-msgstr ""
+msgstr "使用中のメモリー総量 (MB)"
 
 #: dashboards/project/routers/forms.py:23
 #: dashboards/project/routers/ports/forms.py:38
