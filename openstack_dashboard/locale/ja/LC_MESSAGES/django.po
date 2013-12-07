@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-06 00:44-0600\n"
-"PO-Revision-Date: 2013-12-06 09:30+0000\n"
+"POT-Creation-Date: 2013-12-07 04:40-0600\n"
+"PO-Revision-Date: 2013-12-07 10:42+0000\n"
 "Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -480,8 +480,8 @@ msgstr "ドメインコンテキストをクリアしました。"
 #: dashboards/project/loadbalancers/forms.py:35
 #: dashboards/project/loadbalancers/forms.py:74
 #: dashboards/project/loadbalancers/tables.py:189
-#: dashboards/project/loadbalancers/workflows.py:29
-#: dashboards/project/loadbalancers/workflows.py:149
+#: dashboards/project/loadbalancers/workflows.py:33
+#: dashboards/project/loadbalancers/workflows.py:150
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:9
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:9
 #: dashboards/project/networks/forms.py:37
@@ -563,8 +563,8 @@ msgstr "名前"
 #: dashboards/project/loadbalancers/forms.py:40
 #: dashboards/project/loadbalancers/forms.py:79
 #: dashboards/project/loadbalancers/tables.py:191
-#: dashboards/project/loadbalancers/workflows.py:32
-#: dashboards/project/loadbalancers/workflows.py:152
+#: dashboards/project/loadbalancers/workflows.py:36
+#: dashboards/project/loadbalancers/workflows.py:153
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:12
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:12
 #: dashboards/project/networks/templates/networks/_create.html:17
@@ -1176,8 +1176,7 @@ msgid "Removed"
 msgstr "削除しました"
 
 #: dashboards/admin/groups/tables.py:126 dashboards/admin/groups/tables.py:183
-#: dashboards/admin/metering/tables.py:46 dashboards/admin/users/tables.py:47
-#: dashboards/admin/users/tables.py:90
+#: dashboards/admin/users/tables.py:47 dashboards/admin/users/tables.py:90
 #: dashboards/project/databases/tables.py:66
 #: dashboards/project/instances/workflows/create_instance.py:50
 msgid "User"
@@ -1221,7 +1220,7 @@ msgstr "グループのメンバー"
 #: dashboards/project/firewalls/workflows.py:108
 #: dashboards/project/firewalls/workflows.py:215
 #: dashboards/project/firewalls/workflows.py:291
-#: dashboards/project/loadbalancers/workflows.py:130
+#: dashboards/project/loadbalancers/workflows.py:131
 #: dashboards/project/loadbalancers/workflows.py:237
 #: dashboards/project/loadbalancers/workflows.py:369
 #: dashboards/project/loadbalancers/workflows.py:510
@@ -1526,7 +1525,6 @@ msgstr "ゾーン"
 
 #: dashboards/admin/info/tables.py:104 dashboards/admin/info/tables.py:179
 #: dashboards/admin/instances/tables.py:104
-#: dashboards/admin/metering/tables.py:181
 #: dashboards/admin/networks/tables.py:75
 #: dashboards/admin/networks/ports/tables.py:79
 #: dashboards/admin/routers/tables.py:56
@@ -1653,11 +1651,6 @@ msgid "Instance"
 msgstr "インスタンス"
 
 #: dashboards/admin/instances/tables.py:81
-#: dashboards/admin/metering/tables.py:44
-#: dashboards/admin/metering/tables.py:54
-#: dashboards/admin/metering/tables.py:78
-#: dashboards/admin/metering/tables.py:107
-#: dashboards/admin/metering/tables.py:175
 #: dashboards/admin/metering/templates/metering/stats.html:76
 #: dashboards/admin/networks/forms.py:37
 #: dashboards/admin/networks/tables.py:68
@@ -1737,226 +1730,87 @@ msgstr "すべてのインスタンス"
 msgid "Resource Usage"
 msgstr "リソース使用状況"
 
-#: dashboards/admin/metering/tables.py:37
-msgid "up"
-msgstr "動作中"
-
-#: dashboards/admin/metering/tables.py:39
-msgid "none"
-msgstr "なし"
-
-#: dashboards/admin/metering/tables.py:49
-#: dashboards/admin/metering/tables.py:184
-#: dashboards/project/stacks/tables.py:103
-#: dashboards/project/stacks/tables.py:147
-msgid "Resource"
-msgstr "リソース"
-
-#: dashboards/admin/metering/tables.py:57
-msgid "Disk Read Bytes"
-msgstr "ディスク読み出しバイト数"
-
-#: dashboards/admin/metering/tables.py:60
-msgid "Disk Read Requests"
-msgstr "ディスク読み出し要求数"
-
-#: dashboards/admin/metering/tables.py:63
-msgid "Disk Write Bytes"
-msgstr "ディスク書き込みバイト数"
-
-#: dashboards/admin/metering/tables.py:67
-msgid "Disk Write Requests"
-msgstr "ディスク書き込み要求数"
-
-#: dashboards/admin/metering/tables.py:72
-msgid "Global Disk Usage (average of last 30 days)"
-msgstr "全体のディスク使用状況 (直近 30 日の平均)"
-
-#: dashboards/admin/metering/tables.py:81
-msgid "Network Incoming Bytes"
-msgstr "ネットワーク受信バイト数"
-
-#: dashboards/admin/metering/tables.py:86
-msgid "Network Incoming Packets"
-msgstr "ネットワーク受信パケット数"
-
-#: dashboards/admin/metering/tables.py:90
-msgid "Network Outgoing Bytes"
-msgstr "ネットワーク送信バイト数"
-
-#: dashboards/admin/metering/tables.py:95
-msgid "Network Outgoing Packets"
-msgstr "ネットワーク送信パケット数"
-
-#: dashboards/admin/metering/tables.py:100
-msgid "Global Network Traffic Usage (average of last 30 days)"
-msgstr "全体のネットワークトラフィック状況 (直近 30 日の平均)"
-
-#: dashboards/admin/metering/tables.py:109
-msgid "Network Duration"
-msgstr "ネットワークの存在時間"
-
-#: dashboards/admin/metering/tables.py:113
-msgid "Network Creation Requests"
-msgstr "ネットワークの作成要求数"
-
-#: dashboards/admin/metering/tables.py:116
-msgid "Subnet Duration"
-msgstr "サブネットの存在時間"
-
-#: dashboards/admin/metering/tables.py:119
-msgid "Subnet Creation Requests"
-msgstr "サブネットの作成要求数"
-
-#: dashboards/admin/metering/tables.py:122
-#: dashboards/admin/metering/tables.py:134
-msgid "Port Duration"
-msgstr "ポートの存在時間"
-
-#: dashboards/admin/metering/tables.py:125
-#: dashboards/admin/metering/tables.py:137
-msgid "Port Creation Requests"
-msgstr "ポートの作成要求数"
-
-#: dashboards/admin/metering/tables.py:128
-msgid "Router Duration"
-msgstr "ルーターの存在時間"
-
-#: dashboards/admin/metering/tables.py:131
-msgid "Router Creation Requests"
-msgstr "ルーターの作成要求数"
-
-#: dashboards/admin/metering/tables.py:141
-msgid "Floating IP Duration"
-msgstr "Floating IP の存在時間"
-
-#: dashboards/admin/metering/tables.py:145
-msgid "Floating IP Creation Requests"
-msgstr "Floating IP の作成要求数"
-
-#: dashboards/admin/metering/tables.py:150
-msgid "Global Network Usage (average of last 30 days)"
-msgstr "全体のネットワーク使用状況 (直近 30 日の平均)"
-
-#: dashboards/admin/metering/tables.py:169
-#: dashboards/admin/metering/tabs.py:74 dashboards/admin/metering/tabs.py:148
-#: dashboards/admin/metering/views.py:186
-msgid "Unable to retrieve statistics."
-msgstr "統計情報を取得できません。"
-
-#: dashboards/admin/metering/tables.py:188
-msgid "Object Storage Incoming Bytes"
-msgstr "オブジェクトストレージ受信バイト数"
-
-#: dashboards/admin/metering/tables.py:193
-msgid "Object Storage Outgoing Bytes"
-msgstr "オブジェクトストレージ送信バイト数"
-
-#: dashboards/admin/metering/tables.py:198
-msgid "Total Number of Objects"
-msgstr "オブジェクトの合計数"
-
-#: dashboards/admin/metering/tables.py:203
-msgid "Total Size of Objects "
-msgstr "オブジェクトの合計サイズ"
-
-#: dashboards/admin/metering/tables.py:208
-msgid "Global Object Store Usage (average of last 30 days)"
-msgstr "全体のオブジェクトストア使用状況 (直近 30 日の平均)"
-
-#: dashboards/admin/metering/tabs.py:38 dashboards/admin/metering/views.py:157
-msgid "Unable to retrieve tenant list."
-msgstr "プロジェクトリストを取得できません。"
-
-#: dashboards/admin/metering/tabs.py:81
-msgid "Global Disk Usage"
-msgstr "全体のディスク使用状況"
-
-#: dashboards/admin/metering/tabs.py:95
-msgid "Global Network Traffic Usage"
-msgstr "全体のネットワークトラフィック状況"
-
-#: dashboards/admin/metering/tabs.py:108
-msgid "Global Network Usage"
-msgstr "全体のネットワーク使用状況"
-
-#: dashboards/admin/metering/tabs.py:125
-msgid "Global Object Store Usage"
-msgstr "全体のオブジェクトストア使用状況"
-
-#: dashboards/admin/metering/tabs.py:157
+#: dashboards/admin/metering/tabs.py:25
 msgid "Stats"
 msgstr "統計情報"
 
-#: dashboards/admin/metering/tabs.py:183
+#: dashboards/admin/metering/tabs.py:51
 msgid "Unable to retrieve Nova Ceilometer metering information."
 msgstr "Nova Ceilometer の統計情報を取得できません。"
 
-#: dashboards/admin/metering/tabs.py:189
+#: dashboards/admin/metering/tabs.py:57
 msgid "Duration of instance"
 msgstr "インスタンスの存在時間"
 
-#: dashboards/admin/metering/tabs.py:190
+#: dashboards/admin/metering/tabs.py:58
 msgid "Volume of RAM in MB"
 msgstr "MB 単位のメモリー量"
 
-#: dashboards/admin/metering/tabs.py:191
+#: dashboards/admin/metering/tabs.py:59
 msgid "CPU time used"
 msgstr "使用 CPU 時間"
 
-#: dashboards/admin/metering/tabs.py:192
+#: dashboards/admin/metering/tabs.py:60
 msgid "Average CPU utilisation"
 msgstr "平均 CPU 使用量"
 
-#: dashboards/admin/metering/tabs.py:193
+#: dashboards/admin/metering/tabs.py:61
 #: dashboards/project/instances/templates/instances/_flavors_and_quotas.html:28
 msgid "Number of VCPUs"
 msgstr "仮想 CPU 数"
 
-#: dashboards/admin/metering/tabs.py:194
+#: dashboards/admin/metering/tabs.py:62
 msgid "Number of read requests"
 msgstr "読み出し要求数"
 
-#: dashboards/admin/metering/tabs.py:195
+#: dashboards/admin/metering/tabs.py:63
 msgid "Number of write requests"
 msgstr "ディスク書き込み要求数"
 
-#: dashboards/admin/metering/tabs.py:196
+#: dashboards/admin/metering/tabs.py:64
 msgid "Volume of reads in B"
 msgstr "ボリュームの読み出しバイト数"
 
-#: dashboards/admin/metering/tabs.py:197
+#: dashboards/admin/metering/tabs.py:65
 msgid "Volume of writes in B"
 msgstr "ボリュームの書き込みバイト数"
 
-#: dashboards/admin/metering/tabs.py:198
+#: dashboards/admin/metering/tabs.py:66
 msgid "Size of root disk in GB"
 msgstr "ルートディスクの GB サイズ"
 
-#: dashboards/admin/metering/tabs.py:199
+#: dashboards/admin/metering/tabs.py:67
 msgid "Size of ephemeral disk in GB"
 msgstr "一時ディスクの GB サイズ"
 
-#: dashboards/admin/metering/tabs.py:201
+#: dashboards/admin/metering/tabs.py:69
 msgid "Number of incoming bytes on the network for a VM interface"
 msgstr "VM インタフェースでのネットワーク受信バイト数"
 
-#: dashboards/admin/metering/tabs.py:203
+#: dashboards/admin/metering/tabs.py:71
 msgid "Number of outgoing bytes on the network for a VM interface"
 msgstr "VM インタフェースでのネットワーク送信バイト数"
 
-#: dashboards/admin/metering/tabs.py:205
+#: dashboards/admin/metering/tabs.py:73
 msgid "Number of incoming packets for a VM interface"
 msgstr "VM インタフェースでのネットワーク受信パケット数"
 
-#: dashboards/admin/metering/tabs.py:207
+#: dashboards/admin/metering/tabs.py:75
 msgid "Number of outgoing packets for a VM interface"
 msgstr "VM インタフェースでのネットワーク送信パケット数"
 
-#: dashboards/admin/metering/tabs.py:212
+#: dashboards/admin/metering/tabs.py:80
 #, python-format
 msgid "Duration of instance type %s (openstack flavor)"
 msgstr "インスタンスタイプ %s (openstack フレーバー) の存在期間"
+
+#: dashboards/admin/metering/views.py:157
+msgid "Unable to retrieve tenant list."
+msgstr "プロジェクトリストを取得できません。"
+
+#: dashboards/admin/metering/views.py:186
+msgid "Unable to retrieve statistics."
+msgstr "統計情報を取得できません。"
 
 #: dashboards/admin/metering/templates/metering/index.html:3
 msgid "Resources usage Overview"
@@ -2198,8 +2052,8 @@ msgstr "ネットワークプロファイル"
 #: dashboards/project/loadbalancers/forms.py:94
 #: dashboards/project/loadbalancers/forms.py:173
 #: dashboards/project/loadbalancers/forms.py:231
-#: dashboards/project/loadbalancers/workflows.py:39
-#: dashboards/project/loadbalancers/workflows.py:178
+#: dashboards/project/loadbalancers/workflows.py:43
+#: dashboards/project/loadbalancers/workflows.py:179
 #: dashboards/project/loadbalancers/workflows.py:302
 #: dashboards/project/loadbalancers/workflows.py:456
 #: dashboards/project/networks/forms.py:42
@@ -2473,7 +2327,7 @@ msgstr "ネットワークを取得できません。"
 
 #: dashboards/admin/networks/subnets/tables.py:32
 #: dashboards/project/loadbalancers/tables.py:194
-#: dashboards/project/loadbalancers/workflows.py:36
+#: dashboards/project/loadbalancers/workflows.py:40
 #: dashboards/project/networks/workflows.py:116
 #: dashboards/project/networks/subnets/tables.py:45
 #: dashboards/project/networks/subnets/workflows.py:40
@@ -3475,7 +3329,7 @@ msgstr "ポート範囲"
 #: dashboards/project/access_and_security/security_groups/forms.py:139
 #: dashboards/project/access_and_security/security_groups/forms.py:150
 #: dashboards/project/access_and_security/security_groups/forms.py:161
-#: dashboards/project/loadbalancers/workflows.py:162
+#: dashboards/project/loadbalancers/workflows.py:163
 #: dashboards/project/loadbalancers/workflows.py:299
 msgid "Enter an integer value between 1 and 65535."
 msgstr "1 から 65535 までの整数値を入力してください。"
@@ -4480,8 +4334,8 @@ msgstr "名前が \"%(name)s\" の %(count)s を起動しました。"
 #: dashboards/project/firewalls/workflows.py:41
 #: dashboards/project/firewalls/templates/firewalls/_rule_details.html:22
 #: dashboards/project/loadbalancers/tables.py:195
-#: dashboards/project/loadbalancers/workflows.py:37
-#: dashboards/project/loadbalancers/workflows.py:165
+#: dashboards/project/loadbalancers/workflows.py:41
+#: dashboards/project/loadbalancers/workflows.py:166
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:27
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:27
 msgid "Protocol"
@@ -6012,7 +5866,7 @@ msgid "Unable to modify instance \"%s\"."
 msgstr "インスタンス \"%s\" のログを取得できません。"
 
 #: dashboards/project/loadbalancers/forms.py:41
-#: dashboards/project/loadbalancers/workflows.py:38
+#: dashboards/project/loadbalancers/workflows.py:42
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:30
 msgid "Load Balancing Method"
 msgstr "負荷分散方式"
@@ -6028,30 +5882,30 @@ msgid "Failed to update pool %s"
 msgstr "プール %s を更新できません。"
 
 #: dashboards/project/loadbalancers/forms.py:82
-#: dashboards/project/loadbalancers/workflows.py:167
+#: dashboards/project/loadbalancers/workflows.py:168
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:33
 msgid "Session Persistence"
 msgstr "セッション永続性"
 
 #: dashboards/project/loadbalancers/forms.py:86
-#: dashboards/project/loadbalancers/workflows.py:170
+#: dashboards/project/loadbalancers/workflows.py:171
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:37
 msgid "Cookie Name"
 msgstr "クッキー名"
 
 #: dashboards/project/loadbalancers/forms.py:87
-#: dashboards/project/loadbalancers/workflows.py:171
+#: dashboards/project/loadbalancers/workflows.py:172
 msgid "Required for APP_COOKIE persistence; Ignored otherwise."
 msgstr "セッション永続性が APP_COOKIE の場合には必須です。それ以外の場合は無視されます。"
 
 #: dashboards/project/loadbalancers/forms.py:91
-#: dashboards/project/loadbalancers/workflows.py:174
+#: dashboards/project/loadbalancers/workflows.py:175
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:43
 msgid "Connection Limit"
 msgstr "最大接続数"
 
 #: dashboards/project/loadbalancers/forms.py:92
-#: dashboards/project/loadbalancers/workflows.py:175
+#: dashboards/project/loadbalancers/workflows.py:176
 msgid ""
 "Maximum number of connections allowed for the VIP or '-1' if the limit is "
 "not set"
@@ -6154,7 +6008,7 @@ msgid "Load Balancers"
 msgstr "ロードバランサー"
 
 #: dashboards/project/loadbalancers/tables.py:31
-#: dashboards/project/loadbalancers/workflows.py:129
+#: dashboards/project/loadbalancers/workflows.py:130
 msgid "Add Pool"
 msgstr "プールの追加"
 
@@ -6252,13 +6106,13 @@ msgid "Delete Health Monitor"
 msgstr "ヘルスモニターの削除"
 
 #: dashboards/project/loadbalancers/tables.py:192
-#: dashboards/project/loadbalancers/workflows.py:35
+#: dashboards/project/loadbalancers/workflows.py:39
 #: dashboards/project/loadbalancers/templates/loadbalancers/_pool_details.html:21
 msgid "Provider"
 msgstr "プロバイダー"
 
 #: dashboards/project/loadbalancers/tables.py:224
-#: dashboards/project/loadbalancers/workflows.py:161
+#: dashboards/project/loadbalancers/workflows.py:162
 #: dashboards/project/loadbalancers/workflows.py:298
 #: dashboards/project/loadbalancers/templates/loadbalancers/_member_details.html:18
 #: dashboards/project/loadbalancers/templates/loadbalancers/_vip_details.html:24
@@ -6385,68 +6239,68 @@ msgstr "ヘルスモニターの詳細を取得できません。 %s"
 msgid "Unable to retrieve pool. %s"
 msgstr "プールを取得できません。 %s"
 
-#: dashboards/project/loadbalancers/workflows.py:47
+#: dashboards/project/loadbalancers/workflows.py:51
 #: dashboards/project/vpn/workflows.py:43
 msgid "Select a Subnet"
 msgstr "サブネットの選択"
 
-#: dashboards/project/loadbalancers/workflows.py:52
+#: dashboards/project/loadbalancers/workflows.py:56
 #: dashboards/project/vpn/workflows.py:49
 msgid "Unable to retrieve networks list."
 msgstr "ネットワーク一覧を取得できません。"
 
-#: dashboards/project/loadbalancers/workflows.py:59
-#: dashboards/project/loadbalancers/workflows.py:187
+#: dashboards/project/loadbalancers/workflows.py:63
+#: dashboards/project/loadbalancers/workflows.py:188
 msgid "Select a Protocol"
 msgstr "プロトコルの選択"
 
-#: dashboards/project/loadbalancers/workflows.py:64
+#: dashboards/project/loadbalancers/workflows.py:67
 msgid "Select a Method"
 msgstr "方式を選択してください"
 
-#: dashboards/project/loadbalancers/workflows.py:80
+#: dashboards/project/loadbalancers/workflows.py:81
 msgid "Unable to retrieve providers list."
 msgstr "プロバイダーの一覧を取得できません。"
 
-#: dashboards/project/loadbalancers/workflows.py:94
+#: dashboards/project/loadbalancers/workflows.py:95
 #, python-format
 msgid "%s (default)"
 msgstr "%s (デフォルト)"
 
-#: dashboards/project/loadbalancers/workflows.py:97
+#: dashboards/project/loadbalancers/workflows.py:98
 msgid "Provider for Load Balancer is not supported."
 msgstr "ロードバランサーではプロバイダーがサポートされていません。"
 
-#: dashboards/project/loadbalancers/workflows.py:99
+#: dashboards/project/loadbalancers/workflows.py:100
 msgid "No provider is available."
 msgstr "利用可能なプロバイダーがありません。"
 
-#: dashboards/project/loadbalancers/workflows.py:105
+#: dashboards/project/loadbalancers/workflows.py:106
 msgid "Add New Pool"
 msgstr "プールの追加"
 
-#: dashboards/project/loadbalancers/workflows.py:107
+#: dashboards/project/loadbalancers/workflows.py:108
 msgid ""
 "Create Pool for current project.\n"
 "\n"
 "Assign a name and description for the pool. Choose one subnet where all members of this pool must be on. Select the protocol and load balancing method for this pool. Admin State is UP (checked) by default."
 msgstr "このプロジェクトにプールを作成します。\n\nプールの名前と説明を入力してください。このプールのメンバー全てが所属するサブネットを選択してください。このプールで使用するプロトコルと負荷分散方式を選択してください。管理状態はデフォルトで有効 (チェック済み) になっています。"
 
-#: dashboards/project/loadbalancers/workflows.py:131
+#: dashboards/project/loadbalancers/workflows.py:132
 #, python-format
 msgid "Added pool \"%s\"."
 msgstr "プール \"%s\" を追加しました。"
 
-#: dashboards/project/loadbalancers/workflows.py:132
+#: dashboards/project/loadbalancers/workflows.py:133
 #, python-format
 msgid "Unable to add pool \"%s\"."
 msgstr "プール \"%s\" を追加できません。"
 
-#: dashboards/project/loadbalancers/workflows.py:154
+#: dashboards/project/loadbalancers/workflows.py:155
 msgid "VIP Address from Floating IPs"
 msgstr "Floating IP からの仮想 IP 割り当て"
 
-#: dashboards/project/loadbalancers/workflows.py:183
+#: dashboards/project/loadbalancers/workflows.py:184
 #, python-format
 msgid "Specify a free IP address from %s"
 msgstr "%s の未使用の IP アドレスを選択してください"
@@ -7494,6 +7348,11 @@ msgstr "スタック"
 #: dashboards/project/stacks/tables.py:144
 msgid "Stack Resource"
 msgstr "スタックリソース"
+
+#: dashboards/project/stacks/tables.py:103
+#: dashboards/project/stacks/tables.py:147
+msgid "Resource"
+msgstr "リソース"
 
 #: dashboards/project/stacks/tables.py:106
 msgid "Time Since Event"

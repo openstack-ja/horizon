@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-09 05:08+0000\n"
+"POT-Creation-Date: 2013-12-07 04:40-0600\n"
 "PO-Revision-Date: 2013-11-20 11:54+0000\n"
 "Last-Translator: ykatabam <ykatabam@redhat.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: static/horizon/js/horizon.d3linechart.js:201
-#: static/horizon/js/horizon.modals.js:178
+#: static/horizon/js/horizon.modals.js:182
 msgid "An error occurred. Please try again later."
 msgstr "エラーが発生しました。後からもう一度お試しください。"
 
@@ -46,11 +46,16 @@ msgstr "ロールがありません"
 msgid "Cancel"
 msgstr "取り消し"
 
-#: static/horizon/js/horizon.modals.js:125
+#: static/horizon/js/horizon.modals.js:98
+#: static/horizon/js/horizon.tables.js:171
+msgid "Working"
+msgstr "反映中"
+
+#: static/horizon/js/horizon.modals.js:128
 msgid "There was an error submitting the form. Please try again."
 msgstr "フォームの送信中にエラーが発生しました。再度お試しください。"
 
-#: static/horizon/js/horizon.modals.js:159 static/horizon/js/horizon.tabs.js:9
+#: static/horizon/js/horizon.modals.js:163 static/horizon/js/horizon.tabs.js:9
 msgid "Loading"
 msgstr "読み込み中"
 
@@ -71,10 +76,6 @@ msgstr "%sの確認"
 #: static/horizon/js/horizon.tables.js:157
 msgid "Please confirm your selection. This action cannot be undone."
 msgstr "選択内容を確認してください。この操作は取り消せません。"
-
-#: static/horizon/js/horizon.tables.js:171
-msgid "Working"
-msgstr "反映中"
 
 #: static/horizon/js/horizon.tables.js:221
 #, c-format
