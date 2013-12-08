@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Horizon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-12-07 04:40-0600\n"
-"PO-Revision-Date: 2013-12-08 10:27+0000\n"
+"PO-Revision-Date: 2013-12-08 11:26+0000\n"
 "Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -2483,7 +2483,7 @@ msgstr "使用した仮想 CPU 時間"
 
 #: dashboards/admin/overview/templates/overview/usage.csv:4
 msgid "Total Active RAM (MB)"
-msgstr "使用中のメモリー総量 (MB)"
+msgstr "使用中のメモリー合計量 (MB)"
 
 #: dashboards/admin/overview/templates/overview/usage.csv:5
 #: dashboards/project/overview/templates/overview/usage.csv:6
@@ -7013,7 +7013,7 @@ msgstr "稼働中の仮想 CPU 総数"
 
 #: dashboards/project/overview/templates/overview/usage.csv:5
 msgid "Total Active Ram (MB)"
-msgstr "使用中のメモリー総量 (MB)"
+msgstr "使用中のメモリー合計量 (MB)"
 
 #: dashboards/project/routers/forms.py:23
 #: dashboards/project/routers/ports/forms.py:38
