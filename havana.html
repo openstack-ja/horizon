@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Havana Series Release Notes &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 documentation" href="index.html" />
+    <link rel="next" title="Grizzly Series Release Notes" href="grizzly.html" />
+    <link rel="prev" title="Icehouse Series Release Notes" href="icehouse.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="havana-series-release-notes">
+<h1>Havana Series Release Notes<a class="headerlink" href="#havana-series-release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="release-overview">
+<h2>Release Overview<a class="headerlink" href="#release-overview" title="Permalink to this headline">¶</a></h2>
+<p>The Havana release cycle brings support for <em>three</em> new projects, plus
+significant new features for several existing projects. On top of that, many
+aspects of user experience have been improved for both end users and
+administrators. The community continues to grow and expand. The Havana release
+is solidly the best release of the OpenStack Dashboard project yet!</p>
+</div>
+<div class="section" id="highlights">
+<h2>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="heat">
+<h4>Heat<a class="headerlink" href="#heat" title="Permalink to this headline">¶</a></h4>
+<p>The OpenStack Orchestration project (Heat) debuted in Havana, and Horizon
+delivers full support for managing your Heat stacks. Highlights include
+support for dynamic form generation from supported Heat template formats,
+stack topology visualizations, and full stack resource inspection.</p>
+</div>
+<div class="section" id="ceilometer">
+<h4>Ceilometer<a class="headerlink" href="#ceilometer" title="Permalink to this headline">¶</a></h4>
+<p>Also debuting in Havana is the OpenStack Metering project (Ceilometer). Initial
+support for Ceilometer is included in Horizon so that it is possible for an
+administrator to query the usage of the cloud through the OpenStack Dashboard
+and better understand how the system is functioning and being utilized.</p>
+</div>
+<div class="section" id="domains-groups-and-more-keystone-v3-api-support">
+<h4>Domains, Groups, and More: Keystone v3 API Support<a class="headerlink" href="#domains-groups-and-more-keystone-v3-api-support" title="Permalink to this headline">¶</a></h4>
+<p>With the OpenStack Identity Service (Keystone) v3 API fully fledged in the
+Havana release, Horizon has added full support for all the new features such
+as Domains and Groups, Role management and assignment to Domains and Groups,
+Domain-based authentication, and Domain context switching.</p>
+</div>
+<div class="section" id="trove-databases">
+<h4>Trove Databases<a class="headerlink" href="#trove-databases" title="Permalink to this headline">¶</a></h4>
+<p>The OpenStack Database as a Service project (Trove) graduated from incubation
+in the Havana cycle, and thanks to their industriousness they delivered a
+set of panels for the OpenStack dashboard to allow for provisioning and managing
+your Trove databases and backups. Disclaimer: Given that Trove&#8217;s first official
+release as an integrated project will not be until Icehouse this feature should
+still be considered experimental and may be subject to change.</p>
+</div>
+<div class="section" id="nova-features">
+<h4>Nova Features<a class="headerlink" href="#nova-features" title="Permalink to this headline">¶</a></h4>
+<p>The number of OpenStack Compute (Nova) features that are supported in Horizon
+continues to grow. New features in the Havana release include:</p>
+<ul class="simple">
+<li>Editable default quotas.</li>
+<li>The ability for an administrator to reset the password of a server/instance.</li>
+<li>Availability zone support.</li>
+<li>Improved region support.</li>
+<li>Instance resizing.</li>
+<li>Improved boot-from-volume support.</li>
+<li>Per-project flavor support.</li>
+</ul>
+<p>All of these provide a richer set of options for controlling where, when and how
+instances are launched, and improving how they&#8217;re managed once they&#8217;re up and
+running.</p>
+</div>
+<div class="section" id="neutron-features">
+<h4>Neutron Features<a class="headerlink" href="#neutron-features" title="Permalink to this headline">¶</a></h4>
+<p>A number of important new OpenStack Networking (Neutron) features are showcased
+in the Havana release, most notably:</p>
+<ul class="simple">
+<li>VPN as a Service.</li>
+<li>Firewall as a Service.</li>
+<li>Editable and interactive network topology visualizations.</li>
+<li>Full security group and quota parity between Neutron and Nova network.</li>
+</ul>
+<p>These features allow for tremendous flexibility when constructing
+software-defined networks for your cloud using Neutron.</p>
+</div>
+</div>
+<div class="section" id="user-experience-improvements">
+<h3>User Experience Improvements<a class="headerlink" href="#user-experience-improvements" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="self-service-password-change">
+<h4>Self-Service Password Change<a class="headerlink" href="#self-service-password-change" title="Permalink to this headline">¶</a></h4>
+<p>Empowered by changes to the Keystone API, users can now change their own
+passwords without the need to involve an administrator. This is more secure and
+takes the hassle out of things for everyone.</p>
+</div>
+<div class="section" id="better-admin-information-architecture">
+<h4>Better Admin Information Architecture<a class="headerlink" href="#better-admin-information-architecture" title="Permalink to this headline">¶</a></h4>
+<p>Several sections of the Admin dashboard have been rearranged to more logically
+group information together. Additionally, new sources of information have been
+added to allow Admins to better understand the state of the hosts in the cloud
+and their relationship to host aggregates, availability zones, etc.</p>
+</div>
+<div class="section" id="improved-messaging-to-users-on-logout">
+<h4>Improved Messaging To Users On Logout<a class="headerlink" href="#improved-messaging-to-users-on-logout" title="Permalink to this headline">¶</a></h4>
+<p>Several new indicators have been added to inform users why they&#8217;ve been logged
+out when they land on the login screen unexpectedly. These indicators make it
+clear whether the user&#8217;s session has expired, they timed out due to inactivity,
+or they are not authorized for the section of the dashboard they attempted to
+access.</p>
+</div>
+<div class="section" id="security-group-rule-templates">
+<h4>Security Group Rule Templates<a class="headerlink" href="#security-group-rule-templates" title="Permalink to this headline">¶</a></h4>
+<p>Since there are many very common security group rules which users tediously
+re-add each time (rules for SSH and ping, for example) the Horizon team has
+added pre-configured templates for common rules which a user can select and
+add to their security group with two clicks. These rules are configurable
+via the <code class="docutils literal"><span class="pre">SECURITY_GROUP_RULES</span></code> setting.</p>
+</div>
+</div>
+<div class="section" id="community">
+<h3>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="translation-team">
+<h4>Translation Team<a class="headerlink" href="#translation-team" title="Permalink to this headline">¶</a></h4>
+<p>The OpenStack Translations team came fully into its own during the Havana cycle
+and the quality of the translations in Horizon are the best yet by far.
+Congratulations to that team for their success in building the community that
+started primarily within the OpenStack Dashboard project.</p>
+</div>
+<div class="section" id="user-experience-group">
+<h4>User Experience Group<a class="headerlink" href="#user-experience-group" title="Permalink to this headline">¶</a></h4>
+<p>A fledgling OpenStack User Experience Group formed during the Havana cycle with
+the mission of improving UX throughout OpenStack. They have quickly made
+themselves indispensable to the process of designing and improving features in
+the OpenStack Dashboard. Expect significant future improvement in User
+Experience now that there are dedicated people actively collaborating in the
+open to raise the bar.</p>
+</div>
+</div>
+<div class="section" id="under-the-hood">
+<h3>Under The Hood<a class="headerlink" href="#under-the-hood" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="less-complicated-less-compilation-no-more-nodejs">
+<h4>Less Complicated LESS Compilation: No More NodeJS<a class="headerlink" href="#less-complicated-less-compilation-no-more-nodejs" title="Permalink to this headline">¶</a></h4>
+<p>Due to outcry from various parties, and made possible by improvements in the
+Python community&#8217;s support for LESS, Horizon has removed all traces of NodeJS
+from the project. We now use the <code class="docutils literal"><span class="pre">lesscpy</span></code> module to compile our LESS into
+the final stylesheets. This should not affect most users in any way, but it
+should make life easier for downstream distributions and the like.</p>
+</div>
+<div class="section" id="role-based-access-controls">
+<h4>Role-Based Access Controls<a class="headerlink" href="#role-based-access-controls" title="Permalink to this headline">¶</a></h4>
+<p>Horizon has begun the transition to using the other OpenStack projects&#8217;
+<code class="docutils literal"><span class="pre">policy.json</span></code> files to enforce access controls in the dashboard if the files
+are provided. This means access controls are more configurable and can be kept
+in sync between the originating project and Horizon. Currently this is only
+supported for Keystone and parts of Nova&#8217;s policy files. Full support will
+come in the next release. You will need to set the <code class="docutils literal"><span class="pre">POLICY_FILES_PATH</span></code> and
+<code class="docutils literal"><span class="pre">POLICY_FILES</span></code> settings in order to enable this feature.</p>
+</div>
+</div>
+<div class="section" id="other-improvements-and-fixes">
+<h3>Other Improvements and Fixes<a class="headerlink" href="#other-improvements-and-fixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Swift container and object metadata are now supported.</li>
+<li>New visualizations for utilization and quotas.</li>
+<li>The Cisco N1K Router plugin&#8217;s additional features are available through a
+special additional dashboard when enabled and supported in Neutron.</li>
+<li>Support for self-signed or other specified SSL certificate checking.</li>
+<li>Glance image types are now configurable.</li>
+<li>Sorting has been improved in many places through the dashboard.</li>
+<li>API call efficiency optimizations.</li>
+<li>Required fields in forms are now better indicated.</li>
+<li>Session timeout can now be enabled to log out the user after a period of
+inactivity as a security feature.</li>
+<li>Significant PEP8 and code quality compliance improvements.</li>
+<li>Hundreds of bugfixes and minor user experience improvements.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="upgrade-information">
+<h2>Upgrade Information<a class="headerlink" href="#upgrade-information" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allowed-hosts">
+<h3>Allowed Hosts<a class="headerlink" href="#allowed-hosts" title="Permalink to this headline">¶</a></h3>
+<p>For production deployments of Horizon you must add the <code class="docutils literal"><span class="pre">ALLOWED_HOSTS</span></code>
+setting to your <code class="docutils literal"><span class="pre">local_settings.py</span></code> file. This setting
+was added in Django 1.5 and is an important security feature. For more
+information on it please consult the <code class="docutils literal"><span class="pre">local_settings.py.example</span></code> file
+or Django&#8217;s documentation.</p>
+</div>
+<div class="section" id="enabling-keystone-and-neutron-features">
+<h3>Enabling Keystone and Neutron Features<a class="headerlink" href="#enabling-keystone-and-neutron-features" title="Permalink to this headline">¶</a></h3>
+<p>If you have existing configurations for the <code class="docutils literal"><span class="pre">OPENSTACK_KEYSTONE_BACKEND</span></code>
+or <code class="docutils literal"><span class="pre">OPENSTACK_NEUTRON_NETWORK</span></code> settings, you will want to consult the
+<code class="docutils literal"><span class="pre">local_settings.example.py</span></code> file for information on the new options that
+have been added. Existing configurations will continue to work, but may not
+have the correct keys to enable some of the new features in Havana.</p>
+</div>
+</div>
+<div class="section" id="known-issues-and-limitations">
+<h2>Known Issues and Limitations<a class="headerlink" href="#known-issues-and-limitations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="session-creation-and-health-checks">
+<h3>Session Creation and Health Checks<a class="headerlink" href="#session-creation-and-health-checks" title="Permalink to this headline">¶</a></h3>
+<p>If you use a health monitoring service that pings the home page combined with
+a database-backed session backend you may experience excessive session creation.
+This issue is slated to be fixed soon, but in the interim the recommended
+solution is to write a periodic job that deletes expired sessions from your
+session store on a regular basis.</p>
+</div>
+<div class="section" id="deleting-large-numbers-of-resources-simultaneously">
+<h3>Deleting large numbers of resources simultaneously<a class="headerlink" href="#deleting-large-numbers-of-resources-simultaneously" title="Permalink to this headline">¶</a></h3>
+<p>Using the &#8220;select all&#8221; checkbox to delete large numbers of resources at once
+can cause network timeouts (depending on configuration). This is due to the
+underlying APIs not supporting bulk-deletion natively, and consequently Horizon
+has to send requests to delete each resource individually behind the scenes.</p>
+</div>
+<div class="section" id="conflicting-security-group-names-with-neutron">
+<h3>Conflicting Security Group Names With Neutron<a class="headerlink" href="#conflicting-security-group-names-with-neutron" title="Permalink to this headline">¶</a></h3>
+<p>Whereas Nova Network uses only the name of a security group when specifying
+security groups at instance launch time, Neutron can accept either a name or
+a UUID. In order to support both, Horizon passes in the name of the selected
+security groups. However, due to some data-isolation issues in Neutron there is
+an issue that can arise if an admin user tries to specify a security group with
+the same name as another security group in a different project which they also
+have access to. Neutron will find multiple matches for the security group
+name and will fail to launch the instance. The current workaround is to treat
+security group names as unique for admin users.</p>
+</div>
+</div>
+<div class="section" id="backwards-compatibility">
+<h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>The Havana Horizon release should be fully compatible with both Havana and
+Grizzly versions of the rest of the OpenStack integrated projects (Nova, Swift,
+etc.). New features in other OpenStack projects which did not exist in Grizzly
+will obviously only work in Horizon if the rest of the stack supports them as
+well.</p>
+<p>Overall, great effort has been made to maintain compatibility for
+third-party developers who have built on Horizon so far.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Havana Series Release Notes</a><ul>
+<li><a class="reference internal" href="#release-overview">Release Overview</a></li>
+<li><a class="reference internal" href="#highlights">Highlights</a><ul>
+<li><a class="reference internal" href="#new-features">New Features</a><ul>
+<li><a class="reference internal" href="#heat">Heat</a></li>
+<li><a class="reference internal" href="#ceilometer">Ceilometer</a></li>
+<li><a class="reference internal" href="#domains-groups-and-more-keystone-v3-api-support">Domains, Groups, and More: Keystone v3 API Support</a></li>
+<li><a class="reference internal" href="#trove-databases">Trove Databases</a></li>
+<li><a class="reference internal" href="#nova-features">Nova Features</a></li>
+<li><a class="reference internal" href="#neutron-features">Neutron Features</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-experience-improvements">User Experience Improvements</a><ul>
+<li><a class="reference internal" href="#self-service-password-change">Self-Service Password Change</a></li>
+<li><a class="reference internal" href="#better-admin-information-architecture">Better Admin Information Architecture</a></li>
+<li><a class="reference internal" href="#improved-messaging-to-users-on-logout">Improved Messaging To Users On Logout</a></li>
+<li><a class="reference internal" href="#security-group-rule-templates">Security Group Rule Templates</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#community">Community</a><ul>
+<li><a class="reference internal" href="#translation-team">Translation Team</a></li>
+<li><a class="reference internal" href="#user-experience-group">User Experience Group</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#under-the-hood">Under The Hood</a><ul>
+<li><a class="reference internal" href="#less-complicated-less-compilation-no-more-nodejs">Less Complicated LESS Compilation: No More NodeJS</a></li>
+<li><a class="reference internal" href="#role-based-access-controls">Role-Based Access Controls</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-improvements-and-fixes">Other Improvements and Fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrade-information">Upgrade Information</a><ul>
+<li><a class="reference internal" href="#allowed-hosts">Allowed Hosts</a></li>
+<li><a class="reference internal" href="#enabling-keystone-and-neutron-features">Enabling Keystone and Neutron Features</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues-and-limitations">Known Issues and Limitations</a><ul>
+<li><a class="reference internal" href="#session-creation-and-health-checks">Session Creation and Health Checks</a></li>
+<li><a class="reference internal" href="#deleting-large-numbers-of-resources-simultaneously">Deleting large numbers of resources simultaneously</a></li>
+<li><a class="reference internal" href="#conflicting-security-group-names-with-neutron">Conflicting Security Group Names With Neutron</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backwards-compatibility">Backwards Compatibility</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="icehouse.html"
+                                  title="previous chapter">Icehouse Series Release Notes</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="grizzly.html"
+                                  title="next chapter">Grizzly Series Release Notes</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/havana.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="grizzly.html" title="Grizzly Series Release Notes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="icehouse.html" title="Icehouse Series Release Notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

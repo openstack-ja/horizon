@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Folsom Series Release Notes &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 documentation" href="index.html" />
+    <link rel="next" title="Essex Series Release Notes" href="essex.html" />
+    <link rel="prev" title="Grizzly Series Release Notes" href="grizzly.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="folsom-series-release-notes">
+<h1>Folsom Series Release Notes<a class="headerlink" href="#folsom-series-release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="release-overview">
+<h2>Release Overview<a class="headerlink" href="#release-overview" title="Permalink to this headline">¶</a></h2>
+<p>The Folsom release cycle brought several major advances to Horizon&#8217;s user
+experience while also reintroducing Quantum networking as a core piece
+of the OpenStack Dashboard.</p>
+</div>
+<div class="section" id="highlights">
+<h2>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="networking-quantum">
+<h3>Networking (Quantum)<a class="headerlink" href="#networking-quantum" title="Permalink to this headline">¶</a></h3>
+<p>With Quantum being a core project for the Folsom release, we worked closely
+with the Quantum team to bring networking support back into Horizon. This
+appears in two primary places: the Networks panel in both the Project and
+Admin dashboards, and the Network tab in the Launch Instance workflow. Expect
+further improvements in these areas as Quantum continues to mature and more
+users adopt this model of virtual network management.</p>
+</div>
+<div class="section" id="user-experience">
+<h3>User Experience<a class="headerlink" href="#user-experience" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="workflows">
+<h4>Workflows<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h4>
+<p>By far the biggest UI/UX change in the Folsom release is the introduction of
+programmatic workflows. These components allow developers to create concise
+interactions that combine discrete tasks spanning multiple services and
+resources in a user-friendly way and with minimal boilerplate code. Within
+a workflow, related objects can also be dynamically created so users don&#8217;t lose
+their place when they realize the item they wanted isn&#8217;t currently available.
+Look for examples of these workflows in Launch Instance, Associate Floating IP,
+and Create/Edit Project.</p>
+</div>
+<div class="section" id="resource-browser">
+<h4>Resource Browser<a class="headerlink" href="#resource-browser" title="Permalink to this headline">¶</a></h4>
+<p>Another cool new component is an interface designed for &#8220;browsing&#8221; resources
+which are nested under a parent resource. The object store (Swift) is a prime
+example of this. Now there is a consistent top-level navigation for containers
+on the left-hand pane of the &#8220;browser&#8221; while the right-hand pane lets you
+explore within those containers and sub-folders.</p>
+</div>
+</div>
+<div class="section" id="user-experience-improvements">
+<h3>User Experience Improvements<a class="headerlink" href="#user-experience-improvements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Timezone support is now enabled. You can select your preferred timezone
+in the User Settings panel.</li>
+</ul>
+</div>
+<div class="section" id="community">
+<h3>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Third-party developers who wish to build on Horizon can get started much
+faster using the new dashboard and panel templates. See the docs on
+<a class="reference external" href="http://docs.openstack.org/developer/horizon/topics/tutorial.html#creating-a-dashboard">creating a dashboard</a> and <a class="reference external" href="http://docs.openstack.org/developer/horizon/topics/tutorial.html#creating-a-panel">creating a panel</a> for more information.</li>
+<li>A <a class="reference external" href="http://wiki.openstack.org/Translations">thorough set of documentation</a> for developers on how to go about
+internationalizing, localizing and translating OpenStack projects
+is now available.</li>
+</ul>
+</div>
+<div class="section" id="under-the-hood">
+<h3>Under The Hood<a class="headerlink" href="#under-the-hood" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The python-swiftclient library and python-cinderclient libraries are now
+used under the hood instead of cloudfiles and python-novaclient respectively.</li>
+<li>Internationalization of client-side JavaScript is now possible in addition
+to server-side Python code.</li>
+<li>Keystone authentication is now handled by a proper pluggable Django
+authentication backend, offering significantly better and more reliable
+security for Horizon.</li>
+</ul>
+</div>
+<div class="section" id="other-improvements-and-fixes">
+<h3>Other Improvements and Fixes<a class="headerlink" href="#other-improvements-and-fixes" title="Permalink to this headline">¶</a></h3>
+<p>Some of the general areas of improvement include:</p>
+<ul class="simple">
+<li>Images can now be added to Glance by providing a URL for Glance to download
+the image data from.</li>
+<li>Quotas are now displayed dynamically throughout the Project dashboard.</li>
+<li>API endpoints are now displayed on the OpenStack RC File panel so they
+can be organically discovered by an end-user.</li>
+<li>DataTables now support a summation row at the bottom of the table.</li>
+<li>Better cross-browser support (Safari and IE particularly).</li>
+<li>Fewer API calls to OpenStack endpoints (improves performance).</li>
+<li>Better validation of what actions are permitted when.</li>
+<li>Improved error handling and error messages.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="known-issues-and-limitations">
+<h2>Known Issues and Limitations<a class="headerlink" href="#known-issues-and-limitations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="floating-ips-and-quantum">
+<h3>Floating IPs and Quantum<a class="headerlink" href="#floating-ips-and-quantum" title="Permalink to this headline">¶</a></h3>
+<p>Due to the very late addition of floating IP support in Quantum, Nova&#8217;s
+integration there is lacking, so floating IP-related API calls to Nova will
+fail when your OpenStack deployment uses Quantum for networking. This means
+that Horizon actions such as &#8220;allocate&#8221; and &#8220;associate&#8221; floating IPs will
+not work either since they rely on the underlying APIs.</p>
+</div>
+<div class="section" id="pagination">
+<h3>Pagination<a class="headerlink" href="#pagination" title="Permalink to this headline">¶</a></h3>
+<p>A number of the &#8220;index&#8221; pages don&#8217;t fully work with API pagination yet,
+causing them to only display the first chunk of results returned by the API.
+This number is often 1000 (as in the case of novaclient results), but does vary
+somewhat.</p>
+</div>
+<div class="section" id="deleting-large-numbers-of-resources-simultaneously">
+<h3>Deleting large numbers of resources simultaneously<a class="headerlink" href="#deleting-large-numbers-of-resources-simultaneously" title="Permalink to this headline">¶</a></h3>
+<p>Using the &#8220;select all&#8221; checkbox to delete large numbers of resources via the
+API can cause network timeouts (depending on configuration). This is
+due to the APIs not supporting bulk-deletion natively, and consequently Horizon
+has to send requests to delete each resource individually behind the scenes.</p>
+</div>
+</div>
+<div class="section" id="backwards-compatibility">
+<h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>The Folsom Horizon release should be fully-compatible with both Folsom and
+Essex versions of the rest of the OpenStack core projects (Nova, Swift, etc.).
+While some features work significantly better with an all-Folsom stack due
+to bugfixes, etc. in underlying services, there should not be any limitations
+on what will or will not function. (Note: Quantum was not a core OpenStack
+project in Essex, and thus this statement does not apply to network management.)</p>
+<p>In terms of APIs provided for extending Horizon, there are a handful of
+backwards-incompatible changes that were made:</p>
+<ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">can_haz</span></code> and <code class="docutils literal"><span class="pre">can_haz_list</span></code> template filters have been renamed
+to <code class="docutils literal"><span class="pre">has_permissions</span></code> and <code class="docutils literal"><span class="pre">has_permissions_on_list</span></code> respectively.</li>
+<li>The dashboard-specific <code class="docutils literal"><span class="pre">base.html</span></code> templates (e.g. <code class="docutils literal"><span class="pre">nova/base.html</span></code>,
+<code class="docutils literal"><span class="pre">syspanel/base.html</span></code>, etc.) have been removed in favor of a single
+<code class="docutils literal"><span class="pre">base.html</span></code> template.</li>
+<li>In conjunction with the previous item, the dashboard-specific template blocks
+(e.g. <code class="docutils literal"><span class="pre">nova_main</span></code>, <code class="docutils literal"><span class="pre">syspanel_main</span></code>, etc.) have been removed in favor of
+a single <code class="docutils literal"><span class="pre">main</span></code> template block.</li>
+</ul>
+<p>Overall, though, great effort has been made to maintain compatibility for
+third-party developers who may have built on Horizon so far.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Folsom Series Release Notes</a><ul>
+<li><a class="reference internal" href="#release-overview">Release Overview</a></li>
+<li><a class="reference internal" href="#highlights">Highlights</a><ul>
+<li><a class="reference internal" href="#networking-quantum">Networking (Quantum)</a></li>
+<li><a class="reference internal" href="#user-experience">User Experience</a><ul>
+<li><a class="reference internal" href="#workflows">Workflows</a></li>
+<li><a class="reference internal" href="#resource-browser">Resource Browser</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-experience-improvements">User Experience Improvements</a></li>
+<li><a class="reference internal" href="#community">Community</a></li>
+<li><a class="reference internal" href="#under-the-hood">Under The Hood</a></li>
+<li><a class="reference internal" href="#other-improvements-and-fixes">Other Improvements and Fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues-and-limitations">Known Issues and Limitations</a><ul>
+<li><a class="reference internal" href="#floating-ips-and-quantum">Floating IPs and Quantum</a></li>
+<li><a class="reference internal" href="#pagination">Pagination</a></li>
+<li><a class="reference internal" href="#deleting-large-numbers-of-resources-simultaneously">Deleting large numbers of resources simultaneously</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backwards-compatibility">Backwards Compatibility</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="grizzly.html"
+                                  title="previous chapter">Grizzly Series Release Notes</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="essex.html"
+                                  title="next chapter">Essex Series Release Notes</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/folsom.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="essex.html" title="Essex Series Release Notes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="grizzly.html" title="Grizzly Series Release Notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

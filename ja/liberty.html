@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Liberty バージョンのリリースノート &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント" href="index.html" />
+    <link rel="next" title="Kilo バージョンのリリースノート" href="kilo.html" />
+    <link rel="prev" title="Mitaka バージョンのリリースノート" href="mitaka.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="liberty-series-release-notes">
+<h1>Liberty バージョンのリリースノート<a class="headerlink" href="#liberty-series-release-notes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>8.0.1<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ボリュームのマイグレーションがサポートされるようになりました。</p>
+<p>イメージメタデータのエディタが更新されました。</p>
+<p>Heat トポロジーの改善</p>
+<p>WebSSO サポートが改善されました。</p>
+<p>新しいネットワークトポロジーパネル。サブネット割り当てのサポートが追加されました。</p>
+<p>JavaScript 、 SCSS 、および Django テンプレートのプラグインサポートを拡大しました。</p>
+<p>インスタンスの退避と復元がサポートされるようになりました。</p>
+<p>シェルジョブタイプのためのサポートと複数の Sahara の改善が追加されました。</p>
+<p>新しい Trove の機能が追加されました。</p>
+<p>Django 1.8 が新たにサポートされました。サポートするバージョンは Django 1.7 以降になります。</p>
+<div class="section" id="new-features">
+<h3>新機能<a class="headerlink" href="#new-features" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p class="first">ボリュームのマイグレーションがサポートされました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/volume-migration">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">ボリューム種別が編集できるようになり、説明フィールドが含まれました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/volume-type-descriptio">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">メタデータエディターは AngularJS で更新されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/angularize-metadata-update-modals">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">コンピュートイメージのメタデータは、新しいメタデータエディタを使って、プロジェクトダッシュボードから編集できるようになりました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/project-images-metadata">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">Heat トポロジーを改善し、以前はアイコンがなかったり、未知として表示されていたリソースが識別可能になりました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/heat-topology-display-improvement">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">認証プロバイダとプロトコル特定 WebSSO のマッピングが追加されました。</p>
+</li>
+<li><p class="first">設定可能なトークンハッシュは、 OpenStack サービスに渡されたトークンを Horizon でハッシュできないようにします。</p>
+</li>
+<li><p class="first">サブネットツールによるサブネット割り当てのためのサポートが追加されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/neutron-subnet-allocation">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">LBaaS VIP を簡単に floating IP に割り当てるアクションが追加されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/lbaas-vip-fip-associate">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">ネットワークトポロジーダイアグラムは、折りたたみ可能なネットワークを含むインタラクティブなグラフに置き換えられ、大規模な構成ではるかに優れた表示が行われます。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/curvature-network-topology">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">プラグインが改善し、 Horizon はインクルードする JavaScript ファイルを自動的に探索し、 SCSS と Django テンプレートをオーバーライドするプラグイン可能なメカニズムを持っています。</p>
+</li>
+<li><p class="first">シンプルなツールによる AngularJS における翻訳を完全にサポートしました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/angular-translate-makemessages">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">JavaScript のテストのために Karma が追加されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/karma">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">eslint-config-openstack 規則を使用した、JavaScriptのリンティングための ESLint が追加されました。 詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/jscs-cleanup">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">Horizon は既存の Django テンプレートの上書きをサポートするようになりました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/horizon-theme-templates">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">JavaScript ファイルは自動的にインクルードされます。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/auto-js-file-finding">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">インスタンスの退避と復旧のサポート。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/horizon-shelving-command">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">v1 に後退できないときのv2 ブロックデバイスマッピングのサポート。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/horizon-block-device-mapping-v2">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">ジョブインターフェイスマップが統一されました。これは、ジョブが必要または受け付ける設定データを渡すための、人間が読める方法です。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/unified-job-interface-map-ui">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">ジョブバイナリのための編集機能が追加されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/allow-editing-of-job-binaries">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">データソースのための編集機能が追加されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/allow-editing-of-data-sources">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">ジョブテンプレートのための編集機能が追加されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/data-processing-edit-templates">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">クラスターのイベントログを出力します。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/sahara-event-log">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">シェルジョブタイプのためのサポートが追加されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/sahara-shell-action-form">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">データベースクラスタの作成、および管理の最初のサポートが追加されました。現在、 Vertica と Mongo DB がサポートされています。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/database-clustering-support">こちら</a> を参照してください。</p>
+</li>
+</ul>
+</div>
+<div class="section" id="upgrade-notes">
+<h3>アップグレード時の注意<a class="headerlink" href="#upgrade-notes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p class="first">Django 1.8 が新たにサポートされ、サポートするバージョンは Django 1.7 以降になりました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/drop-django14-support">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">データベースバックエンドのセッションは、おそらく、それらの構造の変化によって、アップグレード後まで保存されません。詳細は <a class="reference external" href="https://github.com/openstack/django_openstack_auth/commit/8c64de92f4148d85704b10ea1f7bc441db2ddfee">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">Horizon は、もはや QUnit をテストにしようしておらず、要件から削除されました。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/replace-qunit-tests-with-jasmine">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">Horizon は複数の設定オプション、デフォルトのWeb URL （`` WEBROOT``）、静的ファイルの場所（`` STATIC_ROOT``）、および静的ファイルの URL （`` STATIC_URL``）を設定ファイル内に持っています。</p>
+</li>
+<li><p class="first">テーマの場所が <code class="docutils literal"><span class="pre">openstack_dashboard/static/themes</span></code> から <code class="docutils literal"><span class="pre">openstack_dashboard/themes</span></code> に移動されました。パスをこれに応じて更新する必要があります。また、 Horizon は Bootstrap のマークアップに倣っており、テーマはこのイデオロギーを中心にして構築されるべきです。詳細は、トップバーとサイドナビゲーションを参照してください。</p>
+</li>
+<li><p class="first">廃止予定だった <code class="docutils literal"><span class="pre">OPENSTACK_QUANTUM_NETWORK</span></code> 設定オプションは削除されました。まだ使用したい場合は、<code class="docutils literal"><span class="pre">OPENSTACK_NEUTRON_NETWORK</span></code> に書き換える必要があります。</p>
+</li>
+<li><p class="first">設定に <code class="docutils literal"><span class="pre">OPENSTACK_NOVA_EXTENSIONS_BLACKLIST</span></code> があり、性能面の理由で選択された拡張が無効化されます。詳細は <a class="reference external" href="https://github.com/openstack/horizon/commit/18f4b752b8653c9389f8b0471eccaa0659707ebe">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">Trove と Sahara のパネルが <code class="docutils literal"><span class="pre">openstack_dashboard/contrib</span></code> にあります。主にこれらのサービスチームによって提供されるレビューを分離するためです。将来的に、これらのパネルは Horizon で維持されるず、プラグインとなります。詳細は <a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/plugin-sanity">こちら</a> を参照してください。</p>
+</li>
+<li><p class="first">Horizon は、 Cinder のエンドポイントを、たとえ V2 しか使っていなくても、 <code class="docutils literal"><span class="pre">volume</span></code> と <code class="docutils literal"><span class="pre">volumev2</span></code> の両方を必要とします。</p>
+</li>
+<li><p class="first">多くの JavaScript ファイルとベースページテンプレート（<code class="docutils literal"><span class="pre">horizon/template/base.html</span></code>）は、リポジトリのフレームワーク部分（`` horizon``）からアプリケーション側（`` openstack_dashboard``）に移動し、アプリケーションからより良くフレームワークを分離します。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">目次</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Liberty バージョンのリリースノート</a><ul>
+<li><a class="reference internal" href="#id1">8.0.1</a><ul>
+<li><a class="reference internal" href="#new-features">新機能</a></li>
+<li><a class="reference internal" href="#upgrade-notes">アップグレード時の注意</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h4>前のトピックへ</h4>
+            <p class="topless"><a href="mitaka.html"
+                                  title="前の章へ">Mitaka バージョンのリリースノート</a></p>
+            <h4>次のトピックへ</h4>
+            <p class="topless"><a href="kilo.html"
+                                  title="次の章へ">Kilo バージョンのリリースノート</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>このページ</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/liberty.txt"
+                     rel="nofollow">ソースコードを表示</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>クイック検索</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="検索" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              モジュール、クラス、または関数名を入力してください
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="kilo.html" title="Kilo バージョンのリリースノート"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="mitaka.html" title="Mitaka バージョンのリリースノート"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6 で生成しました。
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

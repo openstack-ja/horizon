@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Kilo Series Release Notes &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 documentation" href="index.html" />
+    <link rel="next" title="Juno Series Release Notes" href="juno.html" />
+    <link rel="prev" title="Liberty Series Release Notes" href="liberty.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="kilo-series-release-notes">
+<h1>Kilo Series Release Notes<a class="headerlink" href="#kilo-series-release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="key-new-features">
+<h2>Key New Features<a class="headerlink" href="#key-new-features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Support for Federated authentication via Web Single-Sign-On &#8211; When
+configured in keystone, the user will be able to choose the authentication
+mechanism to use from those support by the deployment. This feature must be
+enabled by changes to local_settings.py to be utilized. The related settings
+to enable and configure can be found <a class="reference external" href="http://docs.openstack.org/developer/horizon/topics/settings.html#websso-enabled">here</a>.</li>
+<li>Support for Theming &#8211; A simpler mechanism to specify a custom theme for
+Horizon has been included. Allowing for use of CSS values for Bootstrap and
+Horizon variables, as well as the inclusion of custom CSS. More details
+available <a class="reference external" href="http://docs.openstack.org/developer/horizon/topics/settings.html#custom-theme-path">here</a></li>
+<li>Sahara UX Improvements &#8211; Dramatic improvements to the Sahara user experience
+have been made with the addition of guided cluster creation and guided job
+creation pages.</li>
+<li>Launch Instance Wizard (beta) &#8211; A full replacement for the launch instance
+workflow has been implemented in AngularJS to address usability issues in the
+existing launch instance workflow. Due to the late inclusion date and limited
+testing, this feature is marked as beta for Kilo and not enabled by default.
+To use the new workflow, the following change to local_settings.py is required:
+<code class="docutils literal"><span class="pre">LAUNCH_INSTANCE_NG_ENABLED</span> <span class="pre">=</span> <span class="pre">True</span></code>. Additionally, you can disable the
+default launch instance wizard with the following:
+<code class="docutils literal"><span class="pre">LAUNCH_INSTANCE_LEGACY_ENABLED</span> <span class="pre">=</span> <span class="pre">False</span></code>. This new work is a view into
+future development in Horizon.</li>
+<li>Nova<ul>
+<li>Allow service disable/enable on Hypervisor</li>
+<li>Migrate all instances from host</li>
+<li>Expose serial console</li>
+</ul>
+</li>
+<li>Cinder<ul>
+<li>Cinder v2 by default</li>
+<li>Managed/Unmanaged volume support &#8211; allows admin to manage existing
+volumes not managed by cinder, as well as unmanage volumes</li>
+<li>Volume transfer support between projects</li>
+<li>Volume encryption metadata support</li>
+</ul>
+</li>
+<li>Glance<ul>
+<li>View added to allow administrators to view/add/update Glance Metadata
+definitions</li>
+</ul>
+</li>
+<li>Heat<ul>
+<li>Stack Template view</li>
+<li>Orchestration Resources Panel</li>
+<li>Suspend/Resume actions for Stacks</li>
+<li>Preview Stack view allows users to preview stacks specified in templates
+before creating them.</li>
+</ul>
+</li>
+<li>Trove<ul>
+<li>Resizing of Trove instances &#8211; changing instance flavor</li>
+</ul>
+</li>
+<li>Ceilometer<ul>
+<li>Display IPMI meters values from Ceilometer</li>
+</ul>
+</li>
+<li>New Reusable AngularJS widgets in Horizon:<ul>
+<li>AngularJS table implementation<ul>
+<li>Table drawers &#8211; expandable table content</li>
+<li>Improved client/server search</li>
+</ul>
+</li>
+<li>Transfer table widget</li>
+</ul>
+</li>
+<li>Configurable web root for Horizon beyond just &#8216;/&#8217;</li>
+</ul>
+</div>
+<div class="section" id="known-issues">
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Volumes created from snapshots are empty - <a class="reference external" href="https://bugs.launchpad.net/horizon/+bug/1447288">https://bugs.launchpad.net/horizon/+bug/1447288</a></li>
+<li>Django 1.8 is not fully supported yet.</li>
+</ul>
+</div>
+<div class="section" id="upgrade-notes">
+<h2>Upgrade Notes<a class="headerlink" href="#upgrade-notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Django 1.7 is now supported.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Kilo Series Release Notes</a><ul>
+<li><a class="reference internal" href="#key-new-features">Key New Features</a></li>
+<li><a class="reference internal" href="#known-issues">Known Issues</a></li>
+<li><a class="reference internal" href="#upgrade-notes">Upgrade Notes</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="liberty.html"
+                                  title="previous chapter">Liberty Series Release Notes</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="juno.html"
+                                  title="next chapter">Juno Series Release Notes</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/kilo.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="juno.html" title="Juno Series Release Notes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="liberty.html" title="Liberty Series Release Notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

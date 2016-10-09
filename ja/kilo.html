@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Kilo バージョンのリリースノート &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント" href="index.html" />
+    <link rel="next" title="Juno バージョンのリリースノート" href="juno.html" />
+    <link rel="prev" title="Liberty バージョンのリリースノート" href="liberty.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="kilo-series-release-notes">
+<h1>Kilo バージョンのリリースノート<a class="headerlink" href="#kilo-series-release-notes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="key-new-features">
+<h2>主要な新機能<a class="headerlink" href="#key-new-features" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Webシングルサインオン経由での認証連携に対応しました。 keystone で設定した場合、ユーザーは OpenStack 環境が対応している認証機構から 1 つを選択できるようになります。この機能を使うためには、local_settings.py を変更して機能を有効にしなければなりません。この機能に関連する設定は <a class="reference external" href="http://docs.openstack.org/developer/horizon/topics/settings.html#websso-enabled">こちら</a> にあります。</p>
+</li>
+<li><p class="first">テーマに対応しました。 Horizon でカスタマイズテーマを指定する、より簡単な機構が追加されました。カスタム CSS をインクルードするだけでなく、 Bootstrap の CSS 値と Horizon 変数の使用もできます。詳細は <a class="reference external" href="http://docs.openstack.org/developer/horizon/topics/settings.html#custom-theme-path">こちら</a> を参照して下さい。</p>
+</li>
+<li><p class="first">Sahara ユーザーインターフェースの改善 &#8211; 追加のガイド付きクラスター作成とガイド付きジョブ作成ページにより、Sahara のユーザーインターフェースの利便性が劇的に改善しました。</p>
+</li>
+<li><p class="first">インスタンス作成ウィザード (ベータ版) &#8211; 既存のインスタンス作成ワークフローにおける利便性の問題を解決するため、インスタンス作成ワークフローが AngularJS で完全に再実装されました。機能の導入が遅かったこと、限られたテストしか行われていないため、この機能は Kilo ではベータ版とされ、デフォルトでは有効になっていません。新しいワークフローを使用するためには、local_settings.py で <code class="docutils literal"><span class="pre">LAUNCH_INSTANCE_NG_ENABLED</span> <span class="pre">=</span> <span class="pre">True</span></code> を設定する必要があります。また、 <code class="docutils literal"><span class="pre">LAUNCH_INSTANCE_LEGACY_ENABLED</span> <span class="pre">=</span> <span class="pre">False</span></code> でデフォルトのインスタンス作成ウィザードを無効化します。この新機能は、Horizon の開発の将来像となるでしょう。</p>
+</li>
+<li>Nova<ul>
+<li><p class="first">ハイパーバイザー上のサービスの有効可、無効化に対応</p>
+</li>
+<li><p class="first">あるホストからの全インスタンスのマイグレーションに対応</p>
+</li>
+<li><p class="first">シリアルコンソールの公開</p>
+</li>
+</ul>
+</li>
+<li>Cinder<ul>
+<li><p class="first">Cinder v2 API がデフォルトになりました</p>
+</li>
+<li><p class="first">ボリュームの管理/非管理に対応 &#8211; 管理者が cinder の管理対象外の既存のボリュームを cinder の管理対象にしたり、逆に管理対象外にしたりできます</p>
+</li>
+<li><p class="first">プロジェクト間のボリュームの譲渡に対応</p>
+</li>
+<li><p class="first">ボリューム暗号化メタデータに対応</p>
+</li>
+</ul>
+</li>
+<li>Glance<ul>
+<li><p class="first">管理者が Glance メタデータ定義の参照/追加/変更を行うビューが追加</p>
+</li>
+</ul>
+</li>
+<li>Heat<ul>
+<li><p class="first">スタックテンプレートのビューが追加</p>
+</li>
+<li><p class="first">オーケストレーションリソースのパネルが追加</p>
+</li>
+<li><p class="first">スタックの休止/再開アクションが追加</p>
+</li>
+<li><p class="first">スタックのプレビューのビューが追加され、ユーザーがスタックの作成前にテンプレートで指定されたスタックをプレビューできるようになりました</p>
+</li>
+</ul>
+</li>
+<li>Trove<ul>
+<li><p class="first">Trove インスタンスのリサイズ &#8211; インスタンスのフレーバーの変更</p>
+</li>
+</ul>
+</li>
+<li>Ceilometer<ul>
+<li><p class="first">Ceilometer からの IPMI メーター値の表示</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horizon における新しい再利用可能な AngularJS ウィジェット:</p>
+<ul>
+<li><p class="first">AngularJS でのテーブルの実装</p>
+<ul>
+<li><p class="first">テーブル描画機能 &#8211; 拡張可能なテーブルコンテンツ</p>
+</li>
+<li><p class="first">クライアント側／サーバー側での検索の改良</p>
+</li>
+</ul>
+</li>
+<li><p class="first">テーブルウィジェットの転送</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horizon のトップ階層を &#8216;/&#8217; 以外に変更可能になりました</p>
+</li>
+</ul>
+</div>
+<div class="section" id="known-issues">
+<h2>既知の問題<a class="headerlink" href="#known-issues" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p class="first">スナップショットから作成されたボリュームが空になる -  <a class="reference external" href="https://bugs.launchpad.net/horizon/+bug/1447288">https://bugs.launchpad.net/horizon/+bug/1447288</a></p>
+</li>
+<li><p class="first">Django 1.8 は完全には対応していません。</p>
+</li>
+</ul>
+</div>
+<div class="section" id="upgrade-notes">
+<h2>アップグレード時の注意<a class="headerlink" href="#upgrade-notes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Django 1.7 に対応しました。</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">目次</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Kilo バージョンのリリースノート</a><ul>
+<li><a class="reference internal" href="#key-new-features">主要な新機能</a></li>
+<li><a class="reference internal" href="#known-issues">既知の問題</a></li>
+<li><a class="reference internal" href="#upgrade-notes">アップグレード時の注意</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>前のトピックへ</h4>
+            <p class="topless"><a href="liberty.html"
+                                  title="前の章へ">Liberty バージョンのリリースノート</a></p>
+            <h4>次のトピックへ</h4>
+            <p class="topless"><a href="juno.html"
+                                  title="次の章へ">Juno バージョンのリリースノート</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>このページ</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/kilo.txt"
+                     rel="nofollow">ソースコードを表示</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>クイック検索</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="検索" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              モジュール、クラス、または関数名を入力してください
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="juno.html" title="Juno バージョンのリリースノート"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="liberty.html" title="Liberty バージョンのリリースノート"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6 で生成しました。
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

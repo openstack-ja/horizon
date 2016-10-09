@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Essex シリーズの Release Notes &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント" href="index.html" />
+    <link rel="prev" title="Folsom バージョンのリリースノート" href="folsom.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="essex-series-release-notes">
+<h1>Essex シリーズの Release Notes<a class="headerlink" href="#essex-series-release-notes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="release-overview">
+<h2>リリースの概要<a class="headerlink" href="#release-overview" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>During the Essex release cycle, Horizon underwent a significant set of internal
+changes to allow extensibility and customization while also adding a significant
+number of new features and bringing much greater stability to every interaction
+with the underlying components.</p>
+</div>
+<div class="section" id="highlights">
+<h2>ハイライト<a class="headerlink" href="#highlights" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="extensibility">
+<h3>拡張性<a class="headerlink" href="#extensibility" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Making Horizon extensible for third-party developers was one of the core
+goals for the Essex release cycle. Massive strides have been made to allow
+for the addition of new &#8220;plug-in&#8221; components and customization of OpenStack
+Dashboard deployments.</p>
+<p>To support this extensibility, all the components used to build on Horizon&#8217;s
+interface are now modular and reusable. Horizon&#8217;s own dashboards use these
+components, and they have all been built with third-party developers in mind.
+Some of the main components are listed below.</p>
+<div class="section" id="dashboards-and-panels">
+<h4>ダッシュボードとパネル<a class="headerlink" href="#dashboards-and-panels" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Horizon&#8217;s structure has been divided into logical groupings called dashboards
+and panels. Horizon&#8217;s classes representing these concepts handle all the
+structural concerns associated with building a complete user interface
+(navigation, access control, url structure, etc.).</p>
+</div>
+<div class="section" id="data-tables">
+<h4>データテーブル<a class="headerlink" href="#data-tables" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>One of the most common activities in a dashboard user interface is simply
+displaying a list of resources or data and allowing the user to take actions on
+that data. To this end, Horizon abstracted the commonalities of this task into a
+reusable set of classes which allow developers to programmatically create
+displays and interactions for their data with minimal effort and zero
+boilerplate.</p>
+</div>
+<div class="section" id="tabs-and-tabgroups">
+<h4>タブとタブグループ<a class="headerlink" href="#tabs-and-tabgroups" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Another extremely common user-interface element is the use of &#8220;tabs&#8221; to break
+down discrete groups of data into manageable chunks. Since these tabs often
+encompass vastly different data, may have completely different access
+restrictions, and may sometimes be better-off being loaded dynamically rather
+than with the initial page load, Horizon includes tab and tab group classes for
+constructing these interfaces elegantly and with no knowledge of the HTML, CSS
+or JavaScript involved.</p>
+</div>
+</div>
+<div class="section" id="nova-features">
+<h3>Nova の機能<a class="headerlink" href="#nova-features" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Essex では、Nova の機能のサポートが大幅に向上しました。</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Nova ボリュームでサポートされる機能には、以下が含まれます。</dt>
+<dd><ul class="first last simple">
+<li><p class="first">ボリュームの作成と管理</p>
+</li>
+<li><p class="first">ボリュームスナップショット</p>
+</li>
+<li><p class="first">遷移の状態にあるボリュームのリアルタイム AJAX 更新</p>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Nova インスタンスの表示と対話が向上しました。これには、以下が含まれます。</dt>
+<dd><ul class="first last simple">
+<li><p class="first">ボリュームからのインスタンスの起動</p>
+</li>
+<li><p class="first">インスタンスの一時停止とサスペンド</p>
+</li>
+<li><p class="first">インスタンスの電源状態の表示</p>
+</li>
+<li><p class="first">遷移の状態にあるインスタンスのリアルタイム AJAX の更新</p>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Floating IP アドレスプールの管理のサポート</p>
+</li>
+<li><p class="first">新規インスタンスおよびボリュームの詳細の表示</p>
+</li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>設定<a class="headerlink" href="#settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>以下のような役立つ機能を提供する新しい「設定」のセクションが追加されました。</p>
+<ul class="simple">
+<li><p class="first">EC2 認証情報のダウンロード</p>
+</li>
+<li><p class="first">OpenStack RC ファイルのダウンロード</p>
+</li>
+<li><p class="first">ユーザーによる言語設定のカスタマイズ</p>
+</li>
+</ul>
+</div>
+<div class="section" id="user-experience-improvements">
+<h3>ユーザーエクスペリエンスの改善<a class="headerlink" href="#user-experience-improvements" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p class="first">複数のリソースに対するバッチアクションのサポート (例: 複数のインスタンスを一度に削除するなど)</p>
+</li>
+<li><p class="first">UI 全体にわたるモダールインタラクション</p>
+</li>
+<li>AJAX form submission for in-place validation.</li>
+<li>Improved in-context help for forms (tooltips and validation messages).</li>
+</ul>
+</div>
+<div class="section" id="community">
+<h3>コミュニティー<a class="headerlink" href="#community" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p class="first">ヒューマンインターフェースガイドライン (Human Interface Guideline; HIG) の作成と発行。</p>
+</li>
+<li><p class="first">たくさんの開発者向けのドキュメント。</p>
+</li>
+</ul>
+</div>
+<div class="section" id="under-the-hood">
+<h3>Horizon 内部の変更<a class="headerlink" href="#under-the-hood" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul>
+<li><p class="first">国際化は完全に有効になり、すべてのストリングに翻訳用のマークが付与されました。</p>
+</li>
+<li><dl class="first docutils">
+<dt>クライアントライブラリーの変更:</dt>
+<dd><ul class="first last simple">
+<li><p class="first">廃止予定の openstackx ライブラリーから python-novaclient へ完全に移行しました。</p>
+</li>
+<li><p class="first">廃止予定の python-novaclient に含まれるライブラリーから python-keystoneclient に移行しました。</p>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Client-side templating capabilities for more easily creating dynamic
+interactions.</p>
+</li>
+<li><p class="first">Frontend overhaul to use the Bootstrap CSS/JS framework.</p>
+</li>
+<li><p class="first">Centralized error handling for vastly improved stability/reliability
+across APIs/clients.</p>
+</li>
+<li><p class="first">網羅的なテストデータを使ったテストスイートの全面的な改修。</p>
+</li>
+<li><p class="first">Django 1.4 および cookie ベースのセッションのオプションの将来に向けた互換性。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="known-issues-and-limitations">
+<h2>既知の問題と制限<a class="headerlink" href="#known-issues-and-limitations" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="quantum">
+<h3>Quantum<a class="headerlink" href="#quantum" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Quantum サポートは Essex リリースでは Horizon から削除されました。 Folsom リリースでは、 Quantum が OpenStack コアプロジェクトとしての最初のリリースとなるのにあわせて、Horizon サポートも復活する予定です。</p>
+</div>
+<div class="section" id="keystone">
+<h3>Keystone<a class="headerlink" href="#keystone" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Due to the mechanisms by which Keystone determines &#8220;admin&#8221;-ness for a user, an
+admin user interacting with the &#8220;Project&#8221; dashboard may see some inconsistent
+behavior such as all resources being listed instead of only those belonging to
+that project, or only being able to return to the &#8220;Admin&#8221; dashboard while
+accessing certain projects.</p>
+</div>
+<div class="section" id="exceptions-during-customization">
+<h3>カスタマイズ時の例外処理<a class="headerlink" href="#exceptions-during-customization" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>&#8220;customization_module&#8221; 設定を使って Horizon の元々の動作を上書きした際に発生する例外は、エラー処理中に元の例外をマスクしてしまうバグを踏んでしまう場合があります。</p>
+</div>
+</div>
+<div class="section" id="backwards-compatibility">
+<h2>後方互換性<a class="headerlink" href="#backwards-compatibility" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Horizon の Essex リリースは、 Diablo の OpenStack サービスとの後方互換性は部分的にしかありません。ほとんどの場合ログインして機能を使用できますが、 Nova、Glance、Keystone の多くの機能が Essex で大きく変更され、完全な互換性を保つことはできません。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">目次</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Essex シリーズの Release Notes</a><ul>
+<li><a class="reference internal" href="#release-overview">リリースの概要</a></li>
+<li><a class="reference internal" href="#highlights">ハイライト</a><ul>
+<li><a class="reference internal" href="#extensibility">拡張性</a><ul>
+<li><a class="reference internal" href="#dashboards-and-panels">ダッシュボードとパネル</a></li>
+<li><a class="reference internal" href="#data-tables">データテーブル</a></li>
+<li><a class="reference internal" href="#tabs-and-tabgroups">タブとタブグループ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nova-features">Nova の機能</a></li>
+<li><a class="reference internal" href="#settings">設定</a></li>
+<li><a class="reference internal" href="#user-experience-improvements">ユーザーエクスペリエンスの改善</a></li>
+<li><a class="reference internal" href="#community">コミュニティー</a></li>
+<li><a class="reference internal" href="#under-the-hood">Horizon 内部の変更</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues-and-limitations">既知の問題と制限</a><ul>
+<li><a class="reference internal" href="#quantum">Quantum</a></li>
+<li><a class="reference internal" href="#keystone">Keystone</a></li>
+<li><a class="reference internal" href="#exceptions-during-customization">カスタマイズ時の例外処理</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backwards-compatibility">後方互換性</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>前のトピックへ</h4>
+            <p class="topless"><a href="folsom.html"
+                                  title="前の章へ">Folsom バージョンのリリースノート</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>このページ</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/essex.txt"
+                     rel="nofollow">ソースコードを表示</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>クイック検索</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="検索" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              モジュール、クラス、または関数名を入力してください
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="folsom.html" title="Folsom バージョンのリリースノート"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6 で生成しました。
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

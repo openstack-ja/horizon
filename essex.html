@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Essex Series Release Notes &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 documentation" href="index.html" />
+    <link rel="prev" title="Folsom Series Release Notes" href="folsom.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="essex-series-release-notes">
+<h1>Essex Series Release Notes<a class="headerlink" href="#essex-series-release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="release-overview">
+<h2>Release Overview<a class="headerlink" href="#release-overview" title="Permalink to this headline">¶</a></h2>
+<p>During the Essex release cycle, Horizon underwent a significant set of internal
+changes to allow extensibility and customization while also adding a significant
+number of new features and bringing much greater stability to every interaction
+with the underlying components.</p>
+</div>
+<div class="section" id="highlights">
+<h2>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="extensibility">
+<h3>Extensibility<a class="headerlink" href="#extensibility" title="Permalink to this headline">¶</a></h3>
+<p>Making Horizon extensible for third-party developers was one of the core
+goals for the Essex release cycle. Massive strides have been made to allow
+for the addition of new &#8220;plug-in&#8221; components and customization of OpenStack
+Dashboard deployments.</p>
+<p>To support this extensibility, all the components used to build on Horizon&#8217;s
+interface are now modular and reusable. Horizon&#8217;s own dashboards use these
+components, and they have all been built with third-party developers in mind.
+Some of the main components are listed below.</p>
+<div class="section" id="dashboards-and-panels">
+<h4>Dashboards and Panels<a class="headerlink" href="#dashboards-and-panels" title="Permalink to this headline">¶</a></h4>
+<p>Horizon&#8217;s structure has been divided into logical groupings called dashboards
+and panels. Horizon&#8217;s classes representing these concepts handle all the
+structural concerns associated with building a complete user interface
+(navigation, access control, url structure, etc.).</p>
+</div>
+<div class="section" id="data-tables">
+<h4>Data Tables<a class="headerlink" href="#data-tables" title="Permalink to this headline">¶</a></h4>
+<p>One of the most common activities in a dashboard user interface is simply
+displaying a list of resources or data and allowing the user to take actions on
+that data. To this end, Horizon abstracted the commonalities of this task into a
+reusable set of classes which allow developers to programmatically create
+displays and interactions for their data with minimal effort and zero
+boilerplate.</p>
+</div>
+<div class="section" id="tabs-and-tabgroups">
+<h4>Tabs and TabGroups<a class="headerlink" href="#tabs-and-tabgroups" title="Permalink to this headline">¶</a></h4>
+<p>Another extremely common user-interface element is the use of &#8220;tabs&#8221; to break
+down discrete groups of data into manageable chunks. Since these tabs often
+encompass vastly different data, may have completely different access
+restrictions, and may sometimes be better-off being loaded dynamically rather
+than with the initial page load, Horizon includes tab and tab group classes for
+constructing these interfaces elegantly and with no knowledge of the HTML, CSS
+or JavaScript involved.</p>
+</div>
+</div>
+<div class="section" id="nova-features">
+<h3>Nova Features<a class="headerlink" href="#nova-features" title="Permalink to this headline">¶</a></h3>
+<p>Support for Nova&#8217;s features has been greatly improved in Essex:</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Support for Nova volumes, including:</dt>
+<dd><ul class="first last simple">
+<li>Volumes creation and management.</li>
+<li>Volume snapshots.</li>
+<li>Realtime AJAX updating for volumes in transition states.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Improved Nova instance display and interactions, including:</dt>
+<dd><ul class="first last simple">
+<li>Launching instances from volumes.</li>
+<li>Pausing/suspending instances.</li>
+<li>Displaying instance power states.</li>
+<li>Realtime AJAX updating for instances in transition states.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Support for managing Floating IP address pools.</p>
+</li>
+<li><p class="first">New instance and volume detail views.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="settings">
+<h3>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
+<p>A new &#8220;Settings&#8221; area was added that offers several useful functions:</p>
+<ul class="simple">
+<li>EC2 credentials download.</li>
+<li>OpenStack RC file download.</li>
+<li>User language preference customization.</li>
+</ul>
+</div>
+<div class="section" id="user-experience-improvements">
+<h3>User Experience Improvements<a class="headerlink" href="#user-experience-improvements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Support for batch actions on multiple resources (e.g. terminating multiple
+instances at once).</li>
+<li>Modal interactions throughout the entire UI.</li>
+<li>AJAX form submission for in-place validation.</li>
+<li>Improved in-context help for forms (tooltips and validation messages).</li>
+</ul>
+</div>
+<div class="section" id="community">
+<h3>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Creation and publication of a set of Human Interface Guidelines (HIG).</li>
+<li>Copious amounts of documentation for developers.</li>
+</ul>
+</div>
+<div class="section" id="under-the-hood">
+<h3>Under The Hood<a class="headerlink" href="#under-the-hood" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Internationalization fully enabled, with all strings marked for translation.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Client library changes:</dt>
+<dd><ul class="first last simple">
+<li>Full migration to python-novaclient from the deprecated openstackx library.</li>
+<li>Migration to python-keystoneclient from the deprecated keystone portion
+of the python-novaclient library.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Client-side templating capabilities for more easily creating dynamic
+interactions.</p>
+</li>
+<li><p class="first">Frontend overhaul to use the Bootstrap CSS/JS framework.</p>
+</li>
+<li><p class="first">Centralized error handling for vastly improved stability/reliability
+across APIs/clients.</p>
+</li>
+<li><p class="first">Completely revamped test suite with comprehensive test data.</p>
+</li>
+<li><p class="first">Forward-compatibility with Django 1.4 and the option of cookie-based sessions.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="known-issues-and-limitations">
+<h2>Known Issues and Limitations<a class="headerlink" href="#known-issues-and-limitations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="quantum">
+<h3>Quantum<a class="headerlink" href="#quantum" title="Permalink to this headline">¶</a></h3>
+<p>Quantum support has been removed from Horizon for the Essex release. It will be
+restored in Folsom in conjunction with Quantum&#8217;s first release as a core
+OpenStack project.</p>
+</div>
+<div class="section" id="keystone">
+<h3>Keystone<a class="headerlink" href="#keystone" title="Permalink to this headline">¶</a></h3>
+<p>Due to the mechanisms by which Keystone determines &#8220;admin&#8221;-ness for a user, an
+admin user interacting with the &#8220;Project&#8221; dashboard may see some inconsistent
+behavior such as all resources being listed instead of only those belonging to
+that project, or only being able to return to the &#8220;Admin&#8221; dashboard while
+accessing certain projects.</p>
+</div>
+<div class="section" id="exceptions-during-customization">
+<h3>Exceptions during customization<a class="headerlink" href="#exceptions-during-customization" title="Permalink to this headline">¶</a></h3>
+<p>Exceptions raised while overriding built-in Horizon behavior via the
+&#8220;customization_module&#8221; setting may trigger a bug in the error handling
+which will mask the original exception.</p>
+</div>
+</div>
+<div class="section" id="backwards-compatibility">
+<h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>The Essex Horizon release is only partially backwards-compatible with Diablo
+OpenStack components. While it is largely possible to log in and interact, many
+functions in Nova, Glance and Keystone changed too substantially in Essex to
+maintain full compatibility.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Essex Series Release Notes</a><ul>
+<li><a class="reference internal" href="#release-overview">Release Overview</a></li>
+<li><a class="reference internal" href="#highlights">Highlights</a><ul>
+<li><a class="reference internal" href="#extensibility">Extensibility</a><ul>
+<li><a class="reference internal" href="#dashboards-and-panels">Dashboards and Panels</a></li>
+<li><a class="reference internal" href="#data-tables">Data Tables</a></li>
+<li><a class="reference internal" href="#tabs-and-tabgroups">Tabs and TabGroups</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nova-features">Nova Features</a></li>
+<li><a class="reference internal" href="#settings">Settings</a></li>
+<li><a class="reference internal" href="#user-experience-improvements">User Experience Improvements</a></li>
+<li><a class="reference internal" href="#community">Community</a></li>
+<li><a class="reference internal" href="#under-the-hood">Under The Hood</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues-and-limitations">Known Issues and Limitations</a><ul>
+<li><a class="reference internal" href="#quantum">Quantum</a></li>
+<li><a class="reference internal" href="#keystone">Keystone</a></li>
+<li><a class="reference internal" href="#exceptions-during-customization">Exceptions during customization</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backwards-compatibility">Backwards Compatibility</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="folsom.html"
+                                  title="previous chapter">Folsom Series Release Notes</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/essex.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="folsom.html" title="Folsom Series Release Notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

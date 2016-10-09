@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Newton Series Release Notes &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 documentation" href="index.html" />
+    <link rel="next" title="Mitaka Series Release Notes" href="mitaka.html" />
+    <link rel="prev" title="Current Series Release Notes" href="unreleased.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="newton-series-release-notes">
+<h1>Newton Series Release Notes<a class="headerlink" href="#newton-series-release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>10.0.0-23<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="upgrade-notes">
+<h3>Upgrade Notes<a class="headerlink" href="#upgrade-notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The developer enabled files have been moved from <code class="docutils literal"><span class="pre">openstack_dashboard/enabled</span></code> to <code class="docutils literal"><span class="pre">openstack_dashboard/contrib/developer/enabled</span></code>. To enable them, copy into <code class="docutils literal"><span class="pre">openstack_dashboard/local/enabled</span></code> and set <code class="docutils literal"><span class="pre">DEBUG</span> <span class="pre">=</span> <span class="pre">True</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>There will no longer be any <code class="docutils literal"><span class="pre">WARNING</span></code> messages regarding the developer panels in logs.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>10.0.0<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Angular actions now should return a promise that resolves with an object structured in a way to indicate what the action did (or didn&#8217;t do).</p>
+<p>JavaScript can now access the Keystone Token.</p>
+<p>Many of Horizons XStatic packages were updated during this cycle.</p>
+<p>A Details page for a resource type (e.g. Images) may now use the Angular application-level registry to register views so developers may easily create or extend details views. In this implementation these views are presented as tabs within the Details page.</p>
+<p>In an effort to standarize our HTML class naming conventions, we will be updating various class names to use dashes, instead of underscore or camelcasing, to match with Bootstrap&#8217;s convention.</p>
+<p>Horizon no longer requires Nova (or Glance) to function; it will run as long as keystone is present (for instance, swift-only deployments).</p>
+<p>The Images panel now may be configured to use either the legacy or Angular code.</p>
+<p>To aid in continued maintenance of Horizon as a themable and customizable framework, the highly customized &#8216;default&#8217; styles are being dropped in favor of standard Bootstrap styles. The &#8216;default&#8217; theme will only house scss variable changes going forward.</p>
+<p>Angular components now exist to provide simple-to- configure panels and tables, based off of registry information about resources (e.g. Instances).</p>
+<p>Modal sizes now inherit from Bootstrap&#8217;s theme variables.</p>
+<p>We now automatically determine the static folder location for xstatic packages being used by Horizon.</p>
+<div class="section" id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>An action-result service provides convenience methods for construction of the result, and for parsing of a resolved object</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/admin-neutron-l3-agent">blueprint admin-neutron-l3-agent</a>] Add support for managing neutron L3 agent hosts.  The admin screen for system information now provides links / views to see what routers reside on what hosts.   In addition, the admin view of routers now also provides a list of where the router is hosted and the link to see what other routers are sharing the same host.</li>
+<li>Horizon and Horizon Plugins can access the Keystone Token from JavaScript so that they can make CORS calls directly to other OpenStack Services. This can enable much more responsive UI.</li>
+<li>Added a new <code class="docutils literal"><span class="pre">ANGULAR</span> <span class="pre">FEATURES</span></code> dictionary to the settings. This allows simple toggling of new AngularJS features.</li>
+<li>Added the Scheduler Hints tab to the new Launch Instance workflow to allow adding scheduler hints to an instance at launch. In addition to adding custom key-value pairs, the user can also choose from properties in the glance metadata definitions catalog that have the OS::Nova::Server resource type and scheduler_hints properties target.</li>
+<li>Added settings support to the angular workflow service so each step in a workflow can specify a boolean setting that must pass in order for the step to be displayed.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/manage-ips">blueprint manage-ips Add ability to manage floating IPs in syspanel</a>] Admin dashboard Floating IPs panel has been added to Horizon.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/admin-views-filter-first">blueprint admin-views-filter-first</a>] This blueprint provides a configurable setting to allow operators require admin users to provide a search criteria first before loading data into admin views.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/angular-schema-form">blueprint angular-schema-form</a>] Added the Angular Schema Form library to Horizon. This allows developers to build angular forms and workflows from JSON. Read more at <a class="reference external" href="http://schemaform.io/">http://schemaform.io/</a></li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/angular-table-directive">blueprint angular-table-directive</a>] This blueprint provides a way for developers to programatically declare an Angular table vs writing HTML markup. It reduces the boilerplate HTML code. For a basic table, you need to pass in the data and the column configuration into the <cite>hz-dynamic-table</cite> directive.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/angular-template-overrides">blueprint angular-template-overrides</a>] This blueprint provides a way for deployers to use a theme to override HTML fragments used by Angular code in Horizon.  For example, to override the launch instance help panel when the &#8216;material&#8217; theme is used, create openstack_dashboard/themes/material/static/templates/framework /widgets/help-panel/help-panel.html. All of the client side templates are now compiled into a single JavaScript file that is minified and is given as an additional file in the manifest.json file.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/cinder-consistency-groups">blueprint cinder-consistency-groups</a>] This feature adds 2 new tabs to the Project Volumes panel. The first tab will display Consistency Groups, and the second tab will display Consistency Group Snapshots. Consistency Groups (CG) contain existing volumes, and allow the user to perform actions on the volumes in one step. Actions include: create/update/delete CGs, snapshot all volumes in a CG, clone all volumes in a CG, and create a new CG and volumes from a CG snapshot.
+Policies associated with Consistency Groups exist in the Cinder policy file, and by default, all actions are disabled.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/configurable-boot-sources">blueprint configurable-boot-sources</a>] Allows administrators to restrict which sources are available to boot from in the Launch Instance modal by adding 4 new settings to LAUNCH_INSTANCE_DEFAULTS (disable_image, disable_instance_snapshot, disable_volume, disable_volume_snapshot).</li>
+<li>Create from a local file feature is added to both Angular and Django Create Image workflows. It works either in a &#8216;legacy&#8217; mode which proxies an image upload through Django, or in a new &#8216;direct&#8217; mode, which in turn implements [<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/horizon-glance-large-image-upload">blueprint horizon-glance-large-image-upload</a>]. To use the direct mode HORIZON_IMAGES_UPLOAD_MODE setting should be changed to &#8216;direct&#8217; value along with changing glance-api.conf cors.allowed_origin parameter to the URL from which Horizon is served.</li>
+<li>Added ability to render angular row actions with additional details that explain the purpose of the action. These are rendered as tiles and are meant to depict the next steps a user might want to take for a given resource.</li>
+<li>The port-details page has a new tab for managing Allowed Address Pairs. This tab and its features will only be available when this extension is active in Neutron. The Allowed Address Pairs tab will enable creating, deleting, and listing address pairs for the current port.</li>
+<li>Allows to restrict CIDR range for user private network &lt;<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/restrict-private-network-input">https://blueprints.launchpad.net/horizon/+spec/restrict-private-network-input</a>&gt;</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/support-extra-prop-for-project-and-user">blueprint Supports extra properties in project and user</a>] Support an ability to treat additional information for project and user as an extra attribute.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/navigation-improvements">blueprint navigation-improvements</a>] Breadcrumb navigation has been added across Horizon.</li>
+<li>Support a parameter to specify subnet or fixed IP address when creating port.</li>
+<li>A directive (hz-details) provides the ability to intelligently display a set of views (typically for a Details context).</li>
+<li>A generic Details display parses the location to determine the resource type, and displays relevant details views for that type.</li>
+<li>A Descriptor concept allows convenient passing of information that can globally identify an object, for use in generic views and actions.</li>
+<li>Horizon now has a (non-navigational) route in Django so generic details pages are deep-linked.</li>
+<li>A shared Django template is now available for use by any Angular page.</li>
+<li>Adds complete support for Glance v2 so that Horizon no longer depends on having a Glance v1 endpoint in the Keystone catalog. Also provides code compatibility between Glance v1 and v2.</li>
+<li>Adds a new config value called IMAGES_ALLOW_LOCATION, which allows users to set locations when creating or updating images. Depending on the Glance version, the ability to set locations is controlled by policies and/or configuration values.</li>
+<li>Nova and Glance are no longer required in order to run Horizon. As long as keystone is present, Horizon will run correctly.</li>
+<li>the <code class="docutils literal"><span class="pre">ANGULAR_FEATURES</span></code> setting now allows for a key <code class="docutils literal"><span class="pre">images_panel</span></code>. If set to <code class="docutils literal"><span class="pre">True</span></code>, then the Angular Images panel will be used, while the Python version will be used if set to <code class="docutils literal"><span class="pre">False</span></code>.</li>
+<li>Integration tests for Image features may also be toggled in openstack_dashboard/test/integration_tests/horizon.conf using the &#8216;panel_type&#8217; feature, either set to &#8216;legacy&#8217; or &#8216;angular&#8217; to match the enabled panel type.</li>
+<li>Horizon support for network IP availability feature. Enable Horizon admin network dashboard to be able to display IP availability. Enables 2 columns in the admin network subnets table to display the allocated IPs in a given subnet and  unallocated free IPs for each subnet in the network.</li>
+<li>Neutron network type for Geneve tunneling protocol is now supported.</li>
+<li>Neutron provider network types for Midonet are now supported. To enable them, specify these network types in <code class="docutils literal"><span class="pre">supported_provider_types</span></code> in the configuration file.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/operation-history-log">blueprint operation-history-log</a>] Added a feature to log operation history of users.</li>
+<li>Neutron provider network configuration now becomes more flexible so that operators can configure various provider network parameters including new network type, segmenatiton ID ranges and so on based on neutron network back-ends they use.</li>
+<li>Added new setting INTEGRATION_TESTS_SUPPORT, default value is <cite>False</cite>. This value is used when running <cite>manage.py compress</cite> command, so by default all static assets and html classes used by integration tests are removed from Horizon production build. Integration tests gate job sets this variable to <cite>True</cite> and recompresses static assets.</li>
+<li>The hz-resource-table directive takes in a Heat resource name (e.g. &#8216;OS::Nova::Server&#8217;) and uses the Angular registry to provide actions, columns, and summary views.</li>
+<li>The hz-resource-panel directive takes in a Heat resource name (e.g. &#8216;OS::Nova::Server&#8217;) and displays an appropriate header and allows content to be transcluded to build the panel page.</li>
+<li>Add a new setting OVERVIEW_DAYS_RANGE. It defines the default date range in the Overview panel meters - either today minus N days (if the value is integer N), or from the beginning of the current month until today (if set to None). This setting is be used to limit the amount of data fetched by default when rendering the Overview panel. The default value is 1, which differs from the past behaviour, since it caused serious lags on large deployments.</li>
+<li>Modal sizes now inherit their value from theme variables.  Two additional sizes are available now for use in Horizon, extra to the standard 3 sizes of Bootstrap Modals, modal-xs and modal-xl.</li>
+<li>Added the <code class="docutils literal"><span class="pre">TOKEN_DELETE_DISABLED</span></code> setting, so that deployers can customise the revocation of a users token on log out.</li>
+</ul>
+</div>
+<div class="section" id="known-issues">
+<h3>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>If you set &#8216;images_panel&#8217; to False for the ANGULAR_FEATURES option (which is not the default) and configure Horizon to use Glance v2, Ramdisk ID and Kernel ID don&#8217;t show properly on the &#8220;Edit Image&#8221; screen.</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Upgrade Notes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Although it&#8217;s not required, it&#8217;s best to make your actions return promises with the expected structure.</li>
+<li>The <code class="docutils literal"><span class="pre">TEMPLATE_*</span></code> settings have been replaced with a <code class="docutils literal"><span class="pre">TEMPLATE</span></code> dict. This will likely cause issues when porting settings to this version of Horizon. The TEMPLATE_DEBUG setting has been removed and is tied to the DEBUG setting now. A detailed explanation of this dict can be found at <a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/settings/#templates">https://docs.djangoproject.com/en/1.10/ref/settings/#templates</a></li>
+<li>The <code class="docutils literal"><span class="pre">is_authenticated()</span></code> and <code class="docutils literal"><span class="pre">is_anonymous()</span></code> functions in Django OpenStack Auth&#8217;s <code class="docutils literal"><span class="pre">User</span></code> class are properties when running under Django 1.10, and no longer take a margin parameter.</li>
+<li>Horizon currently supports both Angular 1.3.x and Angular 1.4.x, but will remove 1.3 support in the future. See <a class="reference external" href="https://docs.angularjs.org/guide/migration#migrating-from-1-3-to-1-4">Migrating from 1.3 to 1.4</a></li>
+<li>The breadcrumb navigation inside the details pages now applies across Horizon. A small change in the logic means that <code class="docutils literal"><span class="pre">custom_breadcrumb</span></code> items in the context no longer need to specify the panel name and link. See [<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/navigation-improvements">blueprint navigation-improvements</a>]</li>
+<li>The final django TEMPLATE_LOADERS configuration will now be generated from TEMPLATE_LOADERS, CACHED_TEMPLATE_LOADERS and ADD_TEMPLATE_LOADERS settings. See the settings documentation for more information.</li>
+<li>It is no longer necessary to include the version suffix into OPENSTACK_KEYSTONE_URL setting. Thanks to a recent update of django-openstack-auth library as of 2.3.0 release, Horizon will append the proper version suffix to the URL based on the value stored inside OPENSTACK_API_VERSIONS[&#8216;identity&#8217;] setting.</li>
+<li>(optional) Use the common Angular template as the basis of any Angular pages to minimize boilerplate code and to ensure that we use similar features/framing.</li>
+<li>If the &#8216;default&#8217; theme is still required for legacy overrides to function, simply copy the styles in the &#8216;default&#8217; theme into a pre-existing theme or create a new custom theme.</li>
+<li>The <code class="docutils literal"><span class="pre">status_unknown</span></code> table row class has been replaced with the default bootstrap <code class="docutils literal"><span class="pre">warning</span></code> class.</li>
+<li>Many Javascript files have moved to new locations in the horizon/lib static folder. Previously the locations of some files were hard-coded but now the locations are determined automatically based on the xstatic package name.</li>
+</ul>
+</div>
+<div class="section" id="deprecation-notes">
+<h3>Deprecation Notes<a class="headerlink" href="#deprecation-notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>HORIZON_IMAGES_ALLOW_UPLOAD setting is deprecated and should be gradually replaced with HORIZON_IMAGES_UPLOAD_MODE setting.</li>
+<li>Router rules is a horizon extension provided by Big Switch Networks. As part of the horizon-vendor-split work, we drop the extension from upstream horizon. It is now available as a separate plugin at <a class="reference external" href="https://github.com/bigswitch/horizon-bsn">https://github.com/bigswitch/horizon-bsn</a></li>
+<li>LBaaS v1 dashboard is now deprecated and will be removed in Ocata release. LBaaS v1 feature was removed from neutron-lbaas in Ocata and this functionality in Horizon is only for backward compatibility so that operators can upgrade Horizon first. Note that the Dashboard support for LBaaS v2 is provided as a Horizon plugin via <a class="reference external" href="http://git.openstack.org/cgit/openstack/neutron-lbaas-dashboard/">neutron-lbaas-dashboard project</a>.</li>
+<li>All instances of HTML class &#8216;d3_pie_chart_usage&#8217; to &#8216;pie-chart-usage&#8217; All instances of HTML class &#8216;d3_pie_chart_distribution&#8217; to &#8216;pie-chart-distribution&#8217;</li>
+<li>The &#8216;default_ipv4_subnet_pool_label&#8217; and &#8216;default_ipv6_subnet_pool_label&#8217; options were deprecated in the Mitaka release and are no longer valid in the Newton release. Starting with Mitaka you can create one default subnet pool per address family through the Neutron API. These subnet pools will automatically show up in the subnet pool list using the name of the pool as label.</li>
+<li>Inline Edit functionality for Horizon tables is now deprecated and will be removed in Horizon P (12.0) The functionality was removed from the following tables. Admin Volume Types table, Admin Metadata Definitions table, Identity Projects table and Identity Users table</li>
+<li>Fullscreen Modals have been deprecated in favor of modal-xl.  Currently, it is set to 95% of the viewable screen width.</li>
+</ul>
+</div>
+<div class="section" id="security-issues">
+<h3>Security Issues<a class="headerlink" href="#security-issues" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Making Keystone Tokens available to JavaScript slightly increases the risk of a Token being captured. If you don&#8217;t need this functionality, it can be disabled by setting the following option in your local_settings: ENABLE_CLIENT_TOKEN = False</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Bug Fixes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Hardcoded admin role is replaced with RBAC policy check in panels. Now users access to the panels is defined by policies and not user roles. The change affected the Admin dashboard and its panels (Overview, Hypervisors, Instances and Metadata Definitions).</li>
+<li>LP-1585682 is fixed which grants Horizon the ability to properly version Keystone webpath endpoints (URLs like <a class="reference external" href="http:/">http:/</a>/&lt;hostip&gt;/identity instead of <a class="reference external" href="http:/">http:/</a>/&lt;hostip&gt;:5000).</li>
+<li><a class="reference external" href="https://bugs.launchpad.net/horizon/+bug/1508571">https://bugs.launchpad.net/horizon/+bug/1508571</a></li>
+</ul>
+</div>
+<div class="section" id="other-notes">
+<h3>Other Notes<a class="headerlink" href="#other-notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>XStatic-Angular updated from 1.3.7.0 to 1.4.10.1</li>
+<li>XStatic-Angular-FileUpload updated from 1.4.0.1 to 12.0.4.0</li>
+<li>XStatic-Bootstrap-SCSS updated from 3.2.0.0 to 3.3.7.0</li>
+<li>XStatic-Bootswatch updated from 3.3.5.3 to 3.3.6.0</li>
+<li>XStatic-Font-Awesome updated from 4.3.0.0 to 4.5.0.0</li>
+<li>XStatic-Jasmine updated from 2.1.2.0 to 2.4.1.1</li>
+<li>XStatic-MDI updated from 1.1.70.1 to 1.4.57.0</li>
+<li>XStatic-Rickshaw updated from 1.5.0.0 to 1.5.1.0</li>
+<li>XStatic-Smart-Table updated from 1.4.5.3 to 1.4.13.1</li>
+<li>Glance v2 doesn&#8217;t support the copy-from feature, so this feature is disabled in Horizon when using Glance v2.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>9.0.0<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Cinder defines storage size in gibibytes (GiB), which is inconsistent with Horizon panels that show/request storage size in gigabytes (GB).</p>
+<div class="section" id="id7">
+<h3>New Features<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added the Metadata tab to the new Launch Instance workflow to allow adding key-value metadata to an instance at launch. This includes any properties from the OS::Nova::Server namespace of the glance metadata definitions.</li>
+<li>Allows to attach ports during instance launch &lt;<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/allow-launching-ports">https://blueprints.launchpad.net/horizon/+spec/allow-launching-ports</a>&gt;</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/angular-performance-strict-di">blueprint angular-performance-strict-di</a>] This blueprint enforces strict dependency injection in AngularJS code, for improvements to minification and thus performance.</li>
+<li>Move OpenStack Dashboard Swift panel rendering logic to client-side using AngularJS for significant usability improvements.</li>
+<li>Added the Developer dashboard plugin to contrib. This runs when <code class="docutils literal"><span class="pre">DEBUG=True</span></code>, and adds tooling to the UI to aid in development.</li>
+<li>Added the Bootstrap Theme Preview panel to the Developer dashboard. This panel contains a list of Bootstrap components with source code, so that developers can see examples of how to structure this code and the effects their theme will have upon it.</li>
+<li>Added the Django template cached loader, so templates are stored in memory. See <a class="reference external" href="https://docs.djangoproject.com/en/1.8/ref/templates/api/#django.template.loaders.cached.Loader">https://docs.djangoproject.com/en/1.8/ref/templates/api/#django.template.loaders.cached.Loader</a></li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/cinder-consistency-groups">blueprint cinder-consistency-groups</a>] This feature adds a new Consistency Groups tab to the Project Volumes panel. Consistency Groups (GG) contain existing volumes, and allow the user to perform actions on the volumes in one step. Actions include: create a CG, manage volumes associated with the CG, update a CG, and delete a CGs. Note that a CG can not be deleted if it contains any volumes.</li>
+<li>Instance metadata can be updated (<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/edit-server-metadata">https://blueprints.launchpad.net/horizon/+spec/edit-server-metadata</a>)</li>
+<li>Made the Angular Launch Instance workflow the default in Horizon.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/integrate-magic-search">blueprint integrate-magic-search</a>] Magic Search was an external dependency that was being heavily modified or overwritten in sections, so the used parts of code base have been moved into Horizon.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/integration-tests-hardening">blueprint integration-tests-hardening</a>] This blueprint reduced failures in the integration tests caused by structure or styling changes, by making them less dependent on aspects of page structure, such as ordering or CSS classes.</li>
+<li>Added the Update Encryption action for encrypted volume types.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/keystone-federation-protocol-mapping">blueprint keystone-federation-protocol-mapping</a>] This blueprint provides CRUD interaction for identity provider protocols.</li>
+<li>Allow to override settings from local_settings.py with file snippets dropped into local_settings.d/ directory.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/pagination-for-flavor">blueprint pagination-for-flavor</a>] Added forward and backward pagination to the Flavors panel</li>
+<li>Added support for managing domains and projects when using Keystone v3. Horizon now maintains a domain scoped token for users who have a role on a domain, a project scoped token for users who have a role on a project, or both a domain scoped token and project scoped token for users who have roles on both.</li>
+<li>Domain management supports the following use cases:<ul>
+<li>Cloud Admin - View and manage identity resources across domains</li>
+<li>Domain Admin - View and manage identity resources in the domain logged in</li>
+<li>User - View identity project in the domain logged in</li>
+</ul>
+</li>
+<li>Horizon can be configured to run with multiple themes available at run time.  A new selection widget is available through the user menu.  It uses a browser cookie to allow users to toggle between the configured themes.  By default, Horizon is configured with the two themes available, &#8216;default&#8217; and &#8216;material&#8217;.</li>
+<li>Allow external plugins to contribute translations to the Javascript message catalog.</li>
+<li>Selenium tests may now be exercised using the headless PhantomJS driver.</li>
+<li>Added the angular extensible service which allows angular horizon elements such as workflows, tables, actions, and forms to be extended dynamically by adding, removing, or replacing items. The extensible service is applied to every workflow created using the horizon workflow service. This includes the angular Launch Instance workflow.</li>
+<li>All Volume related panels in Horizon that previously used the term &#8220;GB&#8221; and &#8220;gigabyte&#8221; have been replaced with &#8216;GiB&#8217; and &#8216;gibibyte&#8217;.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/keystone-federation-idp">blueprint keystone-federation-idp</a>] Add support for managing keystone identity provider. To enable the panel, set <code class="docutils literal"><span class="pre">OPENSTACK_KEYSTONE_FEDERATION_MANAGEMENT</span></code> in the local_settting.py to True.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/keystone-federation-mapping">blueprint keystone-federation-mapping</a>] Add basic support for managing keystone federation mapping.</li>
+<li>Added the LAUNCH_INSTANCE_DEFAULTS setting which allows specifying default values for the Launch Instance workflow. Initially only the Configuration Drive property is supported.</li>
+<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/message-of-the-day">blueprint message-of-the-day</a>] Message of the day can now be configured in horizon, this will be displayed to the user whenever they login. To enable the feature set <code class="docutils literal"><span class="pre">MESSAGES_PATH</span></code> in the local_settting.py to the directory where message files are located. The message file must have a .json file extension.</li>
+<li>Added policy support to the angular workflow service so each step in a workflow can specify a policy check that must pass in order for the step to be displayed.</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>Known Issues<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>There are also some Nova related panels (e.g. &#8220;Instances&#8221;) that reference storage size in &#8220;GB&#8221;. These panels will be addressed in subsequent patches.</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>Upgrade Notes<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>All AngularJS code must use explicit dependency injection. See <a class="reference external" href="https://docs.angularjs.org/guide/di#using-strict-dependency-injection">https://docs.angularjs.org/guide/di#using-strict-dependency-injection</a></li>
+<li>Custom template tags must have a thread-safe Node implementation to work with the cached loader. See <a class="reference external" href="https://docs.djangoproject.com/en/1.8/howto/custom-template-tags/#template-tag-thread-safety">https://docs.djangoproject.com/en/1.8/howto/custom-template-tags/#template-tag-thread-safety</a></li>
+<li>Horizon no longer requires Magic Search as an external dependency.</li>
+<li>The Sahara based content has been removed from the Horizon source tree and is now a separate plugin. To continue managing Sahara in Horizon, installing the sahara-dashboard plugin on the Horizon server is required.</li>
+<li>The Trove based content has been removed from the Horizon source tree and is now a separate plugin. To continue managing Trove in Horizon, installing the trove-dashboard plugin on the Horizon server is required.</li>
+<li>The main engine managing integration with oslo.policy has been moved to django_openstack_auth. The configuration is still managed in Horizon, but the setting for <code class="docutils literal"><span class="pre">POLICY_CHECK_FUNCTION</span></code> now uses <code class="docutils literal"><span class="pre">openstack_auth.policy.check</span></code> rather than <code class="docutils literal"><span class="pre">openstack_dashboard.policy.check</span></code>. Current behavior will remain consistent.</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>Deprecation Notes<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The Python Swift panel has been deprecated and no longer displays by default. To use the old interface edit <code class="docutils literal"><span class="pre">enabled/_1920_project_containers_panel.py</span></code> to change <code class="docutils literal"><span class="pre">swift_panel</span></code> to <code class="docutils literal"><span class="pre">'legacy'</span></code>.</li>
+<li>The Python Launch Instance workflow has been deprecated and no longer displays by default.</li>
+<li>The &#8216;default_ipv4_subnet_pool_label&#8217; and &#8216;default_ipv6_subnet_pool_label&#8217; options has been deprecated and will be removed in the Newton release. Starting with Mitaka you can create one default subnet pool per address family through the Neutron API. These subnet pools will automatically show up in the subnet pool list using the name of the pool as label.</li>
+<li>The setting CUSTOM_THEME_PATH is now deprecated.</li>
+<li>The setting DEFAULT_THEME_PATH is now deprecated.</li>
+<li>The &#8216;webroot&#8217; theme has been removed.</li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>Security Issues<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Policies associated with Consistency Groups exist in the Cinder policy file, and by default, all actions are disabled.</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>Bug Fixes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Provided the ability for plugins to contribute translations to the JavaScript message catalog. Previously the horizon and openstack_dahboard applications were hardcoded.</li>
+<li>blueprint gb-to-gib-conversion &lt;<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/gb-to-gib-conversion/">https://blueprints.launchpad.net/horizon/+spec/gb-to-gib-conversion/</a>&gt;</li>
+<li>Several fixes have been made to the hzTable controller. The list below outline these changes. See inline documentation for usage details.</li>
+<li>Properties are now bound to the controller instead of the scope.</li>
+<li>Emit the <cite>hzTable:clearSelected</cite> event to clear table row selections.</li>
+<li>The property <cite>selections</cite> tracks the checkbox selection state of each row.</li>
+<li>The property <cite>selected</cite> is now a list of selected rows.</li>
+<li>The property <cite>numSelected</cite> has been removed, use <cite>selected.length</cite> instead.</li>
+<li>The <cite>select</cite> method has been renamed to <cite>toggleSelect</cite>.</li>
+<li>The &#8216;webroot&#8217; theme was providing an example of how to set the webroot value through SCSS for accessing needed static URL prefixes for assets like font paths. This value is now retrieved directly from the Django settings and is available directly in the SCSS namespace via $static_url.</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>Other Notes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Current limitations on managing identity resources with Keystone v3:<ul>
+<li>Does not support role assignments across domains, such as giving a user
+in domain1 access to domain2.</li>
+<li>Does not support project admins managing Keystone projects.</li>
+<li>Does not support hierarchical project management.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Newton Series Release Notes</a><ul>
+<li><a class="reference internal" href="#id1">10.0.0-23</a><ul>
+<li><a class="reference internal" href="#upgrade-notes">Upgrade Notes</a></li>
+<li><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">10.0.0</a><ul>
+<li><a class="reference internal" href="#new-features">New Features</a></li>
+<li><a class="reference internal" href="#known-issues">Known Issues</a></li>
+<li><a class="reference internal" href="#id3">Upgrade Notes</a></li>
+<li><a class="reference internal" href="#deprecation-notes">Deprecation Notes</a></li>
+<li><a class="reference internal" href="#security-issues">Security Issues</a></li>
+<li><a class="reference internal" href="#id5">Bug Fixes</a></li>
+<li><a class="reference internal" href="#other-notes">Other Notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">9.0.0</a><ul>
+<li><a class="reference internal" href="#id7">New Features</a></li>
+<li><a class="reference internal" href="#id9">Known Issues</a></li>
+<li><a class="reference internal" href="#id10">Upgrade Notes</a></li>
+<li><a class="reference internal" href="#id11">Deprecation Notes</a></li>
+<li><a class="reference internal" href="#id12">Security Issues</a></li>
+<li><a class="reference internal" href="#id13">Bug Fixes</a></li>
+<li><a class="reference internal" href="#id14">Other Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="unreleased.html"
+                                  title="previous chapter">Current Series Release Notes</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="mitaka.html"
+                                  title="next chapter">Mitaka Series Release Notes</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/newton.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mitaka.html" title="Mitaka Series Release Notes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="unreleased.html" title="Current Series Release Notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

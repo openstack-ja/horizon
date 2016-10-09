@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Juno バージョンのリリースノート &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント" href="index.html" />
+    <link rel="next" title="Icehouse バージョンのリリースノート" href="icehouse.html" />
+    <link rel="prev" title="Kilo バージョンのリリースノート" href="kilo.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="juno-series-release-notes">
+<h1>Juno バージョンのリリースノート<a class="headerlink" href="#juno-series-release-notes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="release-overview">
+<h2>リリースの概要<a class="headerlink" href="#release-overview" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>The Juno release cycle brings a significant update to the user experience;
+numerous stability improvements; support for Sahara; and significant
+enhancements in feature support for networking, volumes, databases and images.
+The community continues to grow and gain speed. Read on for more details.</p>
+</div>
+<div class="section" id="highlights">
+<h2>ハイライト<a class="headerlink" href="#highlights" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="new-features">
+<h3>新機能<a class="headerlink" href="#new-features" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="sahara">
+<h4>Sahara<a class="headerlink" href="#sahara" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Juno で OpenStack Data Processing プロジェクト(Sahara) は統合プロジェクト (Integrated release) となり、Horizon はデータプロセッシングの管理を幅広くサポートしました。ジョブをトラッキングできるうえ、様々なデータタイプを利用するためのクラスターを記述、ビルドできます。</p>
+</div>
+<div class="section" id="neutron">
+<h4>Neutron<a class="headerlink" href="#neutron" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Juno の Neutron には、以下の新しい機能が追加されました。</p>
+<ul class="simple">
+<li><p class="first">DVR (分散仮想ルーター)</p>
+</li>
+<li><p class="first">L3 HA のサポート</p>
+</li>
+<li><p class="first">IPv6 サブネットモード</p>
+</li>
+</ul>
+<p>Horizon はこれら新しい機能をサポートします。これによりさらに柔軟に SDN を設定できます。</p>
+<p>Neutron の既存機能である MAC アドレス学習拡張機能を Horizon でサポートしました。</p>
+</div>
+<div class="section" id="glance">
+<h4>Glance<a class="headerlink" href="#glance" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Juno で、Glance にはメタデータ定義の管理機能が導入されました。これは、イメージ、アグリゲート、フレーバーを含む様々なタイプのリソースに使用されるメタデータの定義をユーザーが登録できるようにしたものです。Horizon はこれらのメタデータタグの表示、編集に対応しました。</p>
+</div>
+<div class="section" id="cinder">
+<h4>Cinder<a class="headerlink" href="#cinder" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Cinder API のサポートをより充実させる努力が引き続き行われ、Cinder が提供するいくつかの機能が Juno リリースの Horizon で新たにサポートされました。</p>
+<p>Some of these features include:
+* Creating and restoring volume backups
+* Enabling resetting the state of a snapshot
+* Enabling resetting the state of a volume
+* Supporting upload-to-image
+* Volume retype
+* QoS (quality of service) support.</p>
+</div>
+<div class="section" id="trove">
+<h4>Trove<a class="headerlink" href="#trove" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Trove は複数種類のデータストア (mysql, redis, mongodb など) の利用に対応しています。ユーザーは、データベースインスタンス作成時に、クラウドオペレーターがサポートしているデータストアのリストからデータストアを選択できるようになりました。</p>
+<p>差分データベースバックアップの利用と差分バックアップからのリストアがサポートされました。</p>
+<p>Neutron ベースのクラウド対応の改善の一環として、今回、ユーザーがデータベースインスタンス作成時に NIC を指定でき、ユーザーがデータベースインスタンスに直接アクセスできるようになりました。</p>
+</div>
+<div class="section" id="nova">
+<h4>Nova<a class="headerlink" href="#nova" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>新しい Nova インスタンスのアクションパネルは、現在のプロジェクトのすべてのインスタンスについて、アクション結果のリストを提供します。ユーザーは他のユーザーが操作した結果のエラーやアクションを確認できます。</p>
+<p>管理者はホストの退避ができるようになりました。すべてのインスタンスを他のホストにマイグレーションさせる仕組みを提供することで、システムメンテナンスの一助となります。</p>
+</div>
+<div class="section" id="improved-plugin-support">
+<h4>プラグインサポートの改善<a class="headerlink" href="#improved-plugin-support" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Horizonのプラグインシステムは、 Junoリリースでも引き続き改善されました。以下のような改善点があります。</p>
+<ul class="simple">
+<li><p class="first">特定 AngularJS モジュールのプラグインを追加する機能のサポート</p>
+</li>
+<li><p class="first">静的ファイルを追加する機能のサポート。例えば CSS、JS、画像など</p>
+</li>
+<li><p class="first">例外を追加する機能</p>
+</li>
+<li><p class="first">順序に関する問題を修正</p>
+</li>
+<li><p class="first">その他の多数のバグ修正</p>
+</li>
+</ul>
+</div>
+<div class="section" id="enhanced-rbac-support">
+<h4>RBACサポートの強化<a class="headerlink" href="#enhanced-rbac-support" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Horizon でロールベースのアクセス制御 (RBAC) をよりサポートするための継続的な取り組みで、より多くのサービスのビューでユーザーがアクションへアクセスできるかを決定する RBAC チェックが強化されました。新たにサポートされたサービスは、Compute、Networking、および Orchestration です。これらの変更により、単なる「member」と「admin」よりも細かい粒度のアクセス制御をオペレーターが実装することができます。</p>
+<p>ユーザー管理パネル (ドメイン、プロジェクト、ユーザー、ロール、グループ) も、ビューレベルでRBAC をサポートするように変換されています。認証パネルは管理ダッシュボードから独自の「ユーザー管理」のダッシュボードに移動され、単独のポリシーでアクセシビリティが決定されます。これはプロジェクトと管理ダッシュボードで重複に近いコンテンツを単一ビューに集約する第一歩です。単一ビューはロールを広い範囲でサポートします。</p>
+</div>
+<div class="section" id="ux-changes">
+<h4>UX の変更<a class="headerlink" href="#ux-changes" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Juno では Horizon は Bootstrap v3 を 利用するように移行しました。 Horizon は過去いくつかのリリースでは Bootstrap の古いバージョンに固定されたままでした。今回の変更により、現在 Horizon は Bootstrap フレームワークで、多くのバグの修正と全体的な改善を行うことができます。ルックアンドフィールは多くの部分で Havana リリースと一貫性が保たれています。</p>
+</div>
+</div>
+<div class="section" id="under-the-hood">
+<h3>Horizon 内部の変更<a class="headerlink" href="#under-the-hood" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="improved-translatability">
+<h4>翻訳サポートの改善<a class="headerlink" href="#improved-translatability" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Horizon における翻訳改善の一環として、文字列の連結が削除され、時制の扱いが改善されました。</p>
+</div>
+<div class="section" id="javascript-libraries-extracted">
+<h4>JavaScript ライブラリの抽出<a class="headerlink" href="#javascript-libraries-extracted" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Horizon チームの継続的な努力の一環として、より論理的な部品にリポジトリーを分割しています。Horizon が依存するすべてのサードパーティーの JavaScript ライブラリーは Horizon のコードベースから削除され、代わりに Python xstatic パッケージが使用されています。 xstatic 形式は Horizon が構築されている Django フレームワークで簡単に使用することができます。現在 JavaScript ライブラリは他の Python の依存ライブラリと同じｙうに、Horizon 内で利用されています。</p>
+</div>
+<div class="section" id="conversion-from-less-to-scss">
+<h4>LESS から SCSS への変換<a class="headerlink" href="#conversion-from-less-to-scss" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Horizon でサポートされているスタイルシートは LESS ではなく SCSS を利用するように変換されました。この変更は、pythonで LESS コンパイラーのサポートが普及しないために必要でした。Bootstrap 3 LESS スタイルシートの一部は、既存の python ベースの LESS コンパイラーでサポートされていませんでしたが、この変更により、私たちは Bootstrap 3 にアップグレードすることもできました。</p>
+</div>
+</div>
+</div>
+<div class="section" id="known-issues-and-limitations">
+<h2>既知の問題と制限<a class="headerlink" href="#known-issues-and-limitations" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="rendering-issues-in-extensions">
+<h3>エクステンションにおけるレンダリング問題<a class="headerlink" href="#rendering-issues-in-extensions" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The conversion to utilizing Bootstrap v3 can cause content extensions written
+on top of Horizon to have rendering issues. Most of these are fixed by a simple
+CSS class name substitutions. These issues are primarily seen with buttons and
+panel content widths.</p>
+</div>
+<div class="section" id="online-compression">
+<h3>オンラインでの圧縮<a class="headerlink" href="#online-compression" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SCSS への移行において、Horizon がデバッグモード以外の場合にオンラインでの圧縮を使用すると問題が発生することがあります。オフライン圧縮は前のリリース同様に正しく動作します。</p>
+<p><a class="reference external" href="https://bugs.launchpad.net/horizon/+bug/1379761">https://bugs.launchpad.net/horizon/+bug/1379761</a></p>
+</div>
+<div class="section" id="neutron-l3-ha">
+<h3>Neutron L3 HA<a class="headerlink" href="#neutron-l3-ha" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The HA property is updateable in the UI, however, Neutron API does not allow the
+update operation because toggling HA support does not work.</p>
+<p><a class="reference external" href="https://bugs.launchpad.net/horizon/+bug/1379761">https://bugs.launchpad.net/horizon/+bug/1379761</a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">目次</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Juno バージョンのリリースノート</a><ul>
+<li><a class="reference internal" href="#release-overview">リリースの概要</a></li>
+<li><a class="reference internal" href="#highlights">ハイライト</a><ul>
+<li><a class="reference internal" href="#new-features">新機能</a><ul>
+<li><a class="reference internal" href="#sahara">Sahara</a></li>
+<li><a class="reference internal" href="#neutron">Neutron</a></li>
+<li><a class="reference internal" href="#glance">Glance</a></li>
+<li><a class="reference internal" href="#cinder">Cinder</a></li>
+<li><a class="reference internal" href="#trove">Trove</a></li>
+<li><a class="reference internal" href="#nova">Nova</a></li>
+<li><a class="reference internal" href="#improved-plugin-support">プラグインサポートの改善</a></li>
+<li><a class="reference internal" href="#enhanced-rbac-support">RBACサポートの強化</a></li>
+<li><a class="reference internal" href="#ux-changes">UX の変更</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#under-the-hood">Horizon 内部の変更</a><ul>
+<li><a class="reference internal" href="#improved-translatability">翻訳サポートの改善</a></li>
+<li><a class="reference internal" href="#javascript-libraries-extracted">JavaScript ライブラリの抽出</a></li>
+<li><a class="reference internal" href="#conversion-from-less-to-scss">LESS から SCSS への変換</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues-and-limitations">既知の問題と制限</a><ul>
+<li><a class="reference internal" href="#rendering-issues-in-extensions">エクステンションにおけるレンダリング問題</a></li>
+<li><a class="reference internal" href="#online-compression">オンラインでの圧縮</a></li>
+<li><a class="reference internal" href="#neutron-l3-ha">Neutron L3 HA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h4>前のトピックへ</h4>
+            <p class="topless"><a href="kilo.html"
+                                  title="前の章へ">Kilo バージョンのリリースノート</a></p>
+            <h4>次のトピックへ</h4>
+            <p class="topless"><a href="icehouse.html"
+                                  title="次の章へ">Icehouse バージョンのリリースノート</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>このページ</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/juno.txt"
+                     rel="nofollow">ソースコードを表示</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>クイック検索</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="検索" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              モジュール、クラス、または関数名を入力してください
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="icehouse.html" title="Icehouse バージョンのリリースノート"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="kilo.html" title="Kilo バージョンのリリースノート"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6 で生成しました。
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

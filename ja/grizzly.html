@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Grizzly バージョンのリリースノート &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント" href="index.html" />
+    <link rel="next" title="Folsom バージョンのリリースノート" href="folsom.html" />
+    <link rel="prev" title="Havana バージョンのリリースノート" href="havana.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="grizzly-series-release-notes">
+<h1>Grizzly バージョンのリリースノート<a class="headerlink" href="#grizzly-series-release-notes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="release-overview">
+<h2>リリースの概要<a class="headerlink" href="#release-overview" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Grizzly リリースサイクルでは、非常に幅広い改善がありました。ユーザーエクスペリエンスの全面的な改良、安定性の大幅な向上、ネットワーク、インスタンス管理、イメージ管理などの多くの機能、長く懸案となっていたアーキテクチャー上のクリーンアップ、コミュニティーの拡大などです。詳細は続けて下を読んでください。</p>
+</div>
+<div class="section" id="highlights">
+<h2>ハイライト<a class="headerlink" href="#highlights" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="new-features">
+<h3>新機能<a class="headerlink" href="#new-features" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="networking">
+<h4>ネットワーク<a class="headerlink" href="#networking" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Quantum には Grizzly で非常に多くの新機能が追加されました。 L3 (ルーター) 対応、ロードバランサー、ネットワークトポロジー表示、 Nova ネットワーク API との互換性の向上 (インスタンス起動時の VNIC の順序指定、セキュリティーグループや Floating IP の連携)、表示情報のさまざなな改善などが挙げられます。</p>
+</div>
+<div class="section" id="direct-image-upload-to-glance">
+<h4>Glance へのイメージの直接アップロード<a class="headerlink" href="#direct-image-upload-to-glance" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Horizon 経由でユーザーのハードディスクから直接イメージファイルをアップロードできるようになりました (ただし、さまざまなデプロイメント面やセキュリティー面での影響はあります)。数 GB のイメージの場合には、これまで通り Glance CLI を使ってアップロードを行うことを強く推奨します。将来のリリースでこの機能のさらなる改善が行われる予定です。</p>
+</div>
+<div class="section" id="flavor-extra-specs-support">
+<h4>フレーバーの追加スペックのサポート<a class="headerlink" href="#flavor-extra-specs-support" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Folsom で、フレーバーの「追加スペック」(extra specs) のサポートが Nova に追加されました。「追加スペック」は追加のメタデータで、カスタムスケジューラーは適切なインスタンスのスケジューリングを行うのにこの情報を使うことができます。 Grizzly リリースでは、 Horizon から任意のフレーバーに対する追加スペックの読み書きがサポートされました。</p>
+</div>
+<div class="section" id="migrate-instance">
+<h4>インスタンスのマイグレーション<a class="headerlink" href="#migrate-instance" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>管理者が、管理ダッシュボードのインスタンスパネルを使って、現在のホストから他のホストへインスタンスをマイグレーションできるようになりました。</p>
+</div>
+</div>
+<div class="section" id="user-experience-improvements">
+<h3>ユーザーエクスペリエンスの改善<a class="headerlink" href="#user-experience-improvements" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="not-authorized-being-logged-out">
+<h4>「権限なし」でログアウトされてしまう問題<a class="headerlink" href="#not-authorized-being-logged-out" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>OpenStack を初めてデプロイするユーザーが驚くほど多く直面していた問題を一言でまとめると、「すべてを設定したと思ったのに、ダッシュボードにログインしようとしたら、すぐにログアウトされてしまった」という問題でした。その根本的な原因は、セキュリティーを可能な限り強化するために、あらゆるサービス API から返される 401 または 403 応答はいずれも、Horizon で許可されていない部分にアクセスを試みるのと同じように扱われるためにユーザーが即時にログアウトされ、情報や理由についてはほとんどあるいは全く表示されないことにありました。</p>
+<p>Grizzly では、ユーザーをログアウトさせる代わりに、サービス API の  401 および 403 エラーを、Horizon でアクセスが制限されている部分への不正アクセスを試みた場合よりも若干低い重大度として扱うことによって、この問題を改善する方法を選択しました。これには、3 つの理由があります。</p>
+<ol class="arabic simple">
+<li><p class="first">悪意のあるユーザーでない場合には、これらのエラーは、ほぼ 100% 設定ミスが原因なので、デバッグが可能となります。</p>
+</li>
+<li><p class="first">悪意の有るユーザーは、特別な権限が付与されていないので、CLI で実行できる「承認されていない」要求は、ダッシュボードから実行できるのと全く同じです。</p>
+</li>
+<li><p class="first">API エラーは、プロジェクトの管理範囲外の外部システムから生成されます。それらのエラーを軽視せずに適切な措置を取るように試みる必要がありますが、そのために極端な対応や破壊的となる可能性のある措置は取るべきではありません。</p>
+</li>
+</ol>
+<p>今後は、ユーザーはログアウトされなくなりましたが、ページには情報は表示されず、アクセスを試みたデータに対するアクセスする権限がない旨を示したエラーメッセージが表示されます。</p>
+</div>
+<div class="section" id="reorganizations">
+<h4>パネルの構成の見直し<a class="headerlink" href="#reorganizations" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>長年残っていたユーザーにとって分かりづらかった点が Grizzly でいくつか修正されました。</p>
+<p>1 つは、 API アクセスパネル (ユーザーの API エンドポイント、 RC ファイル、 EC2 認証情報が置かれているパネル) が、設定からプロジェクトダッシュボードの「アクセスとセキュリティー」に移動されました。</p>
+<p>2 つめは、デフォルトクォータとサービスのパネル (どちらも情報を参照するだけのパネル) が、 1 枚のシステム情報パネルのタブにまとめられました。これにより、これらのパネルが互いに関係性があることが分かりやすくなり、今後このような情報を参照するだけの表示を集めていく場所が用意されました。</p>
+</div>
+<div class="section" id="one-click-floating-ip-management">
+<h4>1 クリック Floating IP 管理<a class="headerlink" href="#one-click-floating-ip-management" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Floating IP を関連付ける操作では、大半のユーザーには知識や関心がないような項目を何回もクリックして選択する必要があったため、ユーザーからの不満の声が多くあがっていました。このため、1 回のクリックで「簡単に」Floating IP を関連付けするオプションが実装されました。Floating IP プールが 1 つしかないデプロイメントでは、この新しいオプションにより、ユーザーは明示的な Floating IP 管理を無視して、ボタンを 1 つクリックするだけで、Floating IP をインスタンスに関連付け/関連付け解除することができます。</p>
+</div>
+<div class="section" id="organized-images">
+<h4>イメージの整理<a class="headerlink" href="#organized-images" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>イメージのテーブルに新たな機能が追加されました。事前定義済みのフィルターで自分のイメージ、自分と共有されているイメージ、パブリックのイメージ を表示することができます。この新機能により、イメージの検索をはるかに簡単に行うことができるようになり、操作が楽になりました。</p>
+</div>
+<div class="section" id="security-group-rule-editing-improvements">
+<h4>セキュリティーグループのルール編集の改善<a class="headerlink" href="#security-group-rule-editing-improvements" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>セキュリティーグループのルールを編集する操作は、予てから非常に複雑で、多数のオプションと非常に専門的な用語が単に提示されていました。また、OpenStack Dashboard　で採用しているテーブルとフォームを組み合わせたアプローチは、ユーザーエクスペリエンス面ですでに問題がある操作をさらに難しくするだけでした。</p>
+<p>Grizzly では、この操作手順はすべて改変され、大幅に簡素化されました。また、可能な限り多くのコンテキストヘルプが提供され、効率的に操作を実行できるようになりました。</p>
+</div>
+<div class="section" id="icons">
+<h4>アイコン！<a class="headerlink" href="#icons" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>In an effort to make the dashboard more at-a-glance usable, we&#8217;ve added icons
+to most of the common action buttons throughout the dashboard.</p>
+</div>
+<div class="section" id="more-actions-more-better">
+<h4>「その他のアクション」の改善<a class="headerlink" href="#more-actions-more-better" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>「その他のアクション」のドロップダウンメニュー (各行で多数のアクションが利用できるテーブル向け) が新しいユーザーにはわかりにくく、またクリックしにくいというフィードバックが数多く寄せられていました。</p>
+<p>このメニューは改善されて、メニューを開くためのボタンには、はっきりとしたラベルが付けられ、またクリックできる範囲もかなり大きくなりました。</p>
+</div>
+</div>
+<div class="section" id="community">
+<h3>コミュニティー<a class="headerlink" href="#community" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="docs-docs-and-more-docs">
+<h4>ドキュメント、ドキュメント、ドキュメント！<a class="headerlink" href="#docs-docs-and-more-docs" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Large amounts of new documentation was added during the Grizzly cycle, most
+notably are sections documenting: all of the available settings for Horizon and
+the OpenStack Dashboard; security and deployment considerations; and deeper
+guides on customizing the OpenStack Dashboard.</p>
+</div>
+<div class="section" id="irc-meeting">
+<h4>IRC ミーティング<a class="headerlink" href="#irc-meeting" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>During the Grizzly cycle we started holding a weekly project meeting on IRC.
+This has been extremely beneficial for the growth and progress of the project.
+Check out the <a class="reference external" href="https://wiki.openstack.org/wiki/Meetings#Horizon_team_meeting">OpenStack Meetings wiki page</a> for specifics.</p>
+</div>
+</div>
+<div class="section" id="under-the-hood">
+<h3>Horizon 内部の変更<a class="headerlink" href="#under-the-hood" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="legacy-dashboard-names-code-separation">
+<h4>Legacy Dashboard Names &amp; Code Separation<a class="headerlink" href="#legacy-dashboard-names-code-separation" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Very early in the Grizzly cycle we took the opportunity to do some longstanding
+cleanup and refactoring work. The &#8220;nova&#8221; dashboard was renamed to &#8220;project&#8221; and
+the &#8220;syspanel&#8221; dashboard was renamed to &#8220;admin&#8221; to better reflect their
+respective purposes.</p>
+<p>Moreover, a better separation was created between code related to the core
+Horizon framework code (which is not related to OpenStack specifically) and
+the OpenStack Dashboard code. At this point <em>all</em> code related to OpenStack
+lives in the OpenStack Dashboard directory, while the Horizon framework is
+completely agnostic and is a reusable Django app.</p>
+</div>
+<div class="section" id="object-storage-delimiters-and-pseudo-folder-objects">
+<h4>Object Storage の区切り文字と疑似フォルダーオブジェクト<a class="headerlink" href="#object-storage-delimiters-and-pseudo-folder-objects" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>最初に Horizon の Object Storage インターフェースが追加された当時、 Swift のドキュメントでは、コンテナー内の疑似フォルダーを表現するのに、特別なコンテンツ種別を持つ 0 バイトのオブジェクトを追加する方法が推奨されていました。その後、 Swift プロジェクトは、この方法を推奨方法から外し、疑似フォルダーはオブジェクト名内の区切り文字 (通常は &#8220;/&#8221;) で区切ること、を決定しました。</p>
+<p>Horizon は、内部ではこの新しい方法を使用するように更新されました。これにより、多くのデプロイメントでの  Object Storage の使用方法に合致した状態になりました。</p>
+</div>
+</div>
+<div class="section" id="other-improvements-and-fixes">
+<h3>その他の改良と修正<a class="headerlink" href="#other-improvements-and-fixes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p class="first">Keystone PKI トークンのサポート</p>
+</li>
+<li><p class="first">フレーバーの編集の安定性が大幅に改善されました。</p>
+</li>
+<li><p class="first">セキュリティーグループを実行中のインスタンスに追加できるようになりました。</p>
+</li>
+<li><p class="first">ボリュームのクォータが、 Cinder が有効になっているかに応じて、適切なサービスで処理されるようになりました。</p>
+</li>
+<li><p class="first">パスワード確認ボックスでの、パスワード一致の確認がクライアント側で行われるようになり、より迅速なフィードバックが行われます。</p>
+</li>
+<li><p class="first">概要ページで表示されるインスタンスとボリュームの情報量が増え、より良い情報が表示されるように数々の修正が行われました。</p>
+</li>
+<li><p class="first">Object Storage パネルでの Unicode サポートが改善されました。</p>
+</li>
+<li><p class="first">再生攻撃 (replay attack) などを回避するため、ログアウト時に、現在のセッションに関連付けられたトークンの削除を試みるようになりました。</p>
+</li>
+<li><p class="first">ブラウザーの互換性とレンダリングに関する数々の修正。</p>
+</li>
+<li><p class="first">その他、数え切れないほどのバグ修正と改善。 Grizzly で行われた変更の完全なリストは Launchpad で確認してください。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="known-issues-and-limitations">
+<h2>既知の問題と制限<a class="headerlink" href="#known-issues-and-limitations" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="editing-a-flavor-which-results-in-an-api-error-will-delete-the-flavor">
+<h3>フレーバーの編集での API エラーで、フレーバーが削除されてしまう<a class="headerlink" href="#editing-a-flavor-which-results-in-an-api-error-will-delete-the-flavor" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Nova が行うフレーバーの編集/置換の方法の制限のため、変更後のフレーバーを作成する前に以前のフレーバーを削除する必要があります。そのため、変更後のフレーバーを作成時に API エラーが発生した場合、新しいフレーバーは作成されずに古いフレーバーだけが失われる可能性があります。</p>
+</div>
+<div class="section" id="creating-rich-network-topologies">
+<h3>高度なネットワークトポロジーの作成<a class="headerlink" href="#creating-rich-network-topologies" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Due to several Quantum features landing very late in the Grizzly cycle, it
+is not possible to create particularly complex networking configurations
+through the OpenStack Dashboard. These features will continue to grow
+throughout future releases.</p>
+</div>
+<div class="section" id="loadbalancer-feature">
+<h3>ロードバランサー機能<a class="headerlink" href="#loadbalancer-feature" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>最後の最後で、ロードバランサー機能が Quantum と Horizon に実装されました。できる限りのテストを行いましたが、まだ見つかっていないバグがあるかもしれません。 Grizzly リリースにおいては、この機能は「ベータ」扱い、「実験的機能」と考えた方がよいでしょう。</p>
+</div>
+<div class="section" id="quantum-brocade-plugin-not-compatible">
+<h3>Quantum Brocade プラグインにおける制限事項<a class="headerlink" href="#quantum-brocade-plugin-not-compatible" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Quantum の Brocade プラグインは、 Horizon の中心的な機能である Floating IP アドレス API をサポートしていません。そのため、Horizon の Grizzly リリースの Quantum 連携機能とは組み合わせて使用することはできません。</p>
+</div>
+<div class="section" id="deleting-large-numbers-of-resources-simultaneously">
+<h3>大量のリソースの同時削除<a class="headerlink" href="#deleting-large-numbers-of-resources-simultaneously" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>「全選択」チェックボックスを使って大量のリソースを API 経由で削除した場合、ネットワークタイムアウトが発生することがあります (設定に依存します)。 API 自身は bulk delete (一括削除) に対応しておらず、その結果 Horizon がリソース単位に削除要求を送信しているからです。</p>
+</div>
+</div>
+<div class="section" id="backwards-compatibility">
+<h2>後方互換性<a class="headerlink" href="#backwards-compatibility" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>The Grizzly Horizon release should be fully compatible with both Grizzly and
+Folsom versions of the rest of the OpenStack core projects (Nova, Swift, etc.).
+While some features work significantly better with an all-Grizzly stack due
+to bugfixes, etc. in underlying services, there should not be limitations
+on what will or will not function.</p>
+<p>全体としては、多くの努力の結果、これまでに Horizon を利用したアプリケーションを作成している third-party 開発者に対する互換性が維持されています。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">目次</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Grizzly バージョンのリリースノート</a><ul>
+<li><a class="reference internal" href="#release-overview">リリースの概要</a></li>
+<li><a class="reference internal" href="#highlights">ハイライト</a><ul>
+<li><a class="reference internal" href="#new-features">新機能</a><ul>
+<li><a class="reference internal" href="#networking">ネットワーク</a></li>
+<li><a class="reference internal" href="#direct-image-upload-to-glance">Glance へのイメージの直接アップロード</a></li>
+<li><a class="reference internal" href="#flavor-extra-specs-support">フレーバーの追加スペックのサポート</a></li>
+<li><a class="reference internal" href="#migrate-instance">インスタンスのマイグレーション</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-experience-improvements">ユーザーエクスペリエンスの改善</a><ul>
+<li><a class="reference internal" href="#not-authorized-being-logged-out">「権限なし」でログアウトされてしまう問題</a></li>
+<li><a class="reference internal" href="#reorganizations">パネルの構成の見直し</a></li>
+<li><a class="reference internal" href="#one-click-floating-ip-management">1 クリック Floating IP 管理</a></li>
+<li><a class="reference internal" href="#organized-images">イメージの整理</a></li>
+<li><a class="reference internal" href="#security-group-rule-editing-improvements">セキュリティーグループのルール編集の改善</a></li>
+<li><a class="reference internal" href="#icons">アイコン！</a></li>
+<li><a class="reference internal" href="#more-actions-more-better">「その他のアクション」の改善</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#community">コミュニティー</a><ul>
+<li><a class="reference internal" href="#docs-docs-and-more-docs">ドキュメント、ドキュメント、ドキュメント！</a></li>
+<li><a class="reference internal" href="#irc-meeting">IRC ミーティング</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#under-the-hood">Horizon 内部の変更</a><ul>
+<li><a class="reference internal" href="#legacy-dashboard-names-code-separation">Legacy Dashboard Names &amp; Code Separation</a></li>
+<li><a class="reference internal" href="#object-storage-delimiters-and-pseudo-folder-objects">Object Storage の区切り文字と疑似フォルダーオブジェクト</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-improvements-and-fixes">その他の改良と修正</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues-and-limitations">既知の問題と制限</a><ul>
+<li><a class="reference internal" href="#editing-a-flavor-which-results-in-an-api-error-will-delete-the-flavor">フレーバーの編集での API エラーで、フレーバーが削除されてしまう</a></li>
+<li><a class="reference internal" href="#creating-rich-network-topologies">高度なネットワークトポロジーの作成</a></li>
+<li><a class="reference internal" href="#loadbalancer-feature">ロードバランサー機能</a></li>
+<li><a class="reference internal" href="#quantum-brocade-plugin-not-compatible">Quantum Brocade プラグインにおける制限事項</a></li>
+<li><a class="reference internal" href="#deleting-large-numbers-of-resources-simultaneously">大量のリソースの同時削除</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backwards-compatibility">後方互換性</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>前のトピックへ</h4>
+            <p class="topless"><a href="havana.html"
+                                  title="前の章へ">Havana バージョンのリリースノート</a></p>
+            <h4>次のトピックへ</h4>
+            <p class="topless"><a href="folsom.html"
+                                  title="次の章へ">Folsom バージョンのリリースノート</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>このページ</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/grizzly.txt"
+                     rel="nofollow">ソースコードを表示</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>クイック検索</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="検索" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              モジュール、クラス、または関数名を入力してください
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="folsom.html" title="Folsom バージョンのリリースノート"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="havana.html" title="Havana バージョンのリリースノート"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6 で生成しました。
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

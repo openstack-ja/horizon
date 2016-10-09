@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Grizzly Series Release Notes &mdash; Horizon Release Notes 10.0.0.0rc2.dev114 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tweaks.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.0.0rc2.dev114',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Horizon Release Notes 10.0.0.0rc2.dev114 documentation" href="index.html" />
+    <link rel="next" title="Folsom Series Release Notes" href="folsom.html" />
+    <link rel="prev" title="Havana Series Release Notes" href="havana.html" /> 
+  </head>
+  <body role="document">
+  <div id="header">
+    <h1 id="logo"><a href="http://www.openstack.org/">OpenStack</a></h1>
+    <ul id="navigation">
+      
+      <li><a href="http://www.openstack.org/" title="Go to the Home page" class="link">Home</a></li>
+      <li><a href="http://www.openstack.org/projects/" title="Go to the OpenStack Projects page">Projects</a></li>
+      <li><a href="http://www.openstack.org/user-stories/" title="Go to the User Stories page" class="link">User Stories</a></li>
+      <li><a href="http://www.openstack.org/community/" title="Go to the Community page" class="link">Community</a></li>
+      <li><a href="http://www.openstack.org/blog/" title="Go to the OpenStack Blog">Blog</a></li>
+      <li><a href="http://wiki.openstack.org/" title="Go to the OpenStack Wiki">Wiki</a></li>
+      <li><a href="http://docs.openstack.org/" title="Go to OpenStack Documentation" class="current">Documentation</a></li>
+      
+    </ul>
+  </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="grizzly-series-release-notes">
+<h1>Grizzly Series Release Notes<a class="headerlink" href="#grizzly-series-release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="release-overview">
+<h2>Release Overview<a class="headerlink" href="#release-overview" title="Permalink to this headline">¶</a></h2>
+<p>The Grizzly release cycle saw sweeping improvements to overall user experience,
+huge stability improvements, lots of new networking, instance management and
+image management features, a long-needed architectural clarification, and big
+increases in community engagement! Read on to get the specifics.</p>
+</div>
+<div class="section" id="highlights">
+<h2>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="networking">
+<h4>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h4>
+<p>Quantum added a huge number of new features in Grizzly, including L3 support
+(routers), load balancers, network topology infographics, better compatibility
+with Nova networking APIs (VNIC ordering when launching an instance; security
+groups and floating IP integration) and vastly improved informational displays.</p>
+</div>
+<div class="section" id="direct-image-upload-to-glance">
+<h4>Direct Image Upload To Glance<a class="headerlink" href="#direct-image-upload-to-glance" title="Permalink to this headline">¶</a></h4>
+<p>It is now possible (though there are numerous deployment/security implications)
+to upload an image file directly from a user&#8217;s hard disk to Glance through
+Horizon. For multi-GB images it is still strongly recommended that the upload
+be done using the Glance CLI. Further improvements to this feature will come in
+future releases.</p>
+</div>
+<div class="section" id="flavor-extra-specs-support">
+<h4>Flavor Extra Specs Support<a class="headerlink" href="#flavor-extra-specs-support" title="Permalink to this headline">¶</a></h4>
+<p>In Folsom, Nova added support for &#8220;extra specs&#8221; on flavors&#8211;additional metadata
+which custom schedulers could use for appropriately scheduling instances. As of
+the Grizzly release, Horizon now supports reading and writing that data on any
+flavor.</p>
+</div>
+<div class="section" id="migrate-instance">
+<h4>Migrate Instance<a class="headerlink" href="#migrate-instance" title="Permalink to this headline">¶</a></h4>
+<p>Administrators now have the ability to migrate an instance off of its current
+host via the Admin dashboard&#8217;s Instances panel.</p>
+</div>
+</div>
+<div class="section" id="user-experience-improvements">
+<h3>User Experience Improvements<a class="headerlink" href="#user-experience-improvements" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="not-authorized-being-logged-out">
+<h4>&#8220;Not Authorized&#8221; &amp; Being Logged Out<a class="headerlink" href="#not-authorized-being-logged-out" title="Permalink to this headline">¶</a></h4>
+<p>A shocking number of the problems first-time deployers of OpenStack have can be
+summarized as &#8220;I thought I set everything up, then I tried to log into the
+dashboard and I was immediately logged back out.&#8221; The root cause of this was
+that in an effort to be as secure as possible any 401 or 403 response from
+any service API was being treated the same as if it was an attempt to access
+an unauthorized portion of Horizon, and the user was summarily logged out with
+little to no information as to why.</p>
+<p>In Grizzly we have instead chosen to improve this by treating service API
+401 and 403 errors as slightly less severe than unauthorized access attempts
+to restricted areas of Horizon. The reason for this is threefold:</p>
+<ol class="arabic simple">
+<li>For a non-malicious user these errors are almost 100% the result of
+misconfiguration and this makes debugging possible.</li>
+<li>A malicious user can make the exact same &#8220;unauthorized&#8221; requests via the
+CLI as they can via the dashboard; no special privileges are granted.</li>
+<li>API errors are generated by external systems not under the purview of our
+project and while we should attempt to respect and take appropriate action
+on those errors, we should not do anything drastic or even potentially
+destructive because of them.</li>
+</ol>
+<p>Going forward the user will not be logged out, but no information will be
+populated on the page and they will be presented with error messages informing
+them that they are unauthorized for the data they attempted to access.</p>
+</div>
+<div class="section" id="reorganizations">
+<h4>Reorganizations<a class="headerlink" href="#reorganizations" title="Permalink to this headline">¶</a></h4>
+<p>A couple of long-standing user confusions were fixed in Grizzly.</p>
+<p>First off, the API Access panel (containing a user&#8217;s API endpoints, rc files,
+and EC2 credentials) was moved from Settings to the Access &amp; Security section
+of the Project dashboard.</p>
+<p>Second, the Default Quotas and Services panels (which were both strictly
+informational) were combined into tabs in a single System Info panel to make
+it clear that these panels are thematically related, and to create a home for
+informational-only displays like these.</p>
+</div>
+<div class="section" id="one-click-floating-ip-management">
+<h4>One-click Floating IP Management<a class="headerlink" href="#one-click-floating-ip-management" title="Permalink to this headline">¶</a></h4>
+<p>A common complaint from users was that associating a floating IP to an
+instance involved numerous clicks and form selections for something that
+the majority of users had no knowledge of and didn&#8217;t care about. As such, a
+one-click &#8220;simple&#8221; floating IP association option has been created. For
+deployments which only have a single floating IP pool, this allows users to
+ignore explicit floating IP management and just click a button to associate
+or disassociate a floating IP with an instance.</p>
+</div>
+<div class="section" id="organized-images">
+<h4>Organized Images<a class="headerlink" href="#organized-images" title="Permalink to this headline">¶</a></h4>
+<p>The Images table now has a new feature: predefined filters for seeing your own
+images, images that have been shared with you, or public images. This makes
+finding the image you&#8217;re looking for a great deal easier and more pleasant.</p>
+</div>
+<div class="section" id="security-group-rule-editing-improvements">
+<h4>Security Group Rule Editing Improvements<a class="headerlink" href="#security-group-rule-editing-improvements" title="Permalink to this headline">¶</a></h4>
+<p>The security group rule editing experience has always been inherently very
+complicated simply given the number of options and the very technical terms
+involved. Moreover, the combined table-plus-form approach the OpenStack
+Dashboard had taken only made the UX more frustrating for an already difficult
+area.</p>
+<p>In Grizzly this has all been reworked to be significantly simpler, and to
+provide as much contextual help and streamlining as possible.</p>
+</div>
+<div class="section" id="icons">
+<h4>Icons!<a class="headerlink" href="#icons" title="Permalink to this headline">¶</a></h4>
+<p>In an effort to make the dashboard more at-a-glance usable, we&#8217;ve added icons
+to most of the common action buttons throughout the dashboard.</p>
+</div>
+<div class="section" id="more-actions-more-better">
+<h4>&#8220;More Actions&#8221;, More Better<a class="headerlink" href="#more-actions-more-better" title="Permalink to this headline">¶</a></h4>
+<p>Lots of feedback came in that the &#8220;more actions&#8221; dropdown menu (for tables with
+numerous actions available on each row) was confusing to new users and/or
+difficult to click.</p>
+<p>We&#8217;ve now improved it so that the button to open the menu is clearly labeled
+and the hitbox for clicking it is significantly larger.</p>
+</div>
+</div>
+<div class="section" id="community">
+<h3>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="docs-docs-and-more-docs">
+<h4>Docs, docs, and more docs!<a class="headerlink" href="#docs-docs-and-more-docs" title="Permalink to this headline">¶</a></h4>
+<p>Large amounts of new documentation was added during the Grizzly cycle, most
+notably are sections documenting: all of the available settings for Horizon and
+the OpenStack Dashboard; security and deployment considerations; and deeper
+guides on customizing the OpenStack Dashboard.</p>
+</div>
+<div class="section" id="irc-meeting">
+<h4>IRC Meeting<a class="headerlink" href="#irc-meeting" title="Permalink to this headline">¶</a></h4>
+<p>During the Grizzly cycle we started holding a weekly project meeting on IRC.
+This has been extremely beneficial for the growth and progress of the project.
+Check out the <a class="reference external" href="https://wiki.openstack.org/wiki/Meetings#Horizon_team_meeting">OpenStack Meetings wiki page</a> for specifics.</p>
+</div>
+</div>
+<div class="section" id="under-the-hood">
+<h3>Under The Hood<a class="headerlink" href="#under-the-hood" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="legacy-dashboard-names-code-separation">
+<h4>Legacy Dashboard Names &amp; Code Separation<a class="headerlink" href="#legacy-dashboard-names-code-separation" title="Permalink to this headline">¶</a></h4>
+<p>Very early in the Grizzly cycle we took the opportunity to do some longstanding
+cleanup and refactoring work. The &#8220;nova&#8221; dashboard was renamed to &#8220;project&#8221; and
+the &#8220;syspanel&#8221; dashboard was renamed to &#8220;admin&#8221; to better reflect their
+respective purposes.</p>
+<p>Moreover, a better separation was created between code related to the core
+Horizon framework code (which is not related to OpenStack specifically) and
+the OpenStack Dashboard code. At this point <em>all</em> code related to OpenStack
+lives in the OpenStack Dashboard directory, while the Horizon framework is
+completely agnostic and is a reusable Django app.</p>
+</div>
+<div class="section" id="object-storage-delimiters-and-pseudo-folder-objects">
+<h4>Object Storage Delimiters and Pseudo-folder Objects<a class="headerlink" href="#object-storage-delimiters-and-pseudo-folder-objects" title="Permalink to this headline">¶</a></h4>
+<p>When Horizon&#8217;s object storage interface was first added, Swift&#8217;s documentation
+recommended adding 0-byte objects with a special content type to denote
+pseudo-folders within a container. They have since decided that this is not the
+recommended practice, and that pseudo-folders should only be demarcated by
+a delimiting character (usually &#8220;/&#8221;) in the object name.</p>
+<p>Horizon has been updated under the hood to use this method, which should bring
+it better into line with how most deployments are using their object storage.</p>
+</div>
+</div>
+<div class="section" id="other-improvements-and-fixes">
+<h3>Other Improvements and Fixes<a class="headerlink" href="#other-improvements-and-fixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Support for Keystone&#8217;s PKI tokens.</li>
+<li>Flavor editing was made significantly more stable.</li>
+<li>Security groups can be added to a running instance.</li>
+<li>Volume quotas are handled by the appropriate service depending on whether
+or not Cinder is enabled.</li>
+<li>Password confirmation boxes are now validated for matching passwords on
+the client side for more immediate feedback.</li>
+<li>Numerous fixes to display more and better information for instances and
+volumes in their overview pages.</li>
+<li>Improved unicode support for the Object Storage panels.</li>
+<li>Logout now attempts to delete the token(s) associated with the current
+session to avoid replay attacks, etc.</li>
+<li>Various fixes for browser compatibility and rendering.</li>
+<li>Many, many other bugfixes and improvements. Check out Launchpad for the full
+list of what went on in Grizzly.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="known-issues-and-limitations">
+<h2>Known Issues and Limitations<a class="headerlink" href="#known-issues-and-limitations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="editing-a-flavor-which-results-in-an-api-error-will-delete-the-flavor">
+<h3>Editing a Flavor Which Results In An API Error Will Delete The Flavor<a class="headerlink" href="#editing-a-flavor-which-results-in-an-api-error-will-delete-the-flavor" title="Permalink to this headline">¶</a></h3>
+<p>Due to the way that Nova handles flavor editing/replacement it is necessary
+to delete the old flavor before creating the replacement flavor. As such,
+if an API error occurs while creating the replacement it is possible to
+lose the old flavor without the new one being created.</p>
+</div>
+<div class="section" id="creating-rich-network-topologies">
+<h3>Creating Rich Network Topologies<a class="headerlink" href="#creating-rich-network-topologies" title="Permalink to this headline">¶</a></h3>
+<p>Due to several Quantum features landing very late in the Grizzly cycle, it
+is not possible to create particularly complex networking configurations
+through the OpenStack Dashboard. These features will continue to grow
+throughout future releases.</p>
+</div>
+<div class="section" id="loadbalancer-feature">
+<h3>Loadbalancer Feature<a class="headerlink" href="#loadbalancer-feature" title="Permalink to this headline">¶</a></h3>
+<p>The Loadbalancer feature landed in the 11th hour for both Quantum and Horizon
+and, though we did our best to test it, may still contain undiscovered bugs. It
+is best considered a &#8220;beta&#8221; or &#8220;experimental&#8221; feature for the Grizzly release.</p>
+</div>
+<div class="section" id="quantum-brocade-plugin-not-compatible">
+<h3>Quantum Brocade Plugin Not Compatible<a class="headerlink" href="#quantum-brocade-plugin-not-compatible" title="Permalink to this headline">¶</a></h3>
+<p>The Brocade plugin for Quantum does not support key features of the floating
+IP addresses API which are considered central to Horizon&#8217;s functionality. As
+such, it is not compatible with the Grizzly release&#8217;s Quantum integration.</p>
+</div>
+<div class="section" id="deleting-large-numbers-of-resources-simultaneously">
+<h3>Deleting large numbers of resources simultaneously<a class="headerlink" href="#deleting-large-numbers-of-resources-simultaneously" title="Permalink to this headline">¶</a></h3>
+<p>Using the &#8220;select all&#8221; checkbox to delete large numbers of resources via the
+API can cause network timeouts (depending on configuration). This is
+due to the APIs not supporting bulk-deletion natively, and consequently Horizon
+has to send requests to delete each resource individually behind the scenes.</p>
+</div>
+</div>
+<div class="section" id="backwards-compatibility">
+<h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>The Grizzly Horizon release should be fully compatible with both Grizzly and
+Folsom versions of the rest of the OpenStack core projects (Nova, Swift, etc.).
+While some features work significantly better with an all-Grizzly stack due
+to bugfixes, etc. in underlying services, there should not be limitations
+on what will or will not function.</p>
+<p>Overall, great effort has been made to maintain compatibility for
+third-party developers who may have built on Horizon so far.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Grizzly Series Release Notes</a><ul>
+<li><a class="reference internal" href="#release-overview">Release Overview</a></li>
+<li><a class="reference internal" href="#highlights">Highlights</a><ul>
+<li><a class="reference internal" href="#new-features">New Features</a><ul>
+<li><a class="reference internal" href="#networking">Networking</a></li>
+<li><a class="reference internal" href="#direct-image-upload-to-glance">Direct Image Upload To Glance</a></li>
+<li><a class="reference internal" href="#flavor-extra-specs-support">Flavor Extra Specs Support</a></li>
+<li><a class="reference internal" href="#migrate-instance">Migrate Instance</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-experience-improvements">User Experience Improvements</a><ul>
+<li><a class="reference internal" href="#not-authorized-being-logged-out">&#8220;Not Authorized&#8221; &amp; Being Logged Out</a></li>
+<li><a class="reference internal" href="#reorganizations">Reorganizations</a></li>
+<li><a class="reference internal" href="#one-click-floating-ip-management">One-click Floating IP Management</a></li>
+<li><a class="reference internal" href="#organized-images">Organized Images</a></li>
+<li><a class="reference internal" href="#security-group-rule-editing-improvements">Security Group Rule Editing Improvements</a></li>
+<li><a class="reference internal" href="#icons">Icons!</a></li>
+<li><a class="reference internal" href="#more-actions-more-better">&#8220;More Actions&#8221;, More Better</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#community">Community</a><ul>
+<li><a class="reference internal" href="#docs-docs-and-more-docs">Docs, docs, and more docs!</a></li>
+<li><a class="reference internal" href="#irc-meeting">IRC Meeting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#under-the-hood">Under The Hood</a><ul>
+<li><a class="reference internal" href="#legacy-dashboard-names-code-separation">Legacy Dashboard Names &amp; Code Separation</a></li>
+<li><a class="reference internal" href="#object-storage-delimiters-and-pseudo-folder-objects">Object Storage Delimiters and Pseudo-folder Objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-improvements-and-fixes">Other Improvements and Fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues-and-limitations">Known Issues and Limitations</a><ul>
+<li><a class="reference internal" href="#editing-a-flavor-which-results-in-an-api-error-will-delete-the-flavor">Editing a Flavor Which Results In An API Error Will Delete The Flavor</a></li>
+<li><a class="reference internal" href="#creating-rich-network-topologies">Creating Rich Network Topologies</a></li>
+<li><a class="reference internal" href="#loadbalancer-feature">Loadbalancer Feature</a></li>
+<li><a class="reference internal" href="#quantum-brocade-plugin-not-compatible">Quantum Brocade Plugin Not Compatible</a></li>
+<li><a class="reference internal" href="#deleting-large-numbers-of-resources-simultaneously">Deleting large numbers of resources simultaneously</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backwards-compatibility">Backwards Compatibility</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="havana.html"
+                                  title="previous chapter">Havana Series Release Notes</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="folsom.html"
+                                  title="next chapter">Folsom Series Release Notes</a></p>
+            <h3>Project Source</h3>
+            <ul class="this-page-menu">
+              <li><a href="http://git.openstack.org/cgit/openstack/horizon
+"
+                     rel="nofollow">Project Source</a></li>
+            </ul>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/grizzly.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="folsom.html" title="Folsom Series Release Notes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="havana.html" title="Havana Series Release Notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Horizon Release Notes 10.0.0.0rc2.dev114 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Horizon Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+//Tracking docs.openstack.org/developer/<projectname> only
+//The URL is built from the project variable in conf.py
+var pageTracker = _gat._getTracker("UA-17511903-1");
+pageTracker._setCookiePath("/developer/Horizon Release Notes");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>
