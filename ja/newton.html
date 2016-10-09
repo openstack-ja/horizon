@@ -74,13 +74,13 @@
 <h2>10.0.0<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Angular のアクションは、アクションが何をした（あるいは何をしなかった）のかを示す方法において、それを解決するプロミスを構造化されたオブジェクトとともに返すべきです。</p>
 <p>JavaScript が Keystone トークンにアクセスできるようになりました。</p>
-<p>Many of Horizons XStatic packages were updated during this cycle.</p>
+<p>多くの Horizon の XStatic パッケージがこの開発サイクル中に更新されました。</p>
 <p>リソース種別（例：イメージ）の詳細ページには、 ビューを登録するための Angular アプリケーションレベルのレジストリーを使用でき、開発者は簡単に詳細ビューの作成や拡張ができます。この実装では、これらのビューは詳細ページ内のタブとして表示されます。</p>
 <p>HTML クラスの命名規則を標準化するための努力によって、様々なクラス名を、 Bootstrap の規則に合わせて、アンダースコアやキャメルケースの代わりに、ダッシュを使うように更新していきます。</p>
 <p>Horizon を実行するために、Nova (または Glance) が機能する必要はなくなりました。Horizon は、Keystone がある限り (例: Swift のみのデプロイメント) 稼働します。</p>
 <p>イメージのパネルは、レガシーまたは Angular コードのいずれかを使用して設定できるようになりました。</p>
-<p>To aid in continued maintenance of Horizon as a themable and customizable framework, the highly customized &#8216;default&#8217; styles are being dropped in favor of standard Bootstrap styles. The &#8216;default&#8217; theme will only house scss variable changes going forward.</p>
-<p>Angular components now exist to provide simple-to- configure panels and tables, based off of registry information about resources (e.g. Instances).</p>
+<p>テーマに対応したカスタマイズ可能なフレームワークとしての Horizon の継続的なメンテナンスを容易にするため、高度にカスタマイズされていた &#8216;default&#8217; スタイルは削除され、標準の Bootstrap のスタイルを使用するようになりました。今後は &#8216;default&#8217; テーマでは SCSS 変数の変更だけが行われます。</p>
+<p>Angular 部品として、リソース (インスタンスなど) のレジストリー情報に基いて、簡単に設定できるパネルとテーブルを提供する部品が追加されました。</p>
 <p>modal のサイズが Bootstrap テーマの値を継承するようになりました。</p>
 <p>Horizonで使用される  xstatic パッケージ用の static フォルダーの場所が自動的に特定されるようになりました。</p>
 <div class="section" id="new-features">
@@ -88,7 +88,8 @@
 <ul class="simple">
 <li><p class="first">アクション結果サービスは、結果を構築したり、返されたオブジェクトの解析に便利なメソッドを提供します。</p>
 </li>
-<li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/admin-neutron-l3-agent">blueprint admin-neutron-l3-agent</a>] Add support for managing neutron L3 agent hosts.  The admin screen for system information now provides links / views to see what routers reside on what hosts.   In addition, the admin view of routers now also provides a list of where the router is hosted and the link to see what other routers are sharing the same host.</li>
+<li><p class="first">[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/admin-neutron-l3-agent">blueprint admin-neutron-l3-agent</a>] neutron L3 エージェントホストの管理機能が追加されました。管理ダッシュボードのシステム情報画面で、どのルータがどのホスト上に存在するかを確認できます。また、ルーターの管理画面で、ルーターが割り当てられている L3 エージェントのリストが参照でき、リンクを辿ると同じホストに割り当てられている他のルーターを確認できます。</p>
+</li>
 <li><p class="first">Horizon および Horizon のプラグインは JavaScript で  Keystone トークンにアクセス可能なので、CORS コールを他の OpenStack サービスに対して直接実行することができます。これにより、UI の応答性が向上します。</p>
 </li>
 <li><p class="first">新しい辞書型の設定 <code class="docutils literal"><span class="pre">ANGULAR_FEATURE</span></code> が追加されました。この設定により、新しい AngularJS ベースの機能を有効にするかどうかを切り替えできます。</p>
@@ -116,7 +117,8 @@ Policies associated with Consistency Groups exist in the Cinder policy file, and
 <li>[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/support-extra-prop-for-project-and-user">blueprint Supports extra properties in project and user</a>] Support an ability to treat additional information for project and user as an extra attribute.</li>
 <li><p class="first">[<a class="reference external" href="https://blueprints.launchpad.net/horizon/+spec/navigation-improvements">blueprint navigation-improvements</a>] パンくずナビゲーションが Horizon 全体に追加されました。</p>
 </li>
-<li>Support a parameter to specify subnet or fixed IP address when creating port.</li>
+<li><p class="first">ポート作成時にサブネットや Fixed IP アドレスを指定できるようになりました。</p>
+</li>
 <li><p class="first">ディレクティブ（hz-details）は、ビュー（典型としては詳細のコンテキストのため）のセットをインテリジェントに表示する機能を提供します。</p>
 </li>
 <li><p class="first">汎用詳細表示は、場所を解析してリソース種別を決定し、その種別に関連した詳細ビューを表示します。</p>
@@ -151,7 +153,8 @@ Policies associated with Consistency Groups exist in the Cinder policy file, and
 <li>The hz-resource-panel directive takes in a Heat resource name (e.g. &#8216;OS::Nova::Server&#8217;) and displays an appropriate header and allows content to be transcluded to build the panel page.</li>
 <li><p class="first">OVERVIEW_DAYS_RANGE の設定が新たに追加されました。これは、概要パネルのメーターのデフォルト日付範囲を、今日の日付の N 日前までの範囲 (値が整数 N の場合)、または今月の始めから今日までの範囲 (None に設定されている場合) で定義します。この設定は、概要のパネルがレンダリングされる際に取得するデータの量を制限するために使用されます。デフォルト値は 1 です。以前は大型のデプロイメントで深刻なラグの原因となっていたため、以前のバージョンの動作とは異なるようになりました。</p>
 </li>
-<li>Modal sizes now inherit their value from theme variables.  Two additional sizes are available now for use in Horizon, extra to the standard 3 sizes of Bootstrap Modals, modal-xs and modal-xl.</li>
+<li><p class="first">モーダルのサイズは、テーマの変数の値を継承するようになりました。 Bootstrap Modal の標準の 3 つのサイズに加えて、 2 つの追加のサイズ modal-xs と modal-xl が horizon で使用できるようになりました。</p>
+</li>
 <li><p class="first"><code class="docutils literal"><span class="pre">TOKEN_DELETE_DISABLED</span></code> 設定が追加されました。これにより、ログアウト時にユーザートークンの取り消しを行うかを設定できます。</p>
 </li>
 </ul>
@@ -176,14 +179,16 @@ Policies associated with Consistency Groups exist in the Cinder policy file, and
 </li>
 <li><p class="first">最終的な Django の TEMPLATE_LOADERS 設定は、 TEMPLATE_LOADERS 、 CACHED_TEMPLATE_LOADERS 、および ADD_TEMPLATE_LOADERS 設定から生成されます。詳細な情報は設定ドキュメントを参照してください。</p>
 </li>
-<li>It is no longer necessary to include the version suffix into OPENSTACK_KEYSTONE_URL setting. Thanks to a recent update of django-openstack-auth library as of 2.3.0 release, Horizon will append the proper version suffix to the URL based on the value stored inside OPENSTACK_API_VERSIONS[&#8216;identity&#8217;] setting.</li>
+<li><p class="first">OPENSTACK_KEYSTONE_URL 設定で末尾にバージョン情報を含める必要がなくなりました。 django-openstack-auth ライブラリーの 2.3.0 リリースで行われた変更により、 Horizon は OPENSTACK_API_VERSION[&#8216;identity&#8217;] 設定の値に基づいて URL に適切なバージョン情報を付与するようになりました。</p>
+</li>
 <li><p class="first">（オプション）ボイラープレートコードを最小化し、同様の機能/フレーミングの使用を確実にするために、すべての Angular ページの基礎となる共通の Angular テンプレートを使用します。</p>
 </li>
 <li><p class="first">レガシーのオーバーライドが機能するために「default」テーマが依然として必要な場合には、単に「default」テーマのスタイルを以前から存在するテーマにコピーするか、新規カスタムテーマを作成してください。</p>
 </li>
 <li><p class="first">「status_unknown」の表の行のクラスがデフォルトのブートストラップの「warning」クラスに置き換えられました。</p>
 </li>
-<li>Many Javascript files have moved to new locations in the horizon/lib static folder. Previously the locations of some files were hard-coded but now the locations are determined automatically based on the xstatic package name.</li>
+<li><p class="first">多くの JavaScript ファイルが horizon/lib static フォルダー内に移動されました。以前は、いくつかのファイルの場所はハードコートされていましたが、場所は xstatic パッケージ名に基づいて決定されるようになりました。</p>
+</li>
 </ul>
 </div>
 <div class="section" id="deprecation-notes">
@@ -191,28 +196,33 @@ Policies associated with Consistency Groups exist in the Cinder policy file, and
 <ul class="simple">
 <li><p class="first">HORIZON_IMAGES_ALLOW_UPLOAD の設定は廃止予定となり、段階的に HORIZON_IMAGES_UPLOAD_MODE の設定に置き換えられることになります。</p>
 </li>
-<li>Router rules is a horizon extension provided by Big Switch Networks. As part of the horizon-vendor-split work, we drop the extension from upstream horizon. It is now available as a separate plugin at <a class="reference external" href="https://github.com/bigswitch/horizon-bsn">https://github.com/bigswitch/horizon-bsn</a></li>
+<li><p class="first">ルータールールは Big Switch Networks が提供する horizon の拡張機能です。 horizon-vendor-split の取組の一環として、アップストリームの horizon からこの拡張機能を削除しました。この機能は分離されたプラグインとして <a class="reference external" href="https://github.com/bigswitch/horizon-bsn">https://github.com/bigswitch/horizon-bsn</a> から入手できます。</p>
+</li>
 <li><p class="first">LBaaS v1 ダッシュボードは廃止予定となりました。 Ocata リリースで削除される予定です。 LBaaS v1 機能は neutron-lbaas から Ocata リリースで削除されています。 Horizon のこの機能は、オペレーターが Horizon を先にアップグレードできるように、後方互換性を保持するためだけに残されています。 LBaaS v2 用のダッシュボードは <a class="reference external" href="http://git.openstack.org/cgit/openstack/neutron-lbaas-dashboard/">neutron-lbaas-dashboard プロジェクト</a> で Horizon プラグインとして提供されています。</p>
 </li>
 <li><p class="first">HTML クラス &#8216;d3_pie_chart_usage&#8217; が使われている箇所はすべて &#8216;pie-chart-usage&#8217; に変更されました。同様に &#8216;d3_pie_chart_distribution&#8217; は &#8216;pie-chart-distribution&#8217; に変換されました。</p>
 </li>
 <li><p class="first">&#8216;default_ipv4_subnet_pool_label&#8217; と &#8216;default_ipv6_subnet_pool_label&#8217; オプションは Mitaka サイクルで非推奨となり、 Newton リリースでは削除されます。 Mitaka からは、 Neutron API を介してアドレスファミリー毎にデフォルトのサブネットプールを 1 つ作成できます。これらのサブネットプールは、サブネットプールの一覧に自動的に名前が表示されます。</p>
 </li>
-<li>Inline Edit functionality for Horizon tables is now deprecated and will be removed in Horizon P (12.0) The functionality was removed from the following tables. Admin Volume Types table, Admin Metadata Definitions table, Identity Projects table and Identity Users table</li>
-<li>Fullscreen Modals have been deprecated in favor of modal-xl.  Currently, it is set to 95% of the viewable screen width.</li>
+<li><p class="first">Horizon テーブルのインライン編集機能は廃止予定になりました。 Horizon の Pike リリース (12.0) で削除される予定です。この機能は、管理画面のボリューム種別テーブル、管理画面のメタデータ定義テーブル、ユーザー管理画面のプロジェクトテーブル、ユーザー管理画面のユーザーテーブル、から削除されました。</p>
+</li>
+<li><p class="first">フルスクリーンのモーダルは廃止予定になり、 modal-xl を使用するようになりました。 modal-xl の値は表示可能なスクリーン幅の 95% に設定されています。</p>
+</li>
 </ul>
 </div>
 <div class="section" id="security-issues">
 <h3>セキュリティー上の問題<a class="headerlink" href="#security-issues" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
-<li>Making Keystone Tokens available to JavaScript slightly increases the risk of a Token being captured. If you don&#8217;t need this functionality, it can be disabled by setting the following option in your local_settings: ENABLE_CLIENT_TOKEN = False</li>
+<li><p class="first">Keystone トークンを JavaScript 側で参照できるようにすると、トークンがキャプチャーされるリスクが大きく高まります。この機能が不要な場合、 local_settings で ENABLE_CLIENT_TOKEN = False に設定することで無効化できます。</p>
+</li>
 </ul>
 </div>
 <div class="section" id="id5">
 <h3>バグ修正<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li>Hardcoded admin role is replaced with RBAC policy check in panels. Now users access to the panels is defined by policies and not user roles. The change affected the Admin dashboard and its panels (Overview, Hypervisors, Instances and Metadata Definitions).</li>
-<li>LP-1585682 is fixed which grants Horizon the ability to properly version Keystone webpath endpoints (URLs like <a class="reference external" href="http:/">http:/</a>/&lt;hostip&gt;/identity instead of <a class="reference external" href="http:/">http:/</a>/&lt;hostip&gt;:5000).</li>
+<li><p class="first">LP-1585682 が修正され、 Horizon は Keystone のウェブのパスのエンドポイント (<a class="reference external" href="http:/">http:/</a>/&lt;hostip&gt;:5000 ではなく <a class="reference external" href="http:/">http:/</a>/&lt;hostip&gt;/identity のような URL) に適切にバージョンを追加できるようになりました。</p>
+</li>
 <li><a class="reference external" href="https://bugs.launchpad.net/horizon/+bug/1508571">https://bugs.launchpad.net/horizon/+bug/1508571</a></li>
 </ul>
 </div>
